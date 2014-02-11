@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Create and working with lead in OpenERP &mdash; OpenERP Book 8.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '8.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="OpenERP Book 8.0 documentation" href="../../index.html" />
+    <link rel="up" title="Leads to Cash Flow with OpenERP" href="../index.html" />
+    <link rel="next" title="Create leads from incoming emails" href="../03/index.html" />
+    <link rel="prev" title="Install CRM Module in OpenERP" href="../01/index.html" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-47926740-1']);
+  _gaq.push(['_trackPageview']);
+</script>
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">
+          OpenERP Book</a>
+        <span class="navbar-text navbar-version pull-left"><b>8.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="../../index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About OpenERP Online Book !</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../download/index.html">Looking for OpenERP Demo ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../install/index.html">Installation of OpenERP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part01/index.html">Getting start with OpenERP</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Leads to Cash Flow with OpenERP</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Create and working with lead in OpenERP</a><ul>
+<li><a class="reference internal" href="#create-lead">Create Lead</a></li>
+<li><a class="reference internal" href="#communicate-on-leads">Communicate on Leads</a></li>
+<li><a class="reference internal" href="#tracking-leads">Tracking Leads</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+  <li>
+    <a href="../01/index.html" title="Previous Chapter: Install CRM Module in OpenERP"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Install CRM Modu...</span>
+    </a>
+  </li>
+  <li>
+    <a href="../03/index.html" title="Next Chapter: Create leads from incoming emails"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Create leads fro... &raquo;</span>
+    </a>
+  </li>
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../../_sources/part02/02/index.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="create-and-working-with-lead-in-openerp">
+<span id="leads-manual"></span><h1>Create and working with lead in OpenERP<a class="headerlink" href="#create-and-working-with-lead-in-openerp" title="Permalink to this headline">¶</a></h1>
+<p>In OpenERP after <a class="reference internal" href="../01/index.html#install-crm"><em>installing CRM module</em></a>, you can create and manage all the future sales like prospects or sales inquiries by creating Leads which might get convert in to sales for company. Leads may come from various source and different kind of activities for example creating a leads based on marketing over different media like Paper, Television, Phone, SMS, and the most popular one which is marketing over the internet through social media.</p>
+<p>The process of creating leads automatically is called leads generations process and most of the business required to invest a lot to generate the leads. Leads contains many useful informations used in marketing campaign to qualify the leads or can be qualified manually by communicating on the same. Most informations on the leads are contact informations, where it comes from, geographical information, etc..</p>
+<img alt="../../_images/leads-list.png" src="../../_images/leads-list.png" />
+<p>List of Leads in OpenERP</p>
+<div class="section" id="create-lead">
+<h2>Create Lead<a class="headerlink" href="#create-lead" title="Permalink to this headline">¶</a></h2>
+<p>Lets create a first lead into OpenERP based on the business card we receive through meeting, which is a traditional approach of generating leads.</p>
+<img alt="../../_images/lead-form1.png" src="../../_images/lead-form1.png" />
+<p>Create Lead</p>
+<p><strong>Subject</strong></p>
+<p>In order to create a lead you just need only field which is subject. It depends on you what to keep in this fields when you are creating manually, in case of automatic generation of leads it depends on your you create this fields based on the visitor data. Normally it use to identify the leads easily in system.</p>
+<p><strong>Company &amp; Contact Name</strong></p>
+<p>Name of the company from you received the leads, and contact person in that company. It is good to have a contact person information on the leads will be easy to communicate with them during phone call or automated emails through marketing campaign.</p>
+<p><strong>Address</strong></p>
+<p>Its full address of the company or contact person with postal code. well, It is not much important for the movement except if you need it for the further communications in order to send some marketing material, Cd&#8217;s or Books through post.</p>
+<p><strong>Email</strong></p>
+<p>Most important fields which is used during the marketing campaign to contact prospect customer to through email. When you are generating automatic lead through emails, it is use to link Customer fields on leads automatically.</p>
+<p><strong>Phone, Mobile &amp; Fax</strong></p>
+<p>It is also an important details to get in tough with the prospects, you can easily contact to prospects through phone calls, marketing campaign through SMS, or automated phone calls through smart Voip solutions.</p>
+<p><strong>Internal Notes</strong></p>
+<p>It is text message used by the sales person when prospecting the future customer. based on this salesman communicate with the prospect over the call or email communications.</p>
+<p>When you generate leads through your website, It will be easy to streamline subject field and internal notes to filters the leads easily. You should define some of the important fields carefully on your website form that is fillers by the visitors, some of them are as below.</p>
+<p>Email Address, Contact Name, Primary Interest, and Questions if any. Look at the best ever form simple leads capture form.</p>
+<img alt="../../_images/lead-form2.png" src="../../_images/lead-form2.png" />
+<p>Extra Information on Lead</p>
+<p><strong>Marketing Options</strong></p>
+<p>When you are generating and qualifying leads with marketing campaign those fields are important. you can list an leads to existing marketing campaign just by selection campaign  on lead. Channel is the type of media through which lead is generated, and status  showing the current state of lead by default it is in new when you qualify it goes to Opportunity and dead when not qualified may be used in further marketing.</p>
+<p><strong>Mailing</strong></p>
+<p>If opt-out is checked this contact or lead refuse to receive emails through mass emails or marketing campaigns . Filters &#8220;Available for Mass Mailing&#8221; allows you to filter the leads when performing mass mailing.</p>
+</div>
+<div class="section" id="communicate-on-leads">
+<h2>Communicate on Leads<a class="headerlink" href="#communicate-on-leads" title="Permalink to this headline">¶</a></h2>
+<p>A new feature in OpenERP 7.0, Social Enterprise Communications provides all the communications related to the documents available on the same documents so you don;t need any email client or mail folders to search for the communications related to the leads.</p>
+<img alt="../../_images/lead-emails.png" src="../../_images/lead-emails.png" />
+<p>Communications on Leads</p>
+<p>Once you define Incoming and Outgoing email servers on the settings, you can start receiving and sending email on every document which is enterprise social enabled, in OpenERP it called chatter when you will see followers who will get intimations on their dashboard or OpenERP wall depending on the channel they are following. You can directly send an email or internal notes for the future reference along with the document attached in chatter.</p>
+<p><strong>Qualifying Lead</strong></p>
+<img alt="../../_images/lead-state.png" src="../../_images/lead-state.png" />
+<p>States and other Operations on Lead</p>
+<p>When you get positive reply of your email on leads, it shows customer&#8217;s interested to work with us and finally you can convert it in to opportunity through &#8220;Convert to Opportunity&#8221; and it will automatically change state from New -&gt; Opportunity.</p>
+</div>
+<div class="section" id="tracking-leads">
+<h2>Tracking Leads<a class="headerlink" href="#tracking-leads" title="Permalink to this headline">¶</a></h2>
+<p>You can groups the leads and analyze to understand who is overloaded, which team have not enough leads or where are new countries where you started new business ? I thinks those are very important questions to control and take the management decision quickly.</p>
+<img alt="../../_images/lead-groups.png" src="../../_images/lead-groups.png" />
+<p>Leads Tracking</p>
+<p>You can generate lots of analytical reports directly on screen in list view using the Groups, filters under Advance Search operations.</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, OpenERP Book.<br/>
+      Last updated on Feb 11, 2014.<br/>
+    </p>
+  </div>
+</footer>
+<div class="container">
+<script type="text/javascript">
+  (function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ?
+              'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+  })();
+</script>
+</div>
+
+  </body>
+</html>

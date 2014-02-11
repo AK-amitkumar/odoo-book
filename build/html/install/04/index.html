@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Install OpenERP on Mac OSX 10.X.X &mdash; OpenERP Book 8.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '8.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="OpenERP Book 8.0 documentation" href="../../index.html" />
+    <link rel="up" title="Installation of OpenERP" href="../index.html" />
+    <link rel="next" title="Getting start with OpenERP" href="../../part01/index.html" />
+    <link rel="prev" title="Install OpenERP on Fedora, CentOS" href="../03/index.html" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-47926740-1']);
+  _gaq.push(['_trackPageview']);
+</script>
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">
+          OpenERP Book</a>
+        <span class="navbar-text navbar-version pull-left"><b>8.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="../../index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About OpenERP Online Book !</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../download/index.html">Looking for OpenERP Demo ?</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Installation of OpenERP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part01/index.html">Getting start with OpenERP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part02/index.html">Leads to Cash Flow with OpenERP</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Install OpenERP on Mac OSX 10.X.X</a><ul>
+<li><a class="reference internal" href="#install-postgresql">Install PostgreSQL</a></li>
+<li><a class="reference internal" href="#install-xcode-command-line-tool-and-macports">Install Xcode, Command line tool and MacPorts</a></li>
+<li><a class="reference internal" href="#install-openerp-server">Install OpenERP Server</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+  <li>
+    <a href="../03/index.html" title="Previous Chapter: Install OpenERP on Fedora, CentOS"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Install OpenERP ...</span>
+    </a>
+  </li>
+  <li>
+    <a href="../../part01/index.html" title="Next Chapter: Getting start with OpenERP"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Getting start wi... &raquo;</span>
+    </a>
+  </li>
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../../_sources/install/04/index.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="install-openerp-on-mac-osx-10-x-x">
+<span id="install-macosx"></span><h1>Install OpenERP on Mac OSX 10.X.X<a class="headerlink" href="#install-openerp-on-mac-osx-10-x-x" title="Permalink to this headline">¶</a></h1>
+<p>There are many ways to install libraries in to Mac OS 10.X which is required by the OpenERP to run on your Mac OS. Some of the preferred methods are port or pip or easy_install in few case you may use brew is it install libraries in to users local directory not available for other users in same machine.</p>
+<div class="section" id="install-postgresql">
+<h2>Install PostgreSQL<a class="headerlink" href="#install-postgresql" title="Permalink to this headline">¶</a></h2>
+<p>You need to install PostgreSQL database as OpenERP is using as a backend storage, you need to install and configure before you setup additional libraries and OpenERP server.</p>
+<p>Download the Installable package form <a class="reference external" href="http://www.enterprisedb.com/products-services-training/pgdownload">http://www.enterprisedb.com/products-services-training/pgdownload</a> or you can read more ways to install PostgreSQL on Mac OS at <a class="reference external" href="http://www.postgresql.org/download/macosx/">http://www.postgresql.org/download/macosx/</a></p>
+<p>Run the installer and follow the steps</p>
+<img alt="../../_images/postgresql-mac.png" src="../../_images/postgresql-mac.png" />
+<p>PostgreSQL installation step - 1</p>
+<p>Configure postgresql for OpenERP user. You need to add your current user as a postgres user which you have created under your MAC OS and you are using the same user to run OpenERP server. In order to add role to postgresql switch to postgres user.</p>
+<div class="highlight-python"><div class="highlight"><pre>openerp-desktop:/$ sudo su postgres
+password: XXXXXXXXXX
+</pre></div>
+</div>
+<p>Create a new user using following command, in my case I have created openerp as my mac user.</p>
+<div class="highlight-python"><div class="highlight"><pre>bash-3.2$: createuser openerp
+Shall the new role be a superuser? (y/n) y
+</pre></div>
+</div>
+<p><a class="reference internal" href="../00/index.html#pgadmin3"><em>Install and configure PgAdmin3</em></a> if you want to use graphical user interface for PostgreSQL.</p>
+</div>
+<div class="section" id="install-xcode-command-line-tool-and-macports">
+<h2>Install Xcode, Command line tool and MacPorts<a class="headerlink" href="#install-xcode-command-line-tool-and-macports" title="Permalink to this headline">¶</a></h2>
+<p>In order to install libraries using the port method on Mac OS, You need to install development platform and essential libraries, for that  you need to download and install Xcode from the Apple Store. You just need correct login and password for Apple store to install software from store.</p>
+<img alt="../../_images/xcode-install.png" src="../../_images/xcode-install.png" />
+<p>Install Xcode</p>
+<p>Once you install Xcode correctly, you need to install command line tools that allow us to run port command from command line, run below command to install command line tool.</p>
+<div class="highlight-python"><div class="highlight"><pre>openerp-desktop:/$xcode-select --install
+</pre></div>
+</div>
+<p>Last tool you need to install is MacPorts, It is an easy to use system for compiling, installing, and managing open source packages, libraries and softwares on MacOS.</p>
+<p>Before you Download and install the macport you need to agree to the license by dunning below command</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo xcodebuild -license
+</pre></div>
+</div>
+<p>Download macport depending on your MacOS version an install the package like other software.</p>
+<img alt="../../_images/install-macport.png" src="../../_images/install-macport.png" />
+<p>Install MacPorts</p>
+<p>The MacPorts &#8220;selfupdate&#8221; command will also be run for you by the installer to ensure you have our latest available release and the latest revisions to the &#8220;Portfiles&#8221;, run below command to update port profiles.</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo port -v selfupdate
+</pre></div>
+</div>
+<p>Once you complete the installations of Xcode, Command Line Tool and MacPorts, you are ready install related libraries for the OpenERP</p>
+</div>
+<div class="section" id="install-openerp-server">
+<h2>Install OpenERP Server<a class="headerlink" href="#install-openerp-server" title="Permalink to this headline">¶</a></h2>
+<p>If you plan to use OpenERP 6.1 or above you need Python 2.6 or later version,  you can check the version of your Python installed on your machine using below command.</p>
+<div class="highlight-python"><div class="highlight"><pre>openerp-desktop:/$ python --version
+Python 2.7.5
+</pre></div>
+</div>
+<p>You can install all required dependencies with below listed command:</p>
+<div class="highlight-python"><div class="highlight"><pre>openerp-desktop:/$ sudo -i
+Password:
+root # port install py-psycopg2 py-reportlab \
+py-lxml py-tz py-mako py-dateutil graphviz py-parsing py-pil \
+py-docutils py-openid py-mock py-unittest2 py-Werkzeug \
+py-mxdatetime py-caldav py-pydot pt-babel py-chart
+</pre></div>
+</div>
+<p>On success you are ready to download and run OpenERP server. OpenERP server can be download form the OpenERP&#8217;s website, check which version you should download. If you only want to test the server, you do not need to install it. Just unpack the archive and start the openerp-server executable:</p>
+<div class="highlight-python"><div class="highlight"><pre>tar -xzf openerp-7.0-latest.tar.gz
+cd openerp-7.0-*
+./openerp-server
+./openerp-server -h
+</pre></div>
+</div>
+<p>The OpenERP Server can be installed very easily using the setup.py file:</p>
+<div class="highlight-python"><div class="highlight"><pre>tar -xzf openerp-7.0-latest.tar.gz
+cd openerp-7.0-*
+sudo python setup.py install
+</pre></div>
+</div>
+<p>Once you install OpenERP successfully you are ready to Create your first database in OpenERP.</p>
+<div class="highlight-python"><div class="highlight"><pre>export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_CTYPE=&quot;C&quot;
+export LC_ALL=&quot;C&quot;
+</pre></div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, OpenERP Book.<br/>
+      Last updated on Feb 11, 2014.<br/>
+    </p>
+  </div>
+</footer>
+<div class="container">
+<script type="text/javascript">
+  (function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ?
+              'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+  })();
+</script>
+</div>
+
+  </body>
+</html>
