@@ -110,6 +110,13 @@ pygments_style = 'sphinx'
 sys.path.append(os.path.abspath('_themes'))
 html_theme_path = ['_themes']
 html_theme = 'bootstrap'
+
+html_theme_options = {
+    'bootstrap_version': "3",
+    "bootswatch_theme":"flatly"
+}
+
+
 #html_short_title = 'Demo'
 
 #html_theme = 'default'
