@@ -13,12 +13,13 @@ OpenERP Online Book !
    :alt: alternate text
    :align: right
 
-**Table of Contents:**
-
 .. note::
 	The structure of Index may change frequently, if you want to track the pages you love, visit them and store their links in Bookmark or Reading List. 
 	We will not change the direct link of any Page on this Book.
-	
+
+Table of Contents
+~~~~~~~~~~~~~~~~~
+
 .. toctree::
    :maxdepth: 1
    
