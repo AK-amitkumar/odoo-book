@@ -3,14 +3,6 @@
 Getting start with OpenERP
 ==========================
 
-.. image:: images/openerp-book.png
-   :height: 300px
-   :width: 240 px
-   :scale: 100 %
-   :alt: alternate text
-   :align: right
-
-
 **First Step with OpenERP**
 
 .. toctree::

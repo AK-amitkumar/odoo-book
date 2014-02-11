@@ -6,15 +6,8 @@
 OpenERP Online Book !
 =====================
 
-.. image:: images/openerp-book.png
-   :height: 300px
-   :width: 240 px
-   :scale: 100 %
-   :alt: alternate text
-   :align: right
-  
 .. note::
-	The structure of Index may change frequently, if you want to track the pages you love, visit them and store their links in Bookmark or Reading List. 
+	The structure of Index may change frequently, if you want to track the pages you love, visit them and store their links in Bookmark or Reading List.
 	We will not change the direct link of any Page on this Book.
 
 Table of Contents
