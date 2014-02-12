@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Setup the Report Header and Footer &mdash; OpenERP Book 7.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootswatch-3.0.0/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '7.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="OpenERP Book 7.0 documentation" href="../../index.html" />
+    <link rel="up" title="Setup your First Company in OpenERP" href="../index.html" />
+    <link rel="next" title="Manage HR operations using OpenERP" href="../../part04/index.html" />
+    <link rel="prev" title="Setup your First Company in OpenERP" href="../index.html" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-47926740-1']);
+  _gaq.push(['_trackPageview']);
+</script>
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">
+          OpenERP Book</a>
+        <span class="navbar-text navbar-version pull-left"><b>8.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="../../index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About OpenERP Online Book !</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../download/index.html">Looking for OpenERP Demo ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../install/index.html">Installation on Windows, Linux and MacOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part01/index.html">Getting start with OpenERP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part02/index.html">Leads to Cash Flow with OpenERP</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Setup your First Company in OpenERP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part04/index.html">Manage HR operations using OpenERP</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../backup/index.html">OpenERP Backup and Restore</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Setup the Report Header and Footer</a><ul>
+<li><a class="reference internal" href="#standard-header">Standard Header</a></li>
+<li><a class="reference internal" href="#custom-header">Custom Header</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+  <li>
+    <a href="../index.html" title="Previous Chapter: Setup your First Company in OpenERP"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Setup your First...</span>
+    </a>
+  </li>
+  <li>
+    <a href="../../part04/index.html" title="Next Chapter: Manage HR operations using OpenERP"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Manage HR operat... &raquo;</span>
+    </a>
+  </li>
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="setup-the-report-header-and-footer">
+<span id="setup-header-footer"></span><h1>Setup the Report Header and Footer<a class="headerlink" href="#setup-the-report-header-and-footer" title="Permalink to this headline">¶</a></h1>
+<p>It is necessary for every business to keep the format of all documents as it is, event though  business process may transform through next generation business application or ERP system. OpenERP offers you to configure your letterhead to have same as your letterhead for any legal or external documents such as Invoice, Sales Orders, Purchase Orders, Delivery Orders, Etc..</p>
+<p>To change the company header and footer configuration goto Settings → Companies, Select the company for which you would like to change the header and footer.</p>
+<p>Before we begging the configuration of company letterhead, all the information should be filled without missing of any fields. There are mainly 3 different formats for the document printing listed as below</p>
+<ul class="simple">
+<li>RML Header</li>
+<li>RML Internal Header</li>
+<li>RML Internal Header for Landscape Report</li>
+</ul>
+<p>RML Header is used to print all legal and external documents as it contains all the informations required to have on the legal document such as mailing address, contact details like phone and email, company’s tagline, bank and other details like tax numbers and contact person related to that document.</p>
+<p>RML Internal and RML Internal for Landscape are the formats use to print all internal documents which are user internally for the company use such as Party Ledgers, Account Ledgers, Some statistical reports, etc..</p>
+<div class="section" id="standard-header">
+<h2>Standard Header<a class="headerlink" href="#standard-header" title="Permalink to this headline">¶</a></h2>
+<p>RML Header provides configurations to print  the view of company Letterhead as per our need. If you understand any of the markup language it is very easy to change  configurations. There is main section which we are going to change is Page header.</p>
+<img alt="../../_images/rml-header.png" src="../../_images/rml-header.png" />
+<p>Report Header</p>
+<p>Look at the below configuration, It generates the above header format for your all your reports.</p>
+<div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- Set here the default font to use for all &lt;drawString&gt; tags --&gt;</span>
+<span class="nt">&lt;setFont</span> <span class="na">name=</span><span class="s">&quot;DejaVu Sans&quot;</span> <span class="na">size=</span><span class="s">&quot;8&quot;</span><span class="nt">/&gt;</span>
+<span class="c">&lt;!-- You Logo - Change X,Y,Width and Height --&gt;</span>
+<span class="nt">&lt;image</span> <span class="na">x=</span><span class="s">&quot;1.3cm&quot;</span> <span class="na">y=</span><span class="s">&quot;27.7cm&quot;</span> <span class="na">height=</span><span class="s">&quot;40.0&quot;</span> <span class="nt">&gt;</span>[[ company.logo or removeParentNode(&#39;image&#39;) ]]<span class="nt">&lt;/image&gt;</span>
+<span class="nt">&lt;fill</span> <span class="na">color=</span><span class="s">&quot;black&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;stroke</span> <span class="na">color=</span><span class="s">&quot;black&quot;</span><span class="nt">/&gt;</span>
+
+<span class="c">&lt;!-- page header --&gt;</span>
+<span class="nt">&lt;lines&gt;</span>1.3cm 27.7cm 20cm 27.7cm<span class="nt">&lt;/lines&gt;</span>
+<span class="nt">&lt;drawRightString</span> <span class="na">x=</span><span class="s">&quot;20cm&quot;</span> <span class="na">y=</span><span class="s">&quot;27.8cm&quot;</span><span class="nt">&gt;</span>[[ company.rml_header1 ]]<span class="nt">&lt;/drawRightString&gt;</span>
+<span class="nt">&lt;drawString</span> <span class="na">x=</span><span class="s">&quot;1.3cm&quot;</span> <span class="na">y=</span><span class="s">&quot;27.3cm&quot;</span><span class="nt">&gt;</span>[[ company.partner_id.name ]]<span class="nt">&lt;/drawString&gt;</span>
+<span class="nt">&lt;place</span> <span class="na">x=</span><span class="s">&quot;1.3cm&quot;</span> <span class="na">y=</span><span class="s">&quot;25.3cm&quot;</span> <span class="na">height=</span><span class="s">&quot;1.8cm&quot;</span> <span class="na">width=</span><span class="s">&quot;15.0cm&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;main_header&quot;</span><span class="nt">&gt;</span>[[ display_address(company.partner_id) or  &#39;&#39; ]]<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;/place&gt;</span>
+<span class="nt">&lt;drawString</span> <span class="na">x=</span><span class="s">&quot;1.3cm&quot;</span> <span class="na">y=</span><span class="s">&quot;25.0cm&quot;</span><span class="nt">&gt;</span>Phone:<span class="nt">&lt;/drawString&gt;</span>
+<span class="nt">&lt;drawRightString</span> <span class="na">x=</span><span class="s">&quot;7cm&quot;</span> <span class="na">y=</span><span class="s">&quot;25.0cm&quot;</span><span class="nt">&gt;</span>[[ company.partner_id.phone or &#39;&#39; ]]<span class="nt">&lt;/drawRightString&gt;</span>
+<span class="nt">&lt;drawString</span> <span class="na">x=</span><span class="s">&quot;1.3cm&quot;</span> <span class="na">y=</span><span class="s">&quot;24.6cm&quot;</span><span class="nt">&gt;</span>Mail:<span class="nt">&lt;/drawString&gt;</span>
+<span class="nt">&lt;drawRightString</span> <span class="na">x=</span><span class="s">&quot;7cm&quot;</span> <span class="na">y=</span><span class="s">&quot;24.6cm&quot;</span><span class="nt">&gt;</span>[[ company.partner_id.email or &#39;&#39; ]]<span class="nt">&lt;/drawRightString&gt;</span>
+<span class="nt">&lt;lines&gt;</span>1.3cm 24.5cm 7cm 24.5cm<span class="nt">&lt;/lines&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="custom-header">
+<h2>Custom Header<a class="headerlink" href="#custom-header" title="Permalink to this headline">¶</a></h2>
+<p>OpenERP allows you to change the header of the reports without changing in the source code, as explained you can change form the company configurations, Lets make the changes in header to make it right align.</p>
+<img alt="../../_images/rml-header-right.png" src="../../_images/rml-header-right.png" />
+<p>Report Header</p>
+<p>If you are good at drawing graphs, it will be very easy for you to change the coordinates for some of the elements, and you will get the perfect header for your company. To generate this format you need the below code replace in RML Header configuration.</p>
+<div class="highlight-xml"><div class="highlight"><pre><span class="c">&lt;!-- Set here the default font to use for all &lt;drawString&gt; tags --&gt;</span>
+<span class="nt">&lt;setFont</span> <span class="na">name=</span><span class="s">&quot;DejaVu Sans&quot;</span> <span class="na">size=</span><span class="s">&quot;8&quot;</span><span class="nt">/&gt;</span>
+<span class="c">&lt;!-- You Logo - Change X,Y,Width and Height --&gt;</span>
+<span class="nt">&lt;image</span> <span class="na">x=</span><span class="s">&quot;14.6cm&quot;</span> <span class="na">y=</span><span class="s">&quot;27.7cm&quot;</span> <span class="na">height=</span><span class="s">&quot;40.0&quot;</span> <span class="nt">&gt;</span>[[ company.logo or removeParentNode(&#39;image&#39;) ]]<span class="nt">&lt;/image&gt;</span>
+<span class="nt">&lt;fill</span> <span class="na">color=</span><span class="s">&quot;black&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;stroke</span> <span class="na">color=</span><span class="s">&quot;black&quot;</span><span class="nt">/&gt;</span>
+
+<span class="c">&lt;!-- page header --&gt;</span>
+<span class="nt">&lt;lines&gt;</span>1.3cm 27.7cm 20cm 27.7cm<span class="nt">&lt;/lines&gt;</span>
+<span class="nt">&lt;drawRightString</span> <span class="na">x=</span><span class="s">&quot;4.5cm&quot;</span> <span class="na">y=</span><span class="s">&quot;27.8cm&quot;</span><span class="nt">&gt;</span>[[ company.rml_header1 ]]<span class="nt">&lt;/drawRightString&gt;</span>
+<span class="nt">&lt;drawString</span> <span class="na">x=</span><span class="s">&quot;14.6cm&quot;</span> <span class="na">y=</span><span class="s">&quot;27.3cm&quot;</span><span class="nt">&gt;</span>[[ company.partner_id.name ]]<span class="nt">&lt;/drawString&gt;</span>
+<span class="nt">&lt;place</span> <span class="na">x=</span><span class="s">&quot;14.6cm&quot;</span> <span class="na">y=</span><span class="s">&quot;25.3cm&quot;</span> <span class="na">height=</span><span class="s">&quot;1.8cm&quot;</span> <span class="na">width=</span><span class="s">&quot;15.0cm&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;main_header&quot;</span><span class="nt">&gt;</span>[[ display_address(company.partner_id) or  &#39;&#39; ]]<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;/place&gt;</span>
+<span class="nt">&lt;drawString</span> <span class="na">x=</span><span class="s">&quot;14.6cm&quot;</span> <span class="na">y=</span><span class="s">&quot;25.0cm&quot;</span><span class="nt">&gt;</span>Phone:<span class="nt">&lt;/drawString&gt;</span>
+<span class="nt">&lt;drawRightString</span> <span class="na">x=</span><span class="s">&quot;18cm&quot;</span> <span class="na">y=</span><span class="s">&quot;25.0cm&quot;</span><span class="nt">&gt;</span>[[ company.partner_id.phone or &#39;&#39; ]]<span class="nt">&lt;/drawRightString&gt;</span>
+<span class="nt">&lt;drawString</span> <span class="na">x=</span><span class="s">&quot;14.6cm&quot;</span> <span class="na">y=</span><span class="s">&quot;24.6cm&quot;</span><span class="nt">&gt;</span>Mail:<span class="nt">&lt;/drawString&gt;</span>
+<span class="nt">&lt;drawRightString</span> <span class="na">x=</span><span class="s">&quot;19cm&quot;</span> <span class="na">y=</span><span class="s">&quot;24.6cm&quot;</span><span class="nt">&gt;</span>[[ company.partner_id.email or &#39;&#39; ]]<span class="nt">&lt;/drawRightString&gt;</span>
+<span class="nt">&lt;lines&gt;</span>14.6cm 24.5cm 20cm 24.5cm<span class="nt">&lt;/lines&gt;</span>
+</pre></div>
+</div>
+<p>Same way you can change the configuration of the footer too. If you change the configuration of one company does not implies effect for all companies, you have to change the format of letterhead for each company individually.</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, OpenERP Book.<br/>
+      Last updated on Feb 12, 2014.<br/>
+    </p>
+  </div>
+</footer>
+<div class="container">
+<script type="text/javascript">
+  (function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ?
+              'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+  })();
+</script>
+</div>
+
+  </body>
+</html>
