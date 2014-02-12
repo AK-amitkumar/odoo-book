@@ -8,7 +8,7 @@ OpenERP Online Book !
 
 .. note::
 	The structure of Index may change frequently, if you want to track the pages you love, visit them and store their links in Bookmark or Reading List.
-	``Direct link will not be changed once the it gets published on http://openerpbook.com.``
+	``Direct link will not be changed, once it gets published on http://openerpbook.com.``
 
 Table of Contents
 ~~~~~~~~~~~~~~~~~
