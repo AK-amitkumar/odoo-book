@@ -1,7 +1,7 @@
 .. _install:
 
-Installation of OpenERP
-=======================
+Installation on Windows, Linux and MacOS
+========================================
 
 .. toctree::
    :maxdepth: 2

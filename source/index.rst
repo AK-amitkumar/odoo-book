@@ -8,7 +8,7 @@ OpenERP Online Book !
 
 .. note::
 	The structure of Index may change frequently, if you want to track the pages you love, visit them and store their links in Bookmark or Reading List.
-	We will not change the direct link of any Page on this Book.
+	``Direct link will not be changed once the it gets published on http://openerpbook.com.``
 
 Table of Contents
 ~~~~~~~~~~~~~~~~~
@@ -20,10 +20,12 @@ Table of Contents
    download/index.rst
    install/index.rst
    part01/index.rst
+   part04/index.rst
    part02/index.rst
-
+   part03/index.rst
+   
 Indices and tables
-==================
+~~~~~~~~~~~~~~~~~~
 
 * :ref:`genindex`
 * :ref:`modindex`
