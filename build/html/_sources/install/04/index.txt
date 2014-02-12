@@ -19,14 +19,14 @@ PostgreSQL installation step - 1
 
 Configure postgresql for OpenERP user. You need to add your current user as a postgres user which you have created under your MAC OS and you are using the same user to run OpenERP server. In order to add role to postgresql switch to postgres user.
 
-::
+.. code-block:: bash
 
 	openerp-desktop:/$ sudo su postgres
 	password: XXXXXXXXXX
 
 Create a new user using following command, in my case I have created openerp as my mac user.
 
-::
+.. code-block:: bash
 
 	bash-3.2$: createuser openerp
 	Shall the new role be a superuser? (y/n) y
@@ -43,7 +43,7 @@ Install Xcode
 
 Once you install Xcode correctly, you need to install command line tools that allow us to run port command from command line, run below command to install command line tool.
 
-::
+.. code-block:: bash
 
 	openerp-desktop:/$xcode-select --install
 
@@ -51,7 +51,7 @@ Last tool you need to install is MacPorts, It is an easy to use system for compi
 
 Before you Download and install the macport you need to agree to the license by dunning below command
 
-::
+.. code-block:: bash
 
 	sudo xcodebuild -license
 
@@ -63,7 +63,7 @@ Install MacPorts
 
 The MacPorts "selfupdate" command will also be run for you by the installer to ensure you have our latest available release and the latest revisions to the "Portfiles", run below command to update port profiles.
 
-::
+.. code-block:: bash
 
 	sudo port -v selfupdate
 
@@ -73,14 +73,14 @@ Install OpenERP Server
 ----------------------
 If you plan to use OpenERP 6.1 or above you need Python 2.6 or later version,  you can check the version of your Python installed on your machine using below command.
 
-::
+.. code-block:: bash
 	
 	openerp-desktop:/$ python --version
 	Python 2.7.5
 
 You can install all required dependencies with below listed command:
 
-::
+.. code-block:: bash
 
 	openerp-desktop:/$ sudo -i
 	Password:
@@ -91,7 +91,7 @@ You can install all required dependencies with below listed command:
 
 On success you are ready to download and run OpenERP server. OpenERP server can be download form the OpenERP's website, check which version you should download. If you only want to test the server, you do not need to install it. Just unpack the archive and start the openerp-server executable:
 
-::
+.. code-block:: bash
 
 	tar -xzf openerp-7.0-latest.tar.gz
 	cd openerp-7.0-*
@@ -100,7 +100,7 @@ On success you are ready to download and run OpenERP server. OpenERP server can 
 
 The OpenERP Server can be installed very easily using the setup.py file:
 
-::
+.. code-block:: bash
 
 	tar -xzf openerp-7.0-latest.tar.gz
 	cd openerp-7.0-*
@@ -110,7 +110,7 @@ Once you install OpenERP successfully you are ready to Create your first databas
 
 .. note: Sometime you need to change the language settings by changing some variable related the language settings as below.
 
-::
+.. code-block:: bash
 	
 	export LC_ALL=en_US.UTF-8
 	export LANG=en_US.UTF-8

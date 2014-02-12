@@ -79,7 +79,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../../part01/index.html">Getting start with OpenERP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../part04/index.html">Setup your First Company in OpenERP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../part02/index.html">Leads to Cash Flow with OpenERP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../part03/index.html">Human Resource using OpenERP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part03/index.html">Manage HR operations using OpenERP</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../backup/index.html">OpenERP Backup and Restore</a></li>
 </ul>
 </ul>
 </li>
@@ -145,13 +148,13 @@
 <img alt="../../_images/postgresql-mac.png" src="../../_images/postgresql-mac.png" />
 <p>PostgreSQL installation step - 1</p>
 <p>Configure postgresql for OpenERP user. You need to add your current user as a postgres user which you have created under your MAC OS and you are using the same user to run OpenERP server. In order to add role to postgresql switch to postgres user.</p>
-<div class="highlight-python"><div class="highlight"><pre>openerp-desktop:/$ sudo su postgres
+<div class="highlight-bash"><div class="highlight"><pre>openerp-desktop:/<span class="nv">$ </span>sudo su postgres
 password: XXXXXXXXXX
 </pre></div>
 </div>
 <p>Create a new user using following command, in my case I have created openerp as my mac user.</p>
-<div class="highlight-python"><div class="highlight"><pre>bash-3.2$: createuser openerp
-Shall the new role be a superuser? (y/n) y
+<div class="highlight-bash"><div class="highlight"><pre>bash-3.2<span class="nv">$:</span> createuser openerp
+Shall the new role be a superuser? <span class="o">(</span>y/n<span class="o">)</span> y
 </pre></div>
 </div>
 <p><a class="reference internal" href="../00/index.html#pgadmin3"><em>Install and configure PgAdmin3</em></a> if you want to use graphical user interface for PostgreSQL.</p>
@@ -162,19 +165,19 @@ Shall the new role be a superuser? (y/n) y
 <img alt="../../_images/xcode-install.png" src="../../_images/xcode-install.png" />
 <p>Install Xcode</p>
 <p>Once you install Xcode correctly, you need to install command line tools that allow us to run port command from command line, run below command to install command line tool.</p>
-<div class="highlight-python"><div class="highlight"><pre>openerp-desktop:/$xcode-select --install
+<div class="highlight-bash"><div class="highlight"><pre>openerp-desktop:/<span class="nv">$xcode</span>-select --install
 </pre></div>
 </div>
 <p>Last tool you need to install is MacPorts, It is an easy to use system for compiling, installing, and managing open source packages, libraries and softwares on MacOS.</p>
 <p>Before you Download and install the macport you need to agree to the license by dunning below command</p>
-<div class="highlight-python"><div class="highlight"><pre>sudo xcodebuild -license
+<div class="highlight-bash"><div class="highlight"><pre>sudo xcodebuild -license
 </pre></div>
 </div>
 <p>Download macport depending on your MacOS version an install the package like other software.</p>
 <img alt="../../_images/install-macport.png" src="../../_images/install-macport.png" />
 <p>Install MacPorts</p>
 <p>The MacPorts &#8220;selfupdate&#8221; command will also be run for you by the installer to ensure you have our latest available release and the latest revisions to the &#8220;Portfiles&#8221;, run below command to update port profiles.</p>
-<div class="highlight-python"><div class="highlight"><pre>sudo port -v selfupdate
+<div class="highlight-bash"><div class="highlight"><pre>sudo port -v selfupdate
 </pre></div>
 </div>
 <p>Once you complete the installations of Xcode, Command Line Tool and MacPorts, you are ready install related libraries for the OpenERP</p>
@@ -182,37 +185,37 @@ Shall the new role be a superuser? (y/n) y
 <div class="section" id="install-openerp-server">
 <h2>Install OpenERP Server<a class="headerlink" href="#install-openerp-server" title="Permalink to this headline">¶</a></h2>
 <p>If you plan to use OpenERP 6.1 or above you need Python 2.6 or later version,  you can check the version of your Python installed on your machine using below command.</p>
-<div class="highlight-python"><div class="highlight"><pre>openerp-desktop:/$ python --version
+<div class="highlight-bash"><div class="highlight"><pre>openerp-desktop:/<span class="nv">$ </span>python --version
 Python 2.7.5
 </pre></div>
 </div>
 <p>You can install all required dependencies with below listed command:</p>
-<div class="highlight-python"><div class="highlight"><pre>openerp-desktop:/$ sudo -i
+<div class="highlight-bash"><div class="highlight"><pre>openerp-desktop:/<span class="nv">$ </span>sudo -i
 Password:
-root # port install py-psycopg2 py-reportlab \
-py-lxml py-tz py-mako py-dateutil graphviz py-parsing py-pil \
-py-docutils py-openid py-mock py-unittest2 py-Werkzeug \
+root <span class="c"># port install py-psycopg2 py-reportlab \</span>
+py-lxml py-tz py-mako py-dateutil graphviz py-parsing py-pil <span class="se">\</span>
+py-docutils py-openid py-mock py-unittest2 py-Werkzeug <span class="se">\</span>
 py-mxdatetime py-caldav py-pydot pt-babel py-chart
 </pre></div>
 </div>
 <p>On success you are ready to download and run OpenERP server. OpenERP server can be download form the OpenERP&#8217;s website, check which version you should download. If you only want to test the server, you do not need to install it. Just unpack the archive and start the openerp-server executable:</p>
-<div class="highlight-python"><div class="highlight"><pre>tar -xzf openerp-7.0-latest.tar.gz
-cd openerp-7.0-*
+<div class="highlight-bash"><div class="highlight"><pre>tar -xzf openerp-7.0-latest.tar.gz
+<span class="nb">cd </span>openerp-7.0-*
 ./openerp-server
 ./openerp-server -h
 </pre></div>
 </div>
 <p>The OpenERP Server can be installed very easily using the setup.py file:</p>
-<div class="highlight-python"><div class="highlight"><pre>tar -xzf openerp-7.0-latest.tar.gz
-cd openerp-7.0-*
+<div class="highlight-bash"><div class="highlight"><pre>tar -xzf openerp-7.0-latest.tar.gz
+<span class="nb">cd </span>openerp-7.0-*
 sudo python setup.py install
 </pre></div>
 </div>
 <p>Once you install OpenERP successfully you are ready to Create your first database in OpenERP.</p>
-<div class="highlight-python"><div class="highlight"><pre>export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-export LC_CTYPE=&quot;C&quot;
-export LC_ALL=&quot;C&quot;
+<div class="highlight-bash"><div class="highlight"><pre><span class="nb">export </span><span class="nv">LC_ALL</span><span class="o">=</span>en_US.UTF-8
+<span class="nb">export </span><span class="nv">LANG</span><span class="o">=</span>en_US.UTF-8
+<span class="nb">export </span><span class="nv">LC_CTYPE</span><span class="o">=</span><span class="s2">&quot;C&quot;</span>
+<span class="nb">export </span><span class="nv">LC_ALL</span><span class="o">=</span><span class="s2">&quot;C&quot;</span>
 </pre></div>
 </div>
 </div>

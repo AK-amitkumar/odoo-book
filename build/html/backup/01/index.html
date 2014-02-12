@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Backup and Restore of OpenERP Database &mdash; OpenERP Book 8.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootswatch-3.0.0/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '8.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="OpenERP Book 8.0 documentation" href="../../index.html" />
+    <link rel="up" title="OpenERP Backup and Restore" href="../index.html" />
+    <link rel="prev" title="OpenERP Backup and Restore" href="../index.html" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-47926740-1']);
+  _gaq.push(['_trackPageview']);
+</script>
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">
+          OpenERP Book</a>
+        <span class="navbar-text navbar-version pull-left"><b>8.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="../../index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About OpenERP Online Book !</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../download/index.html">Looking for OpenERP Demo ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../install/index.html">Installation on Windows, Linux and MacOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part01/index.html">Getting start with OpenERP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part04/index.html">Setup your First Company in OpenERP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part02/index.html">Leads to Cash Flow with OpenERP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part03/index.html">Manage HR operations using OpenERP</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../download/index.html">Looking for OpenERP Demo ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../install/index.html">Installation on Windows, Linux and MacOS</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">OpenERP Backup and Restore</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Backup and Restore of OpenERP Database</a><ul>
+<li><a class="reference internal" href="#local-installed-openerp-server">Local installed OpenERP Server</a><ul>
+<li><a class="reference internal" href="#backup-through-openerp-interface">Backup through OpenERP Interface</a></li>
+<li><a class="reference internal" href="#login-page">Login Page</a></li>
+<li><a class="reference internal" href="#restore-database-openerp-interface">Restore Database OpenERP Interface</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#backup-through-command-line-interface">Backup through Command Line Interface</a><ul>
+<li><a class="reference internal" href="#restore-through-command-line-interface">Restore through Command Line Interface</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#openerp-online-instance">OpenERP Online Instance</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+  <li>
+    <a href="../index.html" title="Previous Chapter: OpenERP Backup and Restore"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; OpenERP Backup a...</span>
+    </a>
+  </li>
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="backup-and-restore-of-openerp-database">
+<span id="backup-restore-manual"></span><h1>Backup and Restore of OpenERP Database<a class="headerlink" href="#backup-and-restore-of-openerp-database" title="Permalink to this headline">¶</a></h1>
+<p>There are various ways for backup and restore of the OpenERP database depending on which platform you are using. There are two main platforms for using OpenERP. Using OpenERP Online by creating an online Instance or Installing OpenERP on your local server.</p>
+<div class="section" id="local-installed-openerp-server">
+<h2>Local installed OpenERP Server<a class="headerlink" href="#local-installed-openerp-server" title="Permalink to this headline">¶</a></h2>
+<p>Well, when you have local installation I assume that you have the full control over your installation including server. there are two different ways taking back and restore of your OpenERP database. Backup and restore through OpenERP Interface or using PostgreSQL backup and restore command which is pure backup and restore given by the PostgreSQL database provider, although OpenERP&#8217;s backup restore through Interface using the same internally.</p>
+<div class="section" id="backup-through-openerp-interface">
+<h3>Backup through OpenERP Interface<a class="headerlink" href="#backup-through-openerp-interface" title="Permalink to this headline">¶</a></h3>
+<p>It is very easiest way and you just need an Super Administration password for OpenERP which is different then the Database password. Check How to find the Super Administrator password.</p>
+<img alt="../../_images/login-page1.png" src="../../_images/login-page1.png" />
+</div>
+<div class="section" id="login-page">
+<h3>Login Page<a class="headerlink" href="#login-page" title="Permalink to this headline">¶</a></h3>
+<p>Click on Manage Databases from your login page of your OpenERP instance. In case if you are not able to see that option, you can not take back and restore from OpenERP&#8217;s interface as it is disable from the OpenERP configuration and you don;t have other choice then taking backup through PostgreSQL commands on your server physically or through SSH.</p>
+<img alt="../../_images/backup.png" src="../../_images/backup.png" />
+<p>Backup Database</p>
+<p>Select the database to back under the backup option and enter the Super Administrator password which is not a database password and click on Backup button.  If everything goes well on server it will ask you to save the backup file which is an actual backup of your OpenERP&#8217;s database and that&#8217;s done !</p>
+</div>
+<div class="section" id="restore-database-openerp-interface">
+<h3>Restore Database OpenERP Interface<a class="headerlink" href="#restore-database-openerp-interface" title="Permalink to this headline">¶</a></h3>
+<p>You can move that dump file to any other server or keep for the restoration purpose as well. In case if you plan to move that dump to any other server check the compatibility and the version of PostgreSQL at source and  target server if they are same you just need to select that file under the Restore option give Super Administrator password and give a new database name which will be created to restore the database.</p>
+<img alt="../../_images/restore.png" src="../../_images/restore.png" />
+<p>Restore Database</p>
+</div>
+</div>
+<div class="section" id="backup-through-command-line-interface">
+<h2>Backup through Command Line Interface<a class="headerlink" href="#backup-through-command-line-interface" title="Permalink to this headline">¶</a></h2>
+<p>Alternative to OpenERP&#8217;s Database management tools, you can also use Linux command line interface tools by PostgreSQL&#8217;s backup and restore or psql command to backup and restore the database.</p>
+<p>Check the database list available on the PostgreSQL Server</p>
+<div class="highlight-python"><div class="highlight"><pre>openerp-air-2:7.0 openerp$ psql --list
+                             List of databases
+   Name    |  Owner   | Encoding | Collate | Ctype |   Access privileges
+-----------+----------+----------+---------+-------+-----------------------
+ account   | openerp  | UTF8     | C       | C     |
+ postgres  | postgres | UTF8     | C       | C     |
+ template0 | openerp  | UTF8     | C       | C     | =c/postgres          +
+           |          |          |         |       | postgres=CTc/postgres
+ template1 | postgres | UTF8     | C       | C     | =c/postgres          +
+           |          |          |         |       | postgres=CTc/postgres
+(4 rows)
+</pre></div>
+</div>
+<p>Once you decide which database you would like to backup, enter the following to create a backup file.If you have not installed Document Management system or if you have not many files attached the database record this is the suitable options to create a text backup of your database.</p>
+<div class="highlight-python"><div class="highlight"><pre>$ pg_dump account &amp;gt; account.sql
+</pre></div>
+</div>
+<p>Incase if you have have attached many files to database or you have installed Document Management module and using extensively you should create a backup using below command.</p>
+<div class="highlight-python"><div class="highlight"><pre>$ pg_dump account | gzip &amp;gt; account.gz
+</pre></div>
+</div>
+<p>It will create a multi-file tar backup and better to compress with the gzip tool to reduce the size of the backup of database specially when you are working with large database included blob objects like files.</p>
+<div class="section" id="restore-through-command-line-interface">
+<h3>Restore through Command Line Interface<a class="headerlink" href="#restore-through-command-line-interface" title="Permalink to this headline">¶</a></h3>
+<p>You should check the compatibility  of PostgreSQL database version before restore incase your target server is not same then the backup server . Before you restore backup you have to create a new database your self with the below command and then you can restore the backup.</p>
+<div class="highlight-python"><div class="highlight"><pre>$ createdb new-account --eocoding=UNICODE
+$ psql new-account &amp;lt; account.sql
+</pre></div>
+</div>
+<p>In case if you have take the backup of the large file like account.gz you should use the below command to restore the database.</p>
+<div class="highlight-python"><div class="highlight"><pre>$ createdb new-account --eocoding=UNICODE
+$ gunzip -c account.gz | psql new-account
+</pre></div>
+</div>
+<p>You use below command to restore large backup file</p>
+<div class="highlight-python"><div class="highlight"><pre>cat account.gz | gunzip | psql new-account
+</pre></div>
+</div>
+<p>Thats all, You done with the backup and restore of OpenERP database in case of OpenERP installed on your server locally.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">When you are working with large database use the command line interface to take the backup and restore with -c option to compress the file and take large blob objects.</p>
+</div>
+<p>You can also create a custom file format at the time of backup of database using pg_dump, the advantage of taking custom file format is you can select only few tables for the restore process on target server. You have to use the pg_dump command as below</p>
+<div class="highlight-python"><div class="highlight"><pre>$ pg_dump -Fc account &gt; account.gz
+</pre></div>
+</div>
+<p>And you can restore using the pg_restore command as below</p>
+<div class="highlight-python"><div class="highlight"><pre>$ createdb new-account --eocoding=UNICODE
+$ pg_restore -d new-account account.gz
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="openerp-online-instance">
+<h2>OpenERP Online Instance<a class="headerlink" href="#openerp-online-instance" title="Permalink to this headline">¶</a></h2>
+<p>OpenERP Online takes care for the customers backups, It takes daily backup of your database and keeps the last one week of the backups in the system. You can access and download those backups from your OpenERP account at <a class="reference external" href="https://accounts.openerp.com">https://accounts.openerp.com</a> login with your OpenERP account.</p>
+<p>You should a paid customer else your database will not be backup automatically as it will be dropped after 15 days of free trial usage.</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, OpenERP Book.<br/>
+      Last updated on Feb 12, 2014.<br/>
+    </p>
+  </div>
+</footer>
+<div class="container">
+<script type="text/javascript">
+  (function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ?
+              'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+  })();
+</script>
+</div>
+
+  </body>
+</html>

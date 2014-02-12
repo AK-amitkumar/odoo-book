@@ -23,7 +23,16 @@ Table of Contents
    part04/index.rst
    part02/index.rst
    part03/index.rst
+
+OpenERP Administration
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. toctree::
+   :maxdepth: 1
    
+   backup/index.rst
+
+
 Indices and tables
 ~~~~~~~~~~~~~~~~~~
 

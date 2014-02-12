@@ -1,9 +1,10 @@
 .. _human-resource:
 
-Human Resource using OpenERP
-============================
+Manage HR operations using OpenERP
+==================================
 
 .. toctree::
    :maxdepth: 2
    
-``TODO: document is under written process``
+.. note::
+	Part of this Document is under written process !

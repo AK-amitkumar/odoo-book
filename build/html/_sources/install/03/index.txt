@@ -9,7 +9,7 @@ Install PostgreSQL
 ------------------
 You need to install PostgreSQL database as OpenERP is using as a backend storage, you need to install and configure before you setup additional libraries and OpenERP server.
 
-::
+.. code-block:: bash
 
 	$ sudo yum install postgresql-server postgresql
 
@@ -17,7 +17,7 @@ After installing the packages, a database needs to be initialized and configured
 
 If you're not logged in as a root user, do it now, oherwise you won't be able to login as postgres user and type below commands to to initialize the database.
 
-::
+.. code-block:: bash
 
 	$ su -
 	$ su postgres
@@ -25,13 +25,13 @@ If you're not logged in as a root user, do it now, oherwise you won't be able to
 
 Following commands will start PostgreSQL server and check for running PostgreSQL processes:
 
-::
+.. code-block:: bash
 
 	$ sudo service postgresql start
 
 Check whether postgres is running or now and add postgresql service to startup list:
 
-::
+.. code-block:: bash
 
 	$ ps -eZ | grep postgres
 	$ sudo chkconfig -level 235 postgresql on
@@ -44,7 +44,7 @@ If you plan to use OpenERP 6.1 or above you need Python 2.6 or later version, si
 
 On a Fedora or CentOS or rpm based Linux distribution you can install all required dependencies with this single command:
 
-::
+.. code-block:: bash
 
 	$ sudo yum install python-devel pychart python-dateutil \
 		python-reportlab python-lxml  python-psycopg2 python-mako \
@@ -55,7 +55,7 @@ On a Fedora or CentOS or rpm based Linux distribution you can install all requir
 
 OpenERP server can be download form the OpenERP's website, check which version you should download. If you only want to test the server, you do not need to install it. Just unpack the archive and start the openerp-server executable:
 
-::
+.. code-block:: bash
 
 	tar -xzf openerp-7.0-latest.tar.gz
 	cd openerp-7.0-*
@@ -64,7 +64,7 @@ OpenERP server can be download form the OpenERP's website, check which version y
 	
 The OpenERP Server can be installed very easily using the setup.py file:
 
-::
+.. code-block:: bash
 
 	tar -xzf openerp-7.0-latest.tar.gz
 	cd openerp-7.0-*

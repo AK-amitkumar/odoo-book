@@ -8,4 +8,5 @@ Setup your First Company in OpenERP
    
    01/index.rst
    
-``TODO: document is under written process``
+.. note::
+	Part of this Document is under written process !

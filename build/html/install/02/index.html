@@ -79,7 +79,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../../part01/index.html">Getting start with OpenERP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../part04/index.html">Setup your First Company in OpenERP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../part02/index.html">Leads to Cash Flow with OpenERP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../part03/index.html">Human Resource using OpenERP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part03/index.html">Manage HR operations using OpenERP</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../backup/index.html">OpenERP Backup and Restore</a></li>
 </ul>
 </ul>
 </li>
@@ -140,17 +143,17 @@
 <div class="section" id="install-postgresql">
 <h2>Install PostgreSQL<a class="headerlink" href="#install-postgresql" title="Permalink to this headline">¶</a></h2>
 <p>You need to install PostgreSQL database as OpenERP is using as a backend storage, you need to install and configure before you setup additional libraries and OpenERP server.</p>
-<div class="highlight-python"><div class="highlight"><pre>openerp@openerp-desktop:/$ sudo apt-get install postgresql
+<div class="highlight-bash"><div class="highlight"><pre>openerp@openerp-desktop:/<span class="nv">$ </span>sudo apt-get install postgresql
 </pre></div>
 </div>
 <p>Configure postgresql for OpenERP user. You need to add your current user as a postgres user which you have created under Ubuntu and you are using the same user to run OpenERP server. Inorder to add  role to postgresql switch to postgres user.</p>
-<div class="highlight-python"><div class="highlight"><pre>openerp@openerp-desktop:/$ sudo su postgres
+<div class="highlight-bash"><div class="highlight"><pre>openerp@openerp-desktop:/<span class="nv">$ </span>sudo su postgres
 password: XXXXXXXXXX
 </pre></div>
 </div>
 <p>Create a new user using following command, in my case I have created openerp as a linux user.</p>
-<div class="highlight-python"><div class="highlight"><pre>postgres@openerp-desktop:/$ createuser openerp
-Shall the new role be a superuser? (y/n) y
+<div class="highlight-bash"><div class="highlight"><pre>postgres@openerp-desktop:/<span class="nv">$ </span>createuser openerp
+Shall the new role be a superuser? <span class="o">(</span>y/n<span class="o">)</span> y
 </pre></div>
 </div>
 <p><a class="reference internal" href="../00/index.html#pgadmin3"><em>Install and configure PgAdmin3</em></a> if you want to use graphical user interface for PostgreSQL.</p>
@@ -159,24 +162,24 @@ Shall the new role be a superuser? (y/n) y
 <h2>Install OpenERP Server<a class="headerlink" href="#install-openerp-server" title="Permalink to this headline">¶</a></h2>
 <p>If you plan to use OpenERP 6.1 or above you need Python 2.6 or later version, simple like OpenERP&#8217;s Versions policy its better to use the Ubuntu&#8217;s last stable or LTS version for the Production Server.
 On a Ubuntu or and Debian based Linux distribution you can install all required dependencies with this single command:</p>
-<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install python-dateutil python-feedparser \
-        python-gdata python-ldap python-libxslt1 python-lxml python-mako \
-        python-openid python-psycopg2 python-pybabel python-pychart \
-        python-pydot python-pyparsing python-reportlab python-simplejson \
-        python-tz python-vatnumber python-vobject python-webdav \
-        python-werkzeug python-xlwt python-yaml python-zsi \
+<div class="highlight-bash"><div class="highlight"><pre>sudo apt-get install python-dateutil python-feedparser <span class="se">\</span>
+        python-gdata python-ldap python-libxslt1 python-lxml python-mako <span class="se">\</span>
+        python-openid python-psycopg2 python-pybabel python-pychart <span class="se">\</span>
+        python-pydot python-pyparsing python-reportlab python-simplejson <span class="se">\</span>
+        python-tz python-vatnumber python-vobject python-webdav <span class="se">\</span>
+        python-werkzeug python-xlwt python-yaml python-zsi <span class="se">\</span>
         python-docutils python-mock
 </pre></div>
 </div>
 <p>OpenERP server can be download form the OpenERP&#8217;s website, <a class="reference internal" href="../../download/03/index.html#select-version"><em>check which version you should download</em></a>. If you only want to test the server, you do not need to install it. Just unpack the archive and start the openerp-server executable:</p>
-<div class="highlight-python"><div class="highlight"><pre>tar -xzf openerp-7.0-latest.tar.gz
-cd openerp-7.0-*
+<div class="highlight-bash"><div class="highlight"><pre>tar -xzf openerp-7.0-latest.tar.gz
+<span class="nb">cd </span>openerp-7.0-*
 ./openerp-server
 ./openerp-server -h
 </pre></div>
 </div>
 <p>The OpenERP Server can be installed very easily using the setup.py file:</p>
-<div class="highlight-python"><div class="highlight"><pre>sudo python setup.py install
+<div class="highlight-bash"><div class="highlight"><pre>sudo python setup.py install
 </pre></div>
 </div>
 <p>Once you install OpenERP successfully you are ready to Create your first database in OpenERP.</p>

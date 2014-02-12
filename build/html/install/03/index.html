@@ -79,7 +79,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../../part01/index.html">Getting start with OpenERP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../part04/index.html">Setup your First Company in OpenERP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../part02/index.html">Leads to Cash Flow with OpenERP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../part03/index.html">Human Resource using OpenERP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part03/index.html">Manage HR operations using OpenERP</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../backup/index.html">OpenERP Backup and Restore</a></li>
 </ul>
 </ul>
 </li>
@@ -140,23 +143,23 @@
 <div class="section" id="install-postgresql">
 <h2>Install PostgreSQL<a class="headerlink" href="#install-postgresql" title="Permalink to this headline">¶</a></h2>
 <p>You need to install PostgreSQL database as OpenERP is using as a backend storage, you need to install and configure before you setup additional libraries and OpenERP server.</p>
-<div class="highlight-python"><div class="highlight"><pre>$ sudo yum install postgresql-server postgresql
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo yum install postgresql-server postgresql
 </pre></div>
 </div>
 <p>After installing the packages, a database needs to be initialized and configured. To do this use Terminal (in fact, do not close current Terminal window during the installation process). First of all, log in as posgresql user using command</p>
 <p>If you&#8217;re not logged in as a root user, do it now, oherwise you won&#8217;t be able to login as postgres user and type below commands to to initialize the database.</p>
-<div class="highlight-python"><div class="highlight"><pre>$ su -
-$ su postgres
-$ initdb /var/lib/pgsql/data
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>su -
+<span class="nv">$ </span>su postgres
+<span class="nv">$ </span>initdb /var/lib/pgsql/data
 </pre></div>
 </div>
 <p>Following commands will start PostgreSQL server and check for running PostgreSQL processes:</p>
-<div class="highlight-python"><div class="highlight"><pre>$ sudo service postgresql start
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo service postgresql start
 </pre></div>
 </div>
 <p>Check whether postgres is running or now and add postgresql service to startup list:</p>
-<div class="highlight-python"><div class="highlight"><pre>$ ps -eZ | grep postgres
-$ sudo chkconfig -level 235 postgresql on
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>ps -eZ | grep postgres
+<span class="nv">$ </span>sudo chkconfig -level 235 postgresql on
 </pre></div>
 </div>
 <p><a class="reference internal" href="../00/index.html#pgadmin3"><em>Install and configure PgAdmin3</em></a> if you want to use graphical user interface for PostgreSQL.</p>
@@ -165,24 +168,24 @@ $ sudo chkconfig -level 235 postgresql on
 <h2>Install OpenERP Server<a class="headerlink" href="#install-openerp-server" title="Permalink to this headline">¶</a></h2>
 <p>If you plan to use OpenERP 6.1 or above you need Python 2.6 or later version, simple like OpenERP&#8217;s Versions policy its better to use the Fedora&#8217;s last stable version for the Production Server.</p>
 <p>On a Fedora or CentOS or rpm based Linux distribution you can install all required dependencies with this single command:</p>
-<div class="highlight-python"><div class="highlight"><pre>$ sudo yum install python-devel pychart python-dateutil \
-        python-reportlab python-lxml  python-psycopg2 python-mako \
-        python-setuptools pytz PyYAML graphviz pydot python-imaging \
-        pywebdav python-vobject vim system-config-firewall-tui \
-        python-babel python-gdata python-ldap python-openid \
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo yum install python-devel pychart python-dateutil <span class="se">\</span>
+        python-reportlab python-lxml  python-psycopg2 python-mako <span class="se">\</span>
+        python-setuptools pytz PyYAML graphviz pydot python-imaging <span class="se">\</span>
+        pywebdav python-vobject vim system-config-firewall-tui <span class="se">\</span>
+        python-babel python-gdata python-ldap python-openid <span class="se">\</span>
         python-werkzeug python-vatnumber
 </pre></div>
 </div>
 <p>OpenERP server can be download form the OpenERP&#8217;s website, check which version you should download. If you only want to test the server, you do not need to install it. Just unpack the archive and start the openerp-server executable:</p>
-<div class="highlight-python"><div class="highlight"><pre>tar -xzf openerp-7.0-latest.tar.gz
-cd openerp-7.0-*
+<div class="highlight-bash"><div class="highlight"><pre>tar -xzf openerp-7.0-latest.tar.gz
+<span class="nb">cd </span>openerp-7.0-*
 ./openerp-server
 ./openerp-server -h
 </pre></div>
 </div>
 <p>The OpenERP Server can be installed very easily using the setup.py file:</p>
-<div class="highlight-python"><div class="highlight"><pre>tar -xzf openerp-7.0-latest.tar.gz
-cd openerp-7.0-*
+<div class="highlight-bash"><div class="highlight"><pre>tar -xzf openerp-7.0-latest.tar.gz
+<span class="nb">cd </span>openerp-7.0-*
 sudo python setup.py install
 </pre></div>
 </div>
