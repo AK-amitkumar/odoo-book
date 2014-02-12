@@ -57,10 +57,10 @@ Friends of OpenERP Book
 -----------------------
 You can also support this book by being a friend, you just need to add a book image on your website and link to book http://openerpbook.com, we will list all the friends here on this page based on the source of the information we get in traffic and statistics.
 
-::
+.. code-block:: xml
 
 	<div>
-	<img src="http://openerpbook.files.wordpress.com/2014/01/openerpbook1.png?w=2280&amp;h=2850"
+	<img src="http://openerpbook.files.wordpress.com/2014/01/openerpbook1.png"
 	    alt="OpenERP Book"
 	    title="OpenERP Book"
 	    width="2280"

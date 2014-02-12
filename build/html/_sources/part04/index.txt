@@ -1,12 +1,10 @@
-.. _first-company:
+.. _human-resource:
 
-Setup your First Company in OpenERP
-===================================
+Manage HR operations using OpenERP
+==================================
 
 .. toctree::
    :maxdepth: 2
-   
-   01/index.rst
    
 .. note::
 	Part of this Document is under written process !

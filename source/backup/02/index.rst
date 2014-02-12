@@ -3,6 +3,9 @@
 Automatic Backup of OpenERP Database
 ====================================
 
+.. note::
+	Some of the part of this page is contributed by http://opensourceenterprise.wordpress.com
+	
 OpenERP provides backup and restore functionality of its database on various platforms. You can take back and restore on locally installed server while you are allowed to take only backup from OpenERP online, If  you want to restore your database on OpenERP online you can contact to sales@openerp.com.
 
 Here is a very simple steps for creating the OpenERP's database backup automatically using the linux cron job when you have install OpenERP on your own server.
