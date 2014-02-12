@@ -1,4 +1,4 @@
-.. _human-resource:
+.. _first-company:
 
 Setup your First Company in OpenERP
 ===================================
