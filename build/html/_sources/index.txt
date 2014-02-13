@@ -5,10 +5,8 @@
 
 OpenERP Online Book !
 =====================
+**OpenERP Book** is an online book explains OpenERP Modules, Configurations, Developments and answers to all how to Questions. Read more about OpenERP, the aim of this book is to give detail explanation on each any every untapped points for OpenERP over the Internet. Beside explanation of topics it also covers a real life examples and success stories achieved with OpenERP Implementation. :ref:`Read more About Book → <about>`
 
-.. note::
-	The structure of Index may change frequently, if you want to track the pages you love, visit them and store their links in Bookmark or Reading List.
-	Direct links will not be changed, once it published on http://openerpbook.com.
 
 Table of Contents
 ~~~~~~~~~~~~~~~~~
@@ -32,6 +30,9 @@ OpenERP Administration
    
    backup/index.rst
 
+.. note::
+	The structure of Index may change frequently, if you want to track the pages you love, visit them and store their links in Bookmark or Reading List.
+	Direct links will not be changed, once it published on http://openerpbook.com.
 
 Indices and tables
 ~~~~~~~~~~~~~~~~~~
