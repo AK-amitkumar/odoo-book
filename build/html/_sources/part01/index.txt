@@ -6,7 +6,7 @@ Getting start with OpenERP
 **First Step with OpenERP**
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    
    01/index.rst
    02/index.rst
@@ -16,7 +16,7 @@ Getting start with OpenERP
 **Walk through OpenERP**
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    
    05/index.rst
    06/index.rst
@@ -26,7 +26,7 @@ Getting start with OpenERP
 **User Experience**
 	
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    
    09/index.rst
    10/index.rst
