@@ -1,5 +1,8 @@
 .. _get-start-technical-settings:
 
+.. index::
+   single: Technical Features
+   
 Enable advance technical configurations
 =======================================
 OpenERP is very simple to get started with, to make it simple by default OpenERP is not enabling an advance technical configuration. It is not advisable to change any technical settings without understanding in details.

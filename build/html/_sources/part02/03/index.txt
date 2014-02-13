@@ -1,5 +1,8 @@
 .. _leads-automatic:
 
+.. index::
+	single: Create leads from Email
+	
 Create leads from incoming emails
 =================================
 

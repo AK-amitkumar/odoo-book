@@ -1,5 +1,8 @@
 .. _install-macosx:
 
+.. index::
+   single: Install on Mac OSX
+  
 Install OpenERP on Mac OSX 10.X.X
 ==================================
 

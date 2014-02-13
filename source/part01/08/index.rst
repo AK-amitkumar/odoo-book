@@ -1,5 +1,9 @@
 .. _user-config:
 
+.. index::
+   single: Configuring Users
+   single: Groups Settings
+
 Configuring Users
 =================
 

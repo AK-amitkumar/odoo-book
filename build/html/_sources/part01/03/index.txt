@@ -1,5 +1,11 @@
 .. _get-start-module-manage:
 
+.. index::
+   single: Install Modules
+   single: Install Apps
+   single: Update Modules
+   single: Uninstall Modules
+      
 Install and Manage Modules in OpenERP
 =====================================
 Installing module in OpenERP is not as complex as installing OpenERP it self. It is very easy to install and uninstall modules in to OpenERP after understanding the difference between Modules and Apps of OpenERP.

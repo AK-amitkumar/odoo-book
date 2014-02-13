@@ -1,5 +1,8 @@
 .. _connect-to-openerp:
 
+.. index::
+   single: Connect to OpenERP
+   
 Connect to OpenERP
 ==================
 OpenERP allows several methods of connecting, basic and default method is to connect is through your database user and password. Other ways to connecting to OpenERP are based Oauth an open protocol to allow secure authorization in a simple and standard method.

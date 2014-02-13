@@ -1,5 +1,9 @@
 .. _install-ubuntu:
 
+.. index::
+   single: Install on Ubuntu Desktop
+   single: Install on Ubuntu Server
+
 Install OpenERP on Ubuntu Desktop or Server
 ===========================================
 

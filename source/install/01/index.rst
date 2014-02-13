@@ -1,5 +1,8 @@
 .. _install-window:
 
+.. index::
+   single: Install on Windows
+
 Install OpenERP on Windows 7 or 8 or Server 2008
 ================================================
 Installation of OpenERP on windows platform is very easy compare to any other operating system like Ubuntu or Fedora of Mac OSX. You just need to select the correct installer from the OpenERP's website.

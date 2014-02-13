@@ -1,5 +1,8 @@
 .. _lead-to-cash:
 
+.. index::
+	single: Leads to Cash Flow
+	
 Leads to Cash Flow with OpenERP
 ===============================
 

@@ -1,5 +1,8 @@
 .. _first-company:
 
+.. index::
+	single: Setup your First Company
+	
 Setup your First Company in OpenERP
 ===================================
 

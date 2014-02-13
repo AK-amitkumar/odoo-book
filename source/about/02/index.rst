@@ -1,5 +1,13 @@
 .. _contribute:
 
+.. index::
+	single: Contributors
+	single: OpenERP Book, Team
+	single: Content Contributors
+	single: Friends of OpenERP Book
+	single: How can I contribute ?
+	single: Worldwide Contributors
+	
 Contributors
 ============
 

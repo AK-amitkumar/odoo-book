@@ -1,5 +1,11 @@
 .. _setup-header-footer:
 
+.. index::
+	single: Report Header
+	single: Report Footer
+	single: RML Header
+	single: Custom Header
+	
 Setup the Report Header and Footer
 ==================================
 

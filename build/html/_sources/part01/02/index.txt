@@ -1,5 +1,9 @@
 .. _get-start-module-apps:
 
+.. index::
+   single: OpenERP Modules
+   single: OpenERP Apps
+   
 Module vs App in OpenERP
 ========================
 Since the release of OpenERP 7.0, OpenERP Apps store is integrated with all the installations of OpenERP whether they are onsite or online. You don't need to maintain the add-ons in your local installed server when you are working with OpenERP 7.0.

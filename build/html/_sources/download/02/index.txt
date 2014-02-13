@@ -1,7 +1,7 @@
 .. _online:
 
 .. index::
-   single: Instance
+   single: Online OpenERP
 
 Creating OpenERP Online Instance
 ================================

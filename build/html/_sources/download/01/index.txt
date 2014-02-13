@@ -1,9 +1,9 @@
 .. _version:
 
 .. index::
-   single: Demo
-   single: Online
-   single: Test
+   single: OpenERP Demo
+   single: Demo for Community and Developers
+   single: Demo Evaluator Users
 
 OpenERP Demo and Installation
 =============================

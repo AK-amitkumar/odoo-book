@@ -1,5 +1,8 @@
 .. _pgadmin3:
 
+.. index::
+   single: PgAdmin3
+
 Configure PostgreSQL for PgAdmin3
 =================================
 PostgreSQL does not install any graphical user interface for the Database administration, for a graphical user interface of postgresql, use the following command on your Ubuntu Desktop client:

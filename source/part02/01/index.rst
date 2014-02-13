@@ -1,5 +1,8 @@
 .. _install-crm:
 
+.. index::
+	single: Install CRM
+	
 Install CRM Module in OpenERP
 =============================
 

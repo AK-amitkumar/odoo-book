@@ -1,5 +1,10 @@
 .. _install-fedora:
 
+.. index::
+   single: Install on Fedora
+   single: Install on Redhat
+   single: Install on CentOS
+
 Install OpenERP on Fedora, CentOS
 =================================
 

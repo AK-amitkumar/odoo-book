@@ -1,5 +1,8 @@
 .. _install:
 
+.. index::
+   single: OpenERP Installation
+   
 Installation on Windows, Linux and MacOS
 ========================================
 

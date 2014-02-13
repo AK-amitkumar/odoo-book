@@ -1,5 +1,12 @@
 .. _user-preference:
 
+.. index::
+   single: User Preference
+   single: Receive Message by Email
+   single: Timezone Setting
+   single: Language
+   single: Email & Signature
+   
 User Preference
 ===============
 On the first login to OpenERP, If you re outside the Belgium, you might get warning for the Timezone mismatch. First things you should do is to change the timezone settings as per your country.

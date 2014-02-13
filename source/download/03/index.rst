@@ -1,9 +1,11 @@
 .. _select-version:
 
 .. index::
-   single: Windows
-   single: MacOSX
-   single: Linux
+   single: All-in-One Download
+   single: Windows Download
+   single: Linux Download
+   single: MacOS Download
+   single: Source code Download
 
 Which version of OpenERP should I download ?
 ============================================

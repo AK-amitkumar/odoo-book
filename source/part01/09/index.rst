@@ -1,5 +1,17 @@
 .. _openerp-views:
 
+.. index::
+   single: Standard Views
+   single: Kanban View
+   single: Form View
+   single: List View
+   single: Tree View
+   single: Calendar View
+   single: Gantt View
+   single: Diagram View
+   single: Search View
+   single: Special Views
+
 Working with different views
 ============================
 

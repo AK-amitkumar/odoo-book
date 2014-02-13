@@ -1,5 +1,12 @@
 .. _opeenrp-wall:
 
+.. index::
+   single: Enterprise Social Control
+   single: OpenERP Wall
+   single: Followers
+   single: Channels
+   single: OpenERP Mobile
+   
 OpenERP Wall, A new wave of Enterprise Social Communication
 ===========================================================
 

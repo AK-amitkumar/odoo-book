@@ -1,5 +1,8 @@
 .. _get-start-create-db:
 
+.. index::
+   single: Create Database
+   
 Creating Database in OpenERP
 ============================
 :ref:`After successfully installation of OpenERP <install>` in to your local server you can create a first database in to your OpenERP Local instance.

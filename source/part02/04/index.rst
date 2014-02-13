@@ -1,12 +1,17 @@
 .. _qualify-lead:
 
+.. index::
+	single: Lead to Opportunity
+	single: Opportunity Form
+	
+
 Qualify Lead and Convert in to Opportunity
 ==========================================
 
 In OpenERP after :ref:`installing CRM module <install-crm>`, you can create and manage all the future sales like prospects or sales inquiries by :ref:`creating manually <leads-manual>` or :ref:`create automated <leads-automatic>` Leads which might get convert in to sales for company.
 
 Convert to Opportunity
-""""""""""""""""""""""
+----------------------
 
 Once you qualify the lead, you may convert them in to Opportunity by creating a new or merge with the existing one and link those with existing customer or create a new one and link them.
 
@@ -23,7 +28,7 @@ Opportunity by Stages
 In Kanban view each column represents a Pipe, and opportunities link on them can be move to another pipe just by drag and drop, depending on the probability and possibilities of the opportunity.
 
 Opportunity Form
-""""""""""""""""
+----------------
 
 .. image:: images/opportunity-form.png
 

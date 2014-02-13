@@ -1,5 +1,10 @@
 .. _leads-manual:
 
+.. index::
+	single: Create Lead
+	single: Communicate on Leads
+	single: Tracking Leads
+	
 Create and working with lead in OpenERP
 =======================================
 
