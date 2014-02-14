@@ -30,8 +30,6 @@ Book Updates
 ~~~~~~~~~~~~
 To get in touch with the book updates, You can follow this book on twitter  or you can follow this book by email, look at the "Follow Book via Email" section on sidebar and we will send you email on every new Page publish in this Book.
 
-`Why this Book ! <why-this-book.html>`_
-
 License
 ~~~~~~~
 

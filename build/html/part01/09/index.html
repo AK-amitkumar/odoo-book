@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Working with different views &mdash; OpenERP Book 7.0 documentation</title>
+    <title>Working with different views &mdash; OpenERP Book 8.0 documentation</title>
     
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '7.0',
+        VERSION:     '8.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -29,7 +29,7 @@
     <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
-    <link rel="top" title="OpenERP Book 7.0 documentation" href="../../index.html" />
+    <link rel="top" title="OpenERP Book 8.0 documentation" href="../../index.html" />
     <link rel="up" title="Getting start with OpenERP" href="../index.html" />
     <link rel="next" title="Search &amp; Advance Search on List" href="../10/index.html" />
     <link rel="prev" title="Configuring Users" href="../08/index.html" />
@@ -94,6 +94,13 @@
 <li><a class="reference internal" href="#standard-views">Standard Views</a><ul>
 <li><a class="reference internal" href="#kanban-view">Kanban View</a></li>
 <li><a class="reference internal" href="#form-view">Form View</a></li>
+<li><a class="reference internal" href="#list-view">List View</a></li>
+<li><a class="reference internal" href="#switch-between-views">Switch between Views</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#graph-view">Graph View</a><ul>
+<li><a class="reference internal" href="#calendar-view">Calendar View</a></li>
+<li><a class="reference internal" href="#gantt-diagram-view">Gantt &amp; Diagram View</a></li>
 </ul>
 </li>
 </ul>
@@ -146,10 +153,6 @@ Only due to the lots of research in the area of Usability that transform whole a
 <p>OpenERP&#8217;s views are designed in such way that any user can adapt it easily in business. Forms are looks like a paper-sheet, List views are flexible to configure and groups and short on any visible columns..
 Some of the object you may get Chart and Calendar Views too. Some views are special like Gantt View for Project Management, Manufacturing Planning and Diagram View Workflow Design which are specific applications.
 The new view introduced since OpenERP version 6.1 was Kanban which is a new methodology to define the pipes, stages or part of business process.</p>
-<img alt="../../_images/view-switch-01.png" src="../../_images/view-switch-01.png" />
-<p>Switch between views 01</p>
-<img alt="../../_images/view-switch-02.png" src="../../_images/view-switch-02.png" />
-<p>Switch between views 02</p>
 <div class="section" id="standard-views">
 <h2>Standard Views<a class="headerlink" href="#standard-views" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -180,9 +183,46 @@ It is fully configurable depending on the objects, You can change the columns to
 <p>There is nothing much difference between Invoice in Edit mode and Invoice in Printed format. Since the version 7.0 form is having two different modes edit and readonly so depending on the mode form may display different on your screen. Look at the form view in readonly view it display customers full address as below.</p>
 <img alt="../../_images/form-view-readonly.png" src="../../_images/form-view-readonly.png" />
 <p>Form View - Read Mode</p>
+</div>
+<div class="section" id="list-view">
+<h3>List View<a class="headerlink" href="#list-view" title="Permalink to this headline">¶</a></h3>
+<p>One of the simplest very important mode to display data on screen. Required some research before developing list view for any data model to make it very helpful to the end users, like what should be data display in columns and how they arranged in list. OpenERP have developed List view in such way that it provides all the basic operations what end users need.
+List view in OpenERP is not only a view to display data in table format, but it also provides data analysis tool too but filter, enabling or disabling some of the key columns and grouping data on screen. One can easily to data analysis on screen with OpenERP list view.</p>
+<img alt="../../_images/list-view.png" src="../../_images/list-view.png" />
+<p>List View with Grouping</p>
+</div>
+<div class="section" id="switch-between-views">
+<h3>Switch between Views<a class="headerlink" href="#switch-between-views" title="Permalink to this headline">¶</a></h3>
+<p>Depending on the document presentation possibilities, users are allowed to switch between those view just by clicking on them. It just change the presentation with the same data, As the rendering of views developed in such way, so it switch view very quickly like a rich desktop based application.</p>
+<img alt="../../_images/view-switch-01.png" src="../../_images/view-switch-01.png" />
+<p>If you are on Opportunity you may find the above possible view to switch between.</p>
+<img alt="../../_images/view-switch-02.png" src="../../_images/view-switch-02.png" />
+<p>If you are on Workflow you may find above possible view to switch between.</p>
+<p>So, It decided at the time of development that what kind of views are support for document and developed accordingly.</p>
+</div>
+</div>
+<div class="section" id="graph-view">
+<h2>Graph View<a class="headerlink" href="#graph-view" title="Permalink to this headline">¶</a></h2>
+<p>Not all but some of the documents can be display on Graph which have some numbers to plot on axis. Graph view is improving version to version in OpenERP. In version 7.0 is it possible to display many different types of graphs along with the data table which can be exported easily in image or csv format.</p>
+<img alt="../../_images/graph.png" src="../../_images/graph.png" />
+<p>Graph View</p>
+<div class="section" id="calendar-view">
+<h3>Calendar View<a class="headerlink" href="#calendar-view" title="Permalink to this headline">¶</a></h3>
+<p>Like a graph view, you can not display all the data on calendar if they does not associate with the date information. So only document display on the Calendar which have the date information, like Opportunity, Invoice, Sale Order, Leave Request, Etc.</p>
+<img alt="../../_images/calendar.png" src="../../_images/calendar.png" />
+<p>Calendar View</p>
+</div>
+<div class="section" id="gantt-diagram-view">
+<h3>Gantt &amp; Diagram View<a class="headerlink" href="#gantt-diagram-view" title="Permalink to this headline">¶</a></h3>
+<p>Gantt view used for the specific types of application such as scheduling of project and task, manufacturing orders likely Diagram view represents activity and transition between those activities, one of the good example of diagram view is to design a marketing campaign on screen where activity and transition to be defined.</p>
+<img alt="../../_images/gantt-view.png" src="../../_images/gantt-view.png" />
+<p>Gantt view to schedule the task</p>
+<p>In order to create new node you can click on &#8220;New Node&#8221; or to edit select node and double click, It will open the activity configuration depending on your view configuration. To join two node with activity, click on node drag from black dot and drop on to other node will create an arrow (transition) between them and configuration for the same.</p>
+<img alt="../../_images/diagram-view.png" src="../../_images/diagram-view.png" />
+<p>Diagram view used to Define a Marketing Campaign</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">This document is not finished yet.</p>
+<p class="last">Along with the standard views, OpenERP have some special views as well like All Dashboard, OpenERP Inbox, and QWeb specifically designed for Web and Reports for OpenERP Version 8.0.</p>
 </div>
 </div>
 </div>
