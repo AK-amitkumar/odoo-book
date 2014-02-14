@@ -17,7 +17,7 @@ OpenERP Online Book !
    :scale: 100 %
    :alt: alternate text
    :align: right
-	
+
 Table of Contents
 ~~~~~~~~~~~~~~~~~
 
