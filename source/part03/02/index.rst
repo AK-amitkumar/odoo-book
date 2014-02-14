@@ -16,6 +16,8 @@ To add new customer or supplier click on Create button and you will get the empt
 
 Customer and Supplier
 
+Company vs Individual
+---------------------
 To define customer or supplier in OpenERP we need to pass few required informations such like Name, Account Receivable and Account Payable. We can define customer or supplier as an Individual or as a Company. When you define some one as company you can define many different contacts for that company i.e. Purchase Manager, Account Manager, Product Manager, Etc.. If you define Individual you can link them with company later if required.
  
 So, If we have customer or supplier as an Individual their Payable & Receivable accounts are maintain individual for them while contacts link to the company their accounts are maintain on the company.
