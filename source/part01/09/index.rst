@@ -86,7 +86,7 @@ If you are on Workflow you may find above possible view to switch between.
 So, It decided at the time of development that what kind of views are support for document and developed accordingly. 
 
 Graph View
-----------
+~~~~~~~~~~
 Not all but some of the documents can be display on Graph which have some numbers to plot on axis. Graph view is improving version to version in OpenERP. In version 7.0 is it possible to display many different types of graphs along with the data table which can be exported easily in image or csv format.
 
 .. image:: images/graph.png
