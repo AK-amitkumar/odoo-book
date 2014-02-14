@@ -5,7 +5,6 @@
    single: Advance Search
    single: Save Search
    single: Quick Filters
-   
 
 Search & Advance Search on List
 ===============================
@@ -74,4 +73,4 @@ It will save all the applied criteria along with the group by options. An intere
 * Use by Default : If you check this options next time when you open product list it will apply this filter by default.
 
 .. warning::
-	If you select wrong options while Saving Custom Filters, You can still change options of filters from Manage Filters. You have to enter in to debug mode to get the Manage Filters option. 
+	If you select wrong options while Saving Custom Filters, You can still change options of filters, from Manage Filters. You have to enter in to debug mode to get the Manage Filters option. 

@@ -29,6 +29,8 @@ Timezone
 --------
 Select your time zone depending on your location, on selection of correct location Timezone mismatch problem will be fix.
 
+.. _receive-message-by-email:
+
 Receive Message by Email
 ------------------------
 Depending on the configuration, OpenERP will send you an email when OpenERP receive a notification or message on your wall, you will be notify by OpenERP.

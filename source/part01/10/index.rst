@@ -5,7 +5,6 @@
    single: Advance Search
    single: Save Search
    single: Quick Filters
-   
 
 Search & Advance Search on List
 ===============================

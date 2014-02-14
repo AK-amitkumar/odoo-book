@@ -5,11 +5,13 @@
 	
 Setup your First Company in OpenERP
 ===================================
+To understand the scenario lets take an example of the company called **Abc Technologies Pvt Ltd**. locatd in Gandhinagar, Gujarat. Specialized in Digital Media & Marketing Services with the use of Information Technology. 
 
 .. toctree::
    :maxdepth: 2
    
    01/index.rst
+   02/index.rst
    
 .. note::
 	Part of this Document is under written process !
