@@ -28,8 +28,8 @@ Table of Contents
    download/index.rst
    install/index.rst
    part01/index.rst
-   part02/index.rst
    part03/index.rst
+   part02/index.rst
    part04/index.rst
    
 OpenERP Administration

@@ -31,7 +31,7 @@
     <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="OpenERP Book 8.0 documentation" href="../../index.html" />
     <link rel="up" title="Getting start with OpenERP" href="../index.html" />
-    <link rel="next" title="Leads to Cash Flow with OpenERP" href="../../part02/index.html" />
+    <link rel="next" title="Setup your First Company in OpenERP" href="../../part03/index.html" />
     <link rel="prev" title="Working with different views" href="../09/index.html" />
 
 <meta charset='utf-8'>
@@ -77,8 +77,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../download/index.html">Looking for OpenERP Demo ?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../install/index.html">Installation on Windows, Linux and MacOS</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Getting start with OpenERP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../part02/index.html">Leads to Cash Flow with OpenERP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../part03/index.html">Setup your First Company in OpenERP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part02/index.html">Leads to Cash Flow with OpenERP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../part04/index.html">Manage HR operations using OpenERP</a></li>
 </ul>
 <ul>
@@ -90,7 +90,16 @@
                 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Search &amp; Advance Search on List</a></li>
+<li><a class="reference internal" href="#">Search &amp; Advance Search on List</a><ul>
+<li><a class="reference internal" href="#quick-filters">Quick Filters</a><ul>
+<li><a class="reference internal" href="#filters">Filters</a></li>
+<li><a class="reference internal" href="#group-by">Group By</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#advance-search">Advance Search</a></li>
+<li><a class="reference internal" href="#save-current-filter">Save Current Filter</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -103,7 +112,7 @@
     </a>
   </li>
   <li>
-    <a href="../../part02/index.html" title="Next Chapter: Leads to Cash Flow with OpenERP"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Leads to Cash Fl... &raquo;</span>
+    <a href="../../part03/index.html" title="Next Chapter: Setup your First Company in OpenERP"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Setup your First... &raquo;</span>
     </a>
   </li>
             
@@ -134,6 +143,60 @@
       
   <span class="target" id="openerp-search"></span><div class="section" id="search-advance-search-on-list">
 <span id="index-0"></span><h1>Search &amp; Advance Search on List<a class="headerlink" href="#search-advance-search-on-list" title="Permalink to this headline">¶</a></h1>
+<p>Search in OpenERP is similar to spotlight in Mac OS, you can search anything in OpenERP depending on where you are. You can get the search control in all the views except Form View, where you can perform search on the related contents.</p>
+<img alt="../../_images/searchbox.png" src="../../_images/searchbox.png" />
+<p>Search Box in OpenERP</p>
+<p>Lets say if you are on the Product list, when you enter some search criteria in to the search box, it give you all the possibilities related to to that string. As an example you can see that we can search for all product where name contains &#8220;computer&#8221; or browse the all the product who belongs to the &#8220;computer&#8221; category.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you enter two search criteria in search box, apply one after other, it will apply <tt class="docutils literal"><span class="pre">and</span></tt> operator between those criteria.</p>
+</div>
+<div class="section" id="quick-filters">
+<h2>Quick Filters<a class="headerlink" href="#quick-filters" title="Permalink to this headline">¶</a></h2>
+<p>Enter search criteria in to the search box always performs quick filters. Some of the document have defined <tt class="docutils literal"><span class="pre">Filters</span></tt> to filter the data effectively. Like searching for the all the product which can be sold it will be difficult to derived using advance filters. All those basic search criteria can be defined as filters during the development and we can use those quickly from the advance search options.</p>
+<p>To get the advance search options, click on the down-arrow on search box appear on the right side. On click on that you will be able to see all the possible advance filters available for products.</p>
+<img alt="../../_images/search-advance.png" src="../../_images/search-advance.png" />
+<p>Search Box in OpenERP with Advance Options</p>
+<div class="section" id="filters">
+<h3>Filters<a class="headerlink" href="#filters" title="Permalink to this headline">¶</a></h3>
+<p>We can see that some of the predefine criteria listed under the <tt class="docutils literal"><span class="pre">Filters</span></tt> options such as Service, Product, Consumable, To Purchase, Can be Sold, Etc.., On click on filters predefined criteria applied on the list and it filters accordingly.
+If you select multiple filters, like the quick text filters, it will apply <tt class="docutils literal"><span class="pre">and</span></tt> operator between those selected advance filters.</p>
+</div>
+<div class="section" id="group-by">
+<h3>Group By<a class="headerlink" href="#group-by" title="Permalink to this headline">¶</a></h3>
+<p>Data can be grouped in List, Kanban, or Groups Views. In List view you can have a flexibility to have unlimited levels of grouping while other views there is a limitations with grouping. Grouping is applied based on series of clicks performed on the group options. Like among two groups options <tt class="docutils literal"><span class="pre">Category</span></tt> and <tt class="docutils literal"><span class="pre">Default</span> <span class="pre">Unit</span> <span class="pre">of</span> <span class="pre">Measure</span> <span class="pre">Type</span></tt> available but it will apply first depends on what you select first.</p>
+<ul class="simple">
+<li>Product by Category and Default Unit of Measure Type - If you select first <tt class="docutils literal"><span class="pre">Category</span></tt> and then <tt class="docutils literal"><span class="pre">Default</span> <span class="pre">Unit</span> <span class="pre">of</span> <span class="pre">Measure</span> <span class="pre">Type</span></tt></li>
+<li>Product by Default Unit of Measure Type and Category  - If you select first <tt class="docutils literal"><span class="pre">Default</span> <span class="pre">Unit</span> <span class="pre">of</span> <span class="pre">Measure</span> <span class="pre">Type</span></tt> and then <tt class="docutils literal"><span class="pre">Category</span></tt></li>
+</ul>
+<img alt="../../_images/product-search-group.png" src="../../_images/product-search-group.png" />
+<p>Apply Filters and Group</p>
+<p>From above image &#8220;Apply Filters and Group&#8221; you can understand that we have select all Stock-able Products which can be Sold Group By Category.</p>
+</div>
+</div>
+<div class="section" id="advance-search">
+<h2>Advance Search<a class="headerlink" href="#advance-search" title="Permalink to this headline">¶</a></h2>
+<p>To perform more advance search which are not available with Quick Search or Filters like select product whose Sale price in between 50 to 500. We can perform these kind of search with advance search and save them using Save advance search option.
+While working with advance search we can define search operator and conditions between two conditions. If you add more then one conditions in single search it always be treated with <tt class="docutils literal"><span class="pre">OR</span></tt> operator.</p>
+<p>So, If you want to apply <tt class="docutils literal"><span class="pre">AND</span></tt> operator while working with Advance Search after each advance search option, apply and perform advance search again.</p>
+<img alt="../../_images/advance-search.png" src="../../_images/advance-search.png" />
+<p>Apply Advance filters</p>
+</div>
+<div class="section" id="save-current-filter">
+<h2>Save Current Filter<a class="headerlink" href="#save-current-filter" title="Permalink to this headline">¶</a></h2>
+<p>When you done with the advance search, If you don&#8217;t want to lost that complex search criteria you can save those filters using Save current filters options available under Advance Search.</p>
+<img alt="../../_images/save-search.png" src="../../_images/save-search.png" />
+<p>Apply Filters and Group</p>
+<p>It will save all the applied criteria along with the group by options. An interesting thing is while saving the filters you can choose scope of those filters from the available scopes as below.</p>
+<ul class="simple">
+<li>Share with all Users : If you check this options whatever search you have perform and save that will be available to all the users who have access on that document.</li>
+<li>Use by Default : If you check this options next time when you open product list it will apply this filter by default.</li>
+</ul>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">If you select wrong options while Saving Custom Filters, You can still change options of filters from Manage Filters. You have to enter in to debug mode to get the Manage Filters option.</p>
+</div>
+</div>
 </div>
 
 
@@ -167,7 +230,7 @@
     </p>
     <p>
         &copy; Copyright 2014, OpenERP Book.<br/>
-      Last updated on Feb 14, 2014.<br/>
+      Last updated on Feb 15, 2014.<br/>
     </p>
   </div>
 </footer>
