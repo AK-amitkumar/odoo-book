@@ -41,10 +41,10 @@ EAN 13 Barcode
 ~~~~~~~~~~~~~~
 
 .. image:: images/barcode.png
-   :height: 120px
-   :width: 300 px
+   :height: 100px
+   :width: 400 px
 
-EAN 13 Barcode for 780672318863 product code
+EAN 13 Barcode for 0075678164125 product code
  
 A 13 digit International Article Number use to define a barcode data. 
 
@@ -99,6 +99,52 @@ Description
 ~~~~~~~~~~~
 Product specification use to describe product to supplier, it is simply supplier specific product description.
 
-.. note::
-	Document is not yet finished !
-	
+Inventory Information
+---------------------
+Informations related to the stock and locations of the products can be found under the this tab.
+
+.. image:: images/product-inventory.png
+
+Inventory Information
+
+Quantity on Hand
+~~~~~~~~~~~~~~~~
+Available quantity in warehouse can be assign for the delivery. You have to keep in mind that once we assign quantity to delivery it will not deduct from the available quantity. 
+
+Incoming
+~~~~~~~~
+Sum of all the quantity that booked as incoming shipment for related product.
+
+Outgoing
+~~~~~~~~
+Quantity assigned for the product to the delivery orders, will be deliver in future.  
+
+Forecasted Quantity
+~~~~~~~~~~~~~~~~~~~
+Virtual quantity is a computed quantity based on the Quantity on hand, Incoming and Outgoing quantity. ``Virtual Quantity =  Quantity on Hand + Incoming - Outgoing``
+
+There are some informative fields too, like status, product manager, and locations of the storage. 
+
+Sales Information
+-----------------
+Specify some of the information like time to delivery the product, warranty if any available with the product, and technical specification that appear on the sale order at the time of sale.
+
+.. image:: images/product-sale.png
+
+Sale Information
+
+Accounting Information
+----------------------
+Accounting information linked to the product use while sales and purchase like Taxes and Income and Expense account. 
+
+.. image:: images/product-accounting.png
+
+Accounting Information
+
+Income and Expense Accounts
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+During the sales and purchase process income and expense accounts use to encode the financial transaction, most of the time on product those accounts are not set as it takes those accounts form the category. However you can set those accounts on the product for different income and expense account and it will override the configuration of the accounts defined in product category.
+
+Customer & Supplier Taxes
+~~~~~~~~~~~~~~~~~~~~~~~~~
+It is the default tax that applied when we make a purchase or sales,  the label should be default Sales & Purchase Tax instead of Customer and Supplier Tax. 

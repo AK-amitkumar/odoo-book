@@ -108,6 +108,19 @@
 <li><a class="reference internal" href="#id1">Description</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#inventory-information">Inventory Information</a><ul>
+<li><a class="reference internal" href="#quantity-on-hand">Quantity on Hand</a></li>
+<li><a class="reference internal" href="#incoming">Incoming</a></li>
+<li><a class="reference internal" href="#outgoing">Outgoing</a></li>
+<li><a class="reference internal" href="#forecasted-quantity">Forecasted Quantity</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#sales-information">Sales Information</a></li>
+<li><a class="reference internal" href="#accounting-information">Accounting Information</a><ul>
+<li><a class="reference internal" href="#income-and-expense-accounts">Income and Expense Accounts</a></li>
+<li><a class="reference internal" href="#customer-supplier-taxes">Customer &amp; Supplier Taxes</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -179,8 +192,8 @@
 </div>
 <div class="section" id="ean-13-barcode">
 <h3>EAN 13 Barcode<a class="headerlink" href="#ean-13-barcode" title="Permalink to this headline">¶</a></h3>
-<a class="reference internal image-reference" href="../../_images/barcode.png"><img alt="../../_images/barcode.png" src="../../_images/barcode.png" style="width: 300px; height: 120px;" /></a>
-<p>EAN 13 Barcode for 780672318863 product code</p>
+<a class="reference internal image-reference" href="../../_images/barcode.png"><img alt="../../_images/barcode.png" src="../../_images/barcode.png" style="width: 400px; height: 100px;" /></a>
+<p>EAN 13 Barcode for 0075678164125 product code</p>
 <p>A 13 digit International Article Number use to define a barcode data.</p>
 </div>
 <div class="section" id="description">
@@ -255,10 +268,49 @@
 <div class="section" id="id1">
 <h3>Description<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>Product specification use to describe product to supplier, it is simply supplier specific product description.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Document is not yet finished !</p>
 </div>
+</div>
+<div class="section" id="inventory-information">
+<h2>Inventory Information<a class="headerlink" href="#inventory-information" title="Permalink to this headline">¶</a></h2>
+<p>Informations related to the stock and locations of the products can be found under the this tab.</p>
+<img alt="../../_images/product-inventory.png" src="../../_images/product-inventory.png" />
+<p>Inventory Information</p>
+<div class="section" id="quantity-on-hand">
+<h3>Quantity on Hand<a class="headerlink" href="#quantity-on-hand" title="Permalink to this headline">¶</a></h3>
+<p>Available quantity in warehouse can be assign for the delivery. You have to keep in mind that once we assign quantity to delivery it will not deduct from the available quantity.</p>
+</div>
+<div class="section" id="incoming">
+<h3>Incoming<a class="headerlink" href="#incoming" title="Permalink to this headline">¶</a></h3>
+<p>Sum of all the quantity that booked as incoming shipment for related product.</p>
+</div>
+<div class="section" id="outgoing">
+<h3>Outgoing<a class="headerlink" href="#outgoing" title="Permalink to this headline">¶</a></h3>
+<p>Quantity assigned for the product to the delivery orders, will be deliver in future.</p>
+</div>
+<div class="section" id="forecasted-quantity">
+<h3>Forecasted Quantity<a class="headerlink" href="#forecasted-quantity" title="Permalink to this headline">¶</a></h3>
+<p>Virtual quantity is a computed quantity based on the Quantity on hand, Incoming and Outgoing quantity. <tt class="docutils literal"><span class="pre">Virtual</span> <span class="pre">Quantity</span> <span class="pre">=</span>&nbsp; <span class="pre">Quantity</span> <span class="pre">on</span> <span class="pre">Hand</span> <span class="pre">+</span> <span class="pre">Incoming</span> <span class="pre">-</span> <span class="pre">Outgoing</span></tt></p>
+<p>There are some informative fields too, like status, product manager, and locations of the storage.</p>
+</div>
+</div>
+<div class="section" id="sales-information">
+<h2>Sales Information<a class="headerlink" href="#sales-information" title="Permalink to this headline">¶</a></h2>
+<p>Specify some of the information like time to delivery the product, warranty if any available with the product, and technical specification that appear on the sale order at the time of sale.</p>
+<img alt="../../_images/product-sale.png" src="../../_images/product-sale.png" />
+<p>Sale Information</p>
+</div>
+<div class="section" id="accounting-information">
+<h2>Accounting Information<a class="headerlink" href="#accounting-information" title="Permalink to this headline">¶</a></h2>
+<p>Accounting information linked to the product use while sales and purchase like Taxes and Income and Expense account.</p>
+<img alt="../../_images/product-accounting.png" src="../../_images/product-accounting.png" />
+<p>Accounting Information</p>
+<div class="section" id="income-and-expense-accounts">
+<h3>Income and Expense Accounts<a class="headerlink" href="#income-and-expense-accounts" title="Permalink to this headline">¶</a></h3>
+<p>During the sales and purchase process income and expense accounts use to encode the financial transaction, most of the time on product those accounts are not set as it takes those accounts form the category. However you can set those accounts on the product for different income and expense account and it will override the configuration of the accounts defined in product category.</p>
+</div>
+<div class="section" id="customer-supplier-taxes">
+<h3>Customer &amp; Supplier Taxes<a class="headerlink" href="#customer-supplier-taxes" title="Permalink to this headline">¶</a></h3>
+<p>It is the default tax that applied when we make a purchase or sales,  the label should be default Sales &amp; Purchase Tax instead of Customer and Supplier Tax.</p>
 </div>
 </div>
 </div>
