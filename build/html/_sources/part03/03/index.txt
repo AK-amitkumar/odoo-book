@@ -67,9 +67,6 @@ Define the method of procuring when you sale product using any of and of the bel
 * Make to Stock : When you sell this product, OpenERP will use the available inventory for the delivery order. 
 * Make to Order : OpenERP will trigger a draft purchase order to buy the required quantities to the supplier. The delivery order will be ready after having received the products.
 
-.. note::
-	When your procure method is ``Make to Stock`` and if there are not enough quantities available, the delivery order will wait for new products. To fulfill the inventory, you should create others rules like orderpoints.
-
 Supply Method
 ~~~~~~~~~~~~~
 Supply method is working with the procurement method, combinations of the this two configuration define how to get the product when needed.
@@ -82,6 +79,10 @@ Make to Order			Buy						Straight away create a purchase order for the defined f
 Make to Stock			Manufacture				If available assign from stock else create a manufacturing order
 Make to Order			Manufacture				Create a manufacturing order when there is a Sales order
 ==================		=================		==========================================================================================
+
+.. note::
+	When your procure method is ``Make to Stock`` and if there are not enough quantities available, the delivery order will wait for new products. To fulfill the inventory, you should create an orderpoint, also define at least one supplier, else your procurement will stay in the Exception stage.
+
 
 Cost Price
 ~~~~~~~~~~

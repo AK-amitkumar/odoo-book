@@ -213,10 +213,6 @@
 <li>Make to Stock : When you sell this product, OpenERP will use the available inventory for the delivery order.</li>
 <li>Make to Order : OpenERP will trigger a draft purchase order to buy the required quantities to the supplier. The delivery order will be ready after having received the products.</li>
 </ul>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">When your procure method is <tt class="docutils literal"><span class="pre">Make</span> <span class="pre">to</span> <span class="pre">Stock</span></tt> and if there are not enough quantities available, the delivery order will wait for new products. To fulfill the inventory, you should create others rules like orderpoints.</p>
-</div>
 </div>
 <div class="section" id="supply-method">
 <h3>Supply Method<a class="headerlink" href="#supply-method" title="Permalink to this headline">¶</a></h3>
@@ -252,6 +248,10 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">When your procure method is <tt class="docutils literal"><span class="pre">Make</span> <span class="pre">to</span> <span class="pre">Stock</span></tt> and if there are not enough quantities available, the delivery order will wait for new products. To fulfill the inventory, you should create an orderpoint, also define at least one supplier, else your procurement will stay in the Exception stage.</p>
+</div>
 </div>
 <div class="section" id="cost-price">
 <h3>Cost Price<a class="headerlink" href="#cost-price" title="Permalink to this headline">¶</a></h3>
