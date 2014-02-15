@@ -5,6 +5,13 @@
 	single: Product Category
 	single: Sale Price
 	single: Cost Price
+	single: Product Type
+	single: EAN 13 Barcode
+	single: Procurement Method
+	single: Supply Method
+	single: Quantity on Hand
+	single: Forecasted Quantity
+	
 	
 Setup Products and Category
 ===========================

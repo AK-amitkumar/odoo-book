@@ -13,6 +13,7 @@ To understand the scenario lets take an example of the company called **Abc Tech
    01/index.rst
    02/index.rst
    03/index.rst
+   04/index.rst
    
 .. note::
 	This is not a complete document !
