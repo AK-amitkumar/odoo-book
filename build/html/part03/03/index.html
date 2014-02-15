@@ -90,7 +90,26 @@
                 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Setup Products and Category</a></li>
+<li><a class="reference internal" href="#">Setup Products and Category</a><ul>
+<li><a class="reference internal" href="#product-information">Product Information</a><ul>
+<li><a class="reference internal" href="#product-type">Product Type</a></li>
+<li><a class="reference internal" href="#sale-price">Sale Price</a></li>
+<li><a class="reference internal" href="#internal-reference">Internal Reference</a></li>
+<li><a class="reference internal" href="#ean-13-barcode">EAN 13 Barcode</a></li>
+<li><a class="reference internal" href="#description">Description</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#product-procurement">Product Procurement</a><ul>
+<li><a class="reference internal" href="#procurement-method">Procurement Method</a></li>
+<li><a class="reference internal" href="#supply-method">Supply Method</a></li>
+<li><a class="reference internal" href="#cost-price">Cost Price</a></li>
+<li><a class="reference internal" href="#delays">Delays</a></li>
+<li><a class="reference internal" href="#suppliers">Suppliers</a></li>
+<li><a class="reference internal" href="#id1">Description</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -135,7 +154,113 @@
   <span class="target" id="setup-products"></span><div class="section" id="setup-products-and-category">
 <span id="index-0"></span><h1>Setup Products and Category<a class="headerlink" href="#setup-products-and-category" title="Permalink to this headline">¶</a></h1>
 <img alt="../../_images/product.png" src="../../_images/product.png" />
-<p>Prouct basic configuration</p>
+<p>Product basic configuration</p>
+<p>After <a class="reference internal" href="../02/index.html#setup-customer-supplier"><em>setup the customer and suppliers</em></a> next to setup is Products in order to start sale or purchase. Two important fields need to enter to create a new product <tt class="docutils literal"><span class="pre">Name</span></tt> and <tt class="docutils literal"><span class="pre">Category</span></tt> of the product.</p>
+<p>Can be Sold and Can be Purchase are the two checkbox used to define product is available for sales and purchase process. If you select product to to be sold you can get more options on product to configure Sales options.</p>
+<div class="section" id="product-information">
+<h2>Product Information<a class="headerlink" href="#product-information" title="Permalink to this headline">¶</a></h2>
+<p>All prerequisite information for the product like it is stock-able to not sales price, and references.</p>
+<div class="section" id="product-type">
+<h3>Product Type<a class="headerlink" href="#product-type" title="Permalink to this headline">¶</a></h3>
+<p>We can define product as a physical product or service in OpenERP. It support below list of options to define the product type.</p>
+<ul class="simple">
+<li>Stockable Product : Use to define a product which valuation count in to the inventory and issues or transfer possible only if the stock available in warehouse.</li>
+<li>Consumable : Movement in warehouse is possible but does in include in inventory valuations, as it does not takes care for the stock to do such movements in warehouse.</li>
+<li>Service : A product which can not be stock in warehouse, but can be sale or purchase.</li>
+</ul>
+</div>
+<div class="section" id="sale-price">
+<h3>Sale Price<a class="headerlink" href="#sale-price" title="Permalink to this headline">¶</a></h3>
+<p>A fixed price use to define a price for the public. Sale order capture this price when we sale product.</p>
+</div>
+<div class="section" id="internal-reference">
+<h3>Internal Reference<a class="headerlink" href="#internal-reference" title="Permalink to this headline">¶</a></h3>
+<p>Code name for the product used to search the product quickly during various operations like sale or purchase.</p>
+</div>
+<div class="section" id="ean-13-barcode">
+<h3>EAN 13 Barcode<a class="headerlink" href="#ean-13-barcode" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../../_images/barcode.png"><img alt="../../_images/barcode.png" src="../../_images/barcode.png" style="width: 300px; height: 120px;" /></a>
+<p>EAN 13 Barcode for 780672318863 product code</p>
+<p>A 13 digit International Article Number use to define a barcode data.</p>
+</div>
+<div class="section" id="description">
+<h3>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h3>
+<p>Define the product specification use to describe product technically.</p>
+</div>
+</div>
+<div class="section" id="product-procurement">
+<h2>Product Procurement<a class="headerlink" href="#product-procurement" title="Permalink to this headline">¶</a></h2>
+<p>Informations related to the product procurement &amp; supply method, suppliers of the product.</p>
+<img alt="../../_images/product-procurement.png" src="../../_images/product-procurement.png" />
+<p>Product procurement configuration</p>
+<div class="section" id="procurement-method">
+<h3>Procurement Method<a class="headerlink" href="#procurement-method" title="Permalink to this headline">¶</a></h3>
+<p>Define the method of procuring when you sale product using any of and of the below methods.</p>
+<ul class="simple">
+<li>Make to Stock : When you sell this product, OpenERP will use the available inventory for the delivery order.</li>
+<li>Make to Order : OpenERP will trigger a draft purchase order to buy the required quantities to the supplier. The delivery order will be ready after having received the products.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">When your procure method is <tt class="docutils literal"><span class="pre">Make</span> <span class="pre">to</span> <span class="pre">Stock</span></tt> and if there are not enough quantities available, the delivery order will wait for new products. To fulfill the inventory, you should create others rules like orderpoints.</p>
+</div>
+</div>
+<div class="section" id="supply-method">
+<h3>Supply Method<a class="headerlink" href="#supply-method" title="Permalink to this headline">¶</a></h3>
+<p>Supply method is working with the procurement method, combinations of the this two configuration define how to get the product when needed.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="12%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Procurement Method</th>
+<th class="head">Supply Method</th>
+<th class="head">Result</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Make to Stock</td>
+<td>Buy</td>
+<td>If stock is available assigned from warehouse, else it will execute the orderpoints</td>
+</tr>
+<tr class="row-odd"><td>Make to Order</td>
+<td>Buy</td>
+<td>Straight away create a purchase order for the defined first supplier available on product.</td>
+</tr>
+<tr class="row-even"><td>Make to Stock</td>
+<td>Manufacture</td>
+<td>If available assign from stock else create a manufacturing order</td>
+</tr>
+<tr class="row-odd"><td>Make to Order</td>
+<td>Manufacture</td>
+<td>Create a manufacturing order when there is a Sales order</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="cost-price">
+<h3>Cost Price<a class="headerlink" href="#cost-price" title="Permalink to this headline">¶</a></h3>
+<p>Cost price for the product, either comes from the supplier or manufacturing cost for the product.</p>
+</div>
+<div class="section" id="delays">
+<h3>Delays<a class="headerlink" href="#delays" title="Permalink to this headline">¶</a></h3>
+<p>Delay in days to process the manufacturing order.</p>
+</div>
+<div class="section" id="suppliers">
+<h3>Suppliers<a class="headerlink" href="#suppliers" title="Permalink to this headline">¶</a></h3>
+<p>All the suppliers who supply this product and possible to place order to any any form them. Yet no intelligent selection of the supplier is not implemented in OpenERP to select the supplier when need to create a Purchase Order through Procurement.</p>
+</div>
+<div class="section" id="id1">
+<h3>Description<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Product specification use to describe product to supplier, it is simply supplier specific product description.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Document is not yet finished !</p>
+</div>
+</div>
+</div>
 </div>
 
 
