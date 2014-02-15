@@ -38,8 +38,9 @@ OpenERP Administration
 .. toctree::
    :maxdepth: 1
    
+   prod-setup/index.rst
    backup/index.rst
-
+   
 .. note::
 	The structure of Index may change frequently, if you want to track the pages you love, visit them and store their links in Bookmark or Reading List.
 	Direct links will not be changed, once it published on http://openerpbook.com.
