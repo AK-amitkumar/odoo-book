@@ -30,9 +30,9 @@
     <script type="text/javascript" src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="OpenERP Book 8.0 documentation" href="../../index.html" />
-    <link rel="up" title="OpenERP Production Deployment Options" href="../index.html" />
+    <link rel="up" title="Deploy OpenERP in Production" href="../index.html" />
     <link rel="next" title="Deploy OpenERP on Apache Server" href="../01/index.html" />
-    <link rel="prev" title="OpenERP Production Deployment Options" href="../index.html" />
+    <link rel="prev" title="Deploy OpenERP in Production" href="../index.html" />
 
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -82,7 +82,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../part04/index.html">Manage HR operations using OpenERP</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">OpenERP Production Deployment Options</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Deploy OpenERP in Production</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../backup/index.html">OpenERP Backup and Restore</a></li>
 </ul>
 </ul>
@@ -91,7 +91,15 @@
                 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Configure OpenERP as Linux Service</a></li>
+<li><a class="reference internal" href="#">Configure OpenERP as Linux Service</a><ul>
+<li><a class="reference internal" href="#create-a-script">Create a Script</a></li>
+<li><a class="reference internal" href="#make-the-file-executable">Make the file executable</a></li>
+<li><a class="reference internal" href="#configure-to-start-on-boot">Configure to start on boot</a></li>
+<li><a class="reference internal" href="#create-a-config-file">Create a config file</a></li>
+<li><a class="reference internal" href="#change-permission">Change Permission</a></li>
+<li><a class="reference internal" href="#start-stop-openerp-server">Start, Stop OpenERP Server</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -100,7 +108,7 @@
             
               
   <li>
-    <a href="../index.html" title="Previous Chapter: OpenERP Production Deployment Options"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; OpenERP Producti...</span>
+    <a href="../index.html" title="Previous Chapter: Deploy OpenERP in Production"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Deploy OpenERP i...</span>
     </a>
   </li>
   <li>
@@ -135,6 +143,208 @@
       
   <div class="section" id="configure-openerp-as-linux-service">
 <span id="setup-production-openerp-service"></span><h1>Configure OpenERP as Linux Service<a class="headerlink" href="#configure-openerp-as-linux-service" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Some of the part of this page is taken from <a class="reference external" href="http://powerphil.wordpress.com/">http://powerphil.wordpress.com/</a></p>
+</div>
+<p>As we advice that for production setup Linux is the preferred Operating System, It is an essential to configure OpenERP as an linux server after the installation.</p>
+<p>OpenERP can be install on any linux system based on <tt class="docutils literal"><span class="pre">.deb</span></tt> or <tt class="docutils literal"><span class="pre">.rpm</span></tt>, please go through below installation steps for Linux and Mac.</p>
+<ul class="simple">
+<li><a class="reference internal" href="../../install/02/index.html#install-ubuntu"><em>Install OpenERP on Ubuntu Desktop or Server</em></a></li>
+<li><a class="reference internal" href="../../install/03/index.html#install-fedora"><em>Install OpenERP on Fedora, CentOS</em></a></li>
+<li><a class="reference internal" href="../../install/04/index.html#install-macosx"><em>Install OpenERP on Mac OSX 10.X.X</em></a></li>
+</ul>
+<p>After successfully installation, you can configure the server to be started automatically at boot time, so install it as a service.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">OpenERP should be installed and have access on the postgresql for the linux user <tt class="docutils literal"><span class="pre">openerp</span></tt>. If you not have a openerp as user create a user with <tt class="docutils literal"><span class="pre">adduser</span> <span class="pre">openerp</span></tt></p>
+</div>
+<div class="section" id="create-a-script">
+<h2>Create a Script<a class="headerlink" href="#create-a-script" title="Permalink to this headline">¶</a></h2>
+<p>Create a new fie, /etc/init.d/openerp-server with these contents. This script should work on Ubuntu and Centos. If you are on Ubuntu or Debian and have start-stop-daemon available.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c">#!/bin/sh</span>
+
+<span class="c">#</span>
+<span class="c"># OpenERP init script v0.1 for centos by Open-Future</span>
+<span class="c"># Bert Deferme - www.open-future.be - bert@open-future.be</span>
+<span class="c">#</span>
+
+<span class="c"># This program is free software; you can redistribute it and/or modify</span>
+<span class="c"># it under the terms of the GNU General Public License version 3 as</span>
+<span class="c"># published by the Free Software Foundation.</span>
+<span class="c">#</span>
+<span class="c"># For a copy of the GNU General Public License, see &lt;http://www.gnu.org/licenses/&gt;.</span>
+
+<span class="c"># chkconfig: 345 60 61</span>
+<span class="c"># description: starts the openerp-server service</span>
+
+<span class="nv">NAME</span><span class="o">=</span>openerp-server
+<span class="nv">USER</span><span class="o">=</span>openerp
+
+<span class="nv">PATH</span><span class="o">=</span>/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin
+<span class="nv">PIDDIR</span><span class="o">=</span>/var/run/openerp
+<span class="nv">PIDFILE</span><span class="o">=</span><span class="nv">$PIDDIR</span>/<span class="nv">$NAME</span>.pid
+<span class="nv">DAEMON</span><span class="o">=</span>/usr/local/bin/openerp-server
+<span class="nv">DAEMONOPTS</span><span class="o">=</span><span class="s2">&quot;--pidfile=${PIDFILE}&quot;</span>
+
+checkpid<span class="o">()</span> <span class="o">{</span>
+  <span class="o">[</span> -f <span class="nv">$PIDFILE</span> <span class="o">]</span> <span class="o">||</span> <span class="k">return </span>1
+  <span class="nv">pid</span><span class="o">=</span><span class="sb">`</span>cat <span class="nv">$PIDFILE</span><span class="sb">`</span>
+  <span class="o">[</span> -d /proc/<span class="nv">$pid</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="k">return </span>0
+  <span class="k">return </span>1
+<span class="o">}</span>
+
+do_start<span class="o">()</span> <span class="o">{</span>
+
+  <span class="k">if</span> <span class="o">[</span> -f <span class="nv">$PIDFILE</span> <span class="o">]</span>; <span class="k">then</span>
+<span class="k">    </span><span class="nb">echo</span> <span class="s2">&quot;pidfile already exists: $PIDFILE&quot;</span>
+    <span class="nb">exit </span>1
+  <span class="k">fi</span>
+
+<span class="k">  </span><span class="nb">echo</span> -n <span class="s2">&quot;Starting $NAME: &quot;</span>
+
+  <span class="k">if</span> <span class="o">[</span> ! -d <span class="nv">$PIDDIR</span> <span class="o">]</span>
+  <span class="k">then</span>
+<span class="k">      </span>mkdir <span class="nv">$PIDDIR</span>
+      chown <span class="nv">$USER</span> <span class="nv">$PIDDIR</span>
+  <span class="k">fi</span>
+
+<span class="k">  </span>su - <span class="nv">$USER</span> -c <span class="s2">&quot;nohup $DAEMON $DAEMONOPTS &gt;/dev/null 2&gt;&amp;1 &amp;&quot;</span>
+
+  sleep 3
+
+  checkpid
+
+  <span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -eq 1 <span class="o">]</span>; <span class="k">then</span>
+<span class="k">    </span>rm -f <span class="nv">$PIDFILE</span>
+    <span class="nb">echo</span> <span class="s2">&quot;failed.&quot;</span>
+    <span class="nb">exit </span>1
+  <span class="k">fi</span>
+
+<span class="k">  </span><span class="nb">echo</span> <span class="s2">&quot;done.&quot;</span>
+<span class="o">}</span>
+
+do_stop<span class="o">()</span> <span class="o">{</span>
+
+  checkpid
+
+  <span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -eq 1 <span class="o">]</span>; <span class="k">then</span>
+<span class="k">    </span><span class="nb">echo</span> -n <span class="s2">&quot;$NAME not running... (no pidfile found)&quot;</span>
+    <span class="nb">exit </span>0
+  <span class="k">fi</span>
+
+<span class="k">  </span><span class="nb">echo</span> -n <span class="s2">&quot;Stopping $NAME: &quot;</span>
+
+  <span class="nv">pid</span><span class="o">=</span><span class="sb">`</span>cat <span class="nv">$PIDFILE</span><span class="sb">`</span>
+  <span class="nb">kill</span> -15 <span class="nv">$pid</span>
+
+  sleep 2
+
+  <span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -eq 1 <span class="o">]</span>; <span class="k">then</span>
+<span class="k">    </span><span class="nb">echo</span> <span class="s2">&quot;Failed. (pidfile found but process didn&#39;t exist)&quot;</span>
+    <span class="nb">exit </span>1
+  <span class="k">fi</span>
+
+<span class="k">  </span><span class="nb">echo</span> <span class="s2">&quot;done.&quot;</span>
+
+<span class="o">}</span>
+
+do_status<span class="o">()</span> <span class="o">{</span>
+
+  <span class="nb">echo</span> -n <span class="s2">&quot;Checking $NAME: &quot;</span>
+
+  checkpid
+
+  <span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -eq 1 <span class="o">]</span>; <span class="k">then</span>
+<span class="k">    </span><span class="nb">echo</span> <span class="s2">&quot;stopped.&quot;</span>
+  <span class="k">else</span>
+<span class="k">    </span><span class="nb">echo</span> <span class="s2">&quot;running.&quot;</span>
+  <span class="k">fi</span>
+
+<span class="o">}</span>
+
+do_restart<span class="o">()</span> <span class="o">{</span>
+
+  do_stop
+
+  <span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -eq 1 <span class="o">]</span>; <span class="k">then</span>
+<span class="k">    </span><span class="nb">exit </span>1
+  <span class="k">fi</span>
+
+<span class="k">  </span>do_start
+
+<span class="o">}</span>
+
+<span class="k">case</span> <span class="s2">&quot;$1&quot;</span> in
+    start<span class="o">)</span> do_start ;;
+    stop<span class="o">)</span> do_stop ;;
+    restart|force-reload<span class="o">)</span> do_restart ;;
+    status<span class="o">)</span> do_status ;;
+    *<span class="o">)</span>
+        <span class="nv">N</span><span class="o">=</span>/etc/init.d/<span class="nv">$NAME</span>
+        <span class="nb">echo</span> <span class="s2">&quot;Usage: $N {start|stop|restart|status}&quot;</span> &gt;&amp;2
+        <span class="nb">exit </span>1
+        ;;
+<span class="k">esac</span>
+
+<span class="nb">exit </span>0
+</pre></div>
+</div>
+</div>
+<div class="section" id="make-the-file-executable">
+<h2>Make the file executable<a class="headerlink" href="#make-the-file-executable" title="Permalink to this headline">¶</a></h2>
+<p>Once the file created make it executable using below command</p>
+<div class="highlight-bash"><div class="highlight"><pre>chmod a+x /etc/init.d/openerp-server
+</pre></div>
+</div>
+</div>
+<div class="section" id="configure-to-start-on-boot">
+<h2>Configure to start on boot<a class="headerlink" href="#configure-to-start-on-boot" title="Permalink to this headline">¶</a></h2>
+<p>In order to configure openerp-server to start on boot we have to link from /etc/init.d/openerp-server to /etc/rc*.d using below list of commands:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ln -s /etc/init.d/openerp-server /etc/rc0.d/K83openerp-server
+ln -s /etc/init.d/openerp-server /etc/rc1.d/S83openerp-server
+ln -s /etc/init.d/openerp-server /etc/rc2.d/S83openerp-server
+ln -s /etc/init.d/openerp-server /etc/rc3.d/S83openerp-server
+ln -s /etc/init.d/openerp-server /etc/rc4.d/S83openerp-server
+ln -s /etc/init.d/openerp-server /etc/rc5.d/S83openerp-server
+ln -s /etc/init.d/openerp-server /etc/rc6.d/K83openerp-server
+</pre></div>
+</div>
+<p>Make sure the log file is writable by openerp linux user.</p>
+<div class="highlight-bash"><div class="highlight"><pre>touch /var/log/openerp-server.log
+chown openerp /var/log/openerp-server.log
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-a-config-file">
+<h2>Create a config file<a class="headerlink" href="#create-a-config-file" title="Permalink to this headline">¶</a></h2>
+<p>If the user you created as part of the installation was openerp, then create <tt class="docutils literal"><span class="pre">~openerp/.openerp_serverrc</span></tt>, to get the content run OpenERP with -s option:</p>
+<div class="highlight-bash"><div class="highlight"><pre>sudo -u openerp openerp-server -s
+</pre></div>
+</div>
+<p>Add below options to the configuration of the .openerp-serverrc file to define the log file and level of loginfo</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="o">[</span>options<span class="o">]</span>
+<span class="nv">debug_mode</span> <span class="o">=</span>  True
+<span class="nv">logfile</span> <span class="o">=</span>  /var/log/openerp-server.log
+<span class="nv">log_level</span> <span class="o">=</span>  debug_rpc_answer
+</pre></div>
+</div>
+</div>
+<div class="section" id="change-permission">
+<h2>Change Permission<a class="headerlink" href="#change-permission" title="Permalink to this headline">¶</a></h2>
+<p>If you were running these commands as root and not as openerp user, change the ownership to openerp:</p>
+<div class="highlight-bash"><div class="highlight"><pre>chown openerp:openerp ~openerp/.openerp_serverrc
+</pre></div>
+</div>
+</div>
+<div class="section" id="start-stop-openerp-server">
+<h2>Start, Stop OpenERP Server<a class="headerlink" href="#start-stop-openerp-server" title="Permalink to this headline">¶</a></h2>
+<p>If everything goes well you will be able to satrt and stop server using below comands.</p>
+<div class="highlight-bash"><div class="highlight"><pre>service openerp-server start
+service openerp-server stop
+</pre></div>
+</div>
+</div>
 </div>
 
 
