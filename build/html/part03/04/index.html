@@ -82,6 +82,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../part04/index.html">Manage HR operations using OpenERP</a></li>
 </ul>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../prod-setup/index.html">Deploy OpenERP in Production</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../backup/index.html">OpenERP Backup and Restore</a></li>
 </ul>
 </ul>
@@ -90,7 +91,10 @@
                 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Setup Books of Accounts</a></li>
+<li><a class="reference internal" href="#">Setup Books of Accounts</a><ul>
+<li><a class="reference internal" href="#fiscal-periods">Fiscal Periods</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -134,6 +138,24 @@
       
   <span class="target" id="setup-chart-of-accounts"></span><div class="section" id="setup-books-of-accounts">
 <span id="index-0"></span><h1>Setup Books of Accounts<a class="headerlink" href="#setup-books-of-accounts" title="Permalink to this headline">¶</a></h1>
+<p>Accounting system is the hart of any Enterprise System as it is linked to every business process such as sales, purchase, human resource, manufacturing, etc... and financial statements are represent the performance of each company.</p>
+<p>In order to setup the accounting system we need to configure some prerequisite like chart of account, financial period, journals (books), and taxes. We will setup below prerequisite objects to encode the sales and payment receipt transaction.</p>
+<ul class="simple">
+<li>Fiscal Period : Current financial periods</li>
+<li>Chart of Accounts : Local Sales, Export Sales, Bank Account, Cash Account</li>
+<li>Journals (Books) : Sales, Bank and Cash</li>
+</ul>
+<div class="section" id="fiscal-periods">
+<h2>Fiscal Periods<a class="headerlink" href="#fiscal-periods" title="Permalink to this headline">¶</a></h2>
+<p>A fiscal year (or financial year, or sometimes budget year) is a period used for calculating annual (&#8220;yearly&#8221;) financial statements in businesses and other organizations. In many jurisdictions, regulatory laws regarding accounting and taxation require such reports once per twelve months, but do not require that the period reported on constitutes a calendar year (that is, 1 January to 31 December). Fiscal years vary between businesses and countries. The &#8220;fiscal year&#8221; may also refer to the year used for income tax reporting.</p>
+<img alt="../../_images/fiscal-periods.png" src="../../_images/fiscal-periods.png" />
+<p>Fiscal Periods</p>
+<p>So, depending on the country fiscal period need to define by the companies. If you want configure your multinational company in OpenERP you can define multiple companies and you can define fiscal year per country as well.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">A default fiscal period may be created during the setup of database or when you install account or any related module, you can define a date during installation. If you want to change later either remove all periods and create a new periods after changing the dates of create a new fiscal year and remove the existing year.</p>
+</div>
+</div>
 </div>
 
 
@@ -167,7 +189,7 @@
     </p>
     <p>
         &copy; Copyright 2014, OpenERP Book.<br/>
-      Last updated on Feb 15, 2014.<br/>
+      Last updated on Feb 16, 2014.<br/>
     </p>
   </div>
 </footer>
