@@ -192,6 +192,4 @@ Restart the services to load the new configurations
 	sudo service openerp-server restart
 	sudo service nginx restart
 
-You should not be able to connect to the web client on port 8069 and the GTK client should not connect on either the NetRPC (8070) or XMLRPC (8069) services.
-
-For web access you just need to visit https://openerpserver.example.com
+You should not be able to connect to the web client on port 8069. For web access you just need to visit https://openerpserver.example.com
