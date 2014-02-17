@@ -68,7 +68,7 @@ You can also support this book by being a friend, you just need to add a book im
 .. code-block:: xml
 
 	<div>
-	<img src="http://openerpbook.files.wordpress.com/2014/01/openerpbook1.png"
+	<img src="http://openerpbook.com/_images/openerp-book2.png"
 	    alt="OpenERP Book"
 	    title="OpenERP Book"
 	    width="2280"
