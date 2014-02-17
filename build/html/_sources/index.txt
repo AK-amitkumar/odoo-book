@@ -19,7 +19,7 @@ OpenERP Book !
    :align: right
 
 Table of Contents
-~~~~~~~~~~~~~~~~~
+-----------------
 
 .. toctree::
    :maxdepth: 1
@@ -28,12 +28,13 @@ Table of Contents
    download/index.rst
    install/index.rst
    part01/index.rst
+   install-apps/index.rst
    part03/index.rst
    part02/index.rst
    part04/index.rst
-   
+
 OpenERP Administration
-~~~~~~~~~~~~~~~~~~~~~~
+----------------------
 
 .. toctree::
    :maxdepth: 1

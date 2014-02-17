@@ -25,3 +25,7 @@ So, depending on the country fiscal period need to define by the companies. If y
 
 .. note::
 	A default fiscal period may be created during the setup of database or when you install account or any related module, you can define a date during installation. If you want to change later either remove all periods and create a new periods after changing the dates of create a new fiscal year and remove the existing year. 
+	
+Chart of Account
+----------------
+While :ref:`installing the Accounting <install-application-account>` or related module you have been asked to various configurations.

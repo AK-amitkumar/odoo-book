@@ -31,3 +31,19 @@ Non Certified OpenERP Apps
 Yes, OpenERP is not giving any guarantee for any of the community module as those are not the OpenERP's official add-ons  but its a community add-ons and an active developer or community members or parters they takes care for for those apps.
 
 You can add your modules to OpenERP Apps store, you just need your module to be on the Launchpad where the OpenERP's Project hosted.
+
+Difference of Module and Apps
+-----------------------------
+
+=========================   ==========================================================================================================    ================================================================================================================================
+Parameters                  OpenERP Modules                                                                                               OpenERP Apps
+=========================   ==========================================================================================================    ================================================================================================================================
+**Dependency Resolution**   You have to resolve your self, easy for the certified module, very difficult for the community modules        It is just one click installation, When you click on install button will resolve dependency automatically
+**Installation**            Quite difficult for community [#f0]_ modules as you have to resolve dependency your self                      It is just one click installation, Click on the install button which install all the dependent apps
+**Updates**                 You will never get notify, as you decided to maintain everything your self                                    Under the System → Updates menu all apps will be visible who's versions get updates
+**Support / Bug-Fix**       You have to update the branch / apply patch yourself and you can get the bug-fix                              You can directly apply yourself once the new version available under Updates menu, applicable for all apps Certified + Community
+**Migration**               Either do it your self of contact to OpenERP for OE [#f1]_ Contract to get migration of Certified Modules     Either do it your self of contact to OpenERP for OE Contract to get migration of Certified Modules
+=========================   ==========================================================================================================    ================================================================================================================================
+
+.. [#f0] All the modules they are developed by OpenERP Community and may be available at https://launchpad.net/openobject
+.. [#f1] OE Contract stands for the OpenERP Enterprise Contract, you can get one for your implementation at https://www.openerp.com/oe_pricing
