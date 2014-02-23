@@ -93,12 +93,29 @@
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">Setup Books of Accounts</a><ul>
-<li><a class="reference internal" href="#fiscal-periods">Fiscal Periods</a></li>
+<li><a class="reference internal" href="#fiscal-periods">Fiscal Periods</a><ul>
+<li><a class="reference internal" href="#fiscal-year">Fiscal Year</a></li>
+<li><a class="reference internal" href="#code">Code</a></li>
+<li><a class="reference internal" href="#start-end-date">Start &amp; End Date</a></li>
+<li><a class="reference internal" href="#end-of-year-entries-journal">End of Year Entries Journal</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#chart-of-account">Chart of Account</a><ul>
 <li><a class="reference internal" href="#account-code-name">Account Code &amp; Name</a></li>
 <li><a class="reference internal" href="#parent">Parent</a></li>
 <li><a class="reference internal" href="#internal-type">Internal Type</a></li>
 <li><a class="reference internal" href="#account-type">Account Type</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#journals-books">Journals (Books)</a><ul>
+<li><a class="reference internal" href="#journal-name">Journal Name</a></li>
+<li><a class="reference internal" href="#id1">Code</a></li>
+<li><a class="reference internal" href="#type">Type</a></li>
+<li><a class="reference internal" href="#entry-sequence">Entry Sequence</a></li>
+<li><a class="reference internal" href="#centralized-counterpart">Centralized Counterpart</a></li>
+<li><a class="reference internal" href="#skip-draft-state-for-manual-entries">Skip &#8216;Draft&#8217; State for Manual Entries</a></li>
+<li><a class="reference internal" href="#check-date-in-period">Check Date in Period</a></li>
+<li><a class="reference internal" href="#group-invoice-lines">Group Invoice Lines</a></li>
 </ul>
 </li>
 </ul>
@@ -153,20 +170,40 @@
 <li>Chart of Accounts : Local Sales, Export Sales, Bank Account, Cash Account</li>
 <li>Journals (Books) : Sales, Bank and Cash</li>
 </ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Before you proceed to the configuration of Books of Accounting, <a class="reference internal" href="../../install-apps/certified/02/index.html#install-application-account"><em>Installing the Accounting or related module</em></a> from Apps Store.</p>
+</div>
 <div class="section" id="fiscal-periods">
 <h2>Fiscal Periods<a class="headerlink" href="#fiscal-periods" title="Permalink to this headline">¶</a></h2>
 <p>A fiscal year (or financial year, or sometimes budget year) is a period used for calculating annual (&#8220;yearly&#8221;) financial statements in businesses and other organizations. In many jurisdictions, regulatory laws regarding accounting and taxation require such reports once per twelve months, but do not require that the period reported on constitutes a calendar year (that is, 1 January to 31 December). Fiscal years vary between businesses and countries. The &#8220;fiscal year&#8221; may also refer to the year used for income tax reporting.</p>
 <img alt="../../_images/fiscal-periods.png" src="../../_images/fiscal-periods.png" />
 <p>Fiscal Periods</p>
 <p>So, depending on the country fiscal period need to define by the companies. If you want configure your multinational company in OpenERP you can define multiple companies and you can define fiscal year per country as well.</p>
+<div class="section" id="fiscal-year">
+<h3>Fiscal Year<a class="headerlink" href="#fiscal-year" title="Permalink to this headline">¶</a></h3>
+<p>Name the fiscal year which is easy to understand, this name may not be appear on any of the reports used to identify internally. i.e. Many countries have financial year from January to December for them it is easy to keep name like FY-2013, or FY-2014, where some countrie&#8217;s fiscal periods spread in two different years like April 2013 to Match 2014 they can give FY-2013/2014.</p>
+</div>
+<div class="section" id="code">
+<h3>Code<a class="headerlink" href="#code" title="Permalink to this headline">¶</a></h3>
+<p>A short code of the fiscal year. Like 2013, 2014 or 2013-2014</p>
+</div>
+<div class="section" id="start-end-date">
+<h3>Start &amp; End Date<a class="headerlink" href="#start-end-date" title="Permalink to this headline">¶</a></h3>
+<p>First and Last day of the fiscal period. i.e 1st January to 31st December or in some country 1st April to 31st March, Etc...</p>
+</div>
+<div class="section" id="end-of-year-entries-journal">
+<h3>End of Year Entries Journal<a class="headerlink" href="#end-of-year-entries-journal" title="Permalink to this headline">¶</a></h3>
+<p>A Journal which contains entries transfer the balance from current to next financial year. When you proceed to close the fiscal year from Accounting → Periodic Processing → End of Period → Generate Opening Entries it will ask for the Opening Journal Entries on successfully closing year the year the same journal link to closed fiscal year.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">A default fiscal period may be created during the setup of database or when you install account or any related module, you can define a date during installation. If you want to change later either remove all periods and create a new periods after changing the dates of create a new fiscal year and remove the existing year.</p>
 </div>
 </div>
+</div>
 <div class="section" id="chart-of-account">
 <h2>Chart of Account<a class="headerlink" href="#chart-of-account" title="Permalink to this headline">¶</a></h2>
-<p>While <a class="reference internal" href="../../install-apps/certified/02/index.html#install-application-account"><em>installing the Accounting  or related module</em></a> you have been asked to various configurations. Chart of Account is one of them. OpenERP support almost 25+ countries pre-configured charts of account.s</p>
+<p>While <a class="reference internal" href="../../install-apps/certified/02/index.html#install-application-account"><em>installing the Accounting  or related module</em></a> you have been asked to various configurations. Chart of Account is one of them. OpenERP support almost 25+ countries pre-configured charts of account.</p>
 <img alt="../../_images/chart-of-account.png" src="../../_images/chart-of-account.png" />
 <p>Chart of Accounts</p>
 <p>You can still change the chart as the given chart may not gives you all the modules you need. You can create new or modify them from Accounting → Configuration → Accounts → Accounts.</p>
@@ -199,6 +236,60 @@
 <li>P&amp;L / BS Category : You can choose when the account will be displayed. In Balance Sheet (Asset or Liability) or Profit &amp; Loss (Income or Expense) side.</li>
 <li>Deferral Method : You have to choose an option, when the financial year will get close, what to transfer in to the next financial year in the respective accounts ? Only Balance, All details including the reconciled items, or just Unreconciled items or select None to transfer nothing.</li>
 </ul>
+</div>
+</div>
+<div class="section" id="journals-books">
+<h2>Journals (Books)<a class="headerlink" href="#journals-books" title="Permalink to this headline">¶</a></h2>
+<p>Like a paper based accounting system we keep different books to encode different types of transactions like Sales book to encode sales, Purchase Book to encode purchase, Bank book to encode bank transactions, Etc.. In OpenERP we can maintain the same books in terms of Journals, we can create many journals depending on our strategy how we would like to keep the accounting systems access and printing of the accounts.</p>
+<p>You can add new journals from  Accounting → Configuration Journals → Journal, you need to configure few things depending on the types of journals you are going to create.</p>
+<img alt="../../_images/sales-journal.png" src="../../_images/sales-journal.png" />
+<p>Journal (Book)</p>
+<p>Many small companies keep the same books for long time to encode the transaction i.e. one sales book for 5 years, while some companies required to have the new books every year and old books goes to archive to preserve for at least for next 5 to 7 years.</p>
+<div class="section" id="journal-name">
+<h3>Journal Name<a class="headerlink" href="#journal-name" title="Permalink to this headline">¶</a></h3>
+<p>Name of the journal you want to create. It is depending on your system you decided to keep on maintain. If you plan to keep only one journal Retail Sales Book over the multiple fiscal years then <tt class="docutils literal"><span class="pre">Retail</span> <span class="pre">Sales</span> <span class="pre">Book</span></tt> is enough name else you can define a name like <tt class="docutils literal"><span class="pre">Retail</span> <span class="pre">Sales</span> <span class="pre">Book</span> <span class="pre">/</span> <span class="pre">2014</span></tt> or <tt class="docutils literal"><span class="pre">Retail</span> <span class="pre">Sales</span> <span class="pre">Book</span> <span class="pre">/</span> <span class="pre">2014-2015</span></tt></p>
+</div>
+<div class="section" id="id1">
+<h3>Code<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Short name for the journal use to identify and search journal easily on various entry systems such as Invoice, Vouchers, and Journal Entries.</p>
+</div>
+<div class="section" id="type">
+<h3>Type<a class="headerlink" href="#type" title="Permalink to this headline">¶</a></h3>
+<p>A Key field for journal to differentiate the journals to select in various entry system depending on the value of this field. There are various types defined and you can choose those types to specify the journal type.</p>
+<ul class="simple">
+<li>Sale : Define a Sales Journal, Customer Invoice allows to select one from all sales journals while sales</li>
+<li>Sales Return : Define Sales return journal, Customer refund invoice allows to select one from available sale refund journals</li>
+<li>Purchase :  Define a Purchase Journal, Supplier Invoice allows to select one from all purchase journals while purchase</li>
+<li>Purchase Return : Define Purchase return journal, Supplier refund invoice allows to select one from available purchase refund journals</li>
+<li>Cash : to define a cash box you can select this journals, while creating cash journal you must supply the cash account</li>
+<li>Bank &amp; Checks : Used to define a bank and checks book, for writing all bank transactions</li>
+<li>General : All transactions which are not any of the above types, like contra entry, inter-account transfer.</li>
+<li>Opening / Closing Situation : Special types of journal use for encode the opening / closing entries</li>
+</ul>
+</div>
+<div class="section" id="entry-sequence">
+<h3>Entry Sequence<a class="headerlink" href="#entry-sequence" title="Permalink to this headline">¶</a></h3>
+<p>It is a number sequence which defied numbers for each transaction encode in this journal. For every newly created journals the entry sequence will be created automatically, and default numbers format will be <tt class="docutils literal"><span class="pre">Journal</span> <span class="pre">Type/Year/00001</span></tt> for our Retail Sales Book journal it is <tt class="docutils literal"><span class="pre">RSB/2014/0001</span></tt>.</p>
+</div>
+<div class="section" id="centralized-counterpart">
+<h3>Centralized Counterpart<a class="headerlink" href="#centralized-counterpart" title="Permalink to this headline">¶</a></h3>
+<p>Use with the opening / closing journal. When you pass debit entries to enter the opening balance a credit entry will be created and sum in to the same.</p>
+</div>
+<div class="section" id="skip-draft-state-for-manual-entries">
+<h3>Skip &#8216;Draft&#8217; State for Manual Entries<a class="headerlink" href="#skip-draft-state-for-manual-entries" title="Permalink to this headline">¶</a></h3>
+<p>When this checked all entries entries encode to this journal will direct goes to the <tt class="docutils literal"><span class="pre">posted</span></tt> state.</p>
+</div>
+<div class="section" id="check-date-in-period">
+<h3>Check Date in Period<a class="headerlink" href="#check-date-in-period" title="Permalink to this headline">¶</a></h3>
+<p>If the entry date is not in the fiscal period it will not allow those entries if this is checked.</p>
+</div>
+<div class="section" id="group-invoice-lines">
+<h3>Group Invoice Lines<a class="headerlink" href="#group-invoice-lines" title="Permalink to this headline">¶</a></h3>
+<p>If this box is checked, the system will try to group the accounting lines when generating them from invoices</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you would like to apply changes once the entries posted, you should install the Cancel Journal Entries <tt class="docutils literal"><span class="pre">account_cancel</span></tt> module and then check the options Allow Cancelling Entries on journal.</p>
+</div>
 </div>
 </div>
 </div>
@@ -234,7 +325,7 @@
     </p>
     <p>
         &copy; Copyright 2014, OpenERP Book.<br/>
-      Last updated on Feb 18, 2014.<br/>
+      Last updated on Feb 23, 2014.<br/>
     </p>
   </div>
 </footer>

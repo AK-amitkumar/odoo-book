@@ -22,3 +22,7 @@ It may ask you for the username and password for OpenERP.com account on successf
 Post Install
 ------------
 On successfully installed Indian Localization ``l10n_in_base`` you will get a page under Settings → Configuration → Indian Localization. You can choose depending what you want to install as a feature from the Indian localization.
+
+.. image:: images/l10n_in_base_configuration.png
+
+Indian Localization Configurations
