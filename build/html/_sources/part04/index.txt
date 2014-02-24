@@ -1,7 +1,7 @@
 .. _human-resource:
 
-Manage HR operations using OpenERP
-==================================
+Recruit & Manage your Talents
+=============================
 
 .. toctree::
    :maxdepth: 2

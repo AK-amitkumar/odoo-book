@@ -9,14 +9,14 @@
 	
 OpenERP Book !
 ==============
-**OpenERP Book** is an online book explains OpenERP Modules, Configurations, Developments and answers to all how to Questions. Read more about OpenERP, the aim of this book is to give detail explanation on each any every untapped points for OpenERP over the Internet. Beside explanation of topics it also covers a real life examples and success stories achieved with OpenERP Implementation. :ref:`Read more About Book → <about>`
-
 .. image:: images/openerp-book.png
    :height: 300px
    :width: 240 px
    :scale: 100 %
    :alt: alternate text
    :align: right
+   
+**OpenERP Book** is an online book explains OpenERP Modules, Configurations, Developments and answers to all how to Questions. Read more about OpenERP, the aim of this book is to give detail explanation on each any every untapped points for OpenERP over the Internet. Beside explanation of topics it also covers a real life examples and success stories achieved with OpenERP Implementation. :ref:`Read more About Book → <about>`
 
 Table of Contents
 -----------------
@@ -31,15 +31,19 @@ Table of Contents
    install-apps/index.rst
    part03/index.rst
    part02/index.rst
-   part04/index.rst
 
 Proposed Topics
 ---------------
 
-* Organize your Warehouse
 * Boost your Sales
+* Organize your Warehouse
 * Control your Purchase
-* Recruit & Manage your Talents
+
+.. toctree::
+   :maxdepth: 1
+   
+   part04/index.rst
+
 * Plan your Projects and Tasks
 * Manage your Books of Accounts
 * Integrated Document Management
@@ -54,13 +58,13 @@ OpenERP Administration
    
    prod-setup/index.rst
    backup/index.rst
-   
-.. hint::
-	The structure of Index may change frequently, if you want to track the pages you love, visit them and store their links in Bookmark or Reading List.
-	Direct links will not be changed, once it published on http://openerpbook.com.
 
 Indices and tables
-~~~~~~~~~~~~~~~~~~
+------------------
 
 * :ref:`genindex`
 * :ref:`search`
+
+.. hint::
+	The structure of Index may change frequently, if you want to track the pages you love, visit them and store their links in Bookmark or Reading List.
+	Direct links will not be changed, once it published on http://openerpbook.com.

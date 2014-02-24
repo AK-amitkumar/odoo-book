@@ -2,14 +2,10 @@
 
 .. index::
 	single: Setup your First Company
-	
+
 Setup your First Company in OpenERP
 ===================================
-To understand the scenario lets take an example of the company called **Abc Technologies Pvt Ltd**. located in Gandhinagar, Gujarat. Specialized in Digital Media & Marketing Services with the use of Information Technology. For Product, Customer and Accounts we will work with the demo data without creating new data as below.
-
-* Customer / Supplier : Axelor
-* Product : USB Adapter
-* Chart of Account : Indian Chart of Account
+To understand the scenario lets take an example of the company called **Abc Technologies Pvt Ltd**. located in Gandhinagar, Gujarat. Specialized in Trading business dealing in all types of IT Equipments and peripherals. We will sale Some Laptops, Keyboard and Mouse and installations service to Axelor Sarl.
 
 .. toctree::
    :maxdepth: 2
