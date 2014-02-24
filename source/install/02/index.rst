@@ -3,9 +3,10 @@
 .. index::
    single: Install on Ubuntu Desktop
    single: Install on Ubuntu Server
+   single: Install on Debian
 
-Install OpenERP on Ubuntu Desktop or Server
-===========================================
+Install OpenERP on Ubuntu or Debian Linux
+=========================================
 
 Once you install Ubuntu server or desktop based client, you need to install few libraries that is required to run OpenERP.
 

@@ -33,6 +33,19 @@ Table of Contents
    part02/index.rst
    part04/index.rst
 
+Proposed Topics
+---------------
+
+* Organize your Warehouse
+* Boost your Sales
+* Control your Purchase
+* Recruit & Manage your Talents
+* Plan your Projects and Tasks
+* Manage your Books of Accounts
+* Integrated Document Management
+* Working with Tools
+* Tips and Tricks
+
 OpenERP Administration
 ----------------------
 
@@ -42,7 +55,7 @@ OpenERP Administration
    prod-setup/index.rst
    backup/index.rst
    
-.. note::
+.. hint::
 	The structure of Index may change frequently, if you want to track the pages you love, visit them and store their links in Bookmark or Reading List.
 	Direct links will not be changed, once it published on http://openerpbook.com.
 
@@ -50,5 +63,4 @@ Indices and tables
 ~~~~~~~~~~~~~~~~~~
 
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
