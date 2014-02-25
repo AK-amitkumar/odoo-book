@@ -1,4 +1,4 @@
-.. _qualify-lead:
+.. _make-proposal:
 
 .. index::
 	single: Make a Proposal
