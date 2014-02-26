@@ -116,7 +116,6 @@ html_theme_options = {
     "bootswatch_theme":"flatly"
 }
 
-
 #html_short_title = 'Demo'
 
 #html_theme = 'default'

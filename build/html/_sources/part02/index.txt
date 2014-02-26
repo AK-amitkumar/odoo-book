@@ -15,3 +15,4 @@ To understand the scenario lets take an example of the company called **Abc Tech
    03/index.rst
    04/index.rst
    05/index.rst
+   06/index.rst

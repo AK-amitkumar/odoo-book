@@ -64,6 +64,7 @@ Indices and tables
 
 * :ref:`genindex`
 * :ref:`search`
+* :ref:`fullindex`
 
 .. hint::
 	The structure of Index may change frequently, if you want to track the pages you love, visit them and store their links in Bookmark or Reading List.
