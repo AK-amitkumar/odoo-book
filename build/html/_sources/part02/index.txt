@@ -16,3 +16,5 @@ To understand the scenario lets take an example of the company called **Abc Tech
    04/index.rst
    05/index.rst
    06/index.rst
+   
+So, once you complete the above steps you done with the Leads to Cash flow.

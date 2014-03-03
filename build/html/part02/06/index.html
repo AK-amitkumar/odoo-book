@@ -125,7 +125,27 @@
 <li><a class="reference internal" href="#create-invoice-options">Create Invoice - Options</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#invoice-form">Invoice Form</a></li>
+<li><a class="reference internal" href="#validate-invoice">Validate Invoice</a><ul>
+<li><a class="reference internal" href="#customer">Customer</a></li>
+<li><a class="reference internal" href="#invoice-date">Invoice Date</a></li>
+<li><a class="reference internal" href="#journal">Journal</a></li>
+<li><a class="reference internal" href="#account">Account</a></li>
+<li><a class="reference internal" href="#invoice-lines">Invoice Lines</a></li>
+<li><a class="reference internal" href="#invoice-total">Invoice Total</a></li>
+<li><a class="reference internal" href="#payment-terms">Payment Terms</a></li>
+<li><a class="reference internal" href="#id1">Validate Invoice</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#register-payments">Register Payments</a><ul>
+<li><a class="reference internal" href="#id2">Customer</a></li>
+<li><a class="reference internal" href="#date">Date</a></li>
+<li><a class="reference internal" href="#period">Period</a></li>
+<li><a class="reference internal" href="#paid-amount">Paid Amount</a></li>
+<li><a class="reference internal" href="#payment-ref">Payment Ref</a></li>
+<li><a class="reference internal" href="#memo">Memo</a></li>
+<li><a class="reference internal" href="#difference">Difference</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -192,9 +212,87 @@
 </ul>
 </div>
 </div>
-<div class="section" id="invoice-form">
-<h2>Invoice Form<a class="headerlink" href="#invoice-form" title="Permalink to this headline">¶</a></h2>
-<p>Once the invoice is created we can review and confirm the invoice to write an accounting entries in to account.</p>
+<div class="section" id="validate-invoice">
+<h2>Validate Invoice<a class="headerlink" href="#validate-invoice" title="Permalink to this headline">¶</a></h2>
+<p>Once the invoice is created we can review and confirm the invoice to write an accounting entries in to account. Informations on invoice are transfered from sales order itself, to there will not be any errors in computations.</p>
+<img alt="../../_images/invoice.png" src="../../_images/invoice.png" />
+<p>Invoice View</p>
+<div class="section" id="customer">
+<h3>Customer<a class="headerlink" href="#customer" title="Permalink to this headline">¶</a></h3>
+<p>A Customer to whom we raise an invoice based on the sales order.</p>
+</div>
+<div class="section" id="invoice-date">
+<h3>Invoice Date<a class="headerlink" href="#invoice-date" title="Permalink to this headline">¶</a></h3>
+<p>Date of the invoice, a same date will be written on the books when we encode sales invoice.</p>
+</div>
+<div class="section" id="journal">
+<h3>Journal<a class="headerlink" href="#journal" title="Permalink to this headline">¶</a></h3>
+<p>A Book in which we encode the sales invoice, In case if we maintain the multiple books to encode the sales invoice we have choose the correct one here. (i.e. Tax Sales, Retail Sales, Export Sales, Etc..)</p>
+</div>
+<div class="section" id="account">
+<h3>Account<a class="headerlink" href="#account" title="Permalink to this headline">¶</a></h3>
+<p>A Receivable account will be select automatically based on the selected customer.</p>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p>Receivable Accounts per Customer</p>
+<p class="last">If you would like to maintain separate receivable account per customer create an account and link it to the customer receivable account. A same account will be select on selection of customer.</p>
+</div>
+</div>
+<div class="section" id="invoice-lines">
+<h3>Invoice Lines<a class="headerlink" href="#invoice-lines" title="Permalink to this headline">¶</a></h3>
+<p>Depending on what we sale a lines will be transfer from Sales Order to invoice, however you can create a direct invoice without products as well. You need to pass the description, Quantity, Price Unit and Taxes if applicable, A sales account will be selected form the Journal selected on Invoice.</p>
+</div>
+<div class="section" id="invoice-total">
+<h3>Invoice Total<a class="headerlink" href="#invoice-total" title="Permalink to this headline">¶</a></h3>
+<p>Total of the invoice computed based on the Quantity, Price Unit, Taxes, Discount if applicable. It computes Sub-total which does not includes Taxes, and final Total which includes Taxes.</p>
+</div>
+<div class="section" id="payment-terms">
+<h3>Payment Terms<a class="headerlink" href="#payment-terms" title="Permalink to this headline">¶</a></h3>
+<p>A Payment terms defines the time limit by that customer has to clear the account. It depends on business relation with customer you can choose payment terms depending on customer. However you can configure the payment terms on the customer that will be selected in invoice automatically.</p>
+</div>
+<div class="section" id="id1">
+<h3>Validate Invoice<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Once the invoice gets validated for some of the key fields you can click on the <tt class="docutils literal"><span class="pre">Validate</span></tt> button to confirm the invoice and it changed state from Draft to Open, It also encode the related accounting entries in accounting system.</p>
+<img alt="../../_images/before-pay.png" src="../../_images/before-pay.png" />
+<p>Validate Draft Invoice</p>
+</div>
+</div>
+<div class="section" id="register-payments">
+<h2>Register Payments<a class="headerlink" href="#register-payments" title="Permalink to this headline">¶</a></h2>
+<p>Once invoice gets Validated, we can register the payment depending on how payment arrive. Lets assume that Axelor paid an invoice through cash, we can register the payment directly on the Invoice.</p>
+<img alt="../../_images/pay-invoice.png" src="../../_images/pay-invoice.png" />
+<p>Pay Invoice by Cash</p>
+<div class="section" id="id2">
+<h3>Customer<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>A customer to whom we raised an invoice an received payment, will be filled automatically on invoice.</p>
+</div>
+<div class="section" id="date">
+<h3>Date<a class="headerlink" href="#date" title="Permalink to this headline">¶</a></h3>
+<p>A Data on which payment gets reflect in your Bank, Cash, Etc...</p>
+</div>
+<div class="section" id="period">
+<h3>Period<a class="headerlink" href="#period" title="Permalink to this headline">¶</a></h3>
+<p>A Fiscal period will be filled depending on the date selected that shows when the payment gets reflected.</p>
+</div>
+<div class="section" id="paid-amount">
+<h3>Paid Amount<a class="headerlink" href="#paid-amount" title="Permalink to this headline">¶</a></h3>
+<p>The amount received from customer through bank checks, cash, etc.</p>
+</div>
+<div class="section" id="payment-ref">
+<h3>Payment Ref<a class="headerlink" href="#payment-ref" title="Permalink to this headline">¶</a></h3>
+<p>You can define reference of the payment received through i.e. in case of payment received through bank we can put the bank checks numbers or transaction numbers if Telegraphic transfer.</p>
+</div>
+<div class="section" id="memo">
+<h3>Memo<a class="headerlink" href="#memo" title="Permalink to this headline">¶</a></h3>
+<p>A Free text where you can write anything related to the payment transaction.</p>
+</div>
+<div class="section" id="difference">
+<h3>Difference<a class="headerlink" href="#difference" title="Permalink to this headline">¶</a></h3>
+<p>In case if we get the partial payment, we will get the difference amount which is <tt class="docutils literal"><span class="pre">Difference</span> <span class="pre">=</span> <span class="pre">Outstanding</span> <span class="pre">-</span> <span class="pre">Current</span> <span class="pre">Payment</span></tt> and we can have a choice to either close the account by writing off the remaining payment or keep open and wait for the remaining payment from customer for the same invoice.</p>
+<p>So, after successfully cash payment done, invoice state will get change form Open to Paid and it shows that we received the payment in to the pocket wither through bank or cash.</p>
+<img alt="../../_images/after-pay.png" src="../../_images/after-pay.png" />
+<p>Invoice closed</p>
+</div>
 </div>
 </div>
 
@@ -230,7 +328,7 @@
     </p>
     <p>
         &copy; Copyright 2014, OpenERP Book.<br/>
-      Last updated on Feb 25, 2014.<br/>
+      Last updated on Mar 03, 2014.<br/>
     </p>
   </div>
 </footer>

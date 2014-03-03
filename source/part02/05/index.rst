@@ -74,6 +74,10 @@ When we create a quotation from opportunity it contains the id of that opportuni
 .. note::
 	Value of Salesperson, Sales Team, Categories and Source Document comes to Sales order automatically, when Order/Quotation created form the opportunity.
 
+Paid
+~~~~
+Represent states of the invoice payment, if invoice created and paid it checked automatically, else it shows that either invoice is not created or if created then waiting for the payment.
+
 Payment Term
 ~~~~~~~~~~~~
 Payment terms, defines how customer have to pay against the delivery of product / service, it comes from the Accounting modules.
@@ -85,6 +89,10 @@ Depending on the customer location, we have to choose the value of this fiscal p
 Send to Customer
 ----------------
 Once the proposal has been created we can send this proposal to customer through various ways. You can print quotation and send it through courier or today email is the fastest ways to deliver any digital documents. Send quotation through email is a best options as OpenERP generate all documents in PDF format it is easy to send the same to customer.
+
+.. image:: images/sales-states.png
+
+Operations on Sales Order 
 
 Send by Email
 ~~~~~~~~~~~~~
