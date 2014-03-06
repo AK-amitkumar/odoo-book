@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>PostgreSQL Server Installation and Configuration &mdash; OpenERP Book 8.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/bootswatch-3.1.0/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '8.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="OpenERP Book 8.0 documentation" href="../../../../index.html" />
+    <link rel="up" title="OpenERP Installation on Linux" href="../index.html" />
+    <link rel="next" title="OpenERP Server Installation" href="../server/index.html" />
+    <link rel="prev" title="OpenERP Installation on Linux" href="../index.html" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-47926740-1']);
+  _gaq.push(['_trackPageview']);
+</script>
+
+<meta name="google-translate-customization" content="1a9f16396f329347-27b519b501ddf27d-gbee5ada102d015d0-f"></meta>
+
+<!-- AddThis Smart Layers BEGIN -->
+<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-530c64087def677e"></script>
+<script type="text/javascript">
+  addthis.layers({
+    'theme' : 'transparent',
+    'share' : {
+      'position' : 'left',
+      'numPreferredServices' : 5
+    }   
+  });
+</script>
+<!-- AddThis Smart Layers END -->
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../../../index.html">
+          OpenERP Book</a>
+        <span class="navbar-text navbar-version pull-left"><b>8.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">About OpenERP Online Book !</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/index.html">Looking for OpenERP Demo ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../install/index.html">Installation on Windows, Linux and MacOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../part01/index.html">Getting start with OpenERP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../install-apps/index.html">Install and configure OpenERP Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../part03/index.html">Setup your First Company in OpenERP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../part02/index.html">Leads to Cash Flow with OpenERP</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">Drive your Sales &amp; Marketing Activities with OpenERP</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../part04/index.html">Recruit &amp; Manage your Talents</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../prod-setup/index.html">Deploy OpenERP in Production</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../backup/index.html">OpenERP Backup and Restore</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">PostgreSQL Server Installation and Configuration</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+  <li>
+    <a href="../index.html" title="Previous Chapter: OpenERP Installation on Linux"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; OpenERP Installa...</span>
+    </a>
+  </li>
+  <li>
+    <a href="../server/index.html" title="Next Chapter: OpenERP Server Installation"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">OpenERP Server I... &raquo;</span>
+    </a>
+  </li>
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+    
+<form class="navbar-form navbar-right" action="../../../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+
+	        
+        
+      
+  <span class="target" id="index-0"></span><div class="section" id="postgresql-server-installation-and-configuration">
+<span id="installation-postgresql-server"></span><h1>PostgreSQL Server Installation and Configuration<a class="headerlink" href="#postgresql-server-installation-and-configuration" title="Permalink to this headline">¶</a></h1>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Methods</p>
+<p class="last">The PostgreSQL download page &lt;<a class="reference external" href="http://www.postgresql.org/download/linux">http://www.postgresql.org/download/linux</a>&gt; lists the available installation methods. Choose the one that best suits your needs.</p>
+</div>
+<p><em>Example on Ubuntu</em></p>
+<p>Use the following command on your system&#8217;s command prompt to install the <strong>postgresql</strong> package:</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install postgresql
+</pre></div>
+</div>
+<p>For example:</p>
+<div class="highlight-python"><div class="highlight"><pre>openerp@openerp-desktop:/$ sudo apt-get install postgresql
+</pre></div>
+</div>
+<p>For a graphical user interface of <strong>postgresql</strong>, use the following command:</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install pgadmin3
+</pre></div>
+</div>
+<p>For example:</p>
+<div class="highlight-python"><div class="highlight"><pre>openerp@openerp-desktop:/$ sudo apt-get install pgadmin3
+</pre></div>
+</div>
+<p>You can find the new menu item <strong>pgAdmin III</strong> in your Ubuntu system menu from
+<em class="menuselection">Applications ‣ Programming ‣ pgAdmin III</em>.</p>
+<span class="target" id="index-1"></span><p><em>Setup a PostgreSQL user for OpenERP</em></p>
+<p>When the installations of the required software are done, you have to create a
+PostgreSQL user. This user must be the same as your system user. OpenERP will use this user to
+connect to PostgreSQL.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../../../_images/openerp_postgresql.png"><img alt="../../../../_images/openerp_postgresql.png" src="../../../../_images/openerp_postgresql.png" style="width: 295.5px; height: 188.25px;" /></a>
+<p class="caption"><em>Figure demonstrating how OpenERP uses the PostgreSQL user to interact with it</em></p>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Database</p>
+<p class="last">Without creating and configuring a PostgreSQL user for OpenERP as described below, you cannot create a database using
+OpenERP Client.</p>
+</div>
+<p><em>First Method</em></p>
+<p>The default superuser for PostgreSQL is called <strong>postgres</strong>. You may need to login as this
+user first.</p>
+<div class="highlight-python"><div class="highlight"><pre>openerp@openerp-desktop:/$ sudo su postgres
+password: XXXXXXXXXX
+</pre></div>
+</div>
+<p>Now create PostgreSQL user <strong>openerp</strong> using the following command:</p>
+<div class="highlight-python"><div class="highlight"><pre>postgres@openerp-desktop:/$ createuser openerp
+Shall the new role be a superuser? (y/n) y
+</pre></div>
+</div>
+<p>Make this new user a superuser. Only then you can create a database using OpenERP Client.
+In short, <strong>openerp</strong> is the new user created in PostgreSQL for OpenERP. This user is the owner
+of all the tables created by OpenERP Client.</p>
+<p>Now check the list of tables created in PostgreSQL using following command:</p>
+<div class="highlight-python"><div class="highlight"><pre>postgres@openerp-desktop:/$ psql -l
+</pre></div>
+</div>
+<p>You can find the table <strong>template1</strong>, run the following command to use this table:</p>
+<div class="highlight-python"><div class="highlight"><pre>postgres@openerp-desktop:/$ psql template1
+</pre></div>
+</div>
+<p>To apply access rights to the role <strong>openerp</strong> for the database which will be created from OpenERP Client,
+use the following command:</p>
+<div class="highlight-python"><div class="highlight"><pre>template1=# alter role openerp with password &#39;postgres&#39;;
+ALTER ROLE
+</pre></div>
+</div>
+<p><em>Second Method</em></p>
+<p>Another option to create and configure a PostgreSQL user for OpenERP is shown below:</p>
+<div class="highlight-python"><div class="highlight"><pre>postgres@openerp-desktop:/$ createuser --createdb --username postgres --no-createrole
+--pwprompt openerp
+Enter password for new role: XXXXXXXXXX
+Enter it again: XXXXXXXXXX
+Shall the new role be a superuser? (y/n) y
+CREATE ROLE
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Password</p>
+<p class="last">Note that the password is <em>postgres</em>.</p>
+</div>
+<p>Option explanations:</p>
+<blockquote>
+<div><ul class="simple">
+<li><tt class="docutils literal"><span class="pre">--createdb</span></tt> : the new user will be able to create new databases</li>
+<li><tt class="docutils literal"><span class="pre">--username</span> <span class="pre">postgres</span></tt> : <em>createuser</em> will use the <em>postgres</em> user (superuser)</li>
+<li><tt class="docutils literal"><span class="pre">--no-createrole</span></tt> : the new user will not be able to create new users</li>
+<li><tt class="docutils literal"><span class="pre">--pwprompt</span></tt> : <em>createuser</em> will ask you the new user&#8217;s password</li>
+<li><tt class="docutils literal"><span class="pre">openerp</span></tt> : the new user&#8217;s name</li>
+</ul>
+</div></blockquote>
+<p>To access your database using <strong>pgAdmin III</strong>, you need to configure the database connection as shown in following figure:</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../../../_images/new_server_registration.png"><img alt="../../../../_images/new_server_registration.png" src="../../../../_images/new_server_registration.png" style="width: 221.0px; height: 303.0px;" /></a>
+</div>
+<p>You can now start OpenERP Server. You will probably need to modify the
+OpenERP configuration file according to your needs which is normally
+located in <tt class="docutils literal"><span class="pre">~/.openerprc</span></tt>.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Developer Book</p>
+<p class="last">You can find information on configuration files in the Developer Book, section <em class="xref std std-ref">Configuration</em>.</p>
+</div>
+</div>
+
+
+	
+		
+		<div id="disqus_thread"></div>
+	    <script type="text/javascript">
+	        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	        var disqus_shortname = 'openerponlinebook'; // required: replace example with your forum shortname
+	
+	        /* * * DON'T EDIT BELOW THIS LINE * * */
+	        (function() {
+	            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	        })();
+	    </script>
+	    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	    
+    </div>
+    
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, OpenERP Book.<br/>
+      Last updated on Mar 07, 2014.<br/>
+    </p>
+  </div>
+</footer>
+<div class="container">You can contribute to OpenERP Book on <a href="#">Launchpade.net</a>
+<script type="text/javascript">
+  (function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ?
+              'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+  })();
+</script>
+</div>
+
+  </body>
+</html>

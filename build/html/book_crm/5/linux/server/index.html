@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>OpenERP Server Installation &mdash; OpenERP Book 8.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/bootswatch-3.1.0/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '8.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="OpenERP Book 8.0 documentation" href="../../../../index.html" />
+    <link rel="up" title="OpenERP Installation on Linux" href="../index.html" />
+    <link rel="next" title="OpenERP Client Installation" href="../client/index.html" />
+    <link rel="prev" title="PostgreSQL Server Installation and Configuration" href="../postgres/index.html" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-47926740-1']);
+  _gaq.push(['_trackPageview']);
+</script>
+
+<meta name="google-translate-customization" content="1a9f16396f329347-27b519b501ddf27d-gbee5ada102d015d0-f"></meta>
+
+<!-- AddThis Smart Layers BEGIN -->
+<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-530c64087def677e"></script>
+<script type="text/javascript">
+  addthis.layers({
+    'theme' : 'transparent',
+    'share' : {
+      'position' : 'left',
+      'numPreferredServices' : 5
+    }   
+  });
+</script>
+<!-- AddThis Smart Layers END -->
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../../../index.html">
+          OpenERP Book</a>
+        <span class="navbar-text navbar-version pull-left"><b>8.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">About OpenERP Online Book !</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../download/index.html">Looking for OpenERP Demo ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../install/index.html">Installation on Windows, Linux and MacOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../part01/index.html">Getting start with OpenERP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../install-apps/index.html">Install and configure OpenERP Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../part03/index.html">Setup your First Company in OpenERP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../part02/index.html">Leads to Cash Flow with OpenERP</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">Drive your Sales &amp; Marketing Activities with OpenERP</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../part04/index.html">Recruit &amp; Manage your Talents</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../prod-setup/index.html">Deploy OpenERP in Production</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../backup/index.html">OpenERP Backup and Restore</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">OpenERP Server Installation</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+  <li>
+    <a href="../postgres/index.html" title="Previous Chapter: PostgreSQL Server Installation and Configuration"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; PostgreSQL Serve...</span>
+    </a>
+  </li>
+  <li>
+    <a href="../client/index.html" title="Next Chapter: OpenERP Client Installation"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">OpenERP Client I... &raquo;</span>
+    </a>
+  </li>
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+    
+<form class="navbar-form navbar-right" action="../../../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+
+	        
+        
+      
+  <span class="target" id="index-0"></span><div class="section" id="openerp-server-installation">
+<h1>OpenERP Server Installation<a class="headerlink" href="#openerp-server-installation" title="Permalink to this headline">¶</a></h1>
+<p><em>Installing the required packages</em></p>
+<p>You need to have Python (at least 2.5 for OpenERP v6.0) in your Ubuntu system, which is in-built in Ubuntu version 10.04
+and above.</p>
+<p>You also need to install the following Python libraries, because OpenERP Server uses these packages.</p>
+<p>To install the required libraries on your Ubuntu system, you can do the following in your favourite shell:</p>
+<ul>
+<li><p class="first"><em class="guilabel">lxml</em> : lxml is the most feature-rich and easy-to-use library for working with XML and HTML in the Python language.</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install python-lxml
+</pre></div>
+</div>
+</li>
+<li><p class="first"><em class="guilabel">mako</em> : Hyperfast and lightweight templating for the Python platform.</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install python-mako
+</pre></div>
+</div>
+</li>
+<li><p class="first"><em class="guilabel">mxdatetime</em> : Provides the most natural and robust way of dealing with date/time values in Python.</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install python-egenix-mxdatetime
+</pre></div>
+</div>
+</li>
+<li><p class="first"><em class="guilabel">python-dateutil</em> : The dateutil module provides powerful extensions to the standard datetime module, available in Python 2.3+.</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install python-dateutil
+</pre></div>
+</div>
+</li>
+<li><p class="first"><em class="guilabel">psycopg2</em> : Psycopg is the most popular PostgreSQL adapter for the Python programming language.</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install python-psycopg2
+</pre></div>
+</div>
+</li>
+<li><p class="first"><em class="guilabel">pychart</em> : PyChart is a Python library for creating high quality Encapsulated Postscript, PDF, PNG, or SVG charts.</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install python-pychart
+</pre></div>
+</div>
+</li>
+<li><p class="first"><em class="guilabel">pydot</em> : This module provides a full interface to create, handle, modify and process graphs in Graphviz&#8217;s dot language.</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install python-pydot
+</pre></div>
+</div>
+</li>
+<li><p class="first"><em class="guilabel">pytz</em> : World Timezone Definitions for Python.</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install python-tz
+</pre></div>
+</div>
+</li>
+<li><p class="first"><em class="guilabel">reportlab</em> : The ReportLab Toolkit is the time-proven, ultra-robust, open-source engine for programmatically creating PDF documents and forms the foundation of RML. It also contains a library for creating platform-independent vector graphics. It is a fast, flexible, cross-platform solution written in Python.</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install python-reportlab
+</pre></div>
+</div>
+</li>
+<li><p class="first"><em class="guilabel">pyyaml</em> : PyYAML is a YAML parser and emitter for Python.</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install python-yaml
+</pre></div>
+</div>
+</li>
+<li><p class="first"><em class="guilabel">vobject</em> : VObject simplifies the process of parsing and creating iCalendar and vCard objects.</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install python-vobject
+</pre></div>
+</div>
+</li>
+</ul>
+<p><em>Downloading the OpenERP Server</em></p>
+<p>The OpenERP server can be downloaded from the OpenERP website&#8217;s download page &lt;<a class="reference external" href="http://www.openerp.com/downloads">http://www.openerp.com/downloads</a>&gt;.</p>
+<p><em>Testing the OpenERP Server</em></p>
+<p>If you only want to test the server, you do not need to install it. Just unpack the archive and start
+the openerp-server executable:</p>
+<div class="highlight-python"><div class="highlight"><pre>tar -xzf openerp-server-6.0.0.tar.gz
+cd openerp-server-6.0.0/bin
+python openerp-server.py
+</pre></div>
+</div>
+<p>The list of available command line parameters can be obtained with the <tt class="docutils literal"><span class="pre">-h</span></tt>
+command-line switch:</p>
+<div class="highlight-python"><div class="highlight"><pre>python openerp-server.py -h
+</pre></div>
+</div>
+<p><em>Installing the OpenERP Server</em></p>
+<p>The OpenERP Server can be installed very easily using the <em>setup.py</em> file:</p>
+<div class="highlight-python"><div class="highlight"><pre>tar -xzf openerp-server-6.0.0.tar.gz
+cd openerp-server-6.0.0
+sudo python setup.py install
+</pre></div>
+</div>
+<p>If your PostgreSQL server is up and running, you can now run the server using
+the following command:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">openerp</span><span class="o">-</span><span class="n">server</span>
+</pre></div>
+</div>
+<p>If you do not already have a PostgreSQL server up and running, you can read
+<a class="reference internal" href="../postgres/index.html#installation-postgresql-server"><em>PostgreSQL Server Installation and Configuration</em></a>.</p>
+<p>You can find the OpenERP server configuration file
+at <tt class="docutils literal"><span class="pre">~/openerp-server-6.0.0/doc/openerp-server.conf</span></tt>.</p>
+</div>
+
+
+	
+		
+		<div id="disqus_thread"></div>
+	    <script type="text/javascript">
+	        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	        var disqus_shortname = 'openerponlinebook'; // required: replace example with your forum shortname
+	
+	        /* * * DON'T EDIT BELOW THIS LINE * * */
+	        (function() {
+	            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	        })();
+	    </script>
+	    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	    
+    </div>
+    
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, OpenERP Book.<br/>
+      Last updated on Mar 07, 2014.<br/>
+    </p>
+  </div>
+</footer>
+<div class="container">You can contribute to OpenERP Book on <a href="#">Launchpade.net</a>
+<script type="text/javascript">
+  (function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ?
+              'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+  })();
+</script>
+</div>
+
+  </body>
+</html>

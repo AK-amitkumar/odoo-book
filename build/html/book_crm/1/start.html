@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Installation and Initial Setup &mdash; OpenERP Book 8.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootswatch-3.1.0/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '8.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="OpenERP Book 8.0 documentation" href="../../index.html" />
+    <link rel="up" title="First Steps with OpenERP" href="index.html" />
+    <link rel="next" title="Complete Example: from Lead to Sales Order" href="salesteam.html" />
+    <link rel="prev" title="First Steps with OpenERP" href="index.html" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-47926740-1']);
+  _gaq.push(['_trackPageview']);
+</script>
+
+<meta name="google-translate-customization" content="1a9f16396f329347-27b519b501ddf27d-gbee5ada102d015d0-f"></meta>
+
+<!-- AddThis Smart Layers BEGIN -->
+<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-530c64087def677e"></script>
+<script type="text/javascript">
+  addthis.layers({
+    'theme' : 'transparent',
+    'share' : {
+      'position' : 'left',
+      'numPreferredServices' : 5
+    }   
+  });
+</script>
+<!-- AddThis Smart Layers END -->
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">
+          OpenERP Book</a>
+        <span class="navbar-text navbar-version pull-left"><b>8.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About OpenERP Online Book !</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../download/index.html">Looking for OpenERP Demo ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../install/index.html">Installation on Windows, Linux and MacOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part01/index.html">Getting start with OpenERP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../install-apps/index.html">Install and configure OpenERP Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part03/index.html">Setup your First Company in OpenERP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part02/index.html">Leads to Cash Flow with OpenERP</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Drive your Sales &amp; Marketing Activities with OpenERP</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../part04/index.html">Recruit &amp; Manage your Talents</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../prod-setup/index.html">Deploy OpenERP in Production</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../backup/index.html">OpenERP Backup and Restore</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Installation and Initial Setup</a><ul>
+<li><a class="reference internal" href="#use-openerp-online">Use OpenERP Online</a></li>
+<li><a class="reference internal" href="#getting-started-with-openerp-online">Getting Started with OpenERP Online</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+  <li>
+    <a href="index.html" title="Previous Chapter: First Steps with OpenERP"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; First Steps with...</span>
+    </a>
+  </li>
+  <li>
+    <a href="salesteam.html" title="Next Chapter: Complete Example: from Lead to Sales Order"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Complete Example... &raquo;</span>
+    </a>
+  </li>
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+    
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+
+	        
+        
+      
+  <p>OpenERP is an impressive software system, being easy to use and yet providing great benefits
+in helping you manage your company.
+It is easy to install under both Windows and Linux compared with other enterprise-scale systems,
+and offers unmatched functionality.</p>
+<div class="section" id="installation-and-initial-setup">
+<span id="ch-inst"></span><span id="index-0"></span><h1>Installation and Initial Setup<a class="headerlink" href="#installation-and-initial-setup" title="Permalink to this headline">¶</a></h1>
+<p>Whether you want to test OpenERP or put it into full production, you have at least two possible starting
+points:</p>
+<ul class="simple">
+<li>you can use OpenERP Online by subscribing to <a class="reference external" href="http://www.openerp.com/online/">http://www.openerp.com/online/</a>;</li>
+<li>you can install the solution on your own computers to test it in your company&#8217;s system environment.</li>
+</ul>
+<p>In this chapter, the easy-to-use <em>OpenERP Online</em> solution will be briefly explained. For more information about installing OpenERP on your computer, please refer to the chapter <a class="reference internal" href="../5/index.html#part5-crm-install"><em>Installing &amp; Configuring your OpenERP</em></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Some Interesting Websites from OpenERP</p>
+<ul class="last simple">
+<li>Main Site: <a class="reference external" href="http://www.openerp.com">http://www.openerp.com</a>,</li>
+<li>OpenERP Online Site: <a class="reference external" href="http://www.openerp.com/online">http://www.openerp.com/online</a>,</li>
+<li>Online demo at <a class="reference external" href="http://demo.openerp.com">http://demo.openerp.com</a>,</li>
+<li>Documentation site: <a class="reference external" href="http://doc.openerp.com/">http://doc.openerp.com/</a>,</li>
+<li>Community discussion forum where you can often receive assistance: <a class="reference external" href="http://www.openerp.com/forum/">http://www.openerp.com/forum/</a>.</li>
+</ul>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Current documentation</p>
+<p class="last">The procedure for installing OpenERP and its web server are likely to change and improve with
+each new version, so you should always check each release&#8217;s documentation on the website for the latest installation procedures.</p>
+</div>
+<div class="section" id="use-openerp-online">
+<h2>Use OpenERP Online<a class="headerlink" href="#use-openerp-online" title="Permalink to this headline">¶</a></h2>
+<p id="index-1">Nothing is easier for you to discover OpenERP than subscribing to the OpenERP Online offer. You just need a web browser to get started.</p>
+<p>The Online service can be particularly useful to small companies, that just want to get going quickly at low cost.
+You have immediate access to OpenERP&#8217;s Integrated Management System built on the type of enterprise architecture used in many organizations.</p>
+<p>OpenERP&#8217;s Online offer includes several services: hosting at high bandwidth, database management, stable security update, backups, maintenance (24/7 server monitoring), bug fixing and migrations.</p>
+<p>OpenERP guarantees that the software running on OpenERP Online is exactly the same as the Open Source official
+version of OpenERP. Any improvement made on OpenERP will be available online. This allows you to easily switch from the online version to the local version anytime.</p>
+<p>So even if the OpenERP Online solution might be the best solution to suit your needs today, you can easily switch to an installation on your own servers according to your company&#8217;s changing requirements or growth. You are also able to change your service provider
+anytime, while continuing to use the exact same system. Hence, you do not depend on your host. In addition, OpenERP works with standard and open formats and programming languages which allow
+you to export your data and use them in any other software.</p>
+<p>These advantages give you total control over your data, your software, your platform.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/start_saas.jpeg"><img alt="../../_images/start_saas.jpeg" src="../../_images/start_saas.jpeg" style="width: 883.8px; height: 562.5px;" /></a>
+<p class="caption"><em>Subscribe and Start with OpenERP Online</em></p>
+</div>
+<p>If you want to start working with the online platform, you can navigate to <a class="reference external" href="http://www.openerp.com/online">http://www.openerp.com/online</a>. After successful registration, you will be able to configure and use OpenERP online. To log in to your OpenERP Online account, you will receive a username and password. You can build the software to fit your needs, at your own pace!</p>
+<p>OpenERP Online - Software as a Service - is hosted by OpenERP and paid in the form of a monthly subscription. The pricing model is extremely simple. OpenERP charges a fixed fee per month per user. You will get an invoice each month according to the number of users registered in the system at that time. If you add new users during the next 30 days, they will only be charged with the next invoice.
+You can find the details of current pricing and payment options at <a class="reference external" href="http://www.openerp.com/online">http://www.openerp.com/online</a>.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Free Trial</p>
+<p class="last">For a month&#8217;s free trial, check out OpenERP&#8217;s <a class="reference external" href="http://www.openerp.com/online">http://www.openerp.com/online</a>, which enables you to get started quickly without incurring costs for integration or for buying computer systems. After the free trial expires, you can easily continue using OpenERP Online.</p>
+</div>
+</div>
+<div class="section" id="getting-started-with-openerp-online">
+<span id="ch-start"></span><h2>Getting Started with OpenERP Online<a class="headerlink" href="#getting-started-with-openerp-online" title="Permalink to this headline">¶</a></h2>
+<p>If you want to focus on your customers, you need tools: to capture all the knowledge you have available; to help you analyze what you know; to make it easy to use all of that knowledge and analysis. OpenERP invites you to discover the CRM &amp; Sales Management Business Application!</p>
+<p>In this chapter, you can start exploring OpenERP!</p>
+<p>Use a web browser of your choice to connect to OpenERP Web.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/web_startup_new.png"><img alt="../../_images/web_startup_new.png" src="../../_images/web_startup_new.png" style="width: 741.6px; height: 388.8px;" /></a>
+<p class="caption"><em>Web Client at Startup</em></p>
+</div>
+<p>OpenERP suggests that you configure your database using a series of questions. In the software, these series of questions are managed through so-called <tt class="docutils literal"><span class="pre">Configuration</span> <span class="pre">Wizards</span></tt>.</p>
+<p>Click the <tt class="docutils literal"><span class="pre">Start</span> <span class="pre">Configuration</span></tt> button to continue.</p>
+<p>The next configuration wizard will help you to decide what your user interface will look like, whether the screens will only show the most important fields - <tt class="docutils literal"><span class="pre">Simplified</span></tt> - or whether you also want to see the fields for the more advanced users, the <tt class="docutils literal"><span class="pre">Extended</span></tt> view. Select <tt class="docutils literal"><span class="pre">Extended</span></tt> and click <em class="guilabel">Next</em> to continue.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>User Preferences</p>
+<p class="last">You can easily switch from Simplified to Extended view by changing your <cite>User Preferences</cite>.</p>
+</div>
+<p>In the next wizard, you can fill your company data, select your company&#8217;s base currency and add your company logo which can be printed on reports. Click <em class="guilabel">Next</em> to continue.</p>
+<p>Select the <tt class="docutils literal"><span class="pre">Customer</span> <span class="pre">Relationship</span> <span class="pre">Management</span></tt> and <tt class="docutils literal"><span class="pre">Sales</span> <span class="pre">Management</span></tt> business applications for installation and click <em class="guilabel">Install</em>. Now OpenERP will start to install CRM &amp; Sales, allowing you to do a complete sales cycle, from lead / opportunity to quotation and sales order. You will have to wait for the next configuration wizard to be displayed (<em>Loading</em> will appear).</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/install_ba.jpeg"><img alt="../../_images/install_ba.jpeg" src="../../_images/install_ba.jpeg" style="width: 645.6px; height: 316.8px;" /></a>
+<p class="caption"><em>Selecting the CRM &amp; Sales Functionality</em></p>
+</div>
+<p>OpenERP&#8217;s modularity enables you to install a single Business Application (such as CRM) if that is all you need.
+Of course, you can choose to also install Sales Management, to handle quotations, sales orders and sales invoices as well.
+For now, please install <tt class="docutils literal"><span class="pre">Customer</span> <span class="pre">Relationship</span> <span class="pre">Management</span></tt> and <tt class="docutils literal"><span class="pre">Sales</span> <span class="pre">Management</span></tt>, as these two Business Applications will be discussed in this book.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Reconfigure</p>
+<p class="last">Keep in mind that you can change or reconfigure the system any time, for instance through the <cite>Reconfigure</cite> option in the main bar.</p>
+</div>
+<p>When you choose a business application for installation, OpenERP will automatically propose to add or configure related (smaller) applications to enrich your system. When you install CRM, OpenERP will also ask you whether you want to install Fetchmail, or Sales FAQ, for instance.</p>
+<p>The figure <a class="reference internal" href="#fig-accconwiz"><em>Selecting Accounting Configuration</em></a> shows the Accounting Application Configuration screen that appears when you select <tt class="docutils literal"><span class="pre">Sales</span> <span class="pre">Management</span></tt> to be installed.</p>
+<div class="figure align-center" id="fig-accconwiz">
+<a class="reference internal image-reference" href="../../_images/crm_account.jpeg"><img alt="../../_images/crm_account.jpeg" src="../../_images/crm_account.jpeg" style="width: 640.0px; height: 390.4px;" /></a>
+<p class="caption"><em>Selecting Accounting Configuration</em></p>
+</div>
+<p>Indeed, accounting is required to create sales invoices. Select the <cite>Generic Chart of Account</cite> and fill in the Sale Tax (%) applicable in your country. Click <cite>Configure</cite> to continue the configuration.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Accounting</p>
+<p class="last">Please note that you can perfectly well use OpenERP&#8217;s CRM without doing your accounting in OpenERP. When you only install CRM, there is no need to configure accounting.</p>
+</div>
+<p>OpenERP CRM offers lots of features. You can easily manage your address book (prospects, customers, ...), keep track of leads and/or opportunities, manage meetings &amp; phone calls, share (sales) knowledge and much more.</p>
+<p>The figure <a class="reference internal" href="#fig-crmconwiz"><em>Selecting CRM Configuration</em></a> shows the CRM Application Configuration screen that appears when you select <tt class="docutils literal"><span class="pre">Customer</span> <span class="pre">Relationship</span> <span class="pre">Management</span></tt> to be installed.</p>
+<div class="figure align-center" id="fig-crmconwiz">
+<a class="reference internal image-reference" href="../../_images/crm_configuration_wizard.jpeg"><img alt="../../_images/crm_configuration_wizard.jpeg" src="../../_images/crm_configuration_wizard.jpeg" style="width: 645.6px; height: 298.4px;" /></a>
+<p class="caption"><em>Selecting CRM Configuration</em></p>
+</div>
+<p>To stay in line with what will be described later in this book, please install the following options:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">Opportunity</span> <span class="pre">to</span> <span class="pre">Quotation</span></tt> will be checked by default, allowing you to create quotations from an opportunity,</li>
+<li><tt class="docutils literal"><span class="pre">Sale</span> <span class="pre">FAQ</span></tt> to install a company wiki to share your sales knowledge,</li>
+<li><tt class="docutils literal"><span class="pre">Calendar</span> <span class="pre">Synchronizing</span></tt> to link your OpenERP calendar to your mobile device, for instance,</li>
+<li><tt class="docutils literal"><span class="pre">Fetch</span> <span class="pre">Emails</span></tt> to manage incoming and outgoing emails in OpenERP directly,</li>
+<li><tt class="docutils literal"><span class="pre">Thunderbird</span></tt> or <tt class="docutils literal"><span class="pre">Outlook</span></tt> according to the email client you are using, to link your current mailbox to OpenERP and to create new leads or partners in OpenERP, directly from your mailbox.</li>
+</ul>
+<p>If you have selected all of the above options, the following Configuration Wizards will appear:</p>
+<ul class="simple">
+<li>Configure your <em>Sales</em> application: click <tt class="docutils literal"><span class="pre">Configure</span></tt> to accept the default settings (no options checked).</li>
+<li>Configure your <em>Knowledge</em> application: click <tt class="docutils literal"><span class="pre">Configure</span></tt> to accept the default settings.</li>
+<li><em>Thunderbird / Outlook</em> Plug-in Configuration: for now, you only have to click the <tt class="docutils literal"><span class="pre">Save</span> <span class="pre">as</span></tt> button to save the plug-in to your disk (or desktop). Then you can click <tt class="docutils literal"><span class="pre">Configure</span></tt> to continue the installation.</li>
+<li>Configure your <em>Accounting</em> application: click <tt class="docutils literal"><span class="pre">Configure</span></tt> to accept the default settings.</li>
+<li>Configure your <em>Sales</em> application: click <tt class="docutils literal"><span class="pre">Configure</span></tt> to accept the default settings.</li>
+<li><em>Knowledge</em> application configuration: click <tt class="docutils literal"><span class="pre">Next</span></tt> to accept the default settings for the server address.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Plug-ins</p>
+<p class="last">For the configuration of the plug-in, please refer to the settings in chapter <a class="reference internal" href="../2/communicate.html#thunder"><em>Managing your CRM from Mozilla Thunderbird</em></a> or <a class="reference internal" href="../2/communicate.html#outl"><em>Managing your CRM from Microsoft Outlook</em></a>.</p>
+</div>
+<p>OpenERP&#8217;s menu will be displayed, because your system is now ready for actual configuration. To get started, you click the Sales button in OpenERP&#8217;s main screen. In the next chapter <a class="reference internal" href="../2/opport.html#ch-team"><em>Adapting OpenERP to your Sales Organization</em></a> you will start working in the CRM application by telling OpenERP how your company&#8217;s sales teams are organized.</p>
+<p>As your business is growing and evolving all the time, your requirements as to the use of OpenERP are likely to change. To sustain your growth, you can easily extend your CRM with other OpenERP business applications, such as logistics or HR, to name some. OpenERP offers this flexibility; you can start with one business application, such as Customer Relationship Management, and gradually complete OpenERP to suit your ever changing needs!</p>
+</div>
+</div>
+
+
+	
+		
+		<div id="disqus_thread"></div>
+	    <script type="text/javascript">
+	        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	        var disqus_shortname = 'openerponlinebook'; // required: replace example with your forum shortname
+	
+	        /* * * DON'T EDIT BELOW THIS LINE * * */
+	        (function() {
+	            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	        })();
+	    </script>
+	    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	    
+    </div>
+    
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, OpenERP Book.<br/>
+      Last updated on Mar 07, 2014.<br/>
+    </p>
+  </div>
+</footer>
+<div class="container">You can contribute to OpenERP Book on <a href="#">Launchpade.net</a>
+<script type="text/javascript">
+  (function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ?
+              'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+  })();
+</script>
+</div>
+
+  </body>
+</html>

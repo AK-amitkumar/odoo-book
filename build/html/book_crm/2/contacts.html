@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Managing your Address Book &mdash; OpenERP Book 8.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootswatch-3.1.0/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '8.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="OpenERP Book 8.0 documentation" href="../../index.html" />
+    <link rel="up" title="Managing Customer Acquisition" href="index.html" />
+    <link rel="next" title="Managing your Leads" href="leads.html" />
+    <link rel="prev" title="Managing Customer Acquisition" href="index.html" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-47926740-1']);
+  _gaq.push(['_trackPageview']);
+</script>
+
+<meta name="google-translate-customization" content="1a9f16396f329347-27b519b501ddf27d-gbee5ada102d015d0-f"></meta>
+
+<!-- AddThis Smart Layers BEGIN -->
+<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-530c64087def677e"></script>
+<script type="text/javascript">
+  addthis.layers({
+    'theme' : 'transparent',
+    'share' : {
+      'position' : 'left',
+      'numPreferredServices' : 5
+    }   
+  });
+</script>
+<!-- AddThis Smart Layers END -->
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">
+          OpenERP Book</a>
+        <span class="navbar-text navbar-version pull-left"><b>8.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About OpenERP Online Book !</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../download/index.html">Looking for OpenERP Demo ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../install/index.html">Installation on Windows, Linux and MacOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part01/index.html">Getting start with OpenERP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../install-apps/index.html">Install and configure OpenERP Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part03/index.html">Setup your First Company in OpenERP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part02/index.html">Leads to Cash Flow with OpenERP</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Drive your Sales &amp; Marketing Activities with OpenERP</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../part04/index.html">Recruit &amp; Manage your Talents</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../prod-setup/index.html">Deploy OpenERP in Production</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../backup/index.html">OpenERP Backup and Restore</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Managing your Address Book</a><ul>
+<li><a class="reference internal" href="#creating-and-updating-partners">Creating and Updating Partners</a></li>
+<li><a class="reference internal" href="#managing-your-contacts-addresses">Managing your Contacts &amp; Addresses</a></li>
+<li><a class="reference internal" href="#customizing-partner-fields">Customizing Partner Fields</a></li>
+<li><a class="reference internal" href="#performing-actions-on-customers">Performing Actions on Customers</a></li>
+<li><a class="reference internal" href="#finding-your-partners-using-filters">Finding your Partners using Filters</a></li>
+<li><a class="reference internal" href="#categorizing-your-partners">Categorizing your Partners</a></li>
+<li><a class="reference internal" href="#an-alternative-to-manage-your-contacts">An Alternative to Manage your Contacts</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+  <li>
+    <a href="index.html" title="Previous Chapter: Managing Customer Acquisition"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Managing Custome...</span>
+    </a>
+  </li>
+  <li>
+    <a href="leads.html" title="Next Chapter: Managing your Leads"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Managing your Le... &raquo;</span>
+    </a>
+  </li>
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+    
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+
+	        
+        
+      
+  <div class="section" id="managing-your-address-book">
+<span id="part2-crm-cont"></span><h1>Managing your Address Book<a class="headerlink" href="#managing-your-address-book" title="Permalink to this headline">¶</a></h1>
+<p id="index-0">What is the difference between a partner and a contact in OpenERP? A <tt class="docutils literal"><span class="pre">Partner</span></tt> represents an entity that you do business with - a customer, a prospect, or even an employee of your company. In other CRM applications, a partner is also referred to as an Account.
+A <tt class="docutils literal"><span class="pre">Contact</span></tt> represents a person who works for a partner.</p>
+<p>Each partner can have an unlimited number of contacts. OpenERP also allows you to have several contacts with the same address type for one partner. You can easily link several Invoice addresses to a customer, for instance.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Address Types</p>
+<p>If you have recorded several contacts for the same partner, you can tell OpenERP which contact will be used in
+various documents (e.g. a quotation) by specifying the <tt class="docutils literal"><span class="pre">Address</span> <span class="pre">Type</span></tt>.</p>
+<p class="last">For example, a partner (<em>company</em>) can have a delivery address that differs from the company&#8217;s invoice address.
+If the Address Types are correctly assigned, OpenERP can automatically select the appropriate address
+during the creation of the document – an invoice is addressed to the contact that has been assigned
+the Address Type of Invoice, otherwise to the Default address.</p>
+</div>
+<p>The concept of a partner in OpenERP is much more flexible than in many other management applications. Why is that? Because a partner can be your supplier and your customer at the same time.
+As a consequence, any data you update for that partner will apply to both customer and supplier! Thanks to this, you no longer need to update your address book several times (or even in several places) for the same partner.</p>
+<p>The partner form contains information about the company, such as its corporate name, its primary language, and whether the company is a
+<tt class="docutils literal"><span class="pre">Customer</span></tt> and/or a <tt class="docutils literal"><span class="pre">Supplier</span></tt> . The partner form is composed of several tabs.</p>
+<ul class="simple">
+<li>the <em class="guilabel">General</em> tab contains information about different contacts of that partner, postal information,
+communication information and the categories the partner belongs to,</li>
+<li>the <em class="guilabel">Sales &amp; Purchases</em> tab contains information such as the default salesman and sales team, and the website,</li>
+<li>the <em class="menuselection">History</em> tab gives visibility on the complete <tt class="docutils literal"><span class="pre">Communication</span> <span class="pre">History</span></tt> (meetings, marketing campaign activities,
+leads and opportunities, phone calls, emails) with the partner. The events the partner has been involved in are created automatically by
+different documents like phone calls, leads, meetings,</li>
+<li>the <em class="menuselection">Notes</em> tab is an area for free text notes.</li>
+</ul>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/crm_partner_hist.jpeg"><img alt="../../_images/crm_partner_hist.jpeg" src="../../_images/crm_partner_hist.jpeg" style="width: 1295.0px; height: 827.0px;" /></a>
+<p class="caption"><em>The History Tab of a Customer</em></p>
+</div>
+<div class="section" id="creating-and-updating-partners">
+<h2>Creating and Updating Partners<a class="headerlink" href="#creating-and-updating-partners" title="Permalink to this headline">¶</a></h2>
+<p>Before explaining you how to create a partner, just a quick word on the different ways of representing partners in OpenERP.
+<cite>List</cite> view shows a list of customers (the default representation when you click the Customers menu). In this view, you can see several customers at a time.
+<cite>Form</cite> view is displayed when you click a specific customer to start editing or when you create a new customer.</p>
+<p>To create a new partner (a company, customer, supplier, ...) or to display the list of existing customers, use the menu <em class="menuselection">Sales ‣ Address Book ‣ Customers</em>. This menu does not only allow you to create a new partner, but also to search for partners.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/crm_partner_default.jpeg"><img alt="../../_images/crm_partner_default.jpeg" src="../../_images/crm_partner_default.jpeg" style="width: 1498.0px; height: 595.0px;" /></a>
+<p class="caption"><em>A Customer Form</em></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Mandatory</p>
+<p class="last">Blue fields are always mandatory, meaning that you have to enter a value there. It is impossible to save changes as long as a blue field is not completed.</p>
+</div>
+<p>You should at least enter the company&#8217;s <tt class="docutils literal"><span class="pre">Name</span></tt> in the partner form. Some fields are text fields, other fields may be linked to existing data that have been entered elsewhere, such as <tt class="docutils literal"><span class="pre">Countries</span></tt>.</p>
+<p>Create a customer with the following data:</p>
+<ul class="simple">
+<li><em class="guilabel">Name</em> : <tt class="docutils literal"><span class="pre">Smith</span> <span class="pre">and</span> <span class="pre">Offspring</span></tt>,</li>
+<li><em class="guilabel">Customer</em> checkbox : <tt class="docutils literal"><span class="pre">checked</span></tt>,</li>
+<li><em class="guilabel">Supplier</em> checkbox : <tt class="docutils literal"><span class="pre">unchecked</span></tt>,</li>
+<li><em class="guilabel">Contact Name</em> : <tt class="docutils literal"><span class="pre">Stephen</span> <span class="pre">Smith</span></tt>,</li>
+<li><em class="guilabel">Type</em> : <tt class="docutils literal"><span class="pre">Default</span></tt>, in the Postal Address section,</li>
+<li><em class="guilabel">Save</em> the form.</li>
+</ul>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Email</p>
+<p class="last">If you use the email gateway, the Outlook or the Thunderbird plugin, do not forget to register an email addresses to each contact, so that the gateway will automatically attach incoming emails to the right partner.</p>
+</div>
+<p>To update a partner, open the corresponding form, select <cite>Edit</cite> and change the required fields. As explained before, when a company is both one of your customers and a supplier, you just have to edit the partner form once to have changes applied to both customer and supplier.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Checkboxes</p>
+<p class="last">Why is it important for you to correctly set the Customer and Supplier checkboxes in the partner form? These checkboxes are designed to enable OpenERP to quickly select the partners who should be displayed in some drop-down boxes. An example: when you select a partner in a Sales Quotation, OpenERP will only allow you to select from the list of Customers. And that is precisely what the Customer checkbox is used for.</p>
+</div>
+</div>
+<div class="section" id="managing-your-contacts-addresses">
+<span id="index-1"></span><h2>Managing your Contacts &amp; Addresses<a class="headerlink" href="#managing-your-contacts-addresses" title="Permalink to this headline">¶</a></h2>
+<p>You can have several contacts for one partner. Contacts represent company employees that you are in
+touch with, along with their address details. For each address you can indicate the type (<tt class="docutils literal"><span class="pre">Default</span></tt>, <tt class="docutils literal"><span class="pre">Invoice</span></tt>, <tt class="docutils literal"><span class="pre">Delivery</span></tt>, <tt class="docutils literal"><span class="pre">Contact</span></tt>  or <tt class="docutils literal"><span class="pre">Other</span></tt>).</p>
+<p>Contacts can be entered into the <em class="guilabel">General</em> tab of the <strong>Customer</strong> form, or from the list of addresses in the <em class="menuselection">Sales ‣ Address Book ‣ Addresses</em> menu.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Same Contact, Different Partners</p>
+<p class="last">Do you have contacts who work for several companies, and need to be linked to several partners? Check out the <a class="reference internal" href="#ch-contact"><em>An Alternative to Manage your Contacts</em></a> chapter.</p>
+</div>
+</div>
+<div class="section" id="customizing-partner-fields">
+<h2>Customizing Partner Fields<a class="headerlink" href="#customizing-partner-fields" title="Permalink to this headline">¶</a></h2>
+<p>OpenERP also allows you to customize the <tt class="docutils literal"><span class="pre">Partner</span></tt> view to your needs. Click the <cite>Manage Views</cite> option if you want to add fields, delete fields or change the order of fields in a view.</p>
+<p>Let us add the <tt class="docutils literal"><span class="pre">Birthday</span></tt> field to a contact, in the <cite>Addresses</cite> form view. To do so, go to the <em class="menuselection">Sales ‣
+Address Book ‣ Addresses</em> menu and open any address in Form view. In the right menu bar, click <cite>Manage Views</cite>, then <cite>Edit</cite> because the corresponding view will already be preselected.</p>
+<p>Go to the last line of the view and click the blue plus (+) sign to add a field to the <cite>Communication</cite> group. Proceed as in the figure below, then click the <cite>Update</cite> button.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/manage_views_addfield_small.jpeg"><img alt="../../_images/manage_views_addfield_small.jpeg" src="../../_images/manage_views_addfield_small.jpeg" style="width: 606.0px; height: 333.0px;" /></a>
+<p class="caption"><em>Add the Birthday Field for a Contact</em></p>
+</div>
+<p>In the <cite>Properties</cite> screen that appears, you can change the label to <tt class="docutils literal"><span class="pre">Birthday</span></tt> in the <tt class="docutils literal"><span class="pre">String</span></tt> field. To indicate that a new field can be used in the corresponding search view, make sure to select <tt class="docutils literal"><span class="pre">Always</span> <span class="pre">Searchable</span></tt>. Click the <cite>Update</cite> button to confirm your changes. Click <cite>Preview</cite> to see your result. The <tt class="docutils literal"><span class="pre">Birthday</span></tt> field will now appear in your <cite>Address</cite> form view, ready to be used.</p>
+</div>
+<div class="section" id="performing-actions-on-customers">
+<h2>Performing Actions on Customers<a class="headerlink" href="#performing-actions-on-customers" title="Permalink to this headline">¶</a></h2>
+<p id="index-2">At the right side of the <cite>Customers</cite> list or form view, you will find a list of all of the reports, actions and links available for the selected partner(s). You can perform actions and print reports both from List and from Form view, List view allowing you to do actions for several partners at the same time.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Actions</p>
+<p class="last">To display the list of possible actions, just select one or more customers or click the arrow at the top of the right side bar.</p>
+</div>
+<p>You can create a new opportunity for a customer, or start a mass mailing. Mass mailings will usually be started from list view, because you will select several partners at a time.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Campaigns</p>
+<p class="last">For mass mailings, you might prefer to use the Direct Marketing application, which offers great functionality (please refer to chapter <a class="reference internal" href="../3/index.html#part3-crm-market"><em>Driving your Marketing Campaigns</em></a>).</p>
+</div>
+<p>Another action enables you to quickly send an SMS message.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Send an SMS message</p>
+<p>To send an SMS message from standard Open&nbsp;ERP you will have to place an order with the bulk SMS
+gateway operator Clickatell™ <a class="reference external" href="http://clickatell.com">http://clickatell.com</a>.</p>
+<p class="last">To send an SMS message to a partner or a selection of several partners, first select the partners
+in list view, then click the <em class="guilabel">SMS Send</em> Action icon.</p>
+</div>
+</div>
+<div class="section" id="finding-your-partners-using-filters">
+<span id="index-3"></span><h2>Finding your Partners using Filters<a class="headerlink" href="#finding-your-partners-using-filters" title="Permalink to this headline">¶</a></h2>
+<p>Open the <cite>Customers</cite> list view to discover the search options allowing you to easily filter your partners. You can group by <tt class="docutils literal"><span class="pre">Salesman</span></tt> to see which customers have already been assigned a salesman or not. Click the button at the right (the icon of the person) to see the customers you are responsible for.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Limit</p>
+<p class="last">If you want to display more than the 20 partners displayed by default, click the <tt class="docutils literal"><span class="pre">1</span> <span class="pre">to</span> <span class="pre">20</span> <span class="pre">of</span> <span class="pre">-</span> <span class="pre">XX</span></tt> option at the bottom of the screen to be able to change the limit.</p>
+</div>
+<p>Filters also allow you to quickly set lists of customers for which you want to do specific actions. Through the <tt class="docutils literal"><span class="pre">New</span> <span class="pre">Filter</span></tt> option, you can also add your own filters for any field related to the <tt class="docutils literal"><span class="pre">Customer</span></tt> form.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Filters</p>
+<p class="last">You can easily create your own frequently used filters by prefiltering the data the way you want and then using the Save Filter option.</p>
+</div>
+</div>
+<div class="section" id="categorizing-your-partners">
+<span id="partner-categ"></span><h2>Categorizing your Partners<a class="headerlink" href="#categorizing-your-partners" title="Permalink to this headline">¶</a></h2>
+<p id="index-4">OpenERP uses categories to organize all of its partners according to their relationship with your company (customer, prospect, supplier, and so on). Each partner may be attached to several categories. To open the list of available partner categories, use the menu <em class="menuselection">Sales ‣ Configuration ‣ Address Book ‣ Partner Categories</em>.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/crm_partner_category_big.png"><img alt="../../_images/crm_partner_category_big.png" src="../../_images/crm_partner_category_big.png" style="width: 804.0px; height: 597.0px;" /></a>
+<p class="caption"><em>List of Partner Categories</em></p>
+</div>
+<p>Click one of the categories in the partner category structure to get a list of the partners
+in that category. If you click a category that has subcategories, you will get a list of all of the
+partners in the main category and in all of its subcategories.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Categories</p>
+<p class="last">To create a new category, go to the menu <em class="menuselection">Sales ‣ Configuration ‣ Address Book ‣ Partner Categories</em> and click the <cite>New</cite> button.</p>
+</div>
+<p>Because categories can be organized according to a tree structure, you can apply an action at any level of
+the structure: a marketing promotion activity, for example, can be applied either to all customers,
+or selectively only to customers in one category and its subcategories.</p>
+<p>You can create your own categories and assign them to your partner from the <cite>Customer</cite> form. Another way of assigning the corresponding partner to a category is to open the category from the <cite>Partner Categories</cite>.</p>
+<p>In the <a class="reference internal" href="../3/index.html#profiling"><em>Profiling your Customers</em></a> chapter, you will see how to assign partners to categories automatically using segmentation rules.</p>
+</div>
+<div class="section" id="an-alternative-to-manage-your-contacts">
+<span id="ch-contact"></span><h2>An Alternative to Manage your Contacts<a class="headerlink" href="#an-alternative-to-manage-your-contacts" title="Permalink to this headline">¶</a></h2>
+<p>According to your kind of business, the standard way of linking several contacts to one partner may not be flexible enough for you. You could perfectly well have the same employees working for several of your companies. Or maybe you work with representatives ensuring follow up of several of your customers. So you would want to have the same contact linked to different partners.</p>
+<p>Of course, OpenERP provides an alternative, the <tt class="xref py py-mod docutils literal"><span class="pre">base_contact</span></tt> module, which gives you even more flexibility in managing your contacts.</p>
+<p>Easily share the same contact (an employee, for instance), who may perfectly have different jobs, with several partners. You only need to enter (or <em>create</em>) the contact once and link it to the partners concerned, while specifying the position the contact holds for each company in particular. Any changes to contact information only need to be made once for them to be applied to all partners the contact is related to!</p>
+<p>We illustrate the concept of multiple relationships between contacts and partners (companies) through an example. The figure <a class="reference internal" href="#fig-crmconw"><em>Advanced Contact Management</em></a> shows two companies having several addresses (places of business) and several contacts attached to these addresses.</p>
+<p>In this example you will find the following elements:</p>
+<ul class="simple">
+<li>The ABC bank has two places of business, represented by the addresses of ABC Belgium and ABC
+Luxembourg,</li>
+<li>The addresses of Dexey France and Dexey Belgium belong to the Dexey company,</li>
+<li>At the office of ABC Luxembourg, you have the contacts of the director (D. Smith) and the
+accountant (A. Doe),</li>
+<li>Mr Doe holds the post of accountant for ABC Luxembourg and Dexey France,</li>
+<li>Mr D. Smith is director of Dexey France and Dexey Belgium and we also have his private address
+which is not attached to a partner.</li>
+</ul>
+<p>An extra menu option will be added, allowing you to display the list of contacts, through <em class="menuselection">Sales ‣ Address Book ‣ Contacts</em>.</p>
+<p>The screenshot below illustrates how contacts are handled with the advanced Contacts configuration.</p>
+<div class="figure" id="fig-crmconw">
+<a class="reference internal image-reference" href="../../_images/crm_contact_with_latest.png"><img alt="../../_images/crm_contact_with_latest.png" src="../../_images/crm_contact_with_latest.png" style="width: 873.0px; height: 373.0px;" /></a>
+<p class="caption"><em>Advanced Contact Management</em></p>
+</div>
+<p>This is a clear way to illustrate the complexities that may be accomplished in OpenERP.</p>
+<p>If you correct or change a contact name in the contact form, the changes will be applied to all the posts occupied in the different companies.</p>
+<p>The screen below represents a partner form. You can add several addresses, such as Invoice &amp; Delivery, and a list of
+contacts per address. Each contact has its own data, such as name, function, phone number and email.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/crm_base_contacts.png"><img alt="../../_images/crm_base_contacts.png" src="../../_images/crm_base_contacts.png" style="width: 794.4px; height: 441.6px;" /></a>
+<p class="caption"><em>Partner Form with the Advanced Contacts Management</em></p>
+</div>
+<p>Go to <em class="menuselection">Sales ‣ Address Book ‣ Contacts</em> to open a contact form.
+You enter data in the contact form, containing information such as mobile phone, different functions occupied, and personal blog. You can also add a photo of your contact.
+If you click the <cite>Functions and Addresses</cite> line, you will get more details about the job (such as start date, end date and fax).</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/crm_partner_poste.png"><img alt="../../_images/crm_partner_poste.png" src="../../_images/crm_partner_poste.png" style="width: 652.0px; height: 548.0px;" /></a>
+<p class="caption"><em>Detail of a Position occupied by a Contact at a Partner</em></p>
+</div>
+</div>
+</div>
+
+
+	
+		
+		<div id="disqus_thread"></div>
+	    <script type="text/javascript">
+	        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	        var disqus_shortname = 'openerponlinebook'; // required: replace example with your forum shortname
+	
+	        /* * * DON'T EDIT BELOW THIS LINE * * */
+	        (function() {
+	            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	        })();
+	    </script>
+	    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	    
+    </div>
+    
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, OpenERP Book.<br/>
+      Last updated on Mar 07, 2014.<br/>
+    </p>
+  </div>
+</footer>
+<div class="container">You can contribute to OpenERP Book on <a href="#">Launchpade.net</a>
+<script type="text/javascript">
+  (function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ?
+              'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+  })();
+</script>
+</div>
+
+  </body>
+</html>

@@ -35,6 +35,11 @@ Table of Contents
 Proposed Topics
 ---------------
 
+.. toctree::
+   :maxdepth: 1
+   
+   crm_sale/index.rst
+   
 * Boost your Sales
 * Organize your Warehouse
 * Control your Purchase

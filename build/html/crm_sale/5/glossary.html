@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>OpenERP CRM Glossary &mdash; OpenERP Book 8.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootswatch-3.1.0/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '8.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="OpenERP Book 8.0 documentation" href="../../index.html" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-47926740-1']);
+  _gaq.push(['_trackPageview']);
+</script>
+
+<meta name="google-translate-customization" content="1a9f16396f329347-27b519b501ddf27d-gbee5ada102d015d0-f"></meta>
+
+<!-- AddThis Smart Layers BEGIN -->
+<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-530c64087def677e"></script>
+<script type="text/javascript">
+  addthis.layers({
+    'theme' : 'transparent',
+    'share' : {
+      'position' : 'left',
+      'numPreferredServices' : 5
+    }   
+  });
+</script>
+<!-- AddThis Smart Layers END -->
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">
+          OpenERP Book</a>
+        <span class="navbar-text navbar-version pull-left"><b>8.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About OpenERP Online Book !</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../download/index.html">Looking for OpenERP Demo ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../install/index.html">Installation on Windows, Linux and MacOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part01/index.html">Getting start with OpenERP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../install-apps/index.html">Install and configure OpenERP Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part03/index.html">Setup your First Company in OpenERP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part02/index.html">Leads to Cash Flow with OpenERP</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Drive your Sales &amp; Marketing Activities with OpenERP</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../part04/index.html">Recruit &amp; Manage your Talents</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../prod-setup/index.html">Deploy OpenERP in Production</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../backup/index.html">OpenERP Backup and Restore</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">OpenERP CRM Glossary</a><ul>
+<li><a class="reference internal" href="#an-overview-of-the-basic-concepts">An overview of the Basic Concepts</a></li>
+<li><a class="reference internal" href="#how-to-use-filters">How to Use Filters?</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+    
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+
+	        
+        
+      
+  <div class="section" id="openerp-crm-glossary">
+<h1>OpenERP CRM Glossary<a class="headerlink" href="#openerp-crm-glossary" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="an-overview-of-the-basic-concepts">
+<span id="index-0"></span><h2>An overview of the Basic Concepts<a class="headerlink" href="#an-overview-of-the-basic-concepts" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Leads</dt>
+<dd>A lead is a first, unqualified contact with a new prospect. Use leads when you import a database of prospects or integrate your website&#8217;s contact form with OpenERP.
+Once qualified, the lead can be converted to a partner and a business opportunity for further detailed tracking of related activities.</dd>
+<dt>Opportunities</dt>
+<dd>Opportunities allow you to track the pipeline of your best deals: history of the communication, expected revenues, stage of each opportunity, expected closings, etc. Opportunities
+are usually connected with the email gateway which allows you to keep the history of the emails exchanged with the customer. Your teams will be able to schedule meetings and phone
+calls on opportunities, to convert opportunities into quotations, to manage documents related to the opportunity and to track all activities related to this customer.</dd>
+<dt>Sales Orders</dt>
+<dd>The sales order manages invoicing, product fulfilment and delivery processes. OpenERP can handle products, services and consumables. A sales order can trigger tasks, manufacturing
+orders, purchases, etc. It supports several invoicing methods according to your configuration: from the sales order, the delivery, etc.</dd>
+<dt>Address Book</dt>
+<dd>The Customer Address book manages your list of customers. The customer form allows you to record details about your customers (address, contacts, pricelist, account, etc.).
+With the <cite>History</cite> tab, you can follow all moves and transactions related to a customer, such as leads &amp; opportunities, meetings, phone calls and much more.</dd>
+<dt>Meetings</dt>
+<dd>The Meeting Calendar is shared between sales teams and is fully integrated with the other applications like employee holidays. You can also synchronise meetings with your mobile
+phone or other calendar software using the CalDAV interface.</dd>
+<dt>Phone Calls</dt>
+<dd>Easily trace all your Inbound calls. The Inbound menu opens a search view in editable mode, so that you can easily modify or add a new call record. With the action buttons in form
+view, you can convert a phone call into an opportunity or plan a meeting.
+The Outbound menu opens a search view in editable mode, so that you can easily modify or plan a new call. Action buttons allow you to  make your call status evolve for a better
+follow up of your planned calls. During calls, convert your lead into an opportunity, plan a meeting or cancel it.</dd>
+<dt>Billing</dt>
+<dd>Lines to invoice opens a search view with sales order lines and their status. You can use this menu to create invoices from sales order lines that are already delivered, but not
+invoiced yet.</dd>
+<dt>AfterSales Services</dt>
+<dd>Record and trace your customers&#8217; claims here. A claim is defined by a customer&#8217;s name, several types, status and a priority level. A claim can also be a preventive or repairing
+action. A claim can be linked to a reference like a sales order, or a product lot number. You can send emails with attachments directly from OpenERP and get the history of the
+claim treatment (emails sent, interventions type, etc.).
+Like recording and processing claims, Helpdesk and Support are good tools to trace your interventions. This menu is more adapted to oral communication, which is not necessarily
+related to a claim. Select a customer, add notes and categorize your interventions with a channel and a priority level.</dd>
+<dt>Fund Raising</dt>
+<dd>When you wish to support your organization or a campaign, you can trace all your activities for collecting money. The menu opens a search list where you can find fund descriptions,
+email, history and probability of success. Several action buttons allow you to easily modify your different fund statuses.</dd>
+<dt>Products</dt>
+<dd>Product category opens a tree structure view of your products by category. In OpenERP, a product is something you can buy and sell. It can be a raw material, a stockable product,
+a consumable or a service. The product form contains detailed information, such as procurement logistics, sales price, product category, suppliers, etc.</dd>
+<dt>Documents</dt>
+<dd>Documents give you access to all attached documents; it&#8217;s a repository of all attached documents (emails, documents attached to a project, etc.)</dd>
+<dt>Sales FAQ</dt>
+<dd>The Frequently Asked Sales Questions is a wiki page used to share frequently asked questions.</dd>
+</dl>
+<p><em>Reporting &amp; Dashboards</em></p>
+<p>With <tt class="docutils literal"><span class="pre">Sales</span> <span class="pre">Analysis</span></tt> consult your sales total amount according to different group criteria (salesman, partner, product, etc.)</p>
+<p><tt class="docutils literal"><span class="pre">Leads</span> <span class="pre">Analysis</span></tt> allows you to consult different information relative to the CRM. Check for delays, number of responses given and emails sent. You can sort your leads analysis by different groups to get a detailed analysis.</p>
+<p><tt class="docutils literal"><span class="pre">Opportunities</span> <span class="pre">Analysis</span></tt> gives you instant access to your opportunities like expected revenue, planned costs, passed deadlines or the number of exchanges by opportunity.</p>
+<p>Get an analysis of <tt class="docutils literal"><span class="pre">Phone</span> <span class="pre">Call</span></tt> numbers and delay to close, stage, user suits to different groups for a global or a more detailed analysis.</p>
+<p><tt class="docutils literal"><span class="pre">Helpdesk</span></tt> allows you to consult different information relative to support demands. Check for processing delays, number of responses given and emails sent as well as costs. You can sort your analysis by different groups to get a blow-by-blow analysis.</p>
+<p>With <tt class="docutils literal"><span class="pre">Fund</span> <span class="pre">Raising</span></tt>, at a glance, get a view to your fund raising campaigns with the estimated revenues, average probability and delay to close.</p>
+<p><tt class="docutils literal"><span class="pre">Shipments</span> <span class="pre">Analysis</span></tt> opens a search view with all your shipments (in and out quantities), their total value, planned and actual dates. You can sort out your analysis on different groups to get detailed analysis.</p>
+</div>
+<div class="section" id="how-to-use-filters">
+<span id="part5-crm-filters"></span><span id="part1-crm-tips"></span><h2>How to Use Filters?<a class="headerlink" href="#how-to-use-filters" title="Permalink to this headline">¶</a></h2>
+<p>The <cite>Advanced Search View</cite> is a new feature of OpenERP v6 which provides a very user-friendly filtering mechanism
+for the end-user to easily look up desired records from the list.</p>
+<p>The perfect example of an advanced search view is a Statistical Report of OpenERP.
+Such a report shows the statistical summary with filtered results to the end-user.</p>
+<p>Usually, an Advanced Search is composed of three elements, the <cite>Filter</cite> buttons at the top, the <cite>Extended Filters</cite>, and the <cite>Group by</cite> option.
+These filters are dynamic, so according to filters you apply, extra columns may be added to the view.</p>
+<p>You can also easily combine filters; an arrow will be displayed and you will get a structure according to the order in which you clicked the <cite>Filter</cite> buttons.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Filters</p>
+<p class="last">Simply by changing the order in which you select your buttons, you will get a completely different filtered view. E.g. select Salesman first, then Customer or vice versa.</p>
+</div>
+</div>
+</div>
+
+
+	
+		
+		<div id="disqus_thread"></div>
+	    <script type="text/javascript">
+	        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	        var disqus_shortname = 'openerponlinebook'; // required: replace example with your forum shortname
+	
+	        /* * * DON'T EDIT BELOW THIS LINE * * */
+	        (function() {
+	            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	        })();
+	    </script>
+	    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	    
+    </div>
+    
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, OpenERP Book.<br/>
+      Last updated on Mar 07, 2014.<br/>
+    </p>
+  </div>
+</footer>
+<div class="container">You can contribute to OpenERP Book on <a href="#">Launchpade.net</a>
+<script type="text/javascript">
+  (function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ?
+              'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+  })();
+</script>
+</div>
+
+  </body>
+</html>
