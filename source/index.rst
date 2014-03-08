@@ -40,7 +40,6 @@ Proposed Topics
    
    crm_sale/index.rst
    
-* Boost your Sales
 * Organize your Warehouse
 * Control your Purchase
 
