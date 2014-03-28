@@ -311,6 +311,7 @@ epub_copyright = u'2014, OpenERP Book'
 
 # A tuple containing the cover image and cover page html template filenames.
 #epub_cover = ()
+epub_cover = ('./images/openerp-book.png', '')
 
 # A sequence of (type, uri, title) tuples for the guide element of content.opf.
 #epub_guide = ()
