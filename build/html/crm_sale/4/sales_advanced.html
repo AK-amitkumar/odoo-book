@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Advanced Features &mdash; OpenERP Book 8.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootswatch-3.1.0/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '8.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="OpenERP Book 8.0 documentation" href="../../index.html" />
+    <link rel="up" title="Closing your Deals: from Quotation to Sales Order" href="index.html" />
+    <link rel="next" title="Key Features HR" href="../../part04/index.html" />
+    <link rel="prev" title="Managing your Sales Quotations" href="sales_quotations.html" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-47926740-1']);
+  _gaq.push(['_trackPageview']);
+</script>
+
+<meta name="google-translate-customization" content="1a9f16396f329347-27b519b501ddf27d-gbee5ada102d015d0-f"></meta>
+
+<!-- AddThis Smart Layers BEGIN -->
+<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-530c64087def677e"></script>
+<script type="text/javascript">
+  addthis.layers({
+    'theme' : 'transparent',
+    'share' : {
+      'position' : 'left',
+      'numPreferredServices' : 5
+    }   
+  });
+</script>
+<!-- AddThis Smart Layers END -->
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">
+          OpenERP Book</a>
+        <span class="navbar-text navbar-version pull-left"><b>8.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About OpenERP Online Book !</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../download/index.html">Looking for OpenERP Demo ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../install/index.html">Installation on Windows, Linux and MacOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part01/index.html">Getting start with OpenERP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../install-apps/index.html">Install and configure OpenERP Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part03/index.html">Setup your First Company in OpenERP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part02/index.html">Leads to Cash Flow with OpenERP</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Boost your Sales</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../part04/index.html">Key Features HR</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../prod-setup/index.html">Deploy OpenERP in Production</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../backup/index.html">OpenERP Backup and Restore</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Advanced Features</a><ul>
+<li><a class="reference internal" href="#defining-packaging">Defining Packaging</a></li>
+<li><a class="reference internal" href="#managing-alerts">Managing Alerts</a></li>
+<li><a class="reference internal" href="#controlling-deliveries-and-invoicing">Controlling Deliveries and Invoicing</a><ul>
+<li><a class="reference internal" href="#configuring-orders">Configuring Orders</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#managing-carriers">Managing Carriers</a><ul>
+<li><a class="reference internal" href="#tariff-grids">Tariff Grids</a></li>
+<li><a class="reference internal" href="#delivery-modes">Delivery Modes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#keeping-track-of-your-margins">Keeping Track of your Margins</a><ul>
+<li><a class="reference internal" href="#margins-on-sales-orders">Margins on Sales Orders</a></li>
+<li><a class="reference internal" href="#margins-by-product">Margins by Product</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pricing-policies">Pricing Policies</a><ul>
+<li><a class="reference internal" href="#creating-pricelists">Creating Pricelists</a><ul>
+<li><a class="reference internal" href="#pricelist-versions">PriceList Versions</a></li>
+<li><a class="reference internal" href="#calculation-rules">Calculation Rules</a></li>
+<li><a class="reference internal" href="#decimal-accuracy">Decimal Accuracy</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#example-of-a-pricelist">Example of a Pricelist</a><ul>
+<li><a class="reference internal" href="#default-price-lists">Default Price Lists</a></li>
+<li><a class="reference internal" href="#trading-company">Trading Company</a></li>
+<li><a class="reference internal" href="#establishing-customer-contract-conditions">Establishing Customer Contract Conditions</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pricelists-and-managing-currencies">Pricelists and Managing Currencies</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rebates-at-the-end-of-a-campaign">Rebates at the End of a Campaign</a></li>
+<li><a class="reference internal" href="#keeping-track-of-open-orders">Keeping track of Open Orders</a></li>
+<li><a class="reference internal" href="#changing-order-layout">Changing Order Layout</a></li>
+<li><a class="reference internal" href="#invoice-analysis">&nbsp;Invoice Analysis</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+  <li>
+    <a href="sales_quotations.html" title="Previous Chapter: Managing your Sales Quotations"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Managing your Sa...</span>
+    </a>
+  </li>
+  <li>
+    <a href="../../part04/index.html" title="Next Chapter: Key Features HR"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Key Features HR &raquo;</span>
+    </a>
+  </li>
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+    
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+
+	        
+        
+      
+  <div class="section" id="advanced-features">
+<h1>Advanced Features<a class="headerlink" href="#advanced-features" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="defining-packaging">
+<h2>Defining Packaging<a class="headerlink" href="#defining-packaging" title="Permalink to this headline">¶</a></h2>
+<p>Products can be managed in several packaged forms. For example, if you sell
+batteries you can define the following packages for a given battery product:</p>
+<ul class="simple">
+<li>Piece: a battery,</li>
+<li>Blister Pack: a pack of 4 batteries,</li>
+<li>Pack of 100 blisters: 400 batteries,</li>
+<li>Palette: 40 packs for a total of 16,000 batteries.</li>
+</ul>
+<p>OpenERP&#8217;s package management enables you to sell the same product in several different forms. The
+salesperson could sell separately one battery or a palette of batteries. In the order, you can
+select the default packaging type as a function of the quantities ordered.</p>
+<p>For example, if the customer wants to buy 30,000 batteries, the salesperson can select the <tt class="docutils literal"><span class="pre">palette</span></tt> package. OpenERP will then propose to sell 32,000 batteries, which corresponds to two palettes. Or the salesperson can select 75 packs.</p>
+<p>The available packages are defined in the product form, in the <em class="guilabel">Packaging</em> tab. The first item on the
+list is the one that will be used by default.</p>
+<p>Once a package has been defined on the order, OpenERP will throw up an alert if the ordered
+quantities do not correspond to the proposed packages. The quantity must be a multiple of the field
+<em class="guilabel">Quantity by Package</em> defined on the packaging form.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/sale_warning_packaging.png"><img alt="../../_images/sale_warning_packaging.png" src="../../_images/sale_warning_packaging.png" style="width: 534.0px; height: 93.75px;" /></a>
+<p class="caption"><em>Alert on the Quantities sold compared to the Packaging</em></p>
+</div>
+<p>Do not confuse the management of packaging with the management of multiple units of measure. The
+Unit of Measure is used to manage the stock differently according to the various units.
+With packages, the stock is always managed by individual items, but information about the package to use is supplied
+to the storesperson along with that item.</p>
+<p>Even if the effects are the same, the printed documents will be different. The two following
+operations have the same effect on stock movement levels, but will be printed differently
+on the sales order and the packing order as where quantities are concerned:</p>
+<ul class="simple">
+<li>32,000 batteries, delivered on two palettes,</li>
+<li>2 palettes of batteries, with no information about packaging.</li>
+</ul>
+<p>If the customer wants to order a palette and 10 packs, the salesperson can put two order
+lines on the sales order using the same product with different units of measure.</p>
+<p>It is sometimes more useful to define different products than to define several packages for
+the same product. A case of beer in a supermarket is a good example. A case holds 24 bottles, plus
+the empty case itself. The customer can buy bottles by the piece or a case of 24 bottles at one go.</p>
+<p>You could define two packages for the <tt class="docutils literal"><span class="pre">Bottle</span> <span class="pre">of</span> <span class="pre">beer</span></tt>: <tt class="docutils literal"><span class="pre">PCE</span></tt> and <tt class="docutils literal"><span class="pre">case</span></tt> . But this
+representation does not let you manage the stock and price of empty cases. So you might instead
+prefer a Bill of Materials, defining and using three different products:</p>
+<ul class="simple">
+<li>the empty case for the beer,</li>
+<li>the bottle of beer,</li>
+<li>the case of 24 bottles of beer.</li>
+</ul>
+<p>You also define the bill of materials below which determines the make-up of the case of 24 beers:</p>
+<ul class="simple">
+<li>Case of 24 bottles of beer: 1 unit,</li>
+<li>Bottle of beer: 24 units,</li>
+<li>Empty case of beer: 1 unit.</li>
+</ul>
+<p>Each of these three products has a different price. The products <tt class="docutils literal"><span class="pre">Bottle</span> <span class="pre">of</span> <span class="pre">beer</span></tt> and <tt class="docutils literal"><span class="pre">Empty</span> <span class="pre">case</span> <span class="pre">of</span> <span class="pre">beer</span></tt> have a stock level that needs to be managed. The <tt class="docutils literal"><span class="pre">Case</span> <span class="pre">of</span> <span class="pre">24</span> <span class="pre">bottles</span> <span class="pre">of</span> <span class="pre">beer</span></tt> has no stock because, if you sell the product, OpenERP automatically moves the stock in two lines, one for the empty case and the other for the 24 individual bottles of beer.</p>
+</div>
+<div class="section" id="managing-alerts">
+<h2>Managing Alerts<a class="headerlink" href="#managing-alerts" title="Permalink to this headline">¶</a></h2>
+<p id="index-0">To manage alerts on products or partners, you can install the <tt class="xref py py-mod docutils literal"><span class="pre">warning</span></tt> module. Once that is
+installed, you will be able to configure a series of alerts on the partners or products by
+setting parameters in the new <em class="guilabel">Warnings</em> tab on each of the forms.</p>
+<p>You can select any of the following types of warnings and create different warnings for purchases and for sales:</p>
+<ul class="simple">
+<li><em class="guilabel">No Message</em>: This option will not display a message.</li>
+<li><em class="guilabel">Warning</em>: This option will show the user the message entered.</li>
+<li><em class="guilabel">Blocking Message</em>: The message displayed will cause an exception and block the workflow.</li>
+</ul>
+<p>You can activate alerts for a series of events. For each alert, you should enter a message that will
+be displayed when the event concerned is started.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/warning_partner.png"><img alt="../../_images/warning_partner.png" src="../../_images/warning_partner.png" style="width: 495.75px; height: 408.0px;" /></a>
+<p class="caption"><em>Management of alerts on partners</em></p>
+</div>
+<p>The available warnings in the partner form are:</p>
+<ul class="simple">
+<li>Create a warning for a sales order,</li>
+<li>Create a warning for a purchase order,</li>
+<li>Create a warning for a delivery to a partner (or receiving an item),</li>
+<li>Create a warning when invoicing a partner.</li>
+</ul>
+<p>For example, if you enter an alert for the invoicing of a customer, for an accountant entering an
+invoice for that customer, the alert message will be attached as shown in the figure <a class="reference internal" href="#fig-warnsmp"><em>Alert from Invoicing a Customer</em></a>.</p>
+<div class="figure align-center" id="fig-warnsmp">
+<a class="reference internal image-reference" href="../../_images/warning_sample.png"><img alt="../../_images/warning_sample.png" src="../../_images/warning_sample.png" style="width: 503.25px; height: 321.75px;" /></a>
+<p class="caption"><em>Alert from Invoicing a Customer</em></p>
+</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/warning_product.png"><img alt="../../_images/warning_product.png" src="../../_images/warning_product.png" style="width: 497.25px; height: 264.75px;" /></a>
+<p class="caption"><em>Management of Alerts on Products</em></p>
+</div>
+<p>The alerts that can be configured on a product form are related to:</p>
+<ul class="simple">
+<li>The sales of that product,</li>
+<li>The purchase of that product.</li>
+</ul>
+<p>A practical example:</p>
+<p>Now when could you use such an alert? Suppose that your customer asks you to never make any deliveries on Tuesday morning, because the street is blocked due to a weekly market. You surely would like your transporter to be aware of this, so it could be useful to have a kind of message printed by default on each delivery order for this customer.
+To do this, you could create a Warning on the Picking in the <strong>Customer</strong> form of the partner concerned, saying that no deliveries are allowed on Tuesday morning.</p>
+</div>
+<div class="section" id="controlling-deliveries-and-invoicing">
+<h2>Controlling Deliveries and Invoicing<a class="headerlink" href="#controlling-deliveries-and-invoicing" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="configuring-orders">
+<h3>Configuring Orders<a class="headerlink" href="#configuring-orders" title="Permalink to this headline">¶</a></h3>
+<p id="index-1">The way the order is configured will determine its future behaviour:</p>
+<ul class="simple">
+<li><em class="guilabel">Picking Policy</em> : <tt class="docutils literal"><span class="pre">Partial</span> <span class="pre">Delivery</span></tt> or <tt class="docutils literal"><span class="pre">Complete</span> <span class="pre">Delivery</span></tt>,</li>
+<li><em class="guilabel">Shipping Policy</em> : <tt class="docutils literal"><span class="pre">Shipping</span> <span class="pre">&amp;</span> <span class="pre">Manual</span> <span class="pre">Invoice</span></tt>, <tt class="docutils literal"><span class="pre">Payment</span> <span class="pre">Before</span> <span class="pre">Delivery</span></tt>,
+<tt class="docutils literal"><span class="pre">Invoice</span> <span class="pre">on</span> <span class="pre">Order</span> <span class="pre">After</span> <span class="pre">Delivery</span></tt>, and <tt class="docutils literal"><span class="pre">Invoice</span> <span class="pre">from</span> <span class="pre">Delivery</span></tt>,</li>
+<li><em class="guilabel">Invoice on</em> : <tt class="docutils literal"><span class="pre">Ordered</span> <span class="pre">Quantities</span></tt> or <tt class="docutils literal"><span class="pre">Shipped</span> <span class="pre">Quantities</span></tt>.</li>
+</ul>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Configuring your Interface</p>
+<p class="last">If you work in the <tt class="docutils literal"><span class="pre">Simplified</span></tt> view mode, only the <em class="guilabel">Shipping Policy</em> field is visible
+in the second order tab.
+To get to the <tt class="docutils literal"><span class="pre">Extended</span></tt> view mode, go to the <em class="guilabel">Edit Preferences</em> link and select the interface of your choice.
+You can also use the <em class="guilabel">Reconfigure</em> wizard and configure your interface as <em class="guilabel">Extended</em>, or assign the group
+<em class="guilabel">Usability – Extended View</em> to the current user.</p>
+</div>
+<p>The picking mode determines the way the storesperson will do the picking. If the order is put
+into <em class="guilabel">Partial Delivery</em> mode, the picking order will appear in the list of things for the
+storesperson to do as soon as any of the products on the order is available. To get the list of
+items to be done, you can use the menu <em class="menuselection">Warehouse ‣ Outgoing Deliveries</em>.
+By default, the <em class="guilabel">Available</em> filter button is selected, so you immediately see the list of available pickings.</p>
+<p>The storesperson will then be able to make a partial delivery of the quantities actually available
+and do a second picking operation later when the remaining products are available in stock.</p>
+<p>If the picking mode is <em class="guilabel">Complete Delivery</em>, the picking order will not appear in the list of
+pickings to do until all of the products are available in stock. This way, there will only be a
+single delivery for any such order.</p>
+<p>If the storesperson wants to do so, the delivery mode can be modified on each picking list even after the
+order has been confirmed.</p>
+<p>In the case of invoicing from picking, the cost of delivering the products will be
+calculated according to multiple deliveries. This risks incurring a higher cost because of
+the separate deliveries. If invoicing is done from the order, the customer will only be invoiced
+once for the whole delivery, even if the delivery of several items has already been made.</p>
+</div>
+</div>
+<div class="section" id="managing-carriers">
+<h2>Managing Carriers<a class="headerlink" href="#managing-carriers" title="Permalink to this headline">¶</a></h2>
+<p id="index-2">To manage deliveries in OpenERP, you can install the <tt class="xref py py-mod docutils literal"><span class="pre">delivery</span></tt> module.
+To do that, use the <em class="guilabel">Reconfigure</em> wizard and select <em class="guilabel">Delivery Costs</em> under the <em class="guilabel">Sales Application Configuration</em> section for installation.</p>
+<p>This module enables you to manage:</p>
+<ul class="simple">
+<li>the different carriers with whom you work,</li>
+<li>the different transport methods,</li>
+<li>cost calculation and invoicing of each delivery,</li>
+<li>the transport methods and their tariffs.</li>
+</ul>
+<p>Once the <tt class="xref py py-mod docutils literal"><span class="pre">delivery</span></tt> module has been installed, the first thing to do is to configure the different
+modes of delivery accepted by your company. Go to the menu <em class="menuselection">Warehouse
+‣ Configuration ‣ Delivery ‣ Delivery Method</em> to create your company&#8217;s delivery modes.</p>
+<p>For each delivery mode, you should define the following elements:</p>
+<ul class="simple">
+<li>Name of the delivery mode,</li>
+<li>The partner associated with the transport (which can be your own company),</li>
+<li>The associated product.</li>
+</ul>
+<p>Let&#8217;s give you an example:</p>
+<table border="1" class="docutils">
+<caption>Example Delivery Modes</caption>
+<colgroup>
+<col width="28%" />
+<col width="26%" />
+<col width="46%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Carrier</th>
+<th class="head">Carrier Partner</th>
+<th class="head">Delivery Product</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Express Track</td>
+<td>Mail Office</td>
+<td>Express Track Delivery</td>
+</tr>
+<tr class="row-odd"><td>Priority Courier</td>
+<td>Mail Office</td>
+<td>Courier Express Delivery</td>
+</tr>
+<tr class="row-even"><td>EFG Standard</td>
+<td>EFG Inc</td>
+<td>Delivery EFG</td>
+</tr>
+<tr class="row-odd"><td>EFG Express</td>
+<td>EFG Inc</td>
+<td>Delivery EFG Express</td>
+</tr>
+</tbody>
+</table>
+<p>Information about the invoicing of transport (such as accounts, applicable taxes) is entered in the
+product linked to the delivery mode. Ideally the product should be configured with
+<em class="guilabel">Product Type</em> <tt class="docutils literal"><span class="pre">Service</span></tt> and <em class="guilabel">Procurement Method</em> <tt class="docutils literal"><span class="pre">Make</span> <span class="pre">to</span> <span class="pre">Stock</span></tt>.</p>
+<p>You can use the same product for several delivery modes. This simplifies the
+configuration, but it has the disadvantage that you will not be able to separate your sales figures by delivery mode.</p>
+<div class="section" id="tariff-grids">
+<h3>Tariff Grids<a class="headerlink" href="#tariff-grids" title="Permalink to this headline">¶</a></h3>
+<p>Unlike ordinary products, delivery prices are not proposed through pricelists but through delivery grids,
+designed specifically for this purpose. For each delivery mode, you enter one or several tariff grids.
+Each grid is used for a given region/destination.</p>
+<p>For example, for the postal tariffs for Priority Courier, you generally define the three tariff grids
+for Mail Office:</p>
+<ul class="simple">
+<li>National Courier,</li>
+<li>Courier in Europe,</li>
+<li>Courier Outside Europe.</li>
+</ul>
+<p>To define a new delivery grid, use the menu <em class="menuselection">Warehouse ‣ Configuration ‣
+Delivery ‣ Delivery Pricelist</em>. Give a name to your delivery grid and define the
+region for which the tariffs in the grid will apply in the second tab
+<em class="guilabel">Destination</em>. There you can set:</p>
+<ul class="simple">
+<li>A list of countries (for UK or Europe, for example),</li>
+<li>A list of states,</li>
+<li>A range of postal codes (for Paris you might have 75000 – 75900).</li>
+</ul>
+<p>Then you have to set the rules for calculating the transport price in the first tab <em class="guilabel">Grid definition</em>.
+First of all, give the rule a name. Then set the condition for which this rule is applicable, for
+example <tt class="docutils literal"><span class="pre">Weight</span> <span class="pre">&lt;</span> <span class="pre">0.5kg</span></tt>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Weights</p>
+<p class="last">Weights are always expressed in kilograms. You can define a number with a decimal point or comma, so
+to set 500g you would put 0.5 in the weight rule.</p>
+</div>
+<p>Next you can set the sales price and the cost price. Prices can be expressed in various ways:</p>
+<ul class="simple">
+<li>a fixed price,</li>
+<li>a variable price, as a function of weight, volume, weight x volume or price.</li>
+</ul>
+<p>For example, mailing within France using current tariffs would be defined as shown in the table below:</p>
+<table border="1" class="docutils">
+<caption>Example Tariff Rules</caption>
+<colgroup>
+<col width="24%" />
+<col width="32%" />
+<col width="12%" />
+<col width="32%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Condition</th>
+<th class="head">Price</th>
+<th class="head">Price Type</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S</td>
+<td>Weight &lt; 3 kg</td>
+<td>6.90</td>
+<td>Fixed</td>
+</tr>
+<tr class="row-odd"><td>M</td>
+<td>Weight &lt; 5 kg</td>
+<td>7.82</td>
+<td>Fixed</td>
+</tr>
+<tr class="row-even"><td>L</td>
+<td>Weight &lt; 6 kg</td>
+<td>8.53</td>
+<td>Fixed</td>
+</tr>
+<tr class="row-odd"><td>XL</td>
+<td>Weight &lt; 7 kg</td>
+<td>9.87</td>
+<td>Fixed</td>
+</tr>
+</tbody>
+</table>
+<p>You can also define rules that depend on the total amount on the order. For example to offer fixed price
+delivery if the total order amount is greater than 150 USD, add the following rule:</p>
+<table border="1" class="docutils">
+<caption>Additional Tariff Rule</caption>
+<colgroup>
+<col width="33%" />
+<col width="29%" />
+<col width="12%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Condition</th>
+<th class="head">Price</th>
+<th class="head">Price Type</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Franked &gt; 150 USD</td>
+<td>Price &gt; 150 USD</td>
+<td>10</td>
+<td>Fixed</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="delivery-modes">
+<h3>Delivery Modes<a class="headerlink" href="#delivery-modes" title="Permalink to this headline">¶</a></h3>
+<p>Once the delivery modes and their corresponding tariffs have been defined, you can use them in a Sales Order.
+There are two methods for doing that in OpenERP.</p>
+<ul class="simple">
+<li>Delivery based on Ordered Quantities,</li>
+<li>Delivery based on Shipped Quantities.</li>
+</ul>
+<p><em>Delivery based on Ordered Quantities</em></p>
+<p>To add the delivery charges (or transport costs) to the quotation, use the button <em class="guilabel">Delivery Costs</em> available on the <cite>Sales Order</cite> tab of the form. A dialog box opens, asking you to select a delivery mode from the list available.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/sale_delivery.png"><img alt="../../_images/sale_delivery.png" src="../../_images/sale_delivery.png" style="width: 485.25px; height: 129.75px;" /></a>
+<p class="caption"><em>Adding Transport Costs to an Order</em></p>
+</div>
+<p>Once the delivery mode has been selected, OpenERP automatically adds a line to the quotation with
+the amount calculated by the delivery function.</p>
+<p>If you want to calculate the exact delivery charges depending on the actual deliveries, you must use
+invoicing based on deliveries.</p>
+<p><em>Delivery based on Shipped Quantities</em></p>
+<p>To invoice the delivery according to the items shipped, you set the delivery mode in the
+<em class="guilabel">Delivery Method</em> field on the second tab of the order, <em class="guilabel">Other Information</em>, to <em class="guilabel">Invoice from Delivery</em>.</p>
+<p>You can then confirm the order, and when the goods are available you can also validate the delivery order.</p>
+<p>The transport costs will not be added to the sales order, but only to the invoice.
+When the manager has generated the invoices corresponding to the deliveries carried out,
+OpenERP automatically adds a line on each invoice corresponding to the delivery charge, calculated
+on the basis of the items actually sent.</p>
+</div>
+</div>
+<div class="section" id="keeping-track-of-your-margins">
+<h2>Keeping Track of your Margins<a class="headerlink" href="#keeping-track-of-your-margins" title="Permalink to this headline">¶</a></h2>
+<p>For every company, keeping a clear sight on and a good control of margins is crucial. Even if you have a good sales level, it will not guarantee company profitability if margins are not high enough. OpenERP provides a number of methods allowing you to monitor your sales margins. The main ones are:</p>
+<ul class="simple">
+<li>Margins on a sales order,</li>
+<li>Margins by product,</li>
+<li>Margins by project (not explained in this book),</li>
+<li>Using pricelists.</li>
+</ul>
+<div class="section" id="margins-on-sales-orders">
+<h3>Margins on Sales Orders<a class="headerlink" href="#margins-on-sales-orders" title="Permalink to this headline">¶</a></h3>
+<p id="index-3">If you want to check your margins on sales orders, you can install the <tt class="xref py py-mod docutils literal"><span class="pre">sale_margin</span></tt> module
+by selecting <em class="guilabel">Margins in Sales Orders</em> for installation in the <em class="guilabel">Reconfigure</em> wizard.
+This will add margins calculated on each order line and on the order total.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/sale_margin.png"><img alt="../../_images/sale_margin.png" src="../../_images/sale_margin.png" style="width: 657.0px; height: 369.0px;" /></a>
+<p class="caption"><em>An order with the module sale_margin</em></p>
+</div>
+<p>The margin on each line is defined as the quantity sold multiplied by the sales price for the
+customer less the cost price of the products. By default, products are managed using standard price
+in OpenERP (cost price fixed manually and reviewed once per year). You can change that to
+<tt class="docutils literal"><span class="pre">Average</span> <span class="pre">Price</span></tt>, meaning that the product cost fluctuates with purchases from
+suppliers. After product receipt you can include fixed costs, such as delivery costs, in the cost of
+each product.</p>
+<p id="index-4">OpenERP supports a third method of updating the cost price of products.
+This is through the button <em class="guilabel">Update</em> on the product form which lets you
+automatically recalculate the cost price for the selected product.
+The cost price is calculated from the raw materials and the operations carried out
+(if the products have been manufactured internally, so that you have set their costs).</p>
+</div>
+<div class="section" id="margins-by-product">
+<h3>Margins by Product<a class="headerlink" href="#margins-by-product" title="Permalink to this headline">¶</a></h3>
+<p id="index-5">To track margins by product, install the module <tt class="xref py py-mod docutils literal"><span class="pre">product_margin</span></tt>. Once the module
+is installed you can see the margins by product by using the menu <em class="menuselection">Sales ‣ Products
+‣ Product Margins</em>.</p>
+<p>When you have clicked the menu option concerned, OpenERP asks for an analysis period and the state of invoices (draft, open, paid). If
+no period is given, OpenERP will calculate margins on all of the operations without restriction. By
+default, however, OpenERP proposes a period of the last 12 months for analysis.</p>
+<p>You can also filter the analysis on certain types of invoice:</p>
+<ul class="simple">
+<li>All invoices, including unvalidated draft invoices,</li>
+<li>All open and/or paid invoices,</li>
+<li>Paid invoices only.</li>
+</ul>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/product_margin_tree.png"><img alt="../../_images/product_margin_tree.png" src="../../_images/product_margin_tree.png" style="width: 607.5px; height: 366.0px;" /></a>
+<p class="caption"><em>Product Margins</em></p>
+</div>
+<p>You then get a margin analysis table. The following fields are displayed for the sales of each product:</p>
+<ul class="simple">
+<li><em class="guilabel">Avg. Unit Price</em>: the average unit sales price,</li>
+<li><em class="guilabel">Catalog Price</em>: the list price based on this product,</li>
+<li><em class="guilabel"># Invoiced</em>: the number of sold products that have been invoiced,</li>
+<li><em class="guilabel">Sales Gap</em>: the difference between the revenue calculated from list price and volume, and the actual sales,</li>
+<li><em class="guilabel">Turnover</em>: the actual sales revenue for the product selected,</li>
+<li><em class="guilabel">Expected Sale</em>: the number of products sold multiplied by the list price.</li>
+</ul>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/product_margin_form.png"><img alt="../../_images/product_margin_form.png" src="../../_images/product_margin_form.png" style="width: 495.75px; height: 369.75px;" /></a>
+<p class="caption"><em>Margin Details for a Given Product</em></p>
+</div>
+<p>The following fields are given by product for purchases:</p>
+<ul class="simple">
+<li><em class="guilabel">Avg. Unit price</em>: the average unit purchase price,</li>
+<li><em class="guilabel">Standard price</em>: the standard cost price of the product for the company,</li>
+<li><em class="guilabel"># Invoiced</em>: the number of purchased products,</li>
+<li><em class="guilabel">Purchase Gap</em>: the difference between the total actual cost and the standard cost
+multiplied by the number of units purchased,</li>
+<li><em class="guilabel">Total Cost</em>: the total cost of purchases for the product under consideration,</li>
+<li><em class="guilabel">Normal Cost</em>: the number of products sold multiplied by the standard cost price.</li>
+</ul>
+<p>The following fields are given by product for margins:</p>
+<ul class="simple">
+<li><em class="guilabel">Total Margin</em>,</li>
+<li><em class="guilabel">Expected Margin</em>,</li>
+<li><em class="guilabel">Total Margin in percent</em>,</li>
+<li><em class="guilabel">Expected Margin in percent</em>.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="pricing-policies">
+<h2>Pricing Policies<a class="headerlink" href="#pricing-policies" title="Permalink to this headline">¶</a></h2>
+<p>Some companies are notorious for their complicated pricelists. Many forms of price variation are
+used, such as end-of-year refunds, discounts, change of terms and conditions with time, various
+prepayments, cascaded rebates, seasonal promotions, and progressive price reductions.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Rebate, Refund, Reduction</p>
+<p>In some accounting jurisdictions you have to differentiate between the three following terms:</p>
+<ul class="last simple">
+<li>Rebate: reimbursement to the client, usually at the end of the year, that depends on the
+quantity of goods purchased over a period.</li>
+<li>Refund: reduction on the order line or invoice line if a certain quantity of goods is purchased
+at one time or is sold in a framework of a promotional activity.</li>
+<li>Reduction: a one-off reduction resulting from a quality defect or a variation in a product&#8217;s
+conformance to a specification.</li>
+</ul>
+</div>
+<p>Intelligent price management is difficult, because it requires you to integrate several conditions
+from clients and suppliers to create estimates quickly or to invoice automatically. But if you have
+an efficient price management mechanism you can often keep margins raised and respond quickly to
+changes in market conditions. A good price management system gives you scope for varying any and all
+of the relevant factors when you are negotiating a contract.</p>
+<p>To help you work most effectively, OpenERP&#8217;s pricelist principles are extremely powerful yet are
+based on simple and generic rules. You can develop both sales pricelists and purchase pricelists for
+products capable of accommodating conditions such as the date period, the quantity requested and the
+type of product.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Do not confuse the Different Price Specifications</p>
+<p>Do not confuse the sales price with the basic price of the product.
+In OpenERP&#8217;s basic configuration, the sales price is the list price specified in the product form,
+but a customer can have a different sales price depending on the conditions.</p>
+<p class="last">The same applies to the purchase price and standard cost. Purchase price is your suppliers&#8217; selling price,
+which changes in response to different criteria such as quantities, dates, and supplier. This is
+automatically set by the accounting system.</p>
+</div>
+<p>Each pricelist is calculated from defined policies, so you will have as many sales pricelists as
+active sales policies in the company. For example, a company that sells products through three sales
+channels could create the following price lists:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Main distribution:</p>
+<blockquote>
+<div><ul class="simple">
+<li>pricelist for Walbury,</li>
+<li>pricelist for TesMart,</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Postal Sales.</p>
+</li>
+<li><p class="first">Walk-in customers.</p>
+</li>
+</ol>
+</div></blockquote>
+<p>A single pricelist can exist in several versions, only one of which is permitted to be active at a
+given time. These versions let you set different prices at different points in time. So the
+pricelist for walk-in customers could have five different versions, for example: <tt class="docutils literal"><span class="pre">Autumn</span></tt>,
+<tt class="docutils literal"><span class="pre">Summer</span></tt>, <tt class="docutils literal"><span class="pre">Summer</span> <span class="pre">Sales</span></tt>, <tt class="docutils literal"><span class="pre">Winter</span></tt>, <tt class="docutils literal"><span class="pre">Spring</span></tt>. Direct customers will see prices
+that change with the seasons.</p>
+<p>Each pricelist is expressed in a single currency. If your company sells products in several
+currencies, you will have to create as many pricelists as you have currencies.</p>
+<p>The prices on a pricelist can depend on another list, which means that you do not have to repeat the
+definition of all conditions for each product. So a pricelist in USD can be based on a pricelist in
+EUR. If the currency conversion rates between EUR and USD change, or the EUR prices change, the USD
+rates can be <strong>automatically</strong> adjusted.</p>
+<div class="section" id="creating-pricelists">
+<span id="index-6"></span><h3>Creating Pricelists<a class="headerlink" href="#creating-pricelists" title="Permalink to this headline">¶</a></h3>
+<p>You can define a pricelist from the menu <em class="menuselection">Sales ‣ Configuration ‣ Pricelists ‣ Pricelists</em>.</p>
+<p>For each list you should define:</p>
+<ul class="simple">
+<li>a <em class="guilabel">Name</em> for the list,</li>
+<li>a <em class="guilabel">Type</em> of list: <tt class="docutils literal"><span class="pre">Sale</span></tt> for customers or <tt class="docutils literal"><span class="pre">Purchase</span></tt> for suppliers,</li>
+<li>the <em class="guilabel">Currency</em> in which the prices are expressed.</li>
+</ul>
+<div class="section" id="pricelist-versions">
+<span id="index-7"></span><h4>PriceList Versions<a class="headerlink" href="#pricelist-versions" title="Permalink to this headline">¶</a></h4>
+<p>Once the pricelist is defined you have to link at least one version. You can create a new version directly from the pricelist or from the
+<em class="menuselection">Sales ‣ Configuration ‣ Pricelists ‣ Pricelist Versions</em> menu. The version contains all of the
+rules that enable you to calculate a price for a product and a given quantity.</p>
+<p>Start by setting the <em class="guilabel">Name</em> of this associated version. If the list only has a single version, you
+can use the same name for the pricelist and the version. In the <em class="guilabel">Price List</em> field, select
+the pricelist you created (this is not necessary if you create the version directly from the pricelist).</p>
+<p>Then set the <em class="guilabel">Start Date</em> and <em class="guilabel">End Date</em> of this version. The fields are both
+optional: if you do not set any dates the version will be permanently active. Only one version
+may be active at any one point, so bear this in mind when creating them.
+Use the <em class="guilabel">Active</em> field in the versions to activate or disable a pricelist version.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Automatically Updating the Sales Pricelist</p>
+<p class="last">Any sales pricelist can be set to depend on one of the other pricelists.
+So you could create your sales pricelist based on the supplier&#8217;s purchase pricelist, to
+which you add a margin.
+The prices are automatically calculated as a function of the purchase price and need no further
+manual adjustment.</p>
+</div>
+</div>
+<div class="section" id="calculation-rules">
+<span id="index-8"></span><h4>Calculation Rules<a class="headerlink" href="#calculation-rules" title="Permalink to this headline">¶</a></h4>
+<p>A pricelist version is made up of a set of rules that apply to the basic product prices.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/service_pricelist_line.png"><img alt="../../_images/service_pricelist_line.png" src="../../_images/service_pricelist_line.png" style="width: 600.0px; height: 223.5px;" /></a>
+<p class="caption"><em>Rule in a Pricelist Version</em></p>
+</div>
+<p>You define the conditions for a rule in the first part of the screen labelled <em class="guilabel">Rules Test
+Match</em>. The rule applies to the <em class="guilabel">Product</em> or <em class="guilabel">Product Template</em> and/or the named <em class="guilabel">Product
+Category</em>. If a rule is applied to a category, then it is automatically applied to all of its
+subcategories too (using the tree structure for product categories).</p>
+<p>If you set a minimum quantity in <em class="guilabel">Min. Quantity</em>, the rule will only apply to a quantity equal to or larger than the quantity set. This way, you can define reduced rates in steps according to the quantities ordered.</p>
+<p>Several rules can be applied to an order. OpenERP evaluates these rules by sequence number, to determine
+which rule(s) to apply to the specified price calculation. If several rules are valid, only the first in
+sequence is used for the calculation. The <em class="guilabel">Sequence</em> field determines the order, starting with the
+lowest number and working up.</p>
+<p>Once a rule has been selected, the system has to determine how to calculate the price from the rule.
+This operation is based on the criteria set out in the lower part of the form, labelled <em class="guilabel">Price
+Computation</em>.</p>
+<p>The first field to complete is <em class="guilabel">Based on</em>. Set the way in which the partner price will be calculated, choosing between:</p>
+<ul class="simple">
+<li>the <em class="guilabel">Public Price</em> set in the product file,</li>
+<li>the <em class="guilabel">Cost Price</em> set in the product file,</li>
+<li>an <em class="guilabel">Other Pricelist</em> given in the field <em class="guilabel">If Other Pricelist</em>,</li>
+<li>the price that varies as a function of a supplier defined in the <em class="guilabel">Partner section of the
+product form</em>.</li>
+</ul>
+<p>Next, various operations can be applied to the basic price to calculate the sales or purchase price
+for the partner, according to the specified quantities. To calculate it, you apply the formula shown on the
+form: <tt class="docutils literal"><span class="pre">Price</span> <span class="pre">=</span> <span class="pre">Base</span> <span class="pre">Price</span> <span class="pre">x</span> <span class="pre">(1</span> <span class="pre">+</span> <span class="pre">Field1)</span> <span class="pre">+</span> <span class="pre">Field2</span></tt> .</p>
+<p>The first field, <em class="guilabel">Field1</em>, defines a discount. Set it to 0.20 for a discount of 20% from
+the basic price. If your price is based on standard cost, you can set -0.15 to get a 15% price uplift
+compared to the standard costs.</p>
+<p><em class="guilabel">Field2</em> sets a fixed supplement to the price, expressed in the currency of the pricelist.
+This amount is just added (or subtracted, if negative) to the amount calculated with the
+<em class="guilabel">Field1</em> discount.</p>
+<p>Then you can specify a rounding method. The rounding calculation is carried out to the nearest
+number. For example if you set 0.05 in this example, a price of 45.66 will be rounded to 45.65, and
+14,567 rounded to 100 will give a price of 14,600.</p>
+<p>The supplement from <em class="guilabel">Field2</em> is applied before the rounding calculation, which enables
+some interesting effects. For example, if you want all your prices to end in 9.99, set your rounding
+to 10 and your supplement to -0.01 in <em class="guilabel">Field2</em>.</p>
+<p>Minimum and Maximum margins enable you to guarantee a given margin over the base price. A margin of
+10 USD enables you to stop the discount from returning less than that margin. If you put 0 into this
+field, no effect is taken into account.</p>
+<p>Once the pricelist is defined, you can assign it to a partner. Go to the Partner form and select
+its <em class="guilabel">Sales &amp; Purchases</em> tab. You can then change the <em class="guilabel">Purchase Pricelist</em> and the
+<em class="guilabel">Sale Pricelist</em> that is loaded by default for the partner.</p>
+</div>
+<div class="section" id="decimal-accuracy">
+<span id="id1"></span><h4>Decimal Accuracy<a class="headerlink" href="#decimal-accuracy" title="Permalink to this headline">¶</a></h4>
+<p>There are several configuration settings related to the decimal accuracy of
+prices, or the number of decimal places to hold with each price field. To change
+the accuracy of a field, follow these steps:</p>
+<ol class="arabic simple">
+<li>Make sure you have the <cite>Extended</cite> user interface. The setting is in your user
+preferences.</li>
+<li>Go to <em class="menuselection">Administration ‣ Customization ‣ Database Structure ‣
+Decimal Accuracy</em>. This list contains a number of predefined elements.</li>
+<li>Open the entry you want to change. <cite>Purchase Price</cite> and <cite>Sale Price</cite> are the
+most common ones related to prices, but some fields are controlled by the
+<cite>Account</cite> entry.</li>
+<li>Type a new value in the digits field, and save the entry. Do not change the description in the
+<cite>Usage</cite> field, or it will stop working.</li>
+<li>Close the screen where you were editing prices and reopen it. The price field
+should now have the number of digits you asked for.</li>
+</ol>
+</div>
+</div>
+<div class="section" id="example-of-a-pricelist">
+<h3>Example of a Pricelist<a class="headerlink" href="#example-of-a-pricelist" title="Permalink to this headline">¶</a></h3>
+<p>Take the case of an IT systems trading company, for which the following product categories have
+been configured:</p>
+<p>All products</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Accessories</p>
+<blockquote>
+<div><ul class="simple">
+<li>Printers</li>
+<li>Scanners</li>
+<li>Keyboards and Mice</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Computers</p>
+<blockquote>
+<div><ul class="simple">
+<li>Portables</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>Large-screen portables</li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li>Computers</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>Office Computers</li>
+<li>Professional Computers</li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+<p>In addition, the products presented in the table below are defined in the currency of the installed
+chart of accounts.</p>
+<p>TABLE</p>
+<table border="1" class="docutils">
+<caption>Examples of products with their different prices</caption>
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Product</td>
+<td>Sale Price</td>
+<td>Cost Price</td>
+<td>Default supplier price</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>Acclo Portable</td>
+<td>1,200</td>
+<td>887</td>
+<td>893</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>Toshibishi Portable</td>
+<td>1,340</td>
+<td>920</td>
+<td>920</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>Berrel Keyboard</td>
+<td>100</td>
+<td>50</td>
+<td>50</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>Office Computer</td>
+<td>1,400</td>
+<td>1,000</td>
+<td>1,000</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="default-price-lists">
+<span id="index-9"></span><h4>Default Price Lists<a class="headerlink" href="#default-price-lists" title="Permalink to this headline">¶</a></h4>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/product_pricelist_default.png"><img alt="../../_images/product_pricelist_default.png" src="../../_images/product_pricelist_default.png" style="width: 495.75px; height: 242.25px;" /></a>
+<p class="caption"><em>Default pricelist after installing OpenERP</em></p>
+</div>
+<p>When you install the software, two pricelists are created by default: one for sales and one for
+purchases. Each of them contains only one pricelist version and only one line in that version.</p>
+<p>The price for sales defined in the Default Public Pricelist is set by default to
+the Public Price of the product, which is the Sales Price in the Product form.</p>
+<p>The price for purchases defined in the Default Purchase Pricelist is set by default in the same way to
+the Cost Price of the product.</p>
+</div>
+<div class="section" id="trading-company">
+<span id="index-10"></span><h4>Trading Company<a class="headerlink" href="#trading-company" title="Permalink to this headline">¶</a></h4>
+<p>Take the case of a trading company, where the sales price for resellers can be defined like this:</p>
+<ul>
+<li><p class="first">For portable computers, the sales price is calculated from the list price of the supplier Acclo,
+with a supplement of 23% on the cost of purchase.</p>
+</li>
+<li><p class="first">For all other products the sales price is given by the standard cost in the product file, to which
+31% is added. The price should end in <tt class="docutils literal"><span class="pre">.99</span></tt> .</p>
+</li>
+<li><p class="first">The sales price of Berrel keyboards is fixed at 60 for a minimum quantity of 5 keyboards purchased.
+Otherwise it uses the rule above.</p>
+</li>
+<li><p class="first">Assume that the Acclo pricelist is defined in OpenERP. The pricelist for resellers and the
+pricelist version then contains three lines:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first"><tt class="docutils literal"><span class="pre">Acclo</span></tt> line:</p>
+<blockquote>
+<div><ul class="simple">
+<li><em class="guilabel">Product Category</em> : <tt class="docutils literal"><span class="pre">Portables</span></tt> ,</li>
+<li><em class="guilabel">Based on</em> : <tt class="docutils literal"><span class="pre">Other</span> <span class="pre">pricelist</span></tt> ,</li>
+<li><em class="guilabel">Pricelist if other</em> : <tt class="docutils literal"><span class="pre">Acclo</span> <span class="pre">pricelist</span></tt> ,</li>
+<li><em class="guilabel">Field1</em> : <tt class="docutils literal"><span class="pre">-0.23</span></tt> ,</li>
+<li><em class="guilabel">Priority</em> : <tt class="docutils literal"><span class="pre">1</span></tt> .</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">Berrel</span> <span class="pre">Keyboard</span></tt> line:</p>
+<blockquote>
+<div><ul class="simple">
+<li><em class="guilabel">Product Template</em> : <tt class="docutils literal"><span class="pre">Berrel</span> <span class="pre">Keyboard</span></tt> ,</li>
+<li><em class="guilabel">Min. Quantity</em> : <tt class="docutils literal"><span class="pre">5</span></tt> ,</li>
+<li><em class="guilabel">Field1</em> : <tt class="docutils literal"><span class="pre">1.0</span></tt> ,</li>
+<li><em class="guilabel">Field2</em> : <tt class="docutils literal"><span class="pre">60</span></tt> ,</li>
+<li><em class="guilabel">Priority</em> : <tt class="docutils literal"><span class="pre">2</span></tt> .</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">Other</span> <span class="pre">products</span></tt> line:</p>
+<blockquote>
+<div><ul class="simple">
+<li><em class="guilabel">Based on:</em> <tt class="docutils literal"><span class="pre">Standard</span> <span class="pre">Price</span></tt> ,</li>
+<li><em class="guilabel">Field1</em> : <tt class="docutils literal"><span class="pre">-0.31</span></tt> ,</li>
+<li><em class="guilabel">Field2</em> : <tt class="docutils literal"><span class="pre">-0.01</span></tt> ,</li>
+<li><em class="guilabel">Rounding</em> : <tt class="docutils literal"><span class="pre">1.0</span></tt> .</li>
+<li><em class="guilabel">Priority</em> :  <tt class="docutils literal"><span class="pre">3</span></tt>.</li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</li>
+</ul>
+<p>It is important that the priority of the second rule is set below the priority of the third in this
+example. If it were the other way around, the third rule would always be applied, because a quantity of
+5 is always greater than a quantity of 1 for all products.</p>
+<p>Also note that to fix a price of 60 for the 5 Berrel Keyboards, the formula <tt class="docutils literal"><span class="pre">Price</span> <span class="pre">=</span> <span class="pre">Base</span> <span class="pre">Price</span> <span class="pre">x</span>
+<span class="pre">(1</span> <span class="pre">+</span> <span class="pre">1.0)</span> <span class="pre">+</span> <span class="pre">60</span></tt>  has been used.</p>
+</div>
+<div class="section" id="establishing-customer-contract-conditions">
+<h4>Establishing Customer Contract Conditions<a class="headerlink" href="#establishing-customer-contract-conditions" title="Permalink to this headline">¶</a></h4>
+<p>The trading company can now set specific conditions to a customer, such as the company TinAtwo, who
+might have signed a valid contract with the following conditions:</p>
+<ul class="simple">
+<li>For Toshibishi portables, TinAtwo benefits from a discount of 5% of resale price.</li>
+<li>For all other products, the resale conditions are unchanged.</li>
+</ul>
+<p>The sales price for TinAtwo, called <tt class="docutils literal"><span class="pre">TinAtwo</span> <span class="pre">contract</span></tt>, contains two rules:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first"><tt class="docutils literal"><span class="pre">Toshibishi</span> <span class="pre">portable</span></tt> :</p>
+<blockquote>
+<div><ul class="simple">
+<li><em class="guilabel">Product</em> : <tt class="docutils literal"><span class="pre">Toshibishi</span> <span class="pre">Portable</span></tt> ,</li>
+<li><em class="guilabel">Based on</em> : <tt class="docutils literal"><span class="pre">Other</span> <span class="pre">pricelist</span></tt> ,</li>
+<li><em class="guilabel">Pricelist if other</em> : <tt class="docutils literal"><span class="pre">Reseller</span> <span class="pre">pricelist</span></tt> ,</li>
+<li><em class="guilabel">Field1</em> : <tt class="docutils literal"><span class="pre">0.05</span></tt> ,</li>
+<li><em class="guilabel">Priority</em> : <tt class="docutils literal"><span class="pre">1</span></tt> .</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">Other</span> <span class="pre">Products</span></tt>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><em class="guilabel">Product</em> :</li>
+<li><em class="guilabel">Based on</em> : <tt class="docutils literal"><span class="pre">Other</span> <span class="pre">pricelist</span></tt> ,</li>
+<li><em class="guilabel">Pricelist if other</em> : <tt class="docutils literal"><span class="pre">Reseller</span> <span class="pre">pricelist</span></tt> ,</li>
+<li><em class="guilabel">Priority</em> : <tt class="docutils literal"><span class="pre">2</span></tt> .</li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+<p>Once this list has been entered, you should look up the partner form of TinAtwo again. Click the
+<em class="guilabel">Sales &amp; Purchases</em> tab to set the <em class="guilabel">Sale Pricelist</em> field to <em>TinAtwo Contract</em>. If
+the contract is only valid for one year, do not forget to set the <em class="guilabel">Start Date</em> and
+<em class="guilabel">End Date</em> fields in the <em class="guilabel">Pricelist Version</em>.</p>
+<p>Then when salespeople prepare an estimate for TinAtwo, the prices proposed will automatically be
+calculated from the contract conditions.</p>
+</div>
+</div>
+<div class="section" id="pricelists-and-managing-currencies">
+<h3>Pricelists and Managing Currencies<a class="headerlink" href="#pricelists-and-managing-currencies" title="Permalink to this headline">¶</a></h3>
+<p>If your trading company wants to start a product catalog in a new currency you can handle this
+several ways:</p>
+<ul class="simple">
+<li>Enter the prices in a new independent pricelist and maintain the lists in the two currencies
+separately,</li>
+<li>Create a field in the product form for this new currency and make the new pricelist depend on this
+field: prices are then maintained separately, but in the product file,</li>
+<li>Create a new pricelist for the second currency and make it depend on another pricelist or on the
+product price: the conversion between the currencies will then be done automatically at the
+prevailing currency conversion rate.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="rebates-at-the-end-of-a-campaign">
+<h2>Rebates at the End of a Campaign<a class="headerlink" href="#rebates-at-the-end-of-a-campaign" title="Permalink to this headline">¶</a></h2>
+<p>If you want to provide discounts on an order, you can use the pricelist system in OpenERP. But we would not be writing about end-of-campaign rebates if no other solution was available. You can also work with end-of-campaign rebates or year-end rebates. The customer pays a certain price during the whole of the campaign or the year, and he will receive a rebate at the end of the campaign according to the sales made throughout the year.</p>
+<p>Take the case of contract negotiations with a wholesaler. To get the best selling price, the
+wholesaler will ask you for a good deal and will sign up to a certain volume of orders over
+the year.</p>
+<p>You can then propose a price based on the volume that the wholesaler agrees to sell. But then you
+do not have any control over his orders. If at the end of the year the wholesaler has not taken the
+agreed volumes, you can do nothing. At most you can review his terms for the following year.</p>
+<p>Rebates at the end of a campaign can help you avoid this sort of problem. You can propose a contract
+where the price depends on the usual wholesaler&#8217;s terms. You can propose a rebate grid which
+will be assigned at the end of the year as a function of the actual sales made.</p>
+<p id="index-11">Install the <tt class="xref py py-mod docutils literal"><span class="pre">discount_campaign</span></tt> module (in <tt class="docutils literal"><span class="pre">extra-addons</span></tt> at the time of writing)
+to generate rebates at the end of the campaign. Once the modules have been installed, you can configure your campaign using the menu <em class="menuselection">Sales ‣ Configuration ‣ Sales ‣ Discount Campaigns</em>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Year-end Rebate</p>
+<p class="last">Most companies use the term <em>year-end rebate</em>, where rebates are applied at the end of the year.
+But of course you can also define rebates for a campaign that lasts less than or more than one year.</p>
+</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/discount_campaign_RFA.png"><img alt="../../_images/discount_campaign_RFA.png" src="../../_images/discount_campaign_RFA.png" style="width: 495.75px; height: 262.5px;" /></a>
+<p class="caption"><em>Configuring a Campaign Rebate</em></p>
+</div>
+<p>A campaign should have a name, a refund journal (to create the credit notes at the end of the campaign), a start date, and an end date. After entering this information, you should describe the lines of the campaign. Each line can be applied to a product or a category of
+products. Then set the quantity of products sold from which the discount is applied, and the amount
+of the rebate as a percentage of the actual sales volume.</p>
+<p>When you have defined the campaign, you can activate it by clicking the <em class="guilabel">Open</em> button. The
+figure <a class="reference internal" href="#fig-discamp"><em>Configuring a Discount Campaign for Computers</em></a> shows a campaign with a rebate on computers which is between 10% and 20% depending on
+the sales volume.</p>
+<div class="figure align-center" id="fig-discamp">
+<a class="reference internal image-reference" href="../../_images/discount_campaign.png"><img alt="../../_images/discount_campaign.png" src="../../_images/discount_campaign.png" style="width: 493.5px; height: 261.75px;" /></a>
+<p class="caption"><em>Configuring a Discount Campaign for Computers</em></p>
+</div>
+<p>Once the campaign has been defined and activated, you can assign it to various partners. To do that
+set a <em class="guilabel">Discount Campaign</em> in the second tab <em class="guilabel">Sales &amp; Purchases</em> of the partner form.</p>
+<p>Finally, at the end of the campaign, you should close it and OpenERP will automatically generate
+invoices or credit notes for your partner associated with this campaign. OpenERP opens credit
+notes in the <tt class="docutils literal"><span class="pre">Draft</span></tt> state so you can modify them before validation. To calculate the amount on the
+credit note, OpenERP uses all of the invoices sent out during the period of the campaign as a
+basis.</p>
+<p>You can also get an overview of all draft credit notes using the menu <em class="menuselection">Accounting
+‣ Customers ‣ Customer Refunds</em>.</p>
+</div>
+<div class="section" id="keeping-track-of-open-orders">
+<h2>Keeping track of Open Orders<a class="headerlink" href="#keeping-track-of-open-orders" title="Permalink to this headline">¶</a></h2>
+<p id="index-12">In some industries, customers commonly place orders for a certain volume of products and ask for regular
+deliveries from an order up to the total amount on it. This principle, called open orders, is managed
+by the <tt class="xref py py-mod docutils literal"><span class="pre">sale_delivery</span></tt> module in OpenERP.</p>
+<p>OpenERP handles open orders easily. An open order is an order for a
+certain quantity of products but whose deliveries are planned for various dates over a period of
+time.</p>
+<p>To do that, you should install the <tt class="xref py py-mod docutils literal"><span class="pre">sale_delivery</span></tt> module (in <tt class="docutils literal"><span class="pre">extra-addons</span></tt> at the time of writing).
+A Sales Order is entered as a normal order, but you also set the total quantity that will be delivered on each order line.</p>
+<p>Then you can use the new tab <em class="guilabel">Deliveries</em> on the order to plan the quantities sold and enter your
+delivery planning there.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/sale_delivery_form.png"><img alt="../../_images/sale_delivery_form.png" src="../../_images/sale_delivery_form.png" style="width: 495.75px; height: 281.25px;" /></a>
+<p class="caption"><em>Managing Open Orders, Planning Forecasts</em></p>
+</div>
+<p>In the order lines, OpenERP shows you the quantity planned in addition to the quantity sold. This way, you
+can verify whether the quantities sold equal the quantities to be delivered. On confirmation of the sales order, OpenERP no longer generates a single delivery order, but plans scheduled dispatches.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Invoicing Mode</p>
+<p class="last">If you work with Open Orders, you should set <em class="guilabel">Invoice Control</em> to the mode <tt class="docutils literal"><span class="pre">Shipped</span> <span class="pre">Quantities</span></tt>.
+Then the storesperson will be able to re-plan and change the quantities of the forecast deliveries
+in the system.</p>
+</div>
+</div>
+<div class="section" id="changing-order-layout">
+<h2>Changing Order Layout<a class="headerlink" href="#changing-order-layout" title="Permalink to this headline">¶</a></h2>
+<p id="index-13">Install the <tt class="xref py py-mod docutils literal"><span class="pre">sale_layout</span></tt> module by selecting <em class="guilabel">Sales Order Layout Improvement</em> and clicking <em class="guilabel">Configure</em> in the <em class="guilabel">Reconfigure</em> wizard. It enables you to have a more flexible template than the standard order forms.</p>
+<p>For example, you could put the following in the order lines:</p>
+<ul class="simple">
+<li>a horizontal separator line,</li>
+<li>titles and subtitles,</li>
+<li>subtotals at the end of the section,</li>
+<li>comments,</li>
+<li>a page break.</li>
+</ul>
+<p id="index-14">This enables you to lay out a more elaborate, professional-looking quotation page. The
+module <tt class="xref py py-mod docutils literal"><span class="pre">account_invoice_layout</span></tt> (installed automatically on installation of <tt class="xref py py-mod docutils literal"><span class="pre">sale_layout</span></tt>),
+also gives you the same functionality for invoice templates.</p>
+<p>The two figures <a class="reference internal" href="#fig-invlayfrm"><em>Invoice using Customizable Layout</em></a> and <a class="reference internal" href="#fig-invlayprin"><em>Printed Invoice</em></a> show an invoice template in OpenERP
+and the resulting printed invoice.</p>
+<div class="figure align-center" id="fig-invlayfrm">
+<a class="reference internal image-reference" href="../../_images/invoice_layout_form.png"><img alt="../../_images/invoice_layout_form.png" src="../../_images/invoice_layout_form.png" style="width: 599.25px; height: 338.25px;" /></a>
+<p class="caption"><em>Invoice using Customizable Layout</em></p>
+</div>
+<div class="figure align-center" id="fig-invlayprin">
+<a class="reference internal image-reference" href="../../_images/invoice_layout_print.png"><img alt="../../_images/invoice_layout_print.png" src="../../_images/invoice_layout_print.png" style="width: 450.0px; height: 474.75px;" /></a>
+<p class="caption"><em>Printed Invoice</em></p>
+</div>
+</div>
+<div class="section" id="invoice-analysis">
+<h2>&nbsp;Invoice Analysis<a class="headerlink" href="#invoice-analysis" title="Permalink to this headline">¶</a></h2>
+<p>Analyse your invoicing in OpenERP through the <strong>Invoice Analysis</strong> screen.</p>
+<p>This report provides an overview of what has been invoiced to your customer as well as the average payment delays.
+You can easily group by partner, product category, ... or select only invoices that have not been confirmed yet.</p>
+<p>This is an easy way to check your sales people&#8217;s impact on turnover.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/invoice_analysis.jpeg"><img alt="../../_images/invoice_analysis.jpeg" src="../../_images/invoice_analysis.jpeg" style="width: 1186.4px; height: 350.4px;" /></a>
+<p class="caption"><em>Analyzing your Invoices</em></p>
+</div>
+</div>
+</div>
+
+
+	
+		
+		<div id="disqus_thread"></div>
+	    <script type="text/javascript">
+	        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	        var disqus_shortname = 'openerponlinebook'; // required: replace example with your forum shortname
+	
+	        /* * * DON'T EDIT BELOW THIS LINE * * */
+	        (function() {
+	            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	        })();
+	    </script>
+	    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	    
+    </div>
+    
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, OpenERP Book.<br/>
+      Last updated on Mar 28, 2014.<br/>
+    </p>
+  </div>
+</footer>
+<div class="container">You can contribute to OpenERP Book on <a href="#">Launchpade.net</a>
+<script type="text/javascript">
+  (function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ?
+              'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+  })();
+</script>
+</div>
+
+  </body>
+</html>

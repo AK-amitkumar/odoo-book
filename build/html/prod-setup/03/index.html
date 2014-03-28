@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Deploy OpenERP on NGINX &mdash; OpenERP Book 8.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootswatch-3.1.0/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '8.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="OpenERP Book 8.0 documentation" href="../../index.html" />
+    <link rel="up" title="Deploy OpenERP in Production" href="../index.html" />
+    <link rel="next" title="Hardward need to setup OpenERP" href="../05/index.html" />
+    <link rel="prev" title="Deploy OpenERP on gUnicorn" href="../02/index.html" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-47926740-1']);
+  _gaq.push(['_trackPageview']);
+</script>
+
+<meta name="google-translate-customization" content="1a9f16396f329347-27b519b501ddf27d-gbee5ada102d015d0-f"></meta>
+
+<!-- AddThis Smart Layers BEGIN -->
+<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-530c64087def677e"></script>
+<script type="text/javascript">
+  addthis.layers({
+    'theme' : 'transparent',
+    'share' : {
+      'position' : 'left',
+      'numPreferredServices' : 5
+    }   
+  });
+</script>
+<!-- AddThis Smart Layers END -->
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">
+          OpenERP Book</a>
+        <span class="navbar-text navbar-version pull-left"><b>8.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About OpenERP Online Book !</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../download/index.html">Looking for OpenERP Demo ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../install/index.html">Installation on Windows, Linux and MacOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part01/index.html">Getting start with OpenERP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../install-apps/index.html">Install and configure OpenERP Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part03/index.html">Setup your First Company in OpenERP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part02/index.html">Leads to Cash Flow with OpenERP</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../crm_sale/index.html">Boost your Sales</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../part04/index.html">Key Features HR</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Deploy OpenERP in Production</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../backup/index.html">OpenERP Backup and Restore</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Deploy OpenERP on NGINX</a><ul>
+<li><a class="reference internal" href="#installation-of-nginx">Installation of NGINX</a></li>
+<li><a class="reference internal" href="#create-your-cert-and-key">Create your cert and key</a></li>
+<li><a class="reference internal" href="#create-the-nginx-site">Create the nginx site</a></li>
+<li><a class="reference internal" href="#try-the-new-configuration">Try the new configuration</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+  <li>
+    <a href="../02/index.html" title="Previous Chapter: Deploy OpenERP on gUnicorn"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Deploy OpenERP o...</span>
+    </a>
+  </li>
+  <li>
+    <a href="../05/index.html" title="Next Chapter: Hardward need to setup OpenERP"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Hardward need to... &raquo;</span>
+    </a>
+  </li>
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+    
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+
+	        
+        
+      
+  <div class="section" id="deploy-openerp-on-nginx">
+<span id="setup-production-nginx"></span><h1>Deploy OpenERP on NGINX<a class="headerlink" href="#deploy-openerp-on-nginx" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Part of this page is taken from <a class="reference external" href="http://www.schenkels.nl">http://www.schenkels.nl</a></p>
+</div>
+<p>As we advice that for production setup Linux is the preferred Operating System, It is an essential to configure OpenERP as an linux server after the installation.</p>
+<p>OpenERP can be install on any linux system based on <tt class="docutils literal"><span class="pre">.deb</span></tt> or <tt class="docutils literal"><span class="pre">.rpm</span></tt>, please go through below installation steps for Linux and Mac.</p>
+<ul class="simple">
+<li><a class="reference internal" href="../../install/02/index.html#install-ubuntu"><em>Install OpenERP on Ubuntu Desktop or Server</em></a></li>
+<li><a class="reference internal" href="../../install/03/index.html#install-fedora"><em>Install OpenERP on Fedora, CentOS</em></a></li>
+<li><a class="reference internal" href="../../install/04/index.html#install-macosx"><em>Install OpenERP on Mac OSX 10.X.X</em></a></li>
+</ul>
+<p>After successfully installation, you can configure the server to be started automatically at boot time, so <a class="reference internal" href="../04/index.html#setup-production-openerp-service"><em>install it as a service</em></a>.</p>
+<p>Start with the installation of NGINX, Create your cert and key First create a temporary directory and move the files to their final resting</p>
+<div class="section" id="installation-of-nginx">
+<h2>Installation of NGINX<a class="headerlink" href="#installation-of-nginx" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo apt-get install nginx
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-your-cert-and-key">
+<h2>Create your cert and key<a class="headerlink" href="#create-your-cert-and-key" title="Permalink to this headline">¶</a></h2>
+<p>First create a temporary directory and move the files to their final resting place once they have been built (the first cd is just to make sure we are in our home directory to start with):</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nb">cd</span>
+mkdir temp
+<span class="nb">cd </span>temp
+</pre></div>
+</div>
+<p>Generate a new key, you will be asked to enter a passphrase and confirm:</p>
+<div class="highlight-bash"><div class="highlight"><pre>openssl genrsa -des3 -out server.pkey 1024
+</pre></div>
+</div>
+<p>Remove the passphrase by doing this, we do this because we don&#8217;t won&#8217;t to have to type this passphrase after every restart.</p>
+<div class="highlight-bash"><div class="highlight"><pre>openssl rsa -in server.pkey -out server.key
+</pre></div>
+</div>
+<p>Next we need to create a signing request which will hold the data that will be visible in your final certificate:</p>
+<div class="highlight-bash"><div class="highlight"><pre>openssl req -new -key server.key -out server.csr
+</pre></div>
+</div>
+<p>This will generate a series of prompts like this: Enter the information as requested. And finally we self-sign our certificate.</p>
+<div class="highlight-bash"><div class="highlight"><pre>openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
+</pre></div>
+</div>
+<p>We only need two of the files in the working directory, the key and the certificate. But before we can use them they need to have their ownership and access rights altered:</p>
+<div class="highlight-bash"><div class="highlight"><pre>sudo chown root:www-data server.crt server.key
+sudo chmod 640 server.crt server.key
+</pre></div>
+</div>
+<p>And then we put them in a sensible place:</p>
+<div class="highlight-bash"><div class="highlight"><pre>sudo mkdir /etc/ssl/nginx
+sudo chown www-data:root /etc/ssl/nginx
+sudo chmod 710 /etc/ssl/nginx
+sudo mv server.crt server.key /etc/ssl/nginx/
+</pre></div>
+</div>
+<p>We now have the key and certificate on the final location. We can now tell nginx where the files are and how they will behave.</p>
+</div>
+<div class="section" id="create-the-nginx-site">
+<h2>Create the nginx site<a class="headerlink" href="#create-the-nginx-site" title="Permalink to this headline">¶</a></h2>
+<p>We create a new configuration file
+sudo nano /etc/nginx/sites-available/openerp</p>
+<p>with the following content:</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">You will need to change all references to openerpserver.example.com in the following file to either the domain name or static IP address of your server.</p>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>upstream webserver <span class="o">{</span>
+    server 127.0.0.1:8069 <span class="nv">weight</span><span class="o">=</span>1 <span class="nv">fail_timeout</span><span class="o">=</span>300s;
+<span class="o">}</span>
+
+server <span class="o">{</span>
+    listen 80;
+    server_name    _;
+
+    <span class="c"># Strict Transport Security</span>
+    add_header Strict-Transport-Security max-age<span class="o">=</span>2592000;
+
+    rewrite ^/.*<span class="nv">$ </span>https://<span class="nv">$host$request_uri</span>? permanent;
+<span class="o">}</span>
+
+server <span class="o">{</span>
+    <span class="c"># server port and name</span>
+    listen        443 default;
+    server_name   openerpserver.example.com;
+
+    <span class="c"># Specifies the maximum accepted body size of a client request,</span>
+    <span class="c"># as indicated by the request header Content-Length.</span>
+    client_max_body_size 200m;
+
+    <span class="c"># ssl log files</span>
+    access_log    /var/log/nginx/openerp-access.log;
+    error_log    /var/log/nginx/openerp-error.log;
+
+    <span class="c"># ssl certificate files</span>
+    ssl on;
+    ssl_certificate        /etc/ssl/nginx/server.crt;
+    ssl_certificate_key    /etc/ssl/nginx/server.key;
+
+    <span class="c"># add ssl specific settings</span>
+    keepalive_timeout    60;
+
+    <span class="c"># limit ciphers</span>
+    ssl_ciphers            HIGH:!ADH:!MD5;
+    ssl_protocols            SSLv3 TLSv1;
+    ssl_prefer_server_ciphers    on;
+
+    <span class="c"># increase proxy buffer to handle some OpenERP web requests</span>
+    proxy_buffers 16 64k;
+    proxy_buffer_size 128k;
+
+    location / <span class="o">{</span>
+        proxy_pass    http://webserver;
+        <span class="c"># force timeouts if the backend dies</span>
+        proxy_next_upstream error timeout invalid_header http_500 http_502 http_503;
+
+        <span class="c"># set headers</span>
+        proxy_set_header Host <span class="nv">$host</span>;
+        proxy_set_header X-Real-IP <span class="nv">$remote_addr</span>;
+        proxy_set_header X-Forward-For <span class="nv">$proxy_add_x_forwarded_for</span>;
+
+        <span class="c"># Let the OpenERP web service know that we&#39;re using HTTPS, otherwise</span>
+        <span class="c"># it will generate URL using http:// and not https://</span>
+        proxy_set_header X-Forwarded-Proto https;
+
+        <span class="c"># by default, do not forward anything</span>
+        proxy_redirect off;
+    <span class="o">}</span>
+
+    <span class="c"># cache some static data in memory for 60mins.</span>
+    <span class="c"># under heavy load this should relieve stress on the OpenERP web interface a bit.</span>
+    location ~* /web/static/ <span class="o">{</span>
+        proxy_cache_valid 200 60m;
+        proxy_buffering    on;
+        expires 864000;
+        proxy_pass http://webserver;
+    <span class="o">}</span>
+
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>We then will enable the new site configuration by creating a symbolic link in the /etc/nginx/sites-enabled directory.</p>
+<div class="highlight-bash"><div class="highlight"><pre>sudo ln -s /etc/nginx/sites-available/openerp /etc/nginx/sites-enabled/openerp
+</pre></div>
+</div>
+<p>Change the OpenERP server configuration file</p>
+<p>We now need to re-configure the openerp server in a way that non-encrypted services are not accessible from the outside world.</p>
+<p>We will change the /etc/openerp-server.conf so that it will only except requests from nginx.</p>
+<p>Just open then file and add 127.0.0.1 to the xmlrpc and netrpc interface lines as shown below.</p>
+<div class="highlight-bash"><div class="highlight"><pre>sudo vi /etc/openerp-server.conf
+
+<span class="nv">xmlrpc_interface</span> <span class="o">=</span> 127.0.0.1
+<span class="nv">netrpc_interface</span> <span class="o">=</span> 127.0.0.1
+</pre></div>
+</div>
+</div>
+<div class="section" id="try-the-new-configuration">
+<h2>Try the new configuration<a class="headerlink" href="#try-the-new-configuration" title="Permalink to this headline">¶</a></h2>
+<p>Restart the services to load the new configurations</p>
+<div class="highlight-bash"><div class="highlight"><pre>sudo service openerp-server restart
+sudo service nginx restart
+</pre></div>
+</div>
+<p>You should not be able to connect to the web client on port 8069. For web access you just need to visit <a class="reference external" href="https://openerpserver.example.com">https://openerpserver.example.com</a></p>
+</div>
+</div>
+
+
+	
+		
+		<div id="disqus_thread"></div>
+	    <script type="text/javascript">
+	        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	        var disqus_shortname = 'openerponlinebook'; // required: replace example with your forum shortname
+	
+	        /* * * DON'T EDIT BELOW THIS LINE * * */
+	        (function() {
+	            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	        })();
+	    </script>
+	    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	    
+    </div>
+    
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, OpenERP Book.<br/>
+      Last updated on Mar 28, 2014.<br/>
+    </p>
+  </div>
+</footer>
+<div class="container">You can contribute to OpenERP Book on <a href="#">Launchpade.net</a>
+<script type="text/javascript">
+  (function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ?
+              'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+  })();
+</script>
+</div>
+
+  </body>
+</html>

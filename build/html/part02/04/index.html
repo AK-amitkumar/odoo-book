@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Qualify Lead and Convert in to Opportunity &mdash; OpenERP Book 8.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootswatch-3.1.0/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '8.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="OpenERP Book 8.0 documentation" href="../../index.html" />
+    <link rel="up" title="Leads to Cash Flow with OpenERP" href="../index.html" />
+    <link rel="next" title="Make a Proposal to Customer" href="../05/index.html" />
+    <link rel="prev" title="Create leads from incoming emails" href="../03/index.html" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-47926740-1']);
+  _gaq.push(['_trackPageview']);
+</script>
+
+<meta name="google-translate-customization" content="1a9f16396f329347-27b519b501ddf27d-gbee5ada102d015d0-f"></meta>
+
+<!-- AddThis Smart Layers BEGIN -->
+<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-530c64087def677e"></script>
+<script type="text/javascript">
+  addthis.layers({
+    'theme' : 'transparent',
+    'share' : {
+      'position' : 'left',
+      'numPreferredServices' : 5
+    }   
+  });
+</script>
+<!-- AddThis Smart Layers END -->
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">
+          OpenERP Book</a>
+        <span class="navbar-text navbar-version pull-left"><b>8.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About OpenERP Online Book !</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../download/index.html">Looking for OpenERP Demo ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../install/index.html">Installation on Windows, Linux and MacOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part01/index.html">Getting start with OpenERP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../install-apps/index.html">Install and configure OpenERP Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part03/index.html">Setup your First Company in OpenERP</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Leads to Cash Flow with OpenERP</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../crm_sale/index.html">Boost your Sales</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../part04/index.html">Key Features HR</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../prod-setup/index.html">Deploy OpenERP in Production</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../backup/index.html">OpenERP Backup and Restore</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Qualify Lead and Convert in to Opportunity</a><ul>
+<li><a class="reference internal" href="#convert-to-opportunity">Convert to Opportunity</a></li>
+<li><a class="reference internal" href="#opportunity-form">Opportunity Form</a><ul>
+<li><a class="reference internal" href="#next-action-date">Next Action &amp; Date</a></li>
+<li><a class="reference internal" href="#expected-revenue-probability">Expected Revenue &amp; Probability</a></li>
+<li><a class="reference internal" href="#expected-closing-date">Expected Closing Date</a></li>
+<li><a class="reference internal" href="#categories">Categories</a></li>
+<li><a class="reference internal" href="#miscellaneous-option">Miscellaneous Option</a></li>
+<li><a class="reference internal" href="#schedule-or-log-phone-calls">Schedule or Log Phone Calls</a></li>
+<li><a class="reference internal" href="#schedule-meeting">Schedule Meeting</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+  <li>
+    <a href="../03/index.html" title="Previous Chapter: Create leads from incoming emails"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Create leads fro...</span>
+    </a>
+  </li>
+  <li>
+    <a href="../05/index.html" title="Next Chapter: Make a Proposal to Customer"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Make a Proposal ... &raquo;</span>
+    </a>
+  </li>
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+    
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+
+	        
+        
+      
+  <span class="target" id="qualify-lead"></span><div class="section" id="qualify-lead-and-convert-in-to-opportunity">
+<span id="index-0"></span><h1>Qualify Lead and Convert in to Opportunity<a class="headerlink" href="#qualify-lead-and-convert-in-to-opportunity" title="Permalink to this headline">¶</a></h1>
+<p>In OpenERP after <a class="reference internal" href="../01/index.html#install-crm"><em>installing CRM module</em></a>, you can create and manage all the future sales like prospects or sales inquiries by <a class="reference internal" href="../02/index.html#leads-manual"><em>creating manually</em></a> or <a class="reference internal" href="../03/index.html#leads-automatic"><em>create automated</em></a> Leads which might get convert in to sales for company.</p>
+<div class="section" id="convert-to-opportunity">
+<h2>Convert to Opportunity<a class="headerlink" href="#convert-to-opportunity" title="Permalink to this headline">¶</a></h2>
+<p>Once you qualify the lead, you may convert them in to Opportunity by creating a new or merge with the existing one and link those with existing customer or create a new one and link them.</p>
+<img alt="../../_images/lead-to-opportunity.png" src="../../_images/lead-to-opportunity.png" />
+<p>Convert Lead to Opportunity</p>
+<p>Click on &#8220;Convert to Opportunity&#8221; and you will get the opportunity created in New Stage. OpenERP gives you a different pipes in terms of Kanban view to mange the opportunities  into depending on the stage of the opportunity. However you can change those pipes based on your needs or sales process you choose.</p>
+<p>In Kanban view each column represents a Pipe, and opportunities link on them can be move to another pipe just by drag and drop, depending on the probability and possibilities of the opportunity.</p>
+<img alt="../../_images/opportunity-board.png" src="../../_images/opportunity-board.png" />
+<p>Opportunity by Stages</p>
+</div>
+<div class="section" id="opportunity-form">
+<h2>Opportunity Form<a class="headerlink" href="#opportunity-form" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/opportunity-form.png" src="../../_images/opportunity-form.png" />
+<p>Opportunity Form View</p>
+<p>In OpenERP, many information you get on the opportunity comes from lead like Subject, Email, Phone, Internal Nots and all communication, etc..</p>
+<p>A good salesman does not forget to put the Expected Revenue, Probability to close the deal and Expected date to close the deal on Opportunity when you assigned to him / her.</p>
+<div class="section" id="next-action-date">
+<h3>Next Action &amp; Date<a class="headerlink" href="#next-action-date" title="Permalink to this headline">¶</a></h3>
+<p>Salesman can put the next action date and action to perform on that date to progress on the opportunity. Salesman can easily check TODOs on their opportunity pipes to  work on every day based on the next actions.</p>
+</div>
+<div class="section" id="expected-revenue-probability">
+<h3>Expected Revenue &amp; Probability<a class="headerlink" href="#expected-revenue-probability" title="Permalink to this headline">¶</a></h3>
+<p>The revenue can be generated by proposing the products for which prospect is interested is usually encode as a expected revenue and probability is calculated based on the stage of the opportunity.</p>
+<p>Probability of the opportunity can be changed automatically if you choose to do so, based on your stage configuration. You may found the configuration of the stages under Sales → Lead &amp; Opportunities → Stages and you change the required configurations.</p>
+<img alt="../../_images/stage.png" src="../../_images/stage.png" />
+<p>Stages of Opportunity</p>
+</div>
+<div class="section" id="expected-closing-date">
+<h3>Expected Closing Date<a class="headerlink" href="#expected-closing-date" title="Permalink to this headline">¶</a></h3>
+<p>The future date by which the opportunity expected to win by the salesman. This date is used to compute the forecast revenues months by months with respect to the probability of the closing the opportunity.</p>
+<p>Expected closing date is simply based on the sales cycle of the product you selling.</p>
+</div>
+<div class="section" id="categories">
+<h3>Categories<a class="headerlink" href="#categories" title="Permalink to this headline">¶</a></h3>
+<p>Used for the classification of the Opportunity by anything you want, here I took an example of the Type of Solution and Platform on when they need so that i can classify easily for the future operations like emailing or some special offers based on the stages they are.</p>
+</div>
+<div class="section" id="miscellaneous-option">
+<h3>Miscellaneous Option<a class="headerlink" href="#miscellaneous-option" title="Permalink to this headline">¶</a></h3>
+<img alt="../../_images/opportunity-misc.png" src="../../_images/opportunity-misc.png" />
+<p>Miscellaneous Options</p>
+<p>You can track the opportunity history form Misc option under Lead Tab. You can get the number of days since the Opportunity / Leads exist in the system, Days Close represents that since how many days Opportunity closed wither by Winning or Loosing.</p>
+</div>
+<div class="section" id="schedule-or-log-phone-calls">
+<h3>Schedule or Log Phone Calls<a class="headerlink" href="#schedule-or-log-phone-calls" title="Permalink to this headline">¶</a></h3>
+<p>We can schedule or log a phone calls in order to keep a historical data to manage the opportunity follow ups efficiently. A good sales manager wants their term members to call, call and call... so after each call salesman can notes of call discussion on log call.</p>
+<img alt="../../_images/log-calls.png" src="../../_images/log-calls.png" />
+<p>Log Calls</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">You can also integrate a telephone systems such as <tt class="docutils literal"><span class="pre">asterisk</span></tt> to get the call recording and attach it along with the log call or schedule call once the call complete.</p>
+</div>
+</div>
+<div class="section" id="schedule-meeting">
+<h3>Schedule Meeting<a class="headerlink" href="#schedule-meeting" title="Permalink to this headline">¶</a></h3>
+<p>We can also schedule a meeting on calendar to manage it efficiently, we can add attends to add same event on their calendar on OpenERP, send invitations through email to registered partners. We can also get the confirmation of acceptance or rejections of the meeting through scheduled meeting in OenERP itself.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You can get the all the activities like log calls, schedule a meetings on opportunity in chatter, so that we can track an opportunity for all activities along with the internal notes of email communications.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+	
+		
+		<div id="disqus_thread"></div>
+	    <script type="text/javascript">
+	        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	        var disqus_shortname = 'openerponlinebook'; // required: replace example with your forum shortname
+	
+	        /* * * DON'T EDIT BELOW THIS LINE * * */
+	        (function() {
+	            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	        })();
+	    </script>
+	    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	    
+    </div>
+    
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, OpenERP Book.<br/>
+      Last updated on Mar 28, 2014.<br/>
+    </p>
+  </div>
+</footer>
+<div class="container">You can contribute to OpenERP Book on <a href="#">Launchpade.net</a>
+<script type="text/javascript">
+  (function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ?
+              'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+  })();
+</script>
+</div>
+
+  </body>
+</html>

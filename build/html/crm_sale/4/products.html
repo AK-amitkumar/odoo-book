@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Creating your Products &mdash; OpenERP Book 8.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootswatch-3.1.0/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '8.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="OpenERP Book 8.0 documentation" href="../../index.html" />
+    <link rel="up" title="Closing your Deals: from Quotation to Sales Order" href="index.html" />
+    <link rel="next" title="Managing your Sales Quotations" href="sales_quotations.html" />
+    <link rel="prev" title="Closing your Deals: from Quotation to Sales Order" href="index.html" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-47926740-1']);
+  _gaq.push(['_trackPageview']);
+</script>
+
+<meta name="google-translate-customization" content="1a9f16396f329347-27b519b501ddf27d-gbee5ada102d015d0-f"></meta>
+
+<!-- AddThis Smart Layers BEGIN -->
+<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-530c64087def677e"></script>
+<script type="text/javascript">
+  addthis.layers({
+    'theme' : 'transparent',
+    'share' : {
+      'position' : 'left',
+      'numPreferredServices' : 5
+    }   
+  });
+</script>
+<!-- AddThis Smart Layers END -->
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">
+          OpenERP Book</a>
+        <span class="navbar-text navbar-version pull-left"><b>8.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About OpenERP Online Book !</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../download/index.html">Looking for OpenERP Demo ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../install/index.html">Installation on Windows, Linux and MacOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part01/index.html">Getting start with OpenERP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../install-apps/index.html">Install and configure OpenERP Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part03/index.html">Setup your First Company in OpenERP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part02/index.html">Leads to Cash Flow with OpenERP</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Boost your Sales</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../part04/index.html">Key Features HR</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../prod-setup/index.html">Deploy OpenERP in Production</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../backup/index.html">OpenERP Backup and Restore</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Creating your Products</a><ul>
+<li><a class="reference internal" href="#using-the-correct-product-types">Using the Correct Product Types</a></li>
+<li><a class="reference internal" href="#procurement-methods-make-to-stock-and-make-to-order">Procurement Methods – Make to Stock and Make to Order</a></li>
+<li><a class="reference internal" href="#choosing-supply-methods">Choosing Supply Methods</a></li>
+<li><a class="reference internal" href="#understanding-units-of-measure">Understanding Units of Measure</a></li>
+<li><a class="reference internal" href="#categorizing-your-products">Categorizing your Products</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+  <li>
+    <a href="index.html" title="Previous Chapter: Closing your Deals: from Quotation to Sales Order"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Closing your Dea...</span>
+    </a>
+  </li>
+  <li>
+    <a href="sales_quotations.html" title="Next Chapter: Managing your Sales Quotations"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Managing your Sa... &raquo;</span>
+    </a>
+  </li>
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+    
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+
+	        
+        
+      
+  <div class="section" id="creating-your-products">
+<h1>Creating your Products<a class="headerlink" href="#creating-your-products" title="Permalink to this headline">¶</a></h1>
+<p>The <em class="menuselection">Sales ‣ Products</em> menu gives you access to the definition of products.
+In OpenERP, <cite>product</cite> is used to define a raw material, a stockable product, a consumable or a service.</p>
+<div class="admonition tip" id="index-0">
+<p class="first admonition-title">Tip</p>
+<p>Consumables</p>
+<p class="last">In OpenERP, a consumable is a physical product which is treated like a stockable product, with the exception
+that stock management is not taken into account by the system. You could buy it, deliver it or
+produce it, but OpenERP will always assume that there is enough of it in stock. Examples: nails, labels.</p>
+</div>
+<p>Open a product form to see its specific information.</p>
+<p>Price lists (<em class="menuselection">Sales ‣ Configuration ‣ Pricelists</em>) determine the purchase and selling prices and
+adjustments derived from the use of different currencies. The <em class="menuselection">Default Purchase
+Pricelist</em> uses the product&#8217;s <em class="guilabel">Cost Price</em> field for the Purchase price to be calculated. The
+<em class="menuselection">Public Pricelist</em> uses the product&#8217;s <em class="guilabel">Sale Price</em> field to calculate the Sales price in quotations.</p>
+<p>Price lists are extremely flexible and enable you to put a complete price management policy in place.
+They are composed of simple rules that enable you to build up a rule set for most complex situations:
+multiple discounts, selling prices based on purchase prices, price reductions, promotions on product ranges and so on.</p>
+<p>To start, define the following product:</p>
+<table border="1" class="docutils">
+<caption>Product Definition</caption>
+<colgroup>
+<col width="48%" />
+<col width="52%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Value</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Name</td>
+<td>Central Heating Type 1</td>
+</tr>
+<tr class="row-odd"><td>Reference</td>
+<td>CCT1</td>
+</tr>
+<tr class="row-even"><td>Product Type</td>
+<td>Stockable Product</td>
+</tr>
+<tr class="row-odd"><td>Supply Method</td>
+<td>Buy</td>
+</tr>
+</tbody>
+</table>
+<p>From the menu <em class="menuselection">Sales ‣ Product ‣ Products</em>, click <em class="guilabel">New</em> to define a new product.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/stock_product.png"><img alt="../../_images/stock_product.png" src="../../_images/stock_product.png" style="width: 728.25px; height: 422.25px;" /></a>
+<p class="caption"><em>Defining a New Product</em></p>
+</div>
+<p>Three fields are important when you are configuring a new product:</p>
+<ul class="simple">
+<li><em class="guilabel">Product Type</em>,</li>
+<li><em class="guilabel">Procurement Method</em>,</li>
+<li><em class="guilabel">Supply Method</em>.</li>
+</ul>
+<div class="section" id="using-the-correct-product-types">
+<h2>Using the Correct Product Types<a class="headerlink" href="#using-the-correct-product-types" title="Permalink to this headline">¶</a></h2>
+<p>The product type indicates whether the product is handled in stock management and if OpenERP manages its
+procurement. The three distinct product types are:</p>
+<ul class="simple">
+<li><em class="guilabel">Stockable Product</em>: this product is used in stock management and its replenishment is
+more or less automated as defined by the rules established in the system. For these products, we have to know
+how many pieces we have in stock. Examples: a bicycle, a computer or a central heating system.</li>
+<li><em class="guilabel">Consumable</em>: This product is handled in stock management, you can receive it, deliver it and produce it.
+However, its stock level is not managed by the system. OpenERP assumes that you have got sufficient levels
+in stock at all times, so it does not restock it automatically. Example: nails, labels.</li>
+<li><em class="guilabel">Service</em>: It does not appear in the various stock operations. Example: a consulting
+service.</li>
+</ul>
+</div>
+<div class="section" id="procurement-methods-make-to-stock-and-make-to-order">
+<h2>Procurement Methods – Make to Stock and Make to Order<a class="headerlink" href="#procurement-methods-make-to-stock-and-make-to-order" title="Permalink to this headline">¶</a></h2>
+<p>The procurement method determines how the product will be replenished:</p>
+<ul class="simple">
+<li><em class="guilabel">Make to Stock</em>: your customers are supplied from available stock. If the quantities in stock are
+too low to fulfil the order, a Purchase Order (according the minimum stock rules) will be generated in order
+to get the products required. Example: a classic distributor.</li>
+<li><em class="guilabel">Make to Order</em>: when a customer order is confirmed, you procure or manufacture
+the products for this order. A customer order &#8216;Make to Order&#8217; will not modify stock in the medium term
+because you restock with the exact amount that was ordered. Example: computers from a large supplier
+assembled on demand.</li>
+</ul>
+<p>You find a mix of these two modes used for the different final and intermediate products in most
+industries. The procurement method shown on the product form is a default value for the order,
+enabling the salesperson to choose the best mode for fulfilling a particular order by varying the
+sales order parameters as needed.</p>
+<p>The figures <a class="reference internal" href="#fig-stfrst"><em>Change in Stock for a  Make to Stock Product</em></a> and <a class="reference internal" href="#fig-stfrord"><em>Change in Stock for a Make to Order Product</em></a> show the change of stock levels for one product
+managed as <cite>Make to Order</cite> and another managed as <cite>Make to Stock</cite>. The two figures are taken from OpenERP&#8217;s
+<em class="guilabel">Stock Level Forecast</em> report, available from the product form.</p>
+<div class="figure align-center" id="fig-stfrst">
+<a class="reference internal image-reference" href="../../_images/stock_from_stock.png"><img alt="../../_images/stock_from_stock.png" src="../../_images/stock_from_stock.png" style="width: 659.75px; height: 388.05px;" /></a>
+<p class="caption"><em>Change in Stock for a  Make to Stock Product</em></p>
+</div>
+<div class="figure align-center" id="fig-stfrord">
+<a class="reference internal image-reference" href="../../_images/stock_from_order.png"><img alt="../../_images/stock_from_order.png" src="../../_images/stock_from_order.png" style="width: 658.45px; height: 369.85px;" /></a>
+<p class="caption"><em>Change in Stock for a Make to Order Product</em></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Logistical Methods</p>
+<p class="last">The <em class="guilabel">Make to Stock</em> logistical approach is usually used for high volumes and when the
+demand is seasonal or otherwise easy to forecast.
+The <em class="guilabel">Make to Order</em> approach is used for products that are measured, or very expensive to
+stock or have a short restocking time.</p>
+</div>
+</div>
+<div class="section" id="choosing-supply-methods">
+<h2>Choosing Supply Methods<a class="headerlink" href="#choosing-supply-methods" title="Permalink to this headline">¶</a></h2>
+<p>OpenERP supports two supply methods:</p>
+<ul class="simple">
+<li>Produce: when the product is manufactured or the service is supplied from internal resources.</li>
+<li>Buy: when the product is bought from a supplier.</li>
+</ul>
+<p>These are just the default settings used by the system during automated replenishment. The same
+product can be either manufactured internally or bought from a supplier.</p>
+<p>These three fields (<em class="guilabel">Supply Method</em>, <em class="guilabel">Procurement Method</em>, <em class="guilabel">Product
+Type</em>) determine the system&#8217;s behaviour when a product is required. The system will generate
+different documents depending on the configuration of these three fields.</p>
+<p>Figure <a class="reference internal" href="#fig-stflow"><em>Workflow for Automatic Procurement, depending on the Product Configuration</em></a> illustrates different cases for automatic procurement.</p>
+<div class="figure align-center" id="fig-stflow">
+<a class="reference internal image-reference" href="../../_images/stock_flow.png"><img alt="../../_images/stock_flow.png" src="../../_images/stock_flow.png" style="width: 960.8px; height: 704.0px;" /></a>
+<p class="caption"><em>Workflow for Automatic Procurement, depending on the Product Configuration</em></p>
+</div>
+</div>
+<div class="section" id="understanding-units-of-measure">
+<span id="index-1"></span><h2>Understanding Units of Measure<a class="headerlink" href="#understanding-units-of-measure" title="Permalink to this headline">¶</a></h2>
+<p>OpenERP supports several units of measure. Quantities of the same product can be expressed in
+several units of measure at once. For example, you can buy grain by the tonne and resell it by kg.
+You just have to make sure that all the units of measure used for a product are in the same units of
+measure category.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Categories of Units of Measure</p>
+<p class="last">All units of measure in the same category are convertible from one unit to another.</p>
+</div>
+<p>The table below shows some examples of units of measure and their category. The factor is used to
+convert from one unit of measure to another as long as they are in the same category.</p>
+<table border="1" class="docutils">
+<caption>Example Units of Measure</caption>
+<colgroup>
+<col width="25%" />
+<col width="33%" />
+<col width="17%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">UoM</th>
+<th class="head">Category</th>
+<th class="head">Ratio</th>
+<th class="head">UoM Type</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Kg</td>
+<td>Weight</td>
+<td>1</td>
+<td>Reference</td>
+</tr>
+<tr class="row-odd"><td>Gram</td>
+<td>Weight</td>
+<td>1000</td>
+<td>Smaller</td>
+</tr>
+<tr class="row-even"><td>Tonne</td>
+<td>Weight</td>
+<td>1000</td>
+<td>Bigger</td>
+</tr>
+<tr class="row-odd"><td>Hour</td>
+<td>Working time</td>
+<td>8</td>
+<td>Smaller</td>
+</tr>
+<tr class="row-even"><td>Day</td>
+<td>Working time</td>
+<td>1</td>
+<td>Reference</td>
+</tr>
+<tr class="row-odd"><td>Half-day</td>
+<td>Working time</td>
+<td>4</td>
+<td>Smaller</td>
+</tr>
+<tr class="row-even"><td>Item</td>
+<td>Unit</td>
+<td>1</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>100 Items</td>
+<td>Unit</td>
+<td>0.01</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>Depending on the table above, you have 1Kg = 1000g = 0.001 Tonnes. A product in the <tt class="docutils literal"><span class="pre">Weight</span></tt>
+category could be expressed in Kg, Tonnes or Grammes. You cannot express it in hours or pieces, for example.</p>
+<p>Use the menu <em class="menuselection">Sales ‣ Configuration ‣ Products ‣  Units of Measure ‣ Units of Measure</em>
+to define a new unit of measure.</p>
+<p>In the definition of a Unit of Measure, you have a <em class="guilabel">Rounding precision</em> factor which shows how
+amounts are rounded after the conversion. A value of 1 gives rounding to the level of one unit. 0.01
+gives rounding to one hundredth.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Secondary Units</p>
+<p>OpenERP supports double units of measure.
+Notice however that the default unit of measure and the purchase unit of measure have to be in the same category.
+Only the sales unit of measure may be in a different category.</p>
+<p class="last">This is very useful in the agro-food industry, for example: you sell ham by the piece but invoice
+by the Kg.
+A weighing operation is needed before invoicing the customer.</p>
+</div>
+<p>To activate the management options for double units of measure, assign the group <em class="guilabel">Useability /
+Product UoS View</em> to your user.</p>
+<p>In this case, the same product can be expressed in two units of measure belonging to different
+categories for sales and stock/purchase. You can then distinguish between the unit of stock management (the piece) and the unit
+of invoicing or sales (kg).</p>
+<p>In the product form you can then set one unit of measure for sales and stock management, and one
+unit of measure for purchases.</p>
+<p>For each operation on a product, you can use another unit of
+measure, as long as it can be found in the same category as the two units already defined. If you
+use another unit of measure, OpenERP automatically handles the conversion of prices and quantities.</p>
+<p>So if you have 430 Kg of carrots at 5.30 EUR/Kg, OpenERP will automatically make the conversion if
+you want to sell in tonnes – 0.43 tonnes at 5300 EUR / tonne. If you had set a rounding factor of
+0.1 for the <em class="guilabel">tonne</em> unit of measure, OpenERP will tell you that you have only 0.4 tonnes
+available.</p>
+<p>The <em class="menuselection">Sales ‣ Products</em> menu allows you to create new products and update existing products.</p>
+</div>
+<div class="section" id="categorizing-your-products">
+<h2>Categorizing your Products<a class="headerlink" href="#categorizing-your-products" title="Permalink to this headline">¶</a></h2>
+<p>Unlike partner categories (as explained in chapter <a class="reference internal" href="../2/contacts.html#partner-categ"><em>Categorizing your Partners</em></a>) and their assigned partners, product categories do have an effect on the products assigned to them - and a product may only belong to one category. Product categories are linked to accounting and they determine the default income / expense account when invoicing. For a CRM point of view, categories will be very useful to group your sales information in a different way.</p>
+<p>Suppose you would like to have product categories that correspond to your product lines (or your lines of business). With such a category tree structure, you can easily track your opportunities and forecast per product line. Go to the <cite>Reporting</cite> menu, and open the <cite>Sales Analysis</cite> screen to group your quotations and sales orders by category of products.</p>
+<p>You can define new product categories from the <em class="menuselection">Sales ‣ Sales ‣ Configuration ‣ Product ‣ Products Categories</em>, and also directly from the <cite>Product</cite> form.</p>
+<p>From the <em class="menuselection">Sales ‣ Product ‣ Products by Category</em> menu, you get an overview of all product categories according to their tree structure. To see the products linked to a particular category, simply unfold and/or click the product concerned. All products from that category will be displayed.</p>
+</div>
+</div>
+
+
+	
+		
+		<div id="disqus_thread"></div>
+	    <script type="text/javascript">
+	        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	        var disqus_shortname = 'openerponlinebook'; // required: replace example with your forum shortname
+	
+	        /* * * DON'T EDIT BELOW THIS LINE * * */
+	        (function() {
+	            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	        })();
+	    </script>
+	    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	    
+    </div>
+    
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, OpenERP Book.<br/>
+      Last updated on Mar 28, 2014.<br/>
+    </p>
+  </div>
+</footer>
+<div class="container">You can contribute to OpenERP Book on <a href="#">Launchpade.net</a>
+<script type="text/javascript">
+  (function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ?
+              'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+  })();
+</script>
+</div>
+
+  </body>
+</html>
