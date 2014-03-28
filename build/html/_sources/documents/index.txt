@@ -5,6 +5,9 @@
 Integrated Document Management
 ==============================
 
+.. note::
+    This part of this documentation need to refactor, need to change the images and some old content.
+    
  *Information management has become a major strategic factor in company's development.
  It is important to get the right information circulated to the right people, as efficiently
  as possible, yet still keep it secure.

@@ -8,6 +8,10 @@ Recruit & Manage your Talents
 =============================
 
 .. note::
+    This part of this documentation need to refactor, need to change the images and some old content.
+    
+    
+.. note::
 
  This chapter describes OpenERP's main Human Resources and Employee Services features.
  Most of the solutions discussed after this chapter concern management by

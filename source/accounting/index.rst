@@ -4,6 +4,9 @@
 Manage your Books of Accounts
 =============================
 
+.. note::
+    This part of this documentation need to refactor, need to change the images and some old content.
+        
 .. toctree::
     :maxdepth: 2
 

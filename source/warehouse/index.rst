@@ -8,6 +8,9 @@
 Organize your Warehouse
 =======================
 
+.. note::
+    This part of this documentation need to refactor, need to change the images and some old content.
+    
  OpenERP's stock management is at once very simple, flexible and complete.
  It is based on the concept of double entry that revolutionized accounting.
  The system can be described by Lavoisier's maxim “nothing lost, everything changed” or, better,
