@@ -144,4 +144,3 @@ You can have the statistical analysis on all analytic entries from the menu :men
 .. resulting from the use of the information contained herein.
 
 .. Published by Open Object Press, Grand Rosière, Belgium
-

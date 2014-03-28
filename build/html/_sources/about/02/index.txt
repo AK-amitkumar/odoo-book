@@ -24,6 +24,7 @@ Content Contributors
 --------------------
 All the contributors who have contribute success stories, case studies, Implementation tips and tricks, thanks to all of them to make this book really rich interns of usable information in real life. You can also share articles which is written by you, If you want to contribute under this section please contact to any of the co-ordinator on their respective emails address.
 
+* `OpenERP ! <http://www.opeenrp.com/>`_
 * `Open Source Enterprise ! <http://opensourceenterprise.wordpress.com/>`_
 
 Friends of OpenERP Book
@@ -35,7 +36,6 @@ You can also support this book by being a friend, you just need to add a book im
 Worldwide Contributors
 ----------------------
 Yes !, thats you. thank to every one who support this book by visiting regularly  to search for various topics , making healthy discussion on them and sharing a such useful topics to OpenERP community around the word through social media links. After all this book is for community and by community !
-
 
 How can I contribute ?
 ======================

@@ -108,6 +108,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../humanresource/index.html">Recruit &amp; Manage your Talents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../project-service/index.html">Manage your Projects and Services</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Manage your Books of Accounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../documents/index.html">Integrated Document Management</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../prod-setup/index.html">Deploy OpenERP in Production</a></li>
@@ -191,7 +192,7 @@ You also need to add a default sales tax to these accounts, which can be done fr
 <p>Let us give the example of manually entering a sales invoice through <em class="menuselection">Accounting ‣ Journal Entries ‣ Journal Items</em>. Note however that these entries are usually generated automatically by OpenERP.</p>
 <p>Select the journal in which you want to post entries in the <tt class="docutils literal"><span class="pre">Journal</span></tt> box, enter the period and click <tt class="docutils literal"><span class="pre">Search</span></tt>. Now click the <em class="guilabel">Create</em> button.</p>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="accounting/3_7/images/journal_item_rec.png"><img alt="accounting/3_7/images/journal_item_rec.png" src="accounting/3_7/images/journal_item_rec.png" /></a>
+<a class="reference internal image-reference" href="../../_images/journal_item_rec.png"><img alt="../../_images/journal_item_rec.png" src="../../_images/journal_item_rec.png" style="width: 879.75px; height: 150.75px;" /></a>
 <p class="caption"><em>Receivable Entry (first line)</em></p>
 </div>
 <p>Start by entering the receivable entry (Account Receivable or Customer account). Fill at least the following fields in the following order:</p>
@@ -203,11 +204,11 @@ You also need to add a default sales tax to these accounts, which can be done fr
 <p>Press the <em class="guilabel">Enter</em> key on your keyboard to validate the first line. The next draft move number is assigned to your accounting entry. Your line is then colored red and takes the <tt class="docutils literal"><span class="pre">Unbalanced</span></tt>  state. When a line is in the draft state, it is not yet reflected in the accounts. OpenERP will not validate that line until the balancing entry is made (so the credit amounts should balance the debit amounts for that set of entries).</p>
 <p>OpenERP now automatically proposes the balancing accounting line with the default account from the sales journal and default tax linked to this account.</p>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="accounting/3_7/images/journal_item_sal.png"><img alt="accounting/3_7/images/journal_item_sal.png" src="accounting/3_7/images/journal_item_sal.png" /></a>
+<a class="reference internal image-reference" href="../../_images/journal_item_sal.png"><img alt="../../_images/journal_item_sal.png" src="../../_images/journal_item_sal.png" style="width: 974.25px; height: 49.5px;" /></a>
 <p class="caption"><em>Automatically proposed Sales Entry (second line)</em></p>
 </div>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="accounting/3_7/images/journal_item_sal_vat.png"><img alt="accounting/3_7/images/journal_item_sal_vat.png" src="accounting/3_7/images/journal_item_sal_vat.png" /></a>
+<a class="reference internal image-reference" href="../../_images/journal_item_sal_vat.png"><img alt="../../_images/journal_item_sal_vat.png" src="../../_images/journal_item_sal_vat.png" style="width: 1077.75px; height: 83.25px;" /></a>
 <p class="caption"><em>Automatically proposed Sales Entry (third line for VAT)</em></p>
 </div>
 <p>At this stage you can modify and validate this second line of the account. When you press the <em class="guilabel">Enter</em> key on your keyboard to validate the second line, the corresponding tax line will automatically be proposed. Your entry now has status <tt class="docutils literal"><span class="pre">Valid</span></tt>. This status indicates that your entry is balanced, but it can still be reviewed.</p>
@@ -295,7 +296,7 @@ to each other (sum of credits = sum of debits).</p>
 <blockquote>
 <div><p>Suppose that you are entering customer order details. You wonder what is outstanding on the customer account (that is the list of unpaid invoices and unreconciled payments). To review it from the order form, navigate to the <em class="guilabel">Partner</em> field, click the button with the hand and select the option <em class="guilabel">Receivables and Payables</em>. OpenERP opens a history of unreconciled accounting entries on screen.</p>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="accounting/3_7/images/account_reconcile_manual.png"><img alt="accounting/3_7/images/account_reconcile_manual.png" src="accounting/3_7/images/account_reconcile_manual.png" /></a>
+<a class="reference internal image-reference" href="../../_images/account_reconcile_manual.png"><img alt="../../_images/account_reconcile_manual.png" src="../../_images/account_reconcile_manual.png" style="width: 1239.3px; height: 345.95px;" /></a>
 </div>
 </div></blockquote>
 <p><em>Unreconciled Accounting Entries</em></p>
@@ -453,7 +454,7 @@ Do the same to get information about the products you are invoicing. For example
 The drill-down button can be found on many fields, such as account, product, partner, journal, analytic accounts, and more.
 This button also provides a quick way to check any unreconciled entries for an account.</p>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="accounting/3_7/images/account_productivity_journal.png"><img alt="accounting/3_7/images/account_productivity_journal.png" src="accounting/3_7/images/account_productivity_journal.png" /></a>
+<a class="reference internal image-reference" href="../../_images/account_productivity_journal.png"><img alt="../../_images/account_productivity_journal.png" src="../../_images/account_productivity_journal.png" style="width: 461.25px; height: 149.25px;" /></a>
 </div>
 </div></blockquote>
 <p class="last"><em>Clicking the Drill-Down Button for Extra Information</em></p>

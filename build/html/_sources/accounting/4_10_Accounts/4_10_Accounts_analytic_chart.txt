@@ -6,11 +6,9 @@ To Each Enterprise its own Analytic Chart of Accounts
 
 To illustrate analytic accounts clearly, you will follow three use cases, each in one of three different types of company:
 
-        #. Industrial Manufacturing Enterprise,
-
-        #. Law Firm,
-
-        #. IT Services Company.
+    #. Industrial Manufacturing Enterprise,
+    #. Law Firm,
+    #. IT Services Company.
 
 Case 1: Industrial Manufacturing Enterprise
 -------------------------------------------
@@ -21,19 +19,13 @@ So the objective is to examine the costs, sales and margins by department and by
 
 .. note::  Analytic Chart of Accounts for an Industrial Manufacturing Company
 
-                #. Marketing Department
-
-                #. Commercial Department
-
-                #. Administration Department
-
-                #. Production
-
-                        * Product Range 1
-
-                        * Sub-groups
-
-                        * Product Range 2
+    #. Marketing Department
+    #. Commercial Department
+    #. Administration Department
+    #. Production
+        * Product Range 1
+        * Sub-groups
+        * Product Range 2
 
 .. index::
    pair: cost; allocation
@@ -92,16 +84,16 @@ The examples above are based on a breakdown of the costs of the company. Analyti
 
 .. note::  Representation by Unique Product Range
 
-        This analytic representation by department and by product range is generally used by trading
-        companies and industries.
+    This analytic representation by department and by product range is generally used by trading
+    companies and industries.
 
-        A variant of this, is not to break it down by sales and marketing departments, but to assign each
-        cost to its corresponding product range.
-        This will give you an analysis of the profitability of each product range.
+    A variant of this, is not to break it down by sales and marketing departments, but to assign each
+    cost to its corresponding product range.
+    This will give you an analysis of the profitability of each product range.
 
-        Choosing one over the other depends on how you look at your marketing effort.
-        Is it a global cost allocated in some general way, or is each product range responsible
-        for its own marketing costs?
+    Choosing one over the other depends on how you look at your marketing effort.
+    Is it a global cost allocated in some general way, or is each product range responsible
+    for its own marketing costs?
 
 Case 2:  Law Firm
 -----------------

@@ -73,7 +73,6 @@ with Warehouse Management and its dependencies installed and any chart of accoun
 
 In this chapter, the following modules will be used:
 
-.. table:: List of modules
 .. cssclass:: table-bordered
 
    ======================================= ===================================================================
