@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Get your Money in &mdash; OpenERP Book 8.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootswatch-3.1.0/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '8.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="OpenERP Book 8.0 documentation" href="../../index.html" />
+    <link rel="up" title="Customer Invoicing &amp; Payments" href="index.html" />
+    <link rel="next" title="Accounting Management" href="../3_7/index.html" />
+    <link rel="prev" title="Simple Customer Receipts" href="invoice_payment.html" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-47926740-1']);
+  _gaq.push(['_trackPageview']);
+</script>
+
+<meta name="google-translate-customization" content="1a9f16396f329347-27b519b501ddf27d-gbee5ada102d015d0-f"></meta>
+
+<!-- AddThis Smart Layers BEGIN -->
+<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-530c64087def677e"></script>
+<script type="text/javascript">
+  addthis.layers({
+    'theme' : 'transparent',
+    'share' : {
+      'position' : 'left',
+      'numPreferredServices' : 5
+    }   
+  });
+</script>
+<!-- AddThis Smart Layers END -->
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">
+          OpenERP Book</a>
+        <span class="navbar-text navbar-version pull-left"><b>8.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About OpenERP Online Book !</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../download/index.html">Looking for OpenERP Demo ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../install/index.html">Installation on Windows, Linux and MacOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part01/index.html">Getting start with OpenERP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../install-apps/index.html">Install and configure OpenERP Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part03/index.html">Setup your First Company in OpenERP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part02/index.html">Leads to Cash Flow with OpenERP</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../crm_sale/index.html">Boost your Sales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../warehouse/index.html">Organize your Warehouse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../purchase/index.html">Control your Purchase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../humanresource/index.html">Recruit &amp; Manage your Talents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../project-service/index.html">Manage your Projects and Services</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Customer Invoicing &amp; Payments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_7/index.html">Accounting Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_10_Accounts/index.html">Analytic Accounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_8/index.html">Financial Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multicurrency/index.html">An Introduction to Multicurrency Principles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/index.html">Managing your Assets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_9/index.html">Configuring Accounts from A to Z</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../prod-setup/index.html">Deploy OpenERP in Production</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../backup/index.html">OpenERP Backup and Restore</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Get your Money in</a><ul>
+<li><a class="reference internal" href="#financial-analysis-of-partners">Financial Analysis of Partners</a></li>
+<li><a class="reference internal" href="#multi-step-reminders">Multi-step Reminders</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#analyse-your-turnover">Analyse your Turnover</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+  <li>
+    <a href="invoice_payment.html" title="Previous Chapter: Simple Customer Receipts"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Simple Customer ...</span>
+    </a>
+  </li>
+  <li>
+    <a href="../3_7/index.html" title="Next Chapter: Accounting Management"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Accounting Manag... &raquo;</span>
+    </a>
+  </li>
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+    
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+
+	        
+        
+      
+  <div class="section" id="get-your-money-in">
+<span id="index-0"></span><h1>Get your Money in<a class="headerlink" href="#get-your-money-in" title="Permalink to this headline">¶</a></h1>
+<p>OpenERP provides many tools for managing customer and supplier accounts. In this part we will explain:</p>
+<ul class="simple">
+<li>financial analysis of partners, to understand the reports that enable you to carry out an analysis
+of all of your partners,</li>
+<li>multi-level reminders, which is an automatic system for preparing reminder letters or emails when
+invoices remain unpaid.</li>
+<li>detailed analysis of individual partners.</li>
+</ul>
+<div class="section" id="financial-analysis-of-partners">
+<h2>Financial Analysis of Partners<a class="headerlink" href="#financial-analysis-of-partners" title="Permalink to this headline">¶</a></h2>
+<p id="index-1">When members of your accounting department sign in to OpenERP, they can immediately be presented with the <em class="guilabel">Accounting Dashboard</em>. By default, it contains company analysis according to account type. You can also call the dashboard from the menu <em class="menuselection">Reporting ‣ Dashboards ‣ Accounting</em>.</p>
+<p id="index-2">To obtain a more detailed report of the aged balance (or order by past date), use the menu <em class="menuselection">Accounting ‣ Reporting ‣ Generic Reporting ‣ Partners ‣ Aged Partner Balance</em>.</p>
+<p>When you click that report, OpenERP shows a wizard asking you for the chart of accounts, the start date of the analysis period and the size of the interval to be analysed (in days). The start date will determine which documents will be included in the report (document date until the selected start date) and it will serve as a reference date to calculate the amounts due for the selected interval.
+You can print an aged partner balance for Receivable Accounts or Payable Accounts of for both at the same time. The analysis direction may be <tt class="docutils literal"><span class="pre">Past</span></tt> (for entries that are due) or <tt class="docutils literal"><span class="pre">Future</span></tt> to keep track of your cash flow in the next days or weeks (according to your selection). OpenERP then calculates a table of credit balance by period. So, if you request an interval of 30 days, OpenERP generates an analysis of creditors for the past month, past two months, and so on.
+An ageing balance will indicate how much of the accounts receivable is overdue. It also reports how far overdue the accounts are (number of days).</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Aged Partner Balance</p>
+<p class="last">This report works best of you use payment terms or if you set a due date yourself.</p>
+</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/account_aged_balance.png"><img alt="../../_images/account_aged_balance.png" src="../../_images/account_aged_balance.png" style="width: 991.5px; height: 300.75px;" /></a>
+<p class="caption"><em>Aged Balance in the Past using a 30-days Period</em></p>
+</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/account_aged_balance_fut.png"><img alt="../../_images/account_aged_balance_fut.png" src="../../_images/account_aged_balance_fut.png" style="width: 987.0px; height: 306.0px;" /></a>
+<p class="caption"><em>Aged Balance in the Future using a 30-days Period</em></p>
+</div>
+<p>For an analysis by partner, you can use the partner balance that you get through the menu <em class="menuselection">Accounting ‣ Reporting ‣ Generic Reporting ‣ Partners ‣ Partner Balance</em>. The system then supplies you with a PDF report containing one line per partner representing debit, credit and balance. The total is displayed per account receivable.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/account_partner_balance_61.png"><img alt="../../_images/account_partner_balance_61.png" src="../../_images/account_partner_balance_61.png" style="width: 591.75px; height: 444.0px;" /></a>
+<p class="caption"><em>Partner Balance</em></p>
+</div>
+<p id="index-3">If you want detailed information about all invoices, credit notes and payments related to partner, print the partner ledger from the menu <em class="menuselection">Accounting ‣ Reporting ‣ Generic Reporting ‣ Partners ‣ Partner Ledger</em>. You can choose to print one partner per page.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/account_partner_ledger_61.png"><img alt="../../_images/account_partner_ledger_61.png" src="../../_images/account_partner_ledger_61.png" style="width: 591.0px; height: 453.0px;" /></a>
+<p class="caption"><em>Partner Ledger</em></p>
+</div>
+<p>Furthermore, OpenERP also provides statistics about individual account entries, invoices and treasury, for instance. To look up statistic information about your accounting, explore the menu <em class="menuselection">Reporting ‣ Accounting</em>. There you will find <tt class="docutils literal"><span class="pre">Invoices</span> <span class="pre">Analysis</span></tt>, <tt class="docutils literal"><span class="pre">Entries</span> <span class="pre">Analysis</span></tt> and <tt class="docutils literal"><span class="pre">Treasury</span> <span class="pre">Analysis</span></tt> etc.. By default these statistics are displayed as a list which you can filter to fit your needs. Standard filter buttons, extended filters and grouping features allow you to make an in-depth analysis of your accounting. But the list is not all OpenERP has to offer. These statistic reports can be displayed as a graph simply by clicking the <tt class="docutils literal"><span class="pre">Graph</span></tt> button at the top right side of the screen. Notice that graphs allow for only one Group by function at a time.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/account_entries_anal.png"><img alt="../../_images/account_entries_anal.png" src="../../_images/account_entries_anal.png" style="width: 835.5px; height: 340.5px;" /></a>
+<p class="caption"><em>Entries Analysis List View</em></p>
+</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/account_entries_anal_graph.png"><img alt="../../_images/account_entries_anal_graph.png" src="../../_images/account_entries_anal_graph.png" style="width: 841.5px; height: 447.75px;" /></a>
+<p class="caption"><em>Entries Analysis Graph View</em></p>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Exporting Entries</p>
+<p class="last">Remember that you can export all types of resources in OpenERP.
+You can go to the <em class="guilabel">More</em> button at the top centre of any view. The Export feature enables you to easily create your own analysis in tools such as Microsoft Excel or Calc (LibreOffice or OpenOffice), simply by exporting accounting entries.</p>
+</div>
+</div>
+<div class="section" id="multi-step-reminders">
+<span id="index-4"></span><h2>Multi-step Reminders<a class="headerlink" href="#multi-step-reminders" title="Permalink to this headline">¶</a></h2>
+<p>To automate the management of follow-ups (reminders) you should install the module <tt class="xref py py-mod docutils literal"><span class="pre">account_followup</span></tt> (or select the <cite>Manage customer payment follow-ups</cite> option in the Settings -&gt; Configuration -&gt; Accounting -&gt; eInvoicing &amp; Payments).</p>
+<p>This module is integrated with the email features of OpenERP. Ask your system administrator to define the smtp server through the menu <em class="menuselection">Settings ‣ Technical ‣ Email ‣ Outgoing Mail Servers</em>.</p>
+<p>Once the module is installed, configure your levels of follow-up using the menu <em class="menuselection">Accounting ‣ Configuration ‣ Follow-Up Levels</em>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Follow-ups</p>
+<p class="last">You can define only one follow-up cycle per company, because you cannot link the follow-up cycle to a partner.</p>
+</div>
+<p>The levels of follow-up are relative to the due date; when no payment term is specified, the invoice date will be considered as the due date.</p>
+<p>For each level, you should define the number of days and create a note which will automatically be added into the reminder letter. The order in which you define the various follow-up levels determines the order in which letters will be sent.</p>
+<table border="1" class="docutils">
+<caption>Example of Configuring Follow-up Levels</caption>
+<colgroup>
+<col width="13%" />
+<col width="13%" />
+<col width="38%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Sequence</th>
+<th class="head">Level</th>
+<th class="head">Days</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>Level&nbsp;1</td>
+<td>15&nbsp;days net</td>
+<td>First payment reminder</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>Level&nbsp;2</td>
+<td>30&nbsp;days net</td>
+<td>Second reminder</td>
+</tr>
+<tr class="row-even"><td>3</td>
+<td>Level&nbsp;3</td>
+<td>45&nbsp;days from end of month</td>
+<td>Put on notice</td>
+</tr>
+</tbody>
+</table>
+<p>To obtain a detailed statistical report of sent follow-ups go to the menu :menuselection:` Reporting &#8211;&gt; Accounting &#8211;&gt; Follow-ups Analysis`. This screen will let you analyse your reminder data in various ways, e.g. by follow-up level, by partner or for a combination of these data. You can also group by <tt class="docutils literal"><span class="pre">Latest</span> <span class="pre">Followup</span> <span class="pre">Date</span></tt> or <tt class="docutils literal"><span class="pre">Partner</span></tt>, for instance.</p>
+<p>The different reports are standard OpenERP screens, so you can filter them and explore the elements in detail.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/account_followup_sent.png"><img alt="../../_images/account_followup_sent.png" src="../../_images/account_followup_sent.png" style="width: 839.25px; height: 229.5px;" /></a>
+<p class="caption"><em>Reminder Statistics</em></p>
+</div>
+</div>
+</div>
+<div class="section" id="analyse-your-turnover">
+<h1>Analyse your Turnover<a class="headerlink" href="#analyse-your-turnover" title="Permalink to this headline">¶</a></h1>
+<p>Analyse your invoicing in OpenERP through the <strong>Invoices Analysis</strong> screen from the menu <em class="menuselection">Reporting ‣ Accounting ‣ Invoices Analysis</em>.</p>
+<p>In this statistic report, the columns displayed will vary according to the selections and grouping made, thus making it a very flexible report to analyse your invoices.</p>
+<p>This report provides an overview of what has been invoiced to your customer as well as the average payment delays. To see the average due delay, make sure to group by <tt class="docutils literal"><span class="pre">Due</span> <span class="pre">Date</span></tt>.
+You can easily group by partner, product category, ... or select only invoices that have not been confirmed yet.</p>
+<p>This is also an easy way to check your sales people&#8217;s impact on turnover. You can see your turnover per product category, per salesman, per partner and many more options.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/account_invoice_analysis.png"><img alt="../../_images/account_invoice_analysis.png" src="../../_images/account_invoice_analysis.png" style="width: 841.5px; height: 438.0px;" /></a>
+<p class="caption"><em>Analysing your Invoices</em></p>
+</div>
+<p>To quickly see the total turnover per customer in a graph view, group by <tt class="docutils literal"><span class="pre">Partner</span></tt> and click the <tt class="docutils literal"><span class="pre">Graph</span></tt> button to change to graph mode.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/account_turnover_analysis.png"><img alt="../../_images/account_turnover_analysis.png" src="../../_images/account_turnover_analysis.png" style="width: 837.75px; height: 444.0px;" /></a>
+<p class="caption"><em>Analysing your Customer&#8217;s Turnover</em></p>
+</div>
+</div>
+
+
+	
+		
+		<div id="disqus_thread"></div>
+	    <script type="text/javascript">
+	        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	        var disqus_shortname = 'openerponlinebook'; // required: replace example with your forum shortname
+	
+	        /* * * DON'T EDIT BELOW THIS LINE * * */
+	        (function() {
+	            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	        })();
+	    </script>
+	    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	    
+    </div>
+    
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, OpenERP Book.<br/>
+      Last updated on Mar 28, 2014.<br/>
+    </p>
+  </div>
+</footer>
+<div class="container">You can contribute to OpenERP Book on <a href="#">Launchpade.net</a>
+<script type="text/javascript">
+  (function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ?
+              'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+  })();
+</script>
+</div>
+
+  </body>
+</html>

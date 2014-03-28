@@ -39,18 +39,13 @@ Proposed Topics
    :maxdepth: 1
    
    crm_sale/index.rst
-   
-* Organize your Warehouse
-* Control your Purchase
+   warehouse/index.rst
+   purchase/index.rst
+   humanresource/index.rst
+   project-service/index.rst
+   accounting/index.rst
+   documents/index.rst
 
-.. toctree::
-   :maxdepth: 1
-   
-   part04/index.rst
-
-* Plan your Projects and Tasks
-* Manage your Books of Accounts
-* Integrated Document Management
 * Working with Tools
 * Tips and Tricks
 
@@ -68,7 +63,6 @@ Indices and tables
 
 * :ref:`genindex`
 * :ref:`search`
-* :ref:`fullindex`
 
 .. hint::
 	The structure of Index may change frequently, if you want to track the pages you love, visit them and store their links in Bookmark or Reading List.

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Recording Journal Items &mdash; OpenERP Book 8.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootswatch-3.1.0/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '8.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="OpenERP Book 8.0 documentation" href="../../index.html" />
+    <link rel="up" title="Accounting Management" href="index.html" />
+    <link rel="next" title="Automate your Payments" href="accounting_payments.html" />
+    <link rel="prev" title="Advanced Cash Management" href="accounting_entries.html" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-47926740-1']);
+  _gaq.push(['_trackPageview']);
+</script>
+
+<meta name="google-translate-customization" content="1a9f16396f329347-27b519b501ddf27d-gbee5ada102d015d0-f"></meta>
+
+<!-- AddThis Smart Layers BEGIN -->
+<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-530c64087def677e"></script>
+<script type="text/javascript">
+  addthis.layers({
+    'theme' : 'transparent',
+    'share' : {
+      'position' : 'left',
+      'numPreferredServices' : 5
+    }   
+  });
+</script>
+<!-- AddThis Smart Layers END -->
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">
+          OpenERP Book</a>
+        <span class="navbar-text navbar-version pull-left"><b>8.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About OpenERP Online Book !</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../download/index.html">Looking for OpenERP Demo ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../install/index.html">Installation on Windows, Linux and MacOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part01/index.html">Getting start with OpenERP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../install-apps/index.html">Install and configure OpenERP Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part03/index.html">Setup your First Company in OpenERP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part02/index.html">Leads to Cash Flow with OpenERP</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../crm_sale/index.html">Boost your Sales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../warehouse/index.html">Organize your Warehouse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../purchase/index.html">Control your Purchase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../humanresource/index.html">Recruit &amp; Manage your Talents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../project-service/index.html">Manage your Projects and Services</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Manage your Books of Accounts</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../prod-setup/index.html">Deploy OpenERP in Production</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../backup/index.html">OpenERP Backup and Restore</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Recording Journal Items</a><ul>
+<li><a class="reference internal" href="#recording-sales-entries-through-journal-items">Recording Sales Entries through Journal Items</a></li>
+<li><a class="reference internal" href="#miscellaneous-operations-creating-an-opening-entry">Miscellaneous Operations: Creating an Opening Entry</a></li>
+<li><a class="reference internal" href="#journal-entries">Journal Entries</a></li>
+<li><a class="reference internal" href="#manual-reconciliation-process">Manual Reconciliation Process</a></li>
+<li><a class="reference internal" href="#productivity-tips">Productivity Tips</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+  <li>
+    <a href="accounting_entries.html" title="Previous Chapter: Advanced Cash Management"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Advanced Cash Ma...</span>
+    </a>
+  </li>
+  <li>
+    <a href="accounting_payments.html" title="Next Chapter: Automate your Payments"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Automate your Pa... &raquo;</span>
+    </a>
+  </li>
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+    
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+
+	        
+        
+      
+  <span class="target" id="index-0"></span><div class="section" id="recording-journal-items">
+<h1>Recording Journal Items<a class="headerlink" href="#recording-journal-items" title="Permalink to this headline">¶</a></h1>
+<p>All the accounting transactions in OpenERP are based on records, whether they are created by an invoice or directly.</p>
+<p>Financial statements such as the general ledger, account balance, aged balance (or chronological balance) and the various journals are all based on accounting entries. It does not matter if you generated the entry from an invoice form or directly in the invoice journal. It is the
+same for the tax declaration and other statutory financial statements.</p>
+<div class="section" id="recording-sales-entries-through-journal-items">
+<h2>Recording Sales Entries through Journal Items<a class="headerlink" href="#recording-sales-entries-through-journal-items" title="Permalink to this headline">¶</a></h2>
+<p>Journal entries can be entered in several ways, either manually or automatically. As discussed in previous chapters, journal entries are generated automatically on confirmation of purchase and sales invoices, for instance.
+Manual entries can be added through Journal Entries (several entries in one journal) or through Journal Items (line by line, for accountants).</p>
+<p>To easily record journal items, configure your sales journal with a default debit and credit income account, which will be proposed automatically.
+You also need to add a default sales tax to these accounts, which can be done from the menu <em class="menuselection">Accounting ‣ Configuration ‣ Financial Management ‣ Accounts ‣ Accounts</em>. Open the income account you added as default debit and credit account. Click the <tt class="docutils literal"><span class="pre">Add</span></tt> button in the <tt class="docutils literal"><span class="pre">Default</span> <span class="pre">Taxes</span></tt> block and select the applicable local tax(es).</p>
+<p>Let us give the example of manually entering a sales invoice through <em class="menuselection">Accounting ‣ Journal Entries ‣ Journal Items</em>. Note however that these entries are usually generated automatically by OpenERP.</p>
+<p>Select the journal in which you want to post entries in the <tt class="docutils literal"><span class="pre">Journal</span></tt> box, enter the period and click <tt class="docutils literal"><span class="pre">Search</span></tt>. Now click the <em class="guilabel">Create</em> button.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="accounting/3_7/images/journal_item_rec.png"><img alt="accounting/3_7/images/journal_item_rec.png" src="accounting/3_7/images/journal_item_rec.png" /></a>
+<p class="caption"><em>Receivable Entry (first line)</em></p>
+</div>
+<p>Start by entering the receivable entry (Account Receivable or Customer account). Fill at least the following fields in the following order:</p>
+<ul class="simple">
+<li><em class="guilabel">Partner</em>: partner concerned,</li>
+<li><em class="guilabel">Name</em>: description of the invoice line (e.g. <tt class="docutils literal"><span class="pre">PC2</span></tt> ),</li>
+<li><em class="guilabel">Debit</em> or <cite>Credit</cite>: here you type the debit or credit amount (for sales typically the credit amount). Type the amount inclusive of taxes.</li>
+</ul>
+<p>Press the <em class="guilabel">Enter</em> key on your keyboard to validate the first line. The next draft move number is assigned to your accounting entry. Your line is then colored red and takes the <tt class="docutils literal"><span class="pre">Unbalanced</span></tt>  state. When a line is in the draft state, it is not yet reflected in the accounts. OpenERP will not validate that line until the balancing entry is made (so the credit amounts should balance the debit amounts for that set of entries).</p>
+<p>OpenERP now automatically proposes the balancing accounting line with the default account from the sales journal and default tax linked to this account.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="accounting/3_7/images/journal_item_sal.png"><img alt="accounting/3_7/images/journal_item_sal.png" src="accounting/3_7/images/journal_item_sal.png" /></a>
+<p class="caption"><em>Automatically proposed Sales Entry (second line)</em></p>
+</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="accounting/3_7/images/journal_item_sal_vat.png"><img alt="accounting/3_7/images/journal_item_sal_vat.png" src="accounting/3_7/images/journal_item_sal_vat.png" /></a>
+<p class="caption"><em>Automatically proposed Sales Entry (third line for VAT)</em></p>
+</div>
+<p>At this stage you can modify and validate this second line of the account. When you press the <em class="guilabel">Enter</em> key on your keyboard to validate the second line, the corresponding tax line will automatically be proposed. Your entry now has status <tt class="docutils literal"><span class="pre">Valid</span></tt>. This status indicates that your entry is balanced, but it can still be reviewed.</p>
+<p>To actually post this entry, select the lines concerned by checking the corresponding checkboxes and click <tt class="docutils literal"><span class="pre">Post</span> <span class="pre">Journal</span> <span class="pre">Entries</span></tt> at the right side of the screen.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Posting Entries</p>
+<p class="last">You can also post your entries from the menu <em class="menuselection">Accounting ‣ Journal Entries ‣ Journal Entries</em>. Simply select the green button at the end of a journal entry line. This has the same effect as the <tt class="docutils literal"><span class="pre">Post</span> <span class="pre">Journal</span> <span class="pre">Entries</span></tt> wizard.</p>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Completing a Balancing Entry</p>
+<p class="last">If you want to add some other balancing lines you can enter the number of the entry on the new line
+that you are entering.
+In such a case the whole line stays Draft until the whole set balances to zero.</p>
+</div>
+</div>
+<div class="section" id="miscellaneous-operations-creating-an-opening-entry">
+<span id="index-1"></span><h2>Miscellaneous Operations: Creating an Opening Entry<a class="headerlink" href="#miscellaneous-operations-creating-an-opening-entry" title="Permalink to this headline">¶</a></h2>
+<p>When you use OpenERP Accounting &amp; Financial Management for the first time, you will have to enter your Opening Balance for your balance sheet accounts. You can do this through a miscellaneous entry. The best thing is to create a specific Opening Journal (see also the <a class="reference internal" href="../3_9/index.html#ch-configacct"><em>Configuring Accounts from A to Z</em></a> chapter for more details) and an Opening Period.</p>
+<p>Then, each balance sheet account that has a balance in your previous accounting system has to be reopened with the exact same balance. To do this, go to <em class="menuselection">Accounting ‣ Journal Entries ‣ Journal Entries</em>, click <em class="guilabel">Create</em> and select the Opening Journal and Period.
+For each account, create a new line and enter the balance (either debit or credit). The counterpart account for such an entry will typically be your Profit &amp; Loss Account (defined in your journal settings).</p>
+<p>Once you started to keep your books in OpenERP, opening entries can be generated automatically at the annual closing (see also the <a class="reference internal" href="../3_9/index.html#ch-configacct"><em>Configuring Accounts from A to Z</em></a> chapter).</p>
+</div>
+<div class="section" id="journal-entries">
+<h2>Journal Entries<a class="headerlink" href="#journal-entries" title="Permalink to this headline">¶</a></h2>
+<p>To get an overview of existing journal entries or to create new journal entries, go to <em class="menuselection">Accounting ‣ Journal Entries ‣ Journal Entries</em>. Journal entries can be generated in two ways: automatically from invoices or manually by entering account lines in a journal.</p>
+<p>You can indeed create the accounting records directly, without using the invoice and account statements. Some accountants prefer this approach because they might find it easier to think in terms of accounting records rather than in terms of invoices and payments.</p>
+<p>You should really try to use the forms designed for invoices and bank statements rather than manual data entry records, however. These are simpler and are managed within an error-controlling system.</p>
+<p>Through this view, you can see each and every entry that has been made in your accounting system, grouped by move number (each journal entry gets an automatic number). If you want to have a look at each individual move line, you should go to <em class="menuselection">Accounting ‣ Journal Entries ‣ Journal Items</em>.</p>
+<p>From the <em class="guilabel">State</em> column, you can check whether the journal entry has already been validated (<em>Posted</em>) or not (<em>Unposted</em>).</p>
+<p>If you want to have a certain journal entry reviewed by someone else (e.g. your accountant if you prepare most of the entries yourself), you can check the <em class="guilabel">To Review</em> box. In List view, the <em class="guilabel">To Review</em> button allows you to easily look up entries that need a second opinion.</p>
+<p>This screen can also be used to group entries, for instance by partner, journal, or period. The order in which you click the <cite>Group by</cite> buttons determines the way your data will be displayed. With the Advanced Filters, you can look up entries according to amount (is equal to, smaller than, greater than, ...). You can also indicate whether Any, All or None of the conditions should match. These extended filters allow you to get a great view on all your accounting entries!</p>
+</div>
+<div class="section" id="manual-reconciliation-process">
+<span id="index-2"></span><h2>Manual Reconciliation Process<a class="headerlink" href="#manual-reconciliation-process" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Reconciliation</p>
+<p>Reconciliation links entries in an account that cancel each other out – they are reconciled
+to each other (sum of credits = sum of debits).</p>
+<p class="last">This is generally applied to payments or credit notes against corresponding invoices.</p>
+</div>
+<p>Without the reconciliation process, OpenERP would be incapable of marking invoices that have been paid. Suppose that you have got the following situation for the <tt class="docutils literal"><span class="pre">Agrolait</span></tt> customer:</p>
+<ul class="simple">
+<li>Invoice 145: 50,</li>
+<li>Invoice 167: 120,</li>
+<li>Invoice 184: 70.</li>
+</ul>
+<p>If you receive a payment of 120, OpenERP will delay reconciliation because there is a choice of invoices to pay. It could either reconcile the payment against invoices 145 and 184 or against invoice 167.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Treatment in Lots</p>
+<p>Usually, different transactions are grouped together and handled at the same time rather than invoice by invoice. This is called batch work or lot handling.</p>
+<p class="last">You can select several documents in the list of invoices: select the checkboxes of the required lines using the web client and click the appropriate shortcut button at the right; or shift-click the lines using the mouse in the GTK client and use the action or print button at the top – these give you a number of possible actions on the selected objects.</p>
+</div>
+<p>This reconciliation transaction can be carried out at various places in the process, depending on your preferences:</p>
+<ul class="simple">
+<li>at data entry for the accounting statement,</li>
+<li>manually from the account records,</li>
+<li>automatically using OpenERP&#8217;s intelligent reconciliation.</li>
+</ul>
+<p>The reconciliation operation consists of matching entries in different accounts to indicate that they are related. Generally reconciliation is used for:</p>
+<ul class="simple">
+<li>matching invoice entries to payments, so that invoices are marked as paid and customers do not get payment reminder letters for those entries
+(reconciliation in a customer account),</li>
+<li>matching deposits and cheque withdrawals with their respective payments,</li>
+<li>matching invoices and credit notes to cancel them out.</li>
+</ul>
+<p>A reconciliation has to be carried out on a list of accounting entries by an accountant, so that the sum of credits equals the sum of the debits for the matched entries.</p>
+<p>Reconciliation in OpenERP can only be carried out in accounts that have been configured as reconcilable (the <em class="guilabel">Reconcile</em> field in the <em class="guilabel">Account</em> definition).</p>
+<p>For manual reconciliation, open the entries for reconciling an account through the menu <em class="menuselection">Accounting ‣ Periodical Processing ‣ Reconciliation ‣ Manual Reconciliation</em>.</p>
+<p>You can also call up manual reconciliation from the <cite>Journal Items</cite> screen.</p>
+<p>Before starting to reconcile entries, print a partner ledger to have a good view on related entries.</p>
+<p>Select the account and/or partner for which entries need to be reconciled.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Sorting Entries to be Reconciled</p>
+<p class="last">If you only select an account (e.g. account receivable) to be reconciled, you can easily click the <cite>Partner</cite> column to sort the entries by partner. Note that in OpenERP you can click any column heading to sort your data differently. Click once to sort in ascending order and twice to sort in descending order.</p>
+</div>
+<p>OpenERP indicates the sum of debits and credits for the selected entries. When these are equal you can click the <em class="guilabel">Reconcile Entries</em> action (at the right side of the screen; when hidden, click the small arrows) to reconcile the entries.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p><em>Example Real Case of Using Reconciliation</em></p>
+<blockquote>
+<div><p>Suppose that you are entering customer order details. You wonder what is outstanding on the customer account (that is the list of unpaid invoices and unreconciled payments). To review it from the order form, navigate to the <em class="guilabel">Partner</em> field, click the button with the hand and select the option <em class="guilabel">Receivables and Payables</em>. OpenERP opens a history of unreconciled accounting entries on screen.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="accounting/3_7/images/account_reconcile_manual.png"><img alt="accounting/3_7/images/account_reconcile_manual.png" src="accounting/3_7/images/account_reconcile_manual.png" /></a>
+</div>
+</div></blockquote>
+<p><em>Unreconciled Accounting Entries</em></p>
+<blockquote class="last">
+<div>After running the <cite>Reconcile Entries</cite> wizard, these lines can no longer be selected and will not appear when the entries are listed again. If there is a difference between the two entries, OpenERP suggests you to make an adjustment. This &#8220;write-off&#8221; is a compensating entry that enables a complete reconciliation. You should therefore specify the journal and the account to be used for the write-off.</div></blockquote>
+</div>
+<p>For example, if you want to reconcile the following entries:</p>
+<table border="1" class="docutils">
+<caption>Entries for reconciliation</caption>
+<colgroup>
+<col width="26%" />
+<col width="11%" />
+<col width="32%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Date</th>
+<th class="head">Ref.</th>
+<th class="head">Description</th>
+<th class="head">Account</th>
+<th class="head">Debit</th>
+<th class="head">Credit</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>12 May 11</td>
+<td>INV23</td>
+<td>Car hire</td>
+<td>4010</td>
+<td>544.50</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>25 May 11</td>
+<td>INV44</td>
+<td>Car insurance</td>
+<td>4010</td>
+<td>100.00</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>31 May 11</td>
+<td>PAY01</td>
+<td>Invoices n°&nbsp;23, 44</td>
+<td>4010</td>
+<td>&nbsp;</td>
+<td>644.00</td>
+</tr>
+</tbody>
+</table>
+<p>On reconciliation, OpenERP shows a difference of 0.50. At this stage you have two possibilities:</p>
+<ul class="simple">
+<li>do not reconcile, and the customer receives a request for 0.50,</li>
+<li>reconcile and accept an adjustment of 0.50 that you will take from the P&amp;L account.</li>
+</ul>
+<p>OpenERP generates the following entry automatically:</p>
+<table border="1" class="docutils">
+<caption>Write-off account</caption>
+<colgroup>
+<col width="26%" />
+<col width="11%" />
+<col width="32%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Date</th>
+<th class="head">Ref.</th>
+<th class="head">Description</th>
+<th class="head">Account</th>
+<th class="head">Debit</th>
+<th class="head">Credit</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Date</td>
+<td>Ref.</td>
+<td>Description</td>
+<td>Account</td>
+<td>Debit</td>
+<td>Credit</td>
+</tr>
+<tr class="row-odd"><td>03 Jun 11</td>
+<td>AJ001</td>
+<td>Adjustment: profits and losses</td>
+<td>4010</td>
+<td>&nbsp;</td>
+<td>0.50</td>
+</tr>
+<tr class="row-even"><td>03 Jun 11</td>
+<td>AJ001</td>
+<td>Adjustment: profits and losses</td>
+<td>XXX</td>
+<td>0.50</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>The two invoices and the payment will be reconciled in the first adjustment line. The two invoices
+will then automatically be marked as paid.</p>
+</div>
+<div class="section" id="productivity-tips">
+<h2>Productivity Tips<a class="headerlink" href="#productivity-tips" title="Permalink to this headline">¶</a></h2>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Creating new Data</p>
+<p class="last">To quickly create new information, such as a partner, an account or a product, you can use the small button with the hand. When you click this button, select the <em class="guilabel">Create</em> option.
+Inside a field, instead of simply selecting existing information, you can also select the <em class="guilabel">Create and Edit</em> option to create new accounts or partners, for instance.</p>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Related Information</p>
+<p class="last">To quickly find related information, for instance for a partner, an account or a product, you can use the small button with the hand. When you click this button, some options related to the object will be displayed, of course taking into account the Business Applications installed.</p>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Duplicating a Document</p>
+<p class="last">The duplication function can be applied to all the system documents: you can duplicate anything –
+a product, an order, an invoice, or a delivery.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Duplicating Invoices</p>
+<p>Instead of entering a new invoice each time, you can base an invoice on a similar preceding one
+and duplicate it. To do this, first search for a suitable existing invoice. Open the selected invoice, then click <cite>Duplicate</cite>. In the GTK client, select <em class="menuselection">Form ‣ Duplicate</em> from the top menu.</p>
+<p class="last">The duplication creates a new invoice in the <tt class="docutils literal"><span class="pre">Draft</span></tt> state. That enables you to modify the invoice before
+approving it. Duplicating documents in OpenERP is an intelligent function, which enables the
+duplicated invoice to be given its own sequence number, today&#8217;s date, and the draft state, even if
+the preceding invoice has been paid.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Getting Information by Navigating to it</p>
+<p>As you are creating an invoice you will often find you need extra information about the partner to help you complete the invoice. As described earlier, you can navigate to other information linked to this partner by clicking the small button with the hand, such as:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Monthly Turnover</li>
+<li>Benefit Details,</li>
+<li>Most Recent Invoices,</li>
+<li>Receivables &amp; Payables,</li>
+<li>Contracts / Analytic Accounts,</li>
+<li>Latest Orders - Sales Order, Purchase Order.</li>
+</ul>
+</div></blockquote>
+<p>Please note that the displayed options depend on the number of Business Applications you have installed.
+Do the same to get information about the products you are invoicing. For example: is there enough stock? When will you be getting more stocks in? What are the costs and normal list prices for this product?</p>
+<p class="last">By making this information easily accessible while you are invoicing, OpenERP greatly simplifies your work in creating the invoice.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Find what You Need from a Journal Entry</p>
+<blockquote>
+<div><p>When you are encoding journal entries, you will see the button with the small hand which allows you to drill down to related information for the field concerned. Below you will see an example of information that can be looked up for a journal, such as Unpaid Invoices and Bank Statements.
+The drill-down button can be found on many fields, such as account, product, partner, journal, analytic accounts, and more.
+This button also provides a quick way to check any unreconciled entries for an account.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="accounting/3_7/images/account_productivity_journal.png"><img alt="accounting/3_7/images/account_productivity_journal.png" src="accounting/3_7/images/account_productivity_journal.png" /></a>
+</div>
+</div></blockquote>
+<p class="last"><em>Clicking the Drill-Down Button for Extra Information</em></p>
+</div>
+</div>
+</div>
+
+
+	
+		
+		<div id="disqus_thread"></div>
+	    <script type="text/javascript">
+	        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	        var disqus_shortname = 'openerponlinebook'; // required: replace example with your forum shortname
+	
+	        /* * * DON'T EDIT BELOW THIS LINE * * */
+	        (function() {
+	            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	        })();
+	    </script>
+	    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	    
+    </div>
+    
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, OpenERP Book.<br/>
+      Last updated on Mar 28, 2014.<br/>
+    </p>
+  </div>
+</footer>
+<div class="container">You can contribute to OpenERP Book on <a href="#">Launchpade.net</a>
+<script type="text/javascript">
+  (function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ?
+              'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+  })();
+</script>
+</div>
+
+  </body>
+</html>

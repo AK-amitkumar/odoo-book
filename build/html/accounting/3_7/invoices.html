@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Advanced Invoice Management &mdash; OpenERP Book 8.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootswatch-3.1.0/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '8.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="OpenERP Book 8.0 documentation" href="../../index.html" />
+    <link rel="up" title="Accounting Management" href="index.html" />
+    <link rel="next" title="Advanced Cash Management" href="accounting_entries.html" />
+    <link rel="prev" title="Accounting Management" href="index.html" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-47926740-1']);
+  _gaq.push(['_trackPageview']);
+</script>
+
+<meta name="google-translate-customization" content="1a9f16396f329347-27b519b501ddf27d-gbee5ada102d015d0-f"></meta>
+
+<!-- AddThis Smart Layers BEGIN -->
+<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-530c64087def677e"></script>
+<script type="text/javascript">
+  addthis.layers({
+    'theme' : 'transparent',
+    'share' : {
+      'position' : 'left',
+      'numPreferredServices' : 5
+    }   
+  });
+</script>
+<!-- AddThis Smart Layers END -->
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">
+          OpenERP Book</a>
+        <span class="navbar-text navbar-version pull-left"><b>8.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About OpenERP Online Book !</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../download/index.html">Looking for OpenERP Demo ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../install/index.html">Installation on Windows, Linux and MacOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part01/index.html">Getting start with OpenERP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../install-apps/index.html">Install and configure OpenERP Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part03/index.html">Setup your First Company in OpenERP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../part02/index.html">Leads to Cash Flow with OpenERP</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../crm_sale/index.html">Boost your Sales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../warehouse/index.html">Organize your Warehouse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../purchase/index.html">Control your Purchase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../humanresource/index.html">Recruit &amp; Manage your Talents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../project-service/index.html">Manage your Projects and Services</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Manage your Books of Accounts</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../prod-setup/index.html">Deploy OpenERP in Production</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../backup/index.html">OpenERP Backup and Restore</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Advanced Invoice Management</a><ul>
+<li><a class="reference internal" href="#creating-a-customer-invoice">Creating a Customer Invoice</a></li>
+<li><a class="reference internal" href="#tax-management">Tax Management</a></li>
+<li><a class="reference internal" href="#cancelling-an-invoice">Cancelling an Invoice</a></li>
+<li><a class="reference internal" href="#controlling-a-supplier-invoice">Controlling a Supplier Invoice</a></li>
+<li><a class="reference internal" href="#credit-notes-refunds">Credit Notes / Refunds</a></li>
+<li><a class="reference internal" href="#advanced-setup-payment-terms-and-fiscal-positions">Advanced Setup: Payment Terms and Fiscal Positions</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+  <li>
+    <a href="index.html" title="Previous Chapter: Accounting Management"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Accounting Manag...</span>
+    </a>
+  </li>
+  <li>
+    <a href="accounting_entries.html" title="Next Chapter: Advanced Cash Management"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Advanced Cash Ma... &raquo;</span>
+    </a>
+  </li>
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+    
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+
+	        
+        
+      
+  <div class="section" id="advanced-invoice-management">
+<span id="invoicemanagement"></span><h1>Advanced Invoice Management<a class="headerlink" href="#advanced-invoice-management" title="Permalink to this headline">¶</a></h1>
+<p>The principle of entering data for invoices in OpenERP is very simple, both for people with no background in accounting (see chapter :ref:custinv`) and accountants. This means that your accounting information can be kept up-to-date all the time as orders are placed and received, and their taxes are calculated.</p>
+<p>People who have more accounting knowledge will be able to keep full control over the accounting entries that are being generated. Each value proposed by OpenERP can be modified later if needed.</p>
+<p>In OpenERP, the concept of “invoice” refers to the following documents:</p>
+<ul class="simple">
+<li>The Customer Invoice,</li>
+<li>The Supplier Invoice,</li>
+<li>A Customer Credit Note (also called Customer Refund),</li>
+<li>A Supplier Credit Note (also called Supplier Refund).</li>
+</ul>
+<p>Only the invoice type and the representation mode are different, but still very similar, for each of the four documents. But they are all stored in the same object type in the system.</p>
+<p>Each of the four invoice types is related to a corresponding menu item. This allows you to easily distinguish between them, and also to directly refer to the invoice type you need to work on.</p>
+<div class="admonition note" id="index-0">
+<p class="first admonition-title">Note</p>
+<p>Credit Note</p>
+<p class="last">A credit note is a document that enables you to refund an invoice or part of an invoice.</p>
+</div>
+<div class="section" id="creating-a-customer-invoice">
+<h2>Creating a Customer Invoice<a class="headerlink" href="#creating-a-customer-invoice" title="Permalink to this headline">¶</a></h2>
+<p>To access customer invoices in OpenERP, use the menu <em class="menuselection">Accounting ‣ Customers ‣ Customer Invoices</em>; for supplier invoices, go to the menu <em class="menuselection">Accounting ‣ Suppliers ‣ Supplier Invoices</em>.</p>
+<p>In general, when you also use OpenERP&#8217;s functionality for sales, purchases and logistics, most of the invoices do not need to be entered
+manually as they are linked to other processes in the system. Draft invoices are generated automatically by OpenERP from other documents such as Sales Orders, Purchase Orders or Shipments.</p>
+<p>OpenERP uses the following ways to generate invoices:</p>
+<ul class="simple">
+<li>from purchase or sales orders,</li>
+<li>from receipt or dispatch of goods,</li>
+<li>from work carried out (timesheets),</li>
+<li>from closed tasks (projects),</li>
+<li>from fee charges or other rechargeable expenses (service management).</li>
+</ul>
+<p>The chart <a class="reference internal" href="#fig-accfl"><em>Accounting Workflow for Invoicing and Payment</em></a> shows the financial workflow followed by each invoice.</p>
+<div class="figure align-center" id="fig-accfl">
+<a class="reference internal image-reference" href="accounting/3_7/images/account_flow.png"><img alt="accounting/3_7/images/account_flow.png" src="accounting/3_7/images/account_flow.png" /></a>
+<p class="caption"><em>Accounting Workflow for Invoicing and Payment</em></p>
+</div>
+<p id="index-1">The integrated software generates invoice proposals (also called Draft Invoices) which are initially set to the ``Draft``  state, which means they can easily be changed when required. As long as these invoices remain unconfirmed, they have no accounting impact on the system.</p>
+<p>Draft sales invoices have to be approved by an accountant or other dedicated users and sent to the customer. The different invoicing methods are detailed in the following sections and chapters.</p>
+<p>You can also create invoices manually, both for customers and suppliers. This option is usually used for invoices that are not associated with an order (e.g. purchase invoices for electricity) or credit notes.</p>
+<p>Of course, you might need to edit or add extra information to the invoice before sending it to the customer.
+For example, when setting the tax parameters for partners, you have not realised that the customer is tax-exempt. The invoice generated from an order will contain tax at the normal rates based on system settings for partner, product or account. You can then easily edit the invoice before validating it.</p>
+<p>You can create or edit a draft customer invoice manually from the menu <em class="menuselection">Accounting ‣ Customers ‣ Customer Invoices</em>.</p>
+<p>The information that is needed for invoicing is automatically taken from the <tt class="docutils literal"><span class="pre">Partner</span></tt> form (such as payment conditions and the invoice address) or from the <tt class="docutils literal"><span class="pre">Product</span></tt> (such as the account to be used) or from a combination of the two (such as applicable Taxes and the Price of the product).
+From an invoice, you can easily create a new partner, a new product, a new account without having to leave the invoice screen. You can also edit existing data, all from within one form. This makes it very easy to quickly enter invoices.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Draft Invoices</p>
+<p>There are several advantages in working with draft invoices:</p>
+<ul class="last simple">
+<li>You have got an intermediate validation state before the invoice is approved.
+This is useful when your accountants are not the people creating the initial invoice,
+but are still required to approve it before the invoice is entered into the accounts.</li>
+<li>It enables you to create invoices in advance, without approving them at the same time.
+You are also able to list all of the invoices awaiting approval.</li>
+</ul>
+</div>
+<p>You can approve (or <em>validate</em>) an invoice to change its status to ``Open``. Clicking the <tt class="docutils literal"><span class="pre">Pro-forma</span></tt> button will set the invoice to the ``Pro-forma``status.
+A pro forma invoice does not have an invoice number yet, nor any accounting entries, and is commonly used as a preliminary invoice or for customs purposes. Such a pro forma invoice is more formal than a draft invoice and can easily be converted to an open invoice when required, simply by clicking the <tt class="docutils literal"><span class="pre">Validate</span></tt> button.</p>
+<p>An open invoice has a unique invoice number. The invoice is sent to the customer and is marked in the system as awaiting payment.</p>
+<p>Start by manually entering a customer invoice. Go to <em class="menuselection">Accounting ‣ Customers ‣ Customer Invoices</em> and click the <cite>Create</cite> button.</p>
+<p>A new invoice form opens allowing you to enter information.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="accounting/3_7/images/account_invoice_new.png"><img alt="accounting/3_7/images/account_invoice_new.png" src="accounting/3_7/images/account_invoice_new.png" /></a>
+<p class="caption"><em>Entering a New Invoice</em></p>
+</div>
+<p>The document is composed of three parts:</p>
+<ul class="simple">
+<li>the top of the invoice, with customer information,</li>
+<li>the main body of the invoice, with detailed invoice lines,</li>
+<li>the bottom of the page, with details about taxes and totals and the status of the invoice.</li>
+</ul>
+<p>To enter a document in OpenERP, you should try to always fill in the fields in the order they appear on the screen. Doing it this way means that some of the later fields are filled in automatically from the selections made in earlier fields.</p>
+<p>The Sales Journal is proposed by default. If you use several sales journals, make sure to select the required journal. Then select the <cite>Customer</cite>, and the following fields will be completed automatically:</p>
+<ul class="simple">
+<li>the invoice address: corresponds to the customer contact associated to the <cite>Invoice</cite> address type in the partner form (or otherwise the <cite>Default</cite> address type),</li>
+<li>the account: corresponds to the centralisation account specified in the <cite>Accounting</cite> tab of the <em class="guilabel">Partner</em> form,</li>
+<li>a specific or a default payment term: can be defined for the partner in the <cite>Accounting</cite> tab of the <em class="guilabel">Partner</em> form. Payment conditions are generated by rules for the payment of the invoice. For example: 50% in 21 days and 50% in 60 days from the end of the month.</li>
+</ul>
+<p>You do not have to enter a date and a period, because the system&#8217;s date and corresponding period will be set automatically on validation. For purchase invoices, set the date specified on the supplier&#8217;s invoice. The period will be proposed accordingly on validation.</p>
+<div class="admonition note" id="index-2">
+<p class="first admonition-title">Note</p>
+<p>Properties Fields</p>
+<p>The Properties fields (fields with default values, such as payment term) on the <cite>Partner</cite> or the <cite>Product</cite> form are multi-company fields. The value the user sees in these fields depends on the company he works for.</p>
+<p class="last">If you work in a multi-company environment that is using one database, you have several charts of
+accounts. Centralisation accounts for a partner depend on the company the user works for.</p>
+</div>
+<div class="admonition tip" id="index-3">
+<p class="first admonition-title">Tip</p>
+<p>Seeing Partner Relationships</p>
+<p>You can reach more information from certain relation fields in OpenERP.</p>
+<ul class="simple">
+<li>In the web client, a relation is commonly a hyperlink that you open by clicking the small button with the hand, next to a field
+- it takes you to the main form for that entity, with all of the actions and links.</li>
+</ul>
+<p>According to the Business Applications you use, one way or another you can rapidly reach the partner&#8217;s:</p>
+<ul class="last simple">
+<li>current sales and purchases,</li>
+<li>CRM meetings,</li>
+<li>invoices,</li>
+<li>accounting entries,</li>
+<li>payable and receivable accounts.</li>
+</ul>
+</div>
+<p>You can add more detailed additional information to the invoice and select the currency that you want to invoice in.</p>
+<p>For each invoice, you have to enter the different invoice lines. You could use either of the two techniques:</p>
+<ul class="simple">
+<li>use a product to complete the different fields automatically;</li>
+<li>use no product, but instead enter all blue (= mandatory) fields manually for one-off sales,</li>
+</ul>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Invoice Line Description</p>
+<p class="last">The invoice line description is more of a title than a comment. If you want to add more detailed comments you can use the <cite>Notes</cite> field.</p>
+</div>
+<p>Select the product <tt class="docutils literal"><span class="pre">Basic</span> <span class="pre">PC</span></tt> in the product field of an invoice line. You can enter a product code, or part of the name of a product. OpenERP will propose corresponding products. The following fields are then completed automatically:</p>
+<ul class="simple">
+<li><cite>Description</cite>: this comes from the product, in the language of the partner,</li>
+<li>the <cite>Quantity</cite> is set to 1 by default, but can be changed manually,</li>
+<li>Unit of Measure, e.g. PCE, defined by default in the <em class="guilabel">Product</em> form,</li>
+<li><cite>Unit Price</cite>: this is the sales price in the <em class="guilabel">Product</em> form or the price from the selected pricelist; the unit price is expressed exclusive of taxes,</li>
+<li><cite>Account</cite>: the sales account defined in the product properties. If no account is specified in the <em class="guilabel">Product</em> form, OpenERP uses the properties of the category the product is associated with.</li>
+<li><cite>Taxes</cite>: provided by the <em class="guilabel">Product</em> form and related to the fiscal position (either from the <cite>Partner</cite> form or added manually to the invoice).</li>
+</ul>
+<p>You can add more lines by clicking the <tt class="docutils literal"><span class="pre">Save</span> <span class="pre">&amp;</span> <span class="pre">New</span></tt> button. When you are done entering invoice lines, click the <tt class="docutils literal"><span class="pre">Save</span> <span class="pre">&amp;</span> <span class="pre">Close</span></tt> button.</p>
+<div class="admonition tip" id="index-4">
+<p class="first admonition-title">Tip</p>
+<p>Managing the Price with Tax Included</p>
+<p class="last">By default, OpenERP invoices and processes the price without taxes – they are managed as a
+separate amount.
+OpenERP can manage tax-inclusive prices when you check the <cite>Tax Included in Price</cite> field when configuring
+the tax.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Information about the Product</p>
+<p>When you are entering invoice data, it can sometimes be useful to get hold of more information about
+the product you are invoicing. Note that the options depend on the number of Business Applications installed.
+Simply click the small button with the hand to select the available reports. OpenERP provides three standard reports about the product:</p>
+<ul class="last simple">
+<li>forecasts of future stock,</li>
+<li>product cost structure,</li>
+<li>location of the product in your warehouses.</li>
+</ul>
+</div>
+<p>You can enter several invoice lines and modify the default values that are automatically completed by OpenERP. Do not forget to change the default quantity of 1 to the correct quantity.</p>
+<p>Once the invoice lines have been entered, you can click <cite>Compute Taxes</cite> on the invoice to get the following information:</p>
+<ul class="simple">
+<li>details of tax calculated,</li>
+<li>tax rate,</li>
+<li>total taxes,</li>
+<li>total price.</li>
+</ul>
+<p>In the <cite>Taxes</cite> area at the bottom left of the invoice you will find the details of the totals calculated for different tax rates used in the invoice.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Tax Calculations</p>
+<p>When the invoice is not in <tt class="docutils literal"><span class="pre">Edit</span></tt> mode, you can click one of the lines in the tax summary area in the invoice.</p>
+<p>OpenERP then shows you the detail of the tax charges which will be used to compute your tax declaration at the end of the period.</p>
+<p class="last">It shows you the total that will be computed in the different parts of the legal declaration. This enables you to manage the declaration in OpenERP automatically.</p>
+</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="accounting/3_7/images/account_invoice_tva.png"><img alt="accounting/3_7/images/account_invoice_tva.png" src="accounting/3_7/images/account_invoice_tva.png" /></a>
+<p class="caption"><em>Detail of Tax Charges on an Invoice</em></p>
+</div>
+<p>On the second tab <cite>Other Info</cite>, you can change the due date of the invoice (automatically proposed according to the payment terms). You can also select a salesman, if it has not been set by default for the customer. A proposed salesman can also be changed for the invoice.</p>
+<p>Before approving the invoice you can modify the date and the accounting period, which will be set by default to today&#8217;s date on confirmation of the invoice.</p>
+<div class="admonition note" id="index-5">
+<p class="first admonition-title">Note</p>
+<p>Invoice Layout</p>
+<p class="last">If you want to make your invoice layout more elaborate you can install the module <tt class="xref py py-mod docutils literal"><span class="pre">account_invoice_layout</span></tt>. This enables you to add various elements between the lines such as subtotals, sections, separators and notes.</p>
+</div>
+<p>Click <cite>Validate</cite> when you want to approve the invoice. It moves from the <tt class="docutils literal"><span class="pre">Draft</span></tt> state to the <tt class="docutils literal"><span class="pre">Open</span></tt> status. You can easily see the current status of the invoice through the coloured status fields (blue for draft, grey for open) at the bottom of the screen.</p>
+<p>When you have validated an invoice, OpenERP attributes a unique number from a defined sequence (see <tt class="docutils literal"><span class="pre">Number</span></tt> field). By default, it takes the form <tt class="docutils literal"><span class="pre">Journal</span> <span class="pre">Code/Year/Sequence</span> <span class="pre">Number</span></tt> for example, <tt class="docutils literal"><span class="pre">saj/2011/005</span></tt> . You cannot modify an invoice number. Instead, to get a number that corresponds to your needs, you should modify the sequence numbers through the menu <em class="menuselection">Settings ‣ Configuration ‣ Sequences &amp; Identifiers ‣ Sequences</em>.</p>
+<p>Accounting entries corresponding to this invoice are automatically generated when you approve the invoice. Have a look at the details by clicking the small button with the hand next to the <cite>Journal Entry</cite> field on the <cite>Other Info</cite> tab (when the invoice is in <tt class="docutils literal"><span class="pre">Edit</span></tt> mode). When the invoice is not in <tt class="docutils literal"><span class="pre">Edit</span></tt> mode, simply click the entry number next to the <cite>Journal Entry</cite> field. Here you can see the account moves generated by that invoice number.</p>
+<p>The <tt class="docutils literal"><span class="pre">Print</span> <span class="pre">Invoice</span></tt> button allows you to print the validated invoice. Automatically, the invoice will be stored as an attachment.
+When the edi module is configured (read more about it in this book), the invoice will be emailed to the customer on validation.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Occasional Invoices</p>
+<p>When you create an invoice for a product that will only be sold once, you do not have to encode a new product.
+Instead, you will have to provide quite a bit of information manually in the invoice line, especially the blue or mandatory fields:</p>
+<ul class="last simple">
+<li>sales price,</li>
+<li>applicable taxes,</li>
+<li>account,</li>
+<li>product description.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="tax-management">
+<h2>Tax Management<a class="headerlink" href="#tax-management" title="Permalink to this headline">¶</a></h2>
+<p>Taxes can be defined from the <em class="menuselection">Accounting ‣ Configuration ‣ Financial Accounting ‣ Taxes ‣ Taxes</em> menu.
+OpenERP not only allows you to define general sales and purchase taxes, but also specific taxes, such as ecological taxes, that should be added to a product together with the default tax.</p>
+<p>You can combine as many taxes as required for an invoice line. For further details about tax definition, please refer to the chapter <a class="reference internal" href="../3_9/tax_structure.html#tax"><em>Managing your Tax Structure</em></a>.</p>
+<p>Default taxes can be added to a product or to a general account (mostly for purchase invoices). One of the main options to determine the applicable taxes for an invoice line, are the taxes defined in the <cite>Product</cite> form. By default, OpenERP takes account of all the taxes defined in the product form. This means you can easily add several legal taxes to one product, such as the Belgian Recupel (collection of waste electronic and electric material) and Bebat (battery) taxes.</p>
+<p>Take the case of the following product:</p>
+<ul>
+<li><p class="first">Applicable taxes:</p>
+<blockquote>
+<div><ul class="simple">
+<li>VAT: 19.6% type VAT</li>
+<li>DEEE: 5.5, type DEEE</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<div class="admonition note" id="index-6">
+<p class="first admonition-title">Note</p>
+<p>DEEE Tax</p>
+<p class="last">The DEEE tax (disposal of electronic and electrical equipment) is an ecological tax that was
+imposed in France from 2009. It is applied to batteries to finance their recycling and is a fixed
+sum that is applied to the before-tax amount on the invoice.</p>
+</div>
+<p>If you trade with a company in your own country, and your country has a DEEE-type tax, the applicable taxes for this invoice could be:</p>
+<ul class="simple">
+<li>DEEE: 5.5,</li>
+<li>VAT: 19.6%.</li>
+</ul>
+<p>If you sell to a customer in another company of the European community (intracommunity) instead, then tax is not charged. In the partner form, in the tab <cite>Accounting</cite>, the <cite>Fiscal Position</cite> field keeps information about whether the customer is a local, an intracommunal or an export customer. When you create an invoice for this customer, OpenERP will calculate the following taxes on the product:</p>
+<ul class="simple">
+<li>DEEE: 5.5,</li>
+<li>Intracommunal VAT: 0%.</li>
+</ul>
+<p>If you have not entered the parameters in the customer form correctly, OpenERP will suggest incorrect taxes in the invoice. That is not a real issue, because you can always modify the information directly in the <cite>Fiscal Position</cite> field of the invoice before approving it.</p>
+<p>If you do not enter a product in the invoice line, but instead use text, you can easily add taxes manually, or they may be added automatically from the general account if it has been linked to default taxes.</p>
+</div>
+<div class="section" id="cancelling-an-invoice">
+<h2>Cancelling an Invoice<a class="headerlink" href="#cancelling-an-invoice" title="Permalink to this headline">¶</a></h2>
+<p>By default, OpenERP will not allow you to cancel an invoice once it has been approved. Since accounting entries have been created, you theoretically cannot go back and delete them. However, in some cases, it is more convenient to cancel an invoice when there is an error than to produce a credit note and reconcile the two entries. Your attitude to this will be influenced by current legislation in your accounting jurisdiction.</p>
+<p>OpenERP accommodates either approach. The <tt class="xref py py-mod docutils literal"><span class="pre">account_cancel</span></tt> module can be installed if in your country it is allowed to cancel an existing invoice, correct it and revalidate it. You have to set up some parameters for this module to work. You need to allow cancellation of entries by checking the <cite>Allow Cancelling Entries</cite> box in the <tt class="docutils literal"><span class="pre">Journal</span></tt> corresponding to an invoice. You will then be allowed to cancel the invoice if the following two conditions are met:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>The accounting entries have not been reconciled or paid: if they have, then you will have to cancel
+the reconciliation first.</li>
+<li>The accounting period or the fiscal year has not been closed yet: if it is closed, no modification is possible.</li>
+</ol>
+</div></blockquote>
+<p>When you cancel an invoice, the corresponding accounting entries will automatically be modified accordingly.</p>
+<p>You can cancel an invoice by clicking the <cite>Cancel</cite> button in the invoice form. You could then move it from <tt class="docutils literal"><span class="pre">Cancelled</span></tt> to the <tt class="docutils literal"><span class="pre">Draft</span></tt> state to modify it. Once you have made the required changes, you have to regenerate the invoice by clicking the <cite>Validate</cite> button. Note that the original invoice number will still be used for this invoice.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Numbering Invoices</p>
+<p>Some countries require you to have contiguously numbered invoices (that is, with no break in the sequence). If, after cancelling an invoice that you are not regenerating, you find yourself with a break in the numbering, you should modify the sequence, redo the invoice and replace the sequence number with its original value.</p>
+<p class="last">You can control the sequences using the menu <em class="menuselection">Settings ‣ Configuration ‣ Sequences &amp; Identifiers ‣ Sequences</em>.</p>
+</div>
+<p>Cancelling an invoice without regenerating it, will cause a break in the number sequence of your invoices. You are strongly advised to recreate this invoice and reapprove it to fill the hole in the numbering.</p>
+</div>
+<div class="section" id="controlling-a-supplier-invoice">
+<h2>Controlling a Supplier Invoice<a class="headerlink" href="#controlling-a-supplier-invoice" title="Permalink to this headline">¶</a></h2>
+<p>The form that manages supplier invoices is very similar to the one for customer invoices. However,
+it has been adapted to simplify rapid data entry and monitoring of the amounts recorded.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Entering Data</p>
+<p>Many companies do not enter data through supplier invoices, but simply enter accounting data corresponding to
+the purchase journal.</p>
+<p>This particularly applies to users that have focused on the accounting system rather than all the
+capabilities provided by an ERP system.
+The two approaches reach the same accounting result: some prefer one and others prefer the other
+depending on their skills and needs.</p>
+<p class="last">However, when you use the Purchase Management functions in OpenERP you should work directly on
+invoices because they are created from Purchase Orders or Goods Receipt documents.</p>
+</div>
+<p>To enter a new supplier invoice, use the menu <em class="menuselection">Accounting ‣ Suppliers ‣ Supplier Invoices</em>.</p>
+<p>Everything is similar to the customer invoice, starting with the <cite>Journal</cite> unless the default journal is acceptable, and then the <cite>Supplier</cite>, which will automatically complete the following fields:</p>
+<ul class="simple">
+<li><cite>Invoice Address</cite>,</li>
+<li>Partner <cite>Account</cite>.</li>
+</ul>
+<p>Unlike the customer invoice, you do not have to enter payment conditions (although you can, of course) – simply a <cite>Due Date</cite> will do.
+If you do not give a due date, OpenERP assumes that this invoice will be paid in cash.
+If you want to enter more complete payment conditions than just the due date, you can use the <cite>Payment Term</cite> field which you can find on the second tab <cite>Other Info</cite>.</p>
+<p>You can also store the supplier&#8217;s invoice number in the <cite>Free Reference</cite> field.
+You also have to enter the invoice&#8217;s <cite>Verification Total</cite> amount, taxes included. OpenERP uses this amount to check whether all invoice lines have been entered correctly before it will let you validate the invoice.</p>
+<p>Indicate the <cite>Currency</cite> if the invoice is not going to use the default currency, then you can enter the <cite>Invoice lines</cite>.</p>
+<p>Just like the customer invoice, you have the choice of entering all the information manually or use a product to complete many of the fields automatically. When you enter a product, all of the following values are completed automatically:</p>
+<ul class="simple">
+<li>the product <cite>Account</cite> is completed from the properties of the product form or the <cite>Category</cite> of the product if nothing is defined on the product itself,</li>
+<li>the <cite>Taxes</cite> come from the product form and/or the general account, based on the same principles as the customer invoice,</li>
+<li>the <cite>Quantity</cite> is set at 1 by default but can be changed manually,</li>
+<li>set the <cite>Unit Price</cite> according to the total price on the invoice after deducting all the different applicable taxes (so the amount exclusive of taxes),</li>
+</ul>
+<p>Click <cite>Compute Taxes</cite> to ensure that the totals correspond to those indicated on the paper invoice from the supplier. When you approve the invoice, OpenERP verifies that the total amount indicated in the header corresponds to the sum of the amounts exclusive of tax in the invoice lines plus the different applicable taxes.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Invoice Date</p>
+<p class="last">OpenERP automatically completes the <cite>Date Invoiced</cite> and the accounting period on validation, so make sure to enter the invoice date indicated on your supplier invoice before validating.</p>
+</div>
+<div class="admonition note" id="index-7">
+<p class="first admonition-title">Note</p>
+<p>Dates and Accounting Periods</p>
+<p>Accounting periods are treated as legal periods. For example, a tax declaration for an invoice depends on the accounting period and not on the date of invoicing.</p>
+<p>Depending on whether you have monthly or quarterly declarations, the fiscal year generally contains either twelve or four accounting periods. We do not take into account any opening / closing periods here.</p>
+<p class="last">The dates are shown in the document you created in the accounting system. They are used to calculate due dates.</p>
+</div>
+<p id="index-8">You may find that the amounts do not correspond with what your supplier has given you on paper for reasons that may include:</p>
+<ul class="simple">
+<li>the supplier made a calculation error,</li>
+<li>the amounts have been rounded differently.</li>
+</ul>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Rounding Tax</p>
+<p>It often happens that a supplier adds 1 to the total because the tax calculation has been rounded
+upwards. Some tax amounts are not valid because of this rounding.</p>
+<p>For example, it is impossible to arrive at the amount of 145.50 if you are working with a precision of 2
+decimal places and a rate of 19.6%:</p>
+<ul class="last simple">
+<li>121.65 x 1.196 = 145.49</li>
+<li>121.66 x 1.196 = 145.51</li>
+</ul>
+</div>
+<p>In this case, you can modify a value in the lines the total is based on, or the total amount of taxes at the bottom left of the form (in the tax box): both are editable so that you can modify them to adjust the total.</p>
+<p>When the totals tally, you can validate the invoice. OpenERP then generates the corresponding accounting entries. You can manage those entries using the <cite>Account</cite> fields on the invoice and on each of the invoice lines.</p>
+<p>In a logistic configuration, invoice control for purchase invoices can be done either according to the purchase order, or the picking. When invoicing is from the purchase order, a draft invoice will be created on confirmation of the purchase order. This allows the accountant to easily check the purchase order against the invoice received from the supplier without actually looking at the purchase order.
+When invoicing is done from the picking, an invoice will be created as soon as the picking is confirmed. This allows the accountant to easily check the picking list against the invoice received from the supplier without actually looking at the picking list.</p>
+</div>
+<div class="section" id="credit-notes-refunds">
+<span id="index-9"></span><h2>Credit Notes / Refunds<a class="headerlink" href="#credit-notes-refunds" title="Permalink to this headline">¶</a></h2>
+<p>Entering a customer credit note is almost identical to entering a customer invoice. You just start
+from the menu <em class="menuselection">Accounting ‣ Customers ‣ Customer Refunds</em>.</p>
+<p>Similarly, entering a supplier credit note is the same as that of the supplier invoice, and so you
+use the menu <em class="menuselection">Accounting ‣ Suppliers ‣ Supplier Refunds</em>.</p>
+<p>Of course with OpenERP you can quickly generate a credit note from an existing invoice. To do this, select the customer or supplier invoice that has to be refunded, with <tt class="docutils literal"><span class="pre">Open</span></tt> or <tt class="docutils literal"><span class="pre">Paid</span></tt> status. Click the <cite>Refund</cite> button. OpenERP allows you to select several methods for creating credit notes directly from the related invoice (both for customers and suppliers).</p>
+<p>Below you find the different options displayed when you click the <cite>Refund</cite> button on an invoice.</p>
+<dl class="docutils">
+<dt>Create a Draft Refund</dt>
+<dd>Creates a draft credit note of the complete invoice. You can change this credit note, i.e. to make a partial credit note.</dd>
+<dt>Modify</dt>
+<dd>Creates a credit note for the existing invoice, validates the credit note and reconciles it with the invoice. The existing invoice is duplicated so that you can modify it.</dd>
+<dt>Cancel</dt>
+<dd>Creates a credit note for the complete invoice, validates the credit note and reconciles it with the invoice concerned. The existing invoice is &#8220;cancelled&#8221; in a legal way.</dd>
+</dl>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="accounting/3_7/images/account_refund.png"><img alt="accounting/3_7/images/account_refund.png" src="accounting/3_7/images/account_refund.png" /></a>
+<p class="caption"><em>Refund from an Invoice</em></p>
+</div>
+</div>
+<div class="section" id="advanced-setup-payment-terms-and-fiscal-positions">
+<span id="index-10"></span><h2>Advanced Setup: Payment Terms and Fiscal Positions<a class="headerlink" href="#advanced-setup-payment-terms-and-fiscal-positions" title="Permalink to this headline">¶</a></h2>
+<p><strong>Payment Terms</strong></p>
+<p>You can define whatever payment terms you need in OpenERP. Payment terms determine the due dates for paying an invoice.</p>
+<p>To define new payment terms, go to the menu <em class="menuselection">Accounting ‣ Configuration ‣ Miscellaneous ‣ Payment Terms</em> and click <em class="guilabel">Create</em>.</p>
+<p>The figure below represents the following payment term: 5000 within 5 days, 50% payment at the last day of current month,
+remaining balance the 15th of next month.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="accounting/3_7/images/account_payment_term.png"><img alt="accounting/3_7/images/account_payment_term.png" src="accounting/3_7/images/account_payment_term.png" /></a>
+<p class="caption"><em>Configuring Payment Terms</em></p>
+</div>
+<p>To configure new conditions, start by giving the condition a name in the <em class="guilabel">Payment Term</em> field. Text you put in the field <em class="guilabel">Description on invoices</em>, will be printed on the invoice, so enter a clear description of the payment terms there.</p>
+<p>Then create individual lines to allow the system to automatically calculate the due dates in the section <em class="guilabel">Computation</em>. You should give each line a name (<em class="guilabel">Line Name</em>). The name is for information only and does not affect the actual computation of payment terms. The <em class="guilabel">Sequence</em> field lets you define the order in which the rules are evaluated.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Drag &amp; Drop</p>
+<p class="last">You can leave the sequence number to the default value and easily drag and drop payment term lines to change the computation order. Sequence numbers will then be updated automatically.</p>
+</div>
+<p>The <em class="guilabel">Valuation</em> field enables you to calculate the amount to pay for each line according to three options:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">Percent</span></tt>: the line corresponds to a percentage of the total amount, the factor being specified in <em class="guilabel">Amount To Pay</em>. The number indicated in <em class="guilabel">Amount To Pay</em> has to take a value between 0 and 1 (1 equals 100%, 0,50 means 50%).</li>
+<li><tt class="docutils literal"><span class="pre">Fixed</span> <span class="pre">Amount</span></tt>: this is a fixed value determined by the <em class="guilabel">Amount To Pay</em> box.</li>
+<li><tt class="docutils literal"><span class="pre">Balance</span></tt>: refers to the balance remaining after accounting for the other lines.</li>
+</ul>
+<p>Make sure to set the last line of the computation to <tt class="docutils literal"><span class="pre">Balance</span></tt> to avoid rounding errors. The highest sequence number will be the last to be evaluated.</p>
+<p>The last two fields, <em class="guilabel">Number of Days</em> and <em class="guilabel">Day of the Month</em>, enable the calculation of the delay in payment for each line. The delay <em class="guilabel">Day of the Month</em> can be set to <tt class="docutils literal"><span class="pre">-1</span></tt> , <tt class="docutils literal"><span class="pre">0</span></tt> , <tt class="docutils literal"><span class="pre">1</span></tt> or any other positive or negative number.</p>
+<p>Example starting from 20th December 2011, with the following payment term:</p>
+<ul class="simple">
+<li><em class="guilabel">5000 within 5 days</em>: set <cite>Valuation</cite> to <tt class="docutils literal"><span class="pre">Fixed</span> <span class="pre">Amount</span></tt>, <cite>Amount To Pay</cite> to <tt class="docutils literal"><span class="pre">5000</span></tt>, <cite>Number of Days</cite> <tt class="docutils literal"><span class="pre">5</span></tt> and <cite>Day of the Month</cite> <tt class="docutils literal"><span class="pre">0</span></tt>. That creates a journal entry with a due date of 25th December 2011.</li>
+<li><em class="guilabel">50% last day of current month</em>: set <cite>Valuation</cite> to <tt class="docutils literal"><span class="pre">Percent</span></tt>, <cite>Amount To Pay</cite> to <tt class="docutils literal"><span class="pre">0.50`</span></tt>, <cite>Number of Days</cite> <tt class="docutils literal"><span class="pre">0</span></tt> and  <cite>Day of the Month</cite> <tt class="docutils literal"><span class="pre">-1</span></tt>. That creates a journal entry with a due date of 31st December 2011.</li>
+<li><em class="guilabel">Remaining 15th of next month</em>: set <cite>Valuation</cite> to <tt class="docutils literal"><span class="pre">Balance</span></tt>, <cite>Number of Days</cite> <tt class="docutils literal"><span class="pre">0</span></tt> and  <cite>Day of the Month</cite> <tt class="docutils literal"><span class="pre">15</span></tt>. That creates a journal entry with a due date of 15th January 2012.</li>
+</ul>
+<p>What do the digits in the <cite>Day of Month</cite> field represent?</p>
+<ul class="simple">
+<li>-1 = last day of the current month</li>
+<li>0 = net days</li>
+<li>1 = first day of the next month</li>
+<li>-2 = last but one day of the current month</li>
+<li>2 = second day of the next month</li>
+<li>30 = 30th of the next month</li>
+<li>-30 = 30th of the current month</li>
+</ul>
+<p>You can add default payment terms to a customer or supplier through the <em class="guilabel">Accounting</em> tab in the <cite>Partner</cite> form. On an invoice level, you can change the default payment terms.</p>
+<p><strong>Fiscal Positions</strong></p>
+<p>The basic configuration of products, for instance, will only take into account local taxes. But of course, you would like OpenERP to determine the corresponding taxes for you when you are invoicing to a customer within the European Community, to give an example.</p>
+<p>Now that is what fiscal positions can be used for. Through fiscal positions, you can instruct OpenERP to use the correct taxes. Fiscal positions allow you to make a mapping from e.g. national taxes to intracommunal or external taxes.
+Moreover, these mappings also allow you to change income / expense accounts automatically when posting entries. An example of this: suppose you have an income account for local sales, one for intracommunal sales and one for export. By defining fiscal positions, you can have the system change the income account automatically.</p>
+<p>You can link fiscal positions to your customers and suppliers to ensure automatic and easy VAT and/or account conversion.</p>
+<p>To create a new fiscal position, go to <em class="menuselection">Accounting ‣ Configuration ‣ Financial Accounting ‣ Taxes ‣ Fiscal Positions</em> and click <em class="guilabel">Create</em>.</p>
+<p>Create for instance a fiscal position for Intracommunal Taxes.</p>
+<p>Type Intracommunal Taxes in the <em class="guilabel">Fiscal Position</em> field.
+In the <em class="guilabel">Tax Source</em> field, select the local tax that has to be converted for use with intracommunal partners. Then link the intracommunal tax to be used in the <em class="guilabel">Replacement Tax</em> field.
+Do this for each local tax that has to be converted for intracommunal use.
+If you also want accounts to be changed, you can add <em class="guilabel">Account Source</em> (the local account) and <em class="guilabel">Account Destination</em> (intracommunal account).</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="accounting/3_7/images/account_fiscal_pos.png"><img alt="accounting/3_7/images/account_fiscal_pos.png" src="accounting/3_7/images/account_fiscal_pos.png" /></a>
+<p class="caption"><em>Fiscal Position</em></p>
+</div>
+</div>
+</div>
+
+
+	
+		
+		<div id="disqus_thread"></div>
+	    <script type="text/javascript">
+	        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	        var disqus_shortname = 'openerponlinebook'; // required: replace example with your forum shortname
+	
+	        /* * * DON'T EDIT BELOW THIS LINE * * */
+	        (function() {
+	            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	        })();
+	    </script>
+	    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	    
+    </div>
+    
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, OpenERP Book.<br/>
+      Last updated on Mar 28, 2014.<br/>
+    </p>
+  </div>
+</footer>
+<div class="container">You can contribute to OpenERP Book on <a href="#">Launchpade.net</a>
+<script type="text/javascript">
+  (function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ?
+              'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+  })();
+</script>
+</div>
+
+  </body>
+</html>

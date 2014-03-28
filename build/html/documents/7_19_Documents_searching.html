@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Optimizing Document Management &mdash; OpenERP Book 8.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.1.0/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '8.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="OpenERP Book 8.0 documentation" href="../index.html" />
+    <link rel="up" title="Integrated Document Management" href="index.html" />
+    <link rel="next" title="Deploy OpenERP in Production" href="../prod-setup/index.html" />
+    <link rel="prev" title="Standardizing Structures" href="7_19_Documents_structures.html" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-47926740-1']);
+  _gaq.push(['_trackPageview']);
+</script>
+
+<meta name="google-translate-customization" content="1a9f16396f329347-27b519b501ddf27d-gbee5ada102d015d0-f"></meta>
+
+<!-- AddThis Smart Layers BEGIN -->
+<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-530c64087def677e"></script>
+<script type="text/javascript">
+  addthis.layers({
+    'theme' : 'transparent',
+    'share' : {
+      'position' : 'left',
+      'numPreferredServices' : 5
+    }   
+  });
+</script>
+<!-- AddThis Smart Layers END -->
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          OpenERP Book</a>
+        <span class="navbar-text navbar-version pull-left"><b>8.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">About OpenERP Online Book !</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download/index.html">Looking for OpenERP Demo ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install/index.html">Installation on Windows, Linux and MacOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../part01/index.html">Getting start with OpenERP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install-apps/index.html">Install and configure OpenERP Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../part03/index.html">Setup your First Company in OpenERP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../part02/index.html">Leads to Cash Flow with OpenERP</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../crm_sale/index.html">Boost your Sales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../warehouse/index.html">Organize your Warehouse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../purchase/index.html">Control your Purchase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../humanresource/index.html">Recruit &amp; Manage your Talents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project-service/index.html">Manage your Projects and Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../accounting/index.html">Manage your Books of Accounts</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Integrated Document Management</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../prod-setup/index.html">Deploy OpenERP in Production</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../backup/index.html">OpenERP Backup and Restore</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Optimizing Document Management</a><ul>
+<li><a class="reference internal" href="#searching-for-documents">Searching for Documents</a></li>
+<li><a class="reference internal" href="#integration-with-e-mails-using-outlook-and-thunderbird">Integration with E-mails using Outlook and Thunderbird</a></li>
+<li><a class="reference internal" href="#version-management">Version Management</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+  <li>
+    <a href="7_19_Documents_structures.html" title="Previous Chapter: Standardizing Structures"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Standardizing St...</span>
+    </a>
+  </li>
+  <li>
+    <a href="../prod-setup/index.html" title="Next Chapter: Deploy OpenERP in Production"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Deploy OpenERP i... &raquo;</span>
+    </a>
+  </li>
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+    
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+
+	        
+        
+      
+  <div class="section" id="optimizing-document-management">
+<span id="index-0"></span><h1>Optimizing Document Management<a class="headerlink" href="#optimizing-document-management" title="Permalink to this headline">¶</a></h1>
+<p>All documents produced by OpenERP are automatically indexed and classified for
+maximum efficiency. There is an ultra-rapid access to documents, which are
+directly available from your email client or the company management software.
+The user access rights are managed just the same way as those that are available
+in the company management system. All these features help you to get the best
+out of OpenERP&#8217;s document management system.</p>
+<div class="section" id="searching-for-documents">
+<h2>Searching for Documents<a class="headerlink" href="#searching-for-documents" title="Permalink to this headline">¶</a></h2>
+<p>You have seen several methods of accessing documents quickly:</p>
+<ul class="simple">
+<li>From attachments to an OpenERP resource,</li>
+<li>Through FTP access to OpenERP,</li>
+<li>Using the menu <em class="menuselection">Knowledge ‣ Document Management ‣ Directories&#8217; Structure</em>.</li>
+</ul>
+<p>But if you do not know where a specific document can be found, OpenERP also has a search tool
+integrated into its document management to simplify your search. To search for a file, use the menu <em class="menuselection">Knowledge
+‣ Documents ‣ Documents</em>. You get to a document search view that lets you search amongst
+all the attachments and all the documents in the FTP server.</p>
+<p>You can search for a file using various different criteria:</p>
+<ul class="simple">
+<li>The attachment name,</li>
+<li>The attachment type,</li>
+<li>The filename,</li>
+<li>The owner of a file,</li>
+<li>The directory that it is found in,</li>
+<li>The indexed content.</li>
+</ul>
+<p>Notice here an important advantage for an integrated document management system. Information such as
+which partner is associated with a document is automatically detected by OpenERP when the document
+has been stored in a directory. This information is never input by the user – it is detected
+automatically using the information about the resource when it is being saved as a file.</p>
+<p>But your search is not limited to these few fields. You can also search on the content in the files.
+Each file is automatically indexed by the system to give you a search engine rather like Google&#8217;s on
+the whole set of company documents.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Supported File Formats</p>
+<p>The OpenERP document management system can index the following file formats:</p>
+<ul class="simple">
+<li><strong>TXT</strong> : text files,</li>
+<li><strong>PDF</strong> : PDF files,</li>
+<li><strong>SXW</strong> : OpenOffice V1 files,</li>
+<li><strong>ODT</strong> : OpenOffice V2 files,</li>
+<li><strong>DOC</strong> : Microsoft Word files.</li>
+</ul>
+<p class="last">The other file formats are properly handled in the document management system, but their content
+is not indexed automatically.</p>
+</div>
+<p>This functionality is very significant. All you need to do is search for a partner name or an order
+number to automatically get all the documents that are referenced there. And you can use a fragment
+of text to find the document you need from within that subset.</p>
+</div>
+<div class="section" id="integration-with-e-mails-using-outlook-and-thunderbird">
+<h2>Integration with E-mails using Outlook and Thunderbird<a class="headerlink" href="#integration-with-e-mails-using-outlook-and-thunderbird" title="Permalink to this headline">¶</a></h2>
+<p>OpenERP&#8217;s document management system is well-integrated with popular email clients like Microsoft Outlook and Mozilla Thunderbird.
+For this, you can install the required plugins available in OpenERP, usually made available when you install and configure <tt class="xref py py-mod docutils literal"><span class="pre">crm</span></tt>.
+Or you may install <tt class="xref py py-mod docutils literal"><span class="pre">outlook</span></tt> or <tt class="xref py py-mod docutils literal"><span class="pre">thunderbird</span></tt> module according to your requirement, and take advantage of its compatibility with OpenERP&#8217;s documents.
+For more on this, refer <em class="xref std std-ref">ch-commtools</em>.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/create_contact_outlook.png"><img alt="../_images/create_contact_outlook.png" src="../_images/create_contact_outlook.png" style="width: 664.95px; height: 473.85px;" /></a>
+<p class="caption"><em>Creating a new contact through the Document Management System from Outlook</em></p>
+</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/document_attachment_thunderbird.png"><img alt="../_images/document_attachment_thunderbird.png" src="../_images/document_attachment_thunderbird.png" style="width: 664.95px; height: 468.0px;" /></a>
+<p class="caption"><em>Pushing an attachment in the Document Management System from Thunderbird</em></p>
+</div>
+</div>
+<div class="section" id="version-management">
+<h2>Version Management<a class="headerlink" href="#version-management" title="Permalink to this headline">¶</a></h2>
+<p>There is usually a need to keep track of all the important documents that you have printed. For
+example, when you send an invoice to a customer it is a good idea to store a copy of that invoice
+internally in paper or electronic form. Then you can reprint it exactly in the same format as when
+you sent it, even if the company&#8217;s details have changed in the meantime.</p>
+<p>To do this, OpenERP can automatically store as attachments the different reports printed by users.
+By default, only invoices are saved as attachments, and they are saved when they are printed.
+That is because they are commonly legally required.</p>
+<p>But you can configure the system so that it does not matter which type of report is printed -
+they can all be stored automatically. To
+activate that functionality on another type of report, modify this in the menu
+<em class="menuselection">Settings ‣ Technical ‣ Actions ‣ Reports</em>.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/document_report_modif.png"><img alt="../_images/document_report_modif.png" src="../_images/document_report_modif.png" style="width: 837.0px; height: 380.25px;" /></a>
+<p class="caption"><em>Modifying the definition of a report</em></p>
+</div>
+<p>Select the report that you want to change and complete the field <em class="guilabel">Save As Attachment Prefix</em>.
+Once you have done that, each document print action will automatically be saved as an
+attachment to the document.</p>
+</div>
+</div>
+
+
+	
+		
+		<div id="disqus_thread"></div>
+	    <script type="text/javascript">
+	        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	        var disqus_shortname = 'openerponlinebook'; // required: replace example with your forum shortname
+	
+	        /* * * DON'T EDIT BELOW THIS LINE * * */
+	        (function() {
+	            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	        })();
+	    </script>
+	    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	    
+    </div>
+    
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, OpenERP Book.<br/>
+      Last updated on Mar 28, 2014.<br/>
+    </p>
+  </div>
+</footer>
+<div class="container">You can contribute to OpenERP Book on <a href="#">Launchpade.net</a>
+<script type="text/javascript">
+  (function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ?
+              'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+  })();
+</script>
+</div>
+
+  </body>
+</html>
