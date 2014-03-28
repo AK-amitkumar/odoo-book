@@ -24,7 +24,7 @@ Content Contributors
 --------------------
 All the contributors who have contribute success stories, case studies, Implementation tips and tricks, thanks to all of them to make this book really rich interns of usable information in real life. You can also share articles which is written by you, If you want to contribute under this section please contact to any of the co-ordinator on their respective emails address.
 
-* `OpenERP ! <http://www.opeenrp.com/>`_
+* `OpenERP ! <http://www.openerp.com/>`_
 * `Open Source Enterprise ! <http://opensourceenterprise.wordpress.com/>`_
 
 Friends of OpenERP Book
