@@ -1,12 +1,12 @@
-About OpenERP Book
-==================
+About Odoo Book
+===============
 
-OpenERP Book is an online book explains OpenERP Modules, Configurations, Developments and Answers to all how to Questions. Read more about OpenERP, the aim of this book is to give detail explanation on each any every untapped points over the Internet. Beside explanation of topics it also covers a real life examples and success stories achieved with OpenERP Implementation.
+OpenERP Book is an online book explains Odoo Modules, Configurations, Developments and Answers to all how to Questions. Read more about OpenERP, the aim of this book is to give detail explanation on each any every untapped points over the Internet. Beside explanation of topics it also covers a real life examples and success stories achieved with OpenERP Implementation.
 
 Objectives of this Book
 -----------------------
 
-Document the usable apps available on OpenERP Apps store Keep the tracks of Best Practices, How to, and Success stories Document the Localized modules, available on Apps and OpenObject Project Group Latest informations, with respect to version changes. You can read more details at Why this Book ? section. If you are also interested to Contribute to this book please visit our Contribute page. Please don’t forget to rate our posts when you read them, based on that we will select topics and write in to more details.
+Document the usable apps available on Odoo Apps store Keep the tracks of Best Practices, How to, and Success stories Document the Localized modules, available on Apps and OpenObject Project Group Latest informations, with respect to version changes. You can read more details at Why this Book ? section. If you are also interested to Contribute to this book please visit our Contribute page. Please don’t forget to rate our posts when you read them, based on that we will select topics and write in to more details.
 
 Book Updates
 ------------
