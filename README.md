@@ -1,3 +1,5 @@
+Read book at http://openerpbook.com
+
 About Odoo Book
 ===============
 
