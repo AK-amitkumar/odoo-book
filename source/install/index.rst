@@ -16,8 +16,6 @@ Odoo Demonstration
    :maxdepth: 1
    
    download/01/index.rst
-   download/02/index.rst
-   download/03/index.rst
 
 Installation on Windows, Linux and Mac
 --------------------------------------
