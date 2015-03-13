@@ -49,15 +49,6 @@ Proposed Topics
 * Working with Tools
 * Tips and Tricks
 
-OpenERP Administration
-----------------------
-
-.. toctree::
-   :maxdepth: 1
-   
-   prod-setup/index.rst
-   backup/index.rst
-
 Indices and tables
 ------------------
 

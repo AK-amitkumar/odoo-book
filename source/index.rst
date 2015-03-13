@@ -30,8 +30,6 @@ You can start reading the book through widely viewed topics for the Odoo or you 
    install-apps/index.rst
    part03/index.rst
    part02/index.rst
-   prod-setup/index.rst
-   backup/index.rst
 
 .. hint::
 	The structure of Index may change frequently, if you want to track the pages you love, visit them and store their links in bookmark or reading list. direct links will not be changed, once it published on http://odoobooks.com or http://openerpbook.com.
