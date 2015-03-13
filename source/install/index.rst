@@ -3,11 +3,21 @@
 .. index::
    single: Odoo Installation
 
-===========================================
-Installation, Deploy & Database Maintenance 
-===========================================
+=========================================================
+Instant Demo, Installation, Deploy & Database Maintenance 
+=========================================================
 
-Odoo can be install on vaious platforms including wWindows, Mac and Linux, for the Productions uses advisable to setup on the Linux server either hosted on cloud or onsite.
+Odoo can be install on vaious platforms including Windows, Mac and Linux, for the Productions uses advisable to setup on the Linux server either hosted on cloud or onsite. If you are looking for the Odoo Instant demonstration you can quickly do it on Odoo Runbot.
+
+Odoo Demonstration
+------------------
+
+.. toctree::
+   :maxdepth: 1
+   
+   download/01/index.rst
+   download/02/index.rst
+   download/03/index.rst
 
 Installation on Windows, Linux and MacOS
 ----------------------------------------

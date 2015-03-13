@@ -25,7 +25,6 @@ Table of Contents
    :maxdepth: 1
    
    about/index.rst
-   download/index.rst
    install/index.rst
    part01/index.rst
    install-apps/index.rst
