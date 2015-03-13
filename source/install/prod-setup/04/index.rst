@@ -1,23 +1,24 @@
 .. _setup-production-openerp-service:
 
-Configure OpenERP as Linux Service
+==================================
+Configure Odoo as Linux Service
 ==================================
 
 .. note::
 	Some of the part of this page is taken from http://powerphil.wordpress.com/
 	
-As we advice that for production setup Linux is the preferred Operating System, It is an essential to configure OpenERP as an linux server after the installation. 
+As we advice that for production setup Linux is the preferred Operating System, It is an essential to configure Odoo as an linux server after the installation. 
 
-OpenERP can be install on any linux system based on ``.deb`` or ``.rpm``, please go through below installation steps for Linux and Mac.
+Odoo can be install on any linux system based on ``.deb`` or ``.rpm``, please go through below installation steps for Linux and Mac.
 
-* :ref:`Install OpenERP on Ubuntu Desktop or Server <install-ubuntu>`
-* :ref:`Install OpenERP on Fedora, CentOS <install-fedora>`
-* :ref:`Install OpenERP on Mac OSX 10.X.X <install-macosx>`
+* :ref:`Install Odoo on Ubuntu Desktop or Server <install-ubuntu>`
+* :ref:`Install Odoo on Fedora, CentOS <install-fedora>`
+* :ref:`Install Odoo on Mac OSX 10.X.X <install-macosx>`
 
 After successfully installation, you can configure the server to be started automatically at boot time, so install it as a service.
 
 .. warning::
-	OpenERP should be installed and have access on the postgresql for the linux user ``openerp``. If you not have a openerp as user create a user with ``adduser openerp``
+	Odoo should be installed and have access on the postgresql for the linux user ``Odoo``. If you not have a Odoo as user create a user with ``adduser Odoo``
 	
 Create a Script
 ---------------
@@ -28,7 +29,7 @@ Create a new fie, /etc/init.d/openerp-server with these contents. This script sh
 	#!/bin/sh
 	
 	#
-	# OpenERP init script v0.1 for centos by Open-Future
+	# Odoo init script v0.1 for centos by Open-Future
 	# Bert Deferme - www.open-future.be - bert@open-future.be
 	#
 	
