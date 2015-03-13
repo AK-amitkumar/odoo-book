@@ -44,7 +44,7 @@ Odoo Book by Odoo Community is licensed under a Creative Commons Attribution-Non
 Contributors of Odoo Book
 -------------------------
 
-It is not possible to make this book without below listed all team members, All credits goes to them to make this book possible and available with lots of information at http://Odoobook.com
+It is not possible to make this book without below listed all team members, All credits goes to them to make this book possible and available with lots of information at http://odoobooks.com
 
 Odoo Book, Team
 ~~~~~~~~~~~~~~~~~~
@@ -62,7 +62,7 @@ All the contributors who have contribute success stories, case studies, Implemen
 
 Friends of Odoo Book
 ~~~~~~~~~~~~~~~~~~~~~~~
-You can also support this book by being a friend, you just need to add a book image on your website and link to book http://Odoobook.com, we will list all the friends here on this page based on the source of the information we get in traffic and statestics.
+You can also support this book by being a friend, you just need to add a book image on your website and link to book http://odoobooks.com, we will list all the friends here on this page based on the source of the information we get in traffic and statestics.
 
 * `Open Source Enterprise ! <http://opensourceenterprise.wordpress.com/>`_
 
@@ -96,12 +96,12 @@ All the contributors who have contribute success stories, case studies, Implemen
 
 Friends of Odoo Book
 ~~~~~~~~~~~~~~~~~~~~~~~
-You can also support this book by being a friend, you just need to add a book image on your website and link to book http://Odoobook.com, we will list all the friends here on this page based on the source of the information we get in traffic and statistics.
+You can also support this book by being a friend, you just need to add a book image on your website and link to book http://odoobooks.com, we will list all the friends here on this page based on the source of the information we get in traffic and statistics.
 
 .. code-block:: xml
 
 	<div>
-	<img src="http://odoobook.com/_images/openerp-book2.png"
+	<img src="http://odoobooks.com/_images/openerp-book2.png"
 	    alt="Odoo Book"
 	    title="Odoo Book"
 	    width="2280"
@@ -114,7 +114,5 @@ Worldwide Contributors
 Yes !, that's you. thanks to every one who supports this book by visiting regularly  to search for various topics, making healthy discussion on them and sharing a such useful topics to Odoo community around the word through social media links.
 
 To get in touch with the book updates, You can `follow this book on twitter <https://twitter.com/OpenERPBook>`_.
-
-``After all this book is for community and by community !``
 
 Thanks to all the contributors listed above, who have supported this book.
