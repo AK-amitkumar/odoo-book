@@ -37,7 +37,5 @@ To read abou the specific topics on Odoo `Enter to Book → <topics.html>`_
 
 You can also view topics by :ref:`genindex` or you can :ref:`search` for specific topics from Odoo Book.
 
-.. youtube:: https://www.youtube.com/watch?v=o0UM3Lg7K4Y
-
 .. hint::
 	The structure of Index may change frequently, if you want to track the pages you love, visit them and store their links in bookmark or reading list. direct links will not be changed, once it published on http://odoobooks.com or http://openerpbook.com.
