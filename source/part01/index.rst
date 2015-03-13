@@ -1,9 +1,20 @@
 .. _get-start:
 
-Getting start with OpenERP
-==========================
+=======================
+Getting start with Odoo
+=======================
 
-**First Step with OpenERP**
+User Experience
+---------------
+   
+.. toctree::
+   :maxdepth: 1
+   
+   09/index.rst
+   10/index.rst
+
+First Step with Odoo
+--------------------
 
 .. toctree::
    :maxdepth: 1
@@ -13,7 +24,8 @@ Getting start with OpenERP
    03/index.rst
    04/index.rst
    
-**Walk through OpenERP**
+Walk through Odoo
+-----------------
 
 .. toctree::
    :maxdepth: 1
@@ -23,10 +35,3 @@ Getting start with OpenERP
    07/index.rst
    08/index.rst
    
-**User Experience**
-	
-.. toctree::
-   :maxdepth: 1
-   
-   09/index.rst
-   10/index.rst
