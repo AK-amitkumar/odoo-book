@@ -3,19 +3,11 @@
 .. index::
    single: Odoo Installation
 
-=========================================================
-Instant Demo, Installation, Deploy & Database Maintenance 
-=========================================================
+===========================================
+Installation, Deploy & Database Maintenance 
+===========================================
 
 Odoo can be install on vaious platforms including Windows, Mac and Linux, however in order to test odoo you just need a web browser on any operating sytem, if you are looking for the Odoo Instant demonstration you can quickly do it on `Odoo Online Demo <https://demo.odoo.com>`_. Productions environment can be setup on the Linux server either hosted on cloud or onsite. 
-
-Odoo Demonstration
-------------------
-
-.. toctree::
-   :maxdepth: 1
-   
-   download/01/index.rst
 
 Installation on Windows, Linux and Mac
 --------------------------------------

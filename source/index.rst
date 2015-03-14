@@ -24,6 +24,7 @@ You can start reading the book through widely viewed topics for the Odoo or you 
    :maxdepth: 1
    
    about/index.rst
+   download/index.rst
    install/index.rst
    part01/index.rst
    install-apps/index.rst
