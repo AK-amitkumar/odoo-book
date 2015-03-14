@@ -48,7 +48,7 @@ odoo.com/start
 Creating online instance is the best way to present Odoo infront of customers, visit http://www.odoo.com/start page to start the Odoo Apps to install.
 
 .. image:: images/start-instance.png
-   :alt: alternate text
+   :alt: start your free trial at Odoo
 
 4 Hrs Free Trial
 ~~~~~~~~~~~~~~~~
@@ -65,3 +65,16 @@ Free for 2 Users
 
 Since the release of Odoo 8.0 gives the free account for unlimited time for 2 users only. Odoo Online instance is professional way to get started with Odoo evaluation as many features works on Odoo Online out-of-the-box can increase your confidence on Odoo. It is best platform where you can give free access to your customers to play with Odoo after first demo.
 
+Download Odoo / OpenERP
+-----------------------
+
+Odoo is an platform independent business application. You can run it on any platform Windows, Linux or Mac. Linux is the preferred platform for the Production Deployment. You can choose Ubuntu, Fedora, CentOS or Read Hat flavor of the Linux.
+
+.. image:: images/download.png
+   :alt: start your free trial at Odoo
+
+Versions
+~~~~~~~~
+Odoo releasing stable version every year i.e 5.0, 6.0, 7.0, 8.0. Each major release is Long term supported versions, as on today 8.0 is the Last stable LTS version and Odoo is supporting 6.0, 7.0 and 8.0 under the Odoo Maintenance Contract.
+
+`Click Here to Download <https://www.odoo.com/page/download>`_, select the last stable to implement Odoo in production along with the Maintenance contract.
