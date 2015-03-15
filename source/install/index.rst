@@ -37,11 +37,11 @@ Setting proxy server for the Odoo that allows scablitility to Odoo handel heavy 
 .. toctree::
    :maxdepth: 1
 
+   prod-setup/05/index.rst
    prod-setup/01/index.rst
    .. prod-setup/02/index.rst
    prod-setup/03/index.rst
-   prod-setup/05/index.rst
-
+   
 Database Maintenance
 --------------------
 
