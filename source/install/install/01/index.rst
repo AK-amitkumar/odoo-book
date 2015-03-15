@@ -3,8 +3,10 @@
 .. index::
    single: Install on Windows
 
-Install OpenERP on Windows 7 or 8 or Server 2008
-================================================
+=============================================
+Install Odoo on Windows 7 or 8 or Server 2008
+=============================================
+
 Installation of OpenERP on windows platform is very easy compare to any other operating system like Ubuntu or Fedora of Mac OSX. You just need to select the correct installer from the OpenERP's website.
 
 You can use OpenERP on windows platform to test it locally or may be for the onsite demonstration.  Once you download the correct version from the OpenERP's download page. You are ready to start the installation process.
@@ -29,6 +31,7 @@ Start Installation
 
 Choose Software to Install
 --------------------------
+
 If have have not install PostgreSQL Database OpenERP All in One Installer will detect and ask you to install the PostgreSQL database during the installation process.
 
 .. image:: images/03selection.png
@@ -37,6 +40,7 @@ Software Selection
 
 PostgreSQL Configuration
 ------------------------
+
 You need to supply configuration for the PostgreSQL server installation like Host, Port for Database server. Installer will also create windows user which use the to connect to the Database Server to use the Database. keep remember those settings or change accordingly.
 
 .. image:: images/04postgres.png
@@ -57,7 +61,8 @@ Installation Process
 
 PostgreSQL Installation
 -----------------------
-Middle of the installation process Installer may install some of the windows patch which required to install PostgreSQL Server and then Installation of PostgreSQL will begin in popup window.
+
+Middle of the installation process installer may install some of the windows patch which required to install PostgreSQL Server and then Installation of PostgreSQL will begin in popup window.
 
 .. image:: images/09postgres-install.png
 
@@ -67,6 +72,7 @@ On completion of installation of PostgreSQL, the installation of OpenERP finishe
 
 Finish Installation
 -------------------
+
 .. image:: images/11finish.png
 
 Finish the Installation

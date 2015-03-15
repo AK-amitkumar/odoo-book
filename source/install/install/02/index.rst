@@ -5,30 +5,31 @@
    single: Install on Ubuntu Server
    single: Install on Debian
 
-Install OpenERP on Ubuntu or Debian Linux
-=========================================
+======================================
+Install Odoo on Ubuntu or Debian Linux
+======================================
 
-Once you install Ubuntu server or desktop based client, you need to install few libraries that is required to run OpenERP.
+Once you install Ubuntu server or desktop based client, you need to install few libraries that is required to run Odoo.
 
 Install PostgreSQL
 ------------------
 
-You need to install PostgreSQL database as OpenERP is using as a backend storage, you need to install and configure before you setup additional libraries and OpenERP server.
+You need to install PostgreSQL database as Odoo is using as a backend storage, you need to install and configure before you setup additional libraries and Odoo server.
 
-.. code-block:: bash
+.. code-block:: shell
 
 	openerp@openerp-desktop:/$ sudo apt-get install postgresql
 
-Configure postgresql for OpenERP user. You need to add your current user as a postgres user which you have created under Ubuntu and you are using the same user to run OpenERP server. Inorder to add  role to postgresql switch to postgres user.
+Configure postgresql for Odoo user. You need to add your current user as a postgres user which you have created under Ubuntu and you are using the same user to run Odoo server. Inorder to add  role to postgresql switch to postgres user.
 
-.. code-block:: bash
+.. code-block:: shell
 
 	openerp@openerp-desktop:/$ sudo su postgres
 	password: XXXXXXXXXX
 
 Create a new user using following command, in my case I have created openerp as a linux user.
 
-.. code-block:: bash
+.. code-block:: shell
 
 	postgres@openerp-desktop:/$ createuser openerp
 	Shall the new role be a superuser? (y/n) y
@@ -36,13 +37,12 @@ Create a new user using following command, in my case I have created openerp as 
 :ref:`Install and configure PgAdmin3 <pgadmin3>` if you want to use graphical user interface for PostgreSQL.
 
 
-Install OpenERP Server
-----------------------
+Install Odoo
+------------
 
-If you plan to use OpenERP 6.1 or above you need Python 2.6 or later version, simple like OpenERP's Versions policy its better to use the Ubuntu's last stable or LTS version for the Production Server.
-On a Ubuntu or and Debian based Linux distribution you can install all required dependencies with this single command:
+If you plan to use Odoo 6.1 or above you need Python 2.6 or later version, simple like Odoo's Versions policy its better to use the Ubuntu's last stable or LTS version for the Production Server. On a Ubuntu or and Debian based Linux distribution you can install all required dependencies with this single command:
 
-.. code-block:: bash
+.. code-block:: shell
 
 	sudo apt-get install python-dateutil python-feedparser \
 		python-gdata python-ldap python-libxslt1 python-lxml python-mako \ 
@@ -52,23 +52,23 @@ On a Ubuntu or and Debian based Linux distribution you can install all required 
 		python-werkzeug python-xlwt python-yaml python-zsi \
 		python-docutils python-mock
 
-OpenERP server can be download form the OpenERP's website, :ref:`check which version you should download <select-version>`. If you only want to test the server, you do not need to install it. Just unpack the archive and start the openerp-server executable:
+Odoo server can be download form the Odoo's website, :ref:`check which version you should download <version>`. If you only want to test the server, you do not need to install it. Just unpack the archive and start the openerp-server executable:
 
-.. code-block:: bash
+.. code-block:: shell
 
-	tar -xzf openerp-7.0-latest.tar.gz
-	cd openerp-7.0-*
+	tar -xzf openerp-8.0-latest.tar.gz
+	cd openerp-8.0-*
 	./openerp-server
 	./openerp-server -h
 
-The OpenERP Server can be installed very easily using the setup.py file:
+The Odoo Server can be installed very easily using the setup.py file:
 
-.. code-block:: bash
+.. code-block:: shell
 
 	sudo python setup.py install
 
-Once you install OpenERP successfully you are ready to Create your first database in OpenERP.
+Once you install Odoo successfully you are ready to Create your first database in Odoo.
 
 Setup Production Environment
 ----------------------------
-After successfully setup the OpenERP Latest server, you can deploy OpenERP for production environment on Apache or gUnicorn based on your needs.
+After successfully setup the Odoo Latest server, you can deploy Odoo for production environment on Apache or gUnicorn based on your needs.
