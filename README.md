@@ -21,7 +21,7 @@ All the pages of OpenERP Books are free to use for personal use for blogs, forum
 
 Please credits to openerpbook.com when using page(s) from OpenERP Book.
 
-http://openerpbook.com/_images/licenses.png 
+<img src="http://openerpbook.com/_images/licenses.png"/>
 
 Creative Commons License
 
