@@ -114,7 +114,7 @@ html_theme = 'bootstrap'
 
 html_theme_options = {
     'bootstrap_version': "3",
-    "bootswatch_theme":"flatly"
+    "bootswatch_theme":"journal"
 }
 
 #html_short_title = 'Demo'

@@ -31,5 +31,22 @@ You can start reading the book through widely viewed topics for the Odoo or you 
    part03/index.rst
    part02/index.rst
 
+Featured Topics
+---------------
+
+.. toctree::
+   :maxdepth: 1
+   
+   crm_sale/index.rst
+   warehouse/index.rst
+   purchase/index.rst
+   humanresource/index.rst
+   project-service/index.rst
+   accounting/index.rst
+   documents/index.rst
+
+* Working with Tools
+* Tips and Tricks
+
 .. hint::
 	The structure of Index may change frequently, if you want to track the pages you love, visit them and store their links in bookmark or reading list. direct links will not be changed, once it published on http://odoobooks.com or http://openerpbook.com.
