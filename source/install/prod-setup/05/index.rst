@@ -1,13 +1,13 @@
 .. _setup-production-openerp-hardware:
 
-Hardward need to setup OpenERP
-==============================
+=====================
+Hardward Requirements
+=====================
 
 
 
 Small Business - up to 20 Users
 -------------------------------
-
 
 
 

@@ -2,15 +2,17 @@
 
 .. index::
    single: Install on Mac OSX
-  
-Install OpenERP on Mac OSX 10.X.X
-==================================
+ 
+===============================
+Install Odoo on Mac OSX 10.X.X
+===============================
 
-There are many ways to install libraries in to Mac OS 10.X which is required by the OpenERP to run on your Mac OS. Some of the preferred methods are port or pip or easy_install in few case you may use brew is it install libraries in to users local directory not available for other users in same machine.
+There are many ways to install libraries in to Mac OS 10.X which is required by the Odoo to run on your Mac OS. Some of the preferred methods are port or pip or easy_install in few case you may use brew is it install libraries in to users local directory not available for other users in same machine.
 
 Install PostgreSQL
 ------------------
-You need to install PostgreSQL database as OpenERP is using as a backend storage, you need to install and configure before you setup additional libraries and OpenERP server.
+
+You need to install PostgreSQL database as Odoo is using as a backend storage, you need to install and configure before you setup additional libraries and Odoo server.
 
 Download the Installable package form http://www.enterprisedb.com/products-services-training/pgdownload or you can read more ways to install PostgreSQL on Mac OS at http://www.postgresql.org/download/macosx/
 
@@ -20,7 +22,7 @@ Run the installer and follow the steps
 
 PostgreSQL installation step - 1
 
-Configure postgresql for OpenERP user. You need to add your current user as a postgres user which you have created under your MAC OS and you are using the same user to run OpenERP server. In order to add role to postgresql switch to postgres user.
+Configure postgresql for Odoo user. You need to add your current user as a postgres user which you have created under your MAC OS and you are using the same user to run Odoo server. In order to add role to postgresql switch to postgres user.
 
 .. code-block:: bash
 
@@ -38,6 +40,7 @@ Create a new user using following command, in my case I have created openerp as 
 
 Install Xcode, Command line tool and MacPorts
 ---------------------------------------------
+
 In order to install libraries using the port method on Mac OS, You need to install development platform and essential libraries, for that  you need to download and install Xcode from the Apple Store. You just need correct login and password for Apple store to install software from store.
 
 .. image:: images/xcode-install.png
@@ -70,11 +73,12 @@ The MacPorts "selfupdate" command will also be run for you by the installer to e
 
 	sudo port -v selfupdate
 
-Once you complete the installations of Xcode, Command Line Tool and MacPorts, you are ready install related libraries for the OpenERP
+Once you complete the installations of Xcode, Command Line Tool and MacPorts, you are ready install related libraries for the Odoo
 
-Install OpenERP Server
-----------------------
-If you plan to use OpenERP 6.1 or above you need Python 2.6 or later version,  you can check the version of your Python installed on your machine using below command.
+Install Odoo Server
+-------------------
+
+If you plan to use Odoo 6.1 or above you need Python 2.6 or later version,  you can check the version of your Python installed on your machine using below command.
 
 .. code-block:: bash
 	
@@ -92,7 +96,7 @@ You can install all required dependencies with below listed command:
 	py-docutils py-openid py-mock py-unittest2 py-Werkzeug \
 	py-mxdatetime py-caldav py-pydot pt-babel py-chart
 
-On success you are ready to download and run OpenERP server. OpenERP server can be download form the OpenERP's website, check which version you should download. If you only want to test the server, you do not need to install it. Just unpack the archive and start the openerp-server executable:
+On success you are ready to download and run Odoo server. Odoo server can be download form the Odoo's website, check which version you should download. If you only want to test the server, you do not need to install it. Just unpack the archive and start the openerp-server executable:
 
 .. code-block:: bash
 
@@ -109,7 +113,7 @@ The OpenERP Server can be installed very easily using the setup.py file:
 	cd openerp-7.0-*
 	sudo python setup.py install
 
-Once you install OpenERP successfully you are ready to Create your first database in OpenERP.
+Once you install Odoo successfully you are ready to Create your first database in Odoo.
 
 .. note: Sometime you need to change the language settings by changing some variable related the language settings as below.
 
